@@ -13,12 +13,34 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <?php
+        $version = '1993.0.1';
+    ?>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <link href="{{asset('vendor/prism/prism.css')}}?v=<?php echo $version ?>" rel="stylesheet">
+    <link href="{{asset('assets/css/theme.css')}}?v=<?php echo $version ?>" rel="stylesheet">
+    <link href="{{asset('assets/css/user.css')}}?v=<?php echo $version ?>" rel="stylesheet">
+
     <!-- Scripts -->
     <!-- vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <!-- <div id="app"> -->
+        <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -28,14 +50,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+                   
                     <ul class="navbar-nav me-auto">
 
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
+                     
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -70,11 +91,22 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
-    </div>
+    <!-- </div> -->
+    <!-- JavaScript Libraries -->
+
+    <script src="{{asset('vendors/popper/popper.min.js')}}"></script>
+    <script src="{{asset('vendors/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{asset('vendors/anchorjs/anchor.min.js')}}"></script>
+    <script src="{{asset('vendors/is/is.min.js')}}"></script>
+    <script src="{{asset('vendors/fontawesome/all.min.js')}}"></script>
+    <script src="{{asset('vendors/lodash/lodash.min.js')}}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="{{asset('vendors/prism/prism.js')}}"></script>
+    <script src="{{asset('assets/js/theme.js')}}"></script>
 </body>
 </html>
