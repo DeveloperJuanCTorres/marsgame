@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <?php
-        $version = '1993.0.2';
+        $version = '1993.0.3';
     ?>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
