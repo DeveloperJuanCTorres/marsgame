@@ -3,7 +3,7 @@
 @section('content')
 
       <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><span class="text-primary fs-3 ms-2 fw-bolder">en</span><span class="fw-thin text-300 fs-3">surance</span></a>
+        <div class="container"><a class="navbar-brand" href="index.html"><span class="text-primary fs-3 ms-2 fw-bolder">Mars</span><span class="fw-thin text-300 fs-3">Game</span></a>
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse pt-4 pt-lg-0" id="navbarSupportedContent">
             <p class="mb-0 ms-auto text-light fs-0 fw-normal"><i class="fas fa-phone-alt me-2"></i>Call Us Now <a class="text-light" href="tel:+604-680-9785">+215(362)4579</a></p>
@@ -371,98 +371,6 @@
 
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section id="contact">
-
-        <div class="container">
-          <div class="row">
-            <h2 class="text-light text-center mb-8">Contact Us</h2>
-            <div class="col-12 col-lg-6 col-xl-7 mb-4 order-0 order-sm-0"><a class="logo-footer fs-7" href="index.html"><span class="text-primary fw-bolder">en</span><span class="fw-thin text-300">surance</span></a>
-              <p class="text-light my-4"> <i class="fas fa-map-marker-alt me-3"></i><span class="text-light">1500 Treat Ave, Suite 200  &nbsp;</span><a class="text-light" href="tel:+604-680-9785">+604-680-9785</a><br />San Francisco, CA 94110</p>
-              <p class="text-light"> <i class="fas fa-envelope me-3 text-primary"> </i><a href="mailto:vctung@outlook.com">vctung@outlook.com </a></p>
-              <p class="text-light"> <i class="fas fa-phone-alt me-3 text-primary"> </i><a href="tel:1-800-800-2299">1-800-800-2299 (Support)</a></p>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-5">
-              <h3 class="text-200 my-4">Subscribe to newsletter </h3>
-              <form class="position-relative">
-                <div class="input-group-icon">
-                  <input class="form-control form-ensurance-control" type="email" placeholder="Enter your email " aria-label="email" />
-                </div>
-                <button class="btn btn-primary btn-subscribe" type="submit">Subscribe now</button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0">
-
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="d-md-flex justify-content-between pb-1 pt-4">
-                <div class="pb-4">
-                  <ul class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
-                    <li><a class="widget-list-link fs-ms" href="#">Home</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="#">About Us</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="#">Blog</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="#">Services</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="#">Terms &amp; Conditions</a></li>
-                  </ul>
-                </div>
-                <div class="pb-4">
-                  <ul class="list-unstyled list-inline my-2">
-                    <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fa-2x social-icons"></i></a></li>
-                    <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram fa-2x social-icons"></i></a></li>
-                    <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x social-icons"> </i></a></li>
-                    <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-linkedin fa-2x social-icons"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0 bg-black">
-
-        <div class="container">
-          <div class="row justify-content-md-between justify-content-evenly py-4">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-              <p class="fs--1 my-2 fw-light text-200">All rights Reserved &copy; Your Company, 2021</p>
-            </div>
-            <div class="col-12 col-sm-8 col-md-6">
-              <p class="fs--1 fw-light my-2 text-center text-md-end text-200"> Made with&nbsp;
-                <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#F95C19" viewBox="0 0 16 16">
-                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;by&nbsp;<a class="fw-bold text-primary" href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+      
 
 @endsection
