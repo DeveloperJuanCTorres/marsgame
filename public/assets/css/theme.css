@@ -429,7 +429,7 @@
   --ensurance-pagination-active-border-color: #5EDCD4;
   --ensurance-pagination-disabled-bg: #fff;
   /* ---------------------------------- Card ---------------------------------- */
-  --ensurance-card-border-color: rgba(0, 0, 0, 0.125);
+  --ensurance-card-border-color: rgba(0, 152, 58, 0.125);
   --ensurance-card-cap-bg: rgba(0, 0, 0, 0.03);
   --ensurance-card-cap-color: null;
   --ensurance-card-color: null;
@@ -6025,7 +6025,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: var(--ensurance-card-bg);
   background-clip: border-box;
-  border: 1px solid var(--ensurance-card-border-color);
+  border: 4px solid var(--ensurance-card-border-color);
   border-radius: 3.125rem;
 }
 .card > hr {
@@ -21988,7 +21988,7 @@ iframe.yt-video.loaded {
 }
 
 .testimonial-bg {
-  background-color: #186be87d;
+  background-color: #2D2E83;
 }
 @media (min-width: 720px) {
   .testimonial-bg {
@@ -22037,7 +22037,7 @@ iframe.yt-video.loaded {
 }
 
 .social-icons {
-  color: #536468;
+  color: #00983A;
 }
 .social-icons:hover {
   color: #5EDCD4;

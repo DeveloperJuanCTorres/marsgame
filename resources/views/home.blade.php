@@ -17,14 +17,14 @@
             <div class="col-md-5 col-xl-5 pe-xxl-0">
               <div class="card card-bg shadow hero-header-form">
                 <div class="card-body p-4 p-xl-6">
-                  <h2 class="text-100 text-center">Get a Quote</h2>
+                  <h2 class="text-100 text-center">¡Obtén tus beneficios aquí!</h2>
                   <form class="mb-3">
                     <div class="form-floating mb-3">
                       <input class="form-control input-box form-ensurance-header-control" id="floatingName" type="text" placeholder="name" />
                       <label for="floatingName">Your name</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input class="form-control input-box form-ensurance-header-control" id="floatingPhone" type="tel" placeholder="name@example.com" />
+                      <input class="form-control input-box form-ensurance-header-control" id="floatingPhone" type="number" placeholder="name@example.com" />
                       <label for="floatingPhone">Phone</label>
                     </div>
                     <div class="form-floating mb-3">
@@ -40,7 +40,7 @@
                       <label for="floatingTextarea">Comments</label>
                     </div>
                     <div class="col-12 d-grid">
-                      <button class="btn btn-primary rounded-pill" type="submit">Get Quote</button>
+                      <button class="btn btn-primary rounded-pill" type="submit">Quiero ser suscriptor</button>
                     </div>
                   </form>
                 </div>
@@ -164,7 +164,7 @@
         <div class="container-fluid px-0">
           <div class="row g-0">
             <div class="col-12 col-xxl-11 offset-xxl-1">
-              <h2 class="text-light text-center">Our Awesome Clients</h2>
+              <h2 class="text-light text-center">Próximo Sorteo</h2>
               <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carouse">
                 <div class="carousel-inner ps-md-5 ps-lg-11 py-4 py-md-5 py-lg-4 pb-lg-9">
                   <div class="carousel-item active">
@@ -324,7 +324,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="promociones">
+      <section id="promociones" style="padding-top: 0;">
 
         <div class="container">
           <div class="row">
