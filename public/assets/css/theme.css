@@ -4281,9 +4281,9 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #536468;
-  background-color: #5EDCD4;
-  border-color: #5EDCD4;
+  color: #2D2E83;
+  background-color: #00983A;
+  border-color: #00983A;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -20173,7 +20173,7 @@ ul {
 }
 
 .card-bg {
-  background-color: rgba(4, 91, 193, 0.3);
+  background-color: rgba(45, 46, 131);
   -webkit-backdrop-filter: blur(0.625rem);
   backdrop-filter: blur(0.625rem);
 }
@@ -21496,8 +21496,8 @@ html[dir=rtl] .googlemap .gm-style-iw.gm-style-iw-c button[title=Close] {
     border-radius: 3.125rem;
     z-index: -1 !important;
     opacity: 0.3;
-    background-image: -o-linear-gradient(250deg, #186be8, #186be8);
-    background-image: linear-gradient(200deg, #186be8, #186be8);
+    background-image: -o-linear-gradient(250deg, #2D2E83, #2D2E83);
+    background-image: linear-gradient(200deg, #2D2E83, #2D2E83);
   }
   .img-shape::after {
     position: absolute;
@@ -21508,7 +21508,7 @@ html[dir=rtl] .googlemap .gm-style-iw.gm-style-iw-c button[title=Close] {
     z-index: -1 !important;
     top: 15.3rem;
     left: 25rem;
-    border: 1px solid #186BE8;
+    border: 1px solid #2D2E83;
     opacity: 0.5;
     background: transparent;
   }
@@ -21864,7 +21864,7 @@ iframe.yt-video.loaded {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #224E8F;
+  background-color: #2D2E83;
   margin-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -21878,7 +21878,7 @@ iframe.yt-video.loaded {
   margin-right: auto;
 }
 .icon-box:hover {
-  background-color: #186BE8;
+  background-color: #2D2E83;
 }
 .icon-box:hover .car-insurance-icon {
   display: none !important;

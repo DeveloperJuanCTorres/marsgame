@@ -78,7 +78,7 @@ var colors = {
   warning: '#f5803e',
   danger: '#e63757',
   light: '#f9fafd',
-  dark: '#000'
+  dark: '#2D2E83'
 };
 var grays = {
   white: '#fff',

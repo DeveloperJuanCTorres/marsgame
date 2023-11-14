@@ -2,30 +2,7 @@
 
 @section('content')
 
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><span class="text-primary fs-3 ms-2 fw-bolder">Mars</span><span class="fw-thin text-300 fs-3">Game</span></a>
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse pt-4 pt-lg-0" id="navbarSupportedContent">
-            <p class="mb-0 ms-auto text-light fs-0 fw-normal"><i class="fas fa-phone-alt me-2"></i>Call Us Now <a class="text-light" href="tel:+604-680-9785">+215(362)4579</a></p>
-            <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
-              <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#products">Products</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#news">News &amp; Blog</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#contact">Contact us</a></li>
-            </ul>
-            <div class="d-flex mt-2 align-items-center mt-lg-0">
-              <div class="dropdown">
-                <button class="btn btn-sm d-flex mx-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-search text-primary"></i></button>
-                <div class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton1" style="top:55px">
-                  <form>
-                    <input class="form-control form-search-control border-100" type="search" placeholder="Search" aria-label="Search" />
-                  </form>
-                </div>
-              </div><a href="#!"> <i class="fas fa-user text-primary"> </i></a>
-            </div>
-          </div>
-        </div>
-      </nav>
+    
       <section class="py-0">
         <div class="bg-holder" style="background-image:url(assets/img/illustrations/bg.png);background-position:left center;background-size:auto 816px;">
         </div>
@@ -182,7 +159,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-8">
+      <section id="clientes" class="py-8">
 
         <div class="container-fluid px-0">
           <div class="row g-0">
@@ -277,11 +254,81 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="news">
+      <section id="ultimosorteos">
 
         <div class="container">
           <div class="row">
-            <h2 class="text-light text-center my-5">Recent News</h2>
+            <h2 class="text-light text-center my-5">Últimos sorteos</h2>
+          </div>
+          <div class="row flex-center h-100 circle-blend circle-blend-left circle-primary">
+            <div class="col-12">
+              <div class="row align-items-center circle-blend circle-blend-right circle-warning">
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card p-3 h-100 card-soft-primary">
+                    <div class="card-body">
+                      <div class="d-flex flex-between-center">
+                        <p class="fw-normal mb-0 text-400">24 July, 2021</p>
+                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Thoughts</span></h6>
+                      </div>
+                      <h5 class="fw-bold fs-2 text-200 my-3">A pandemic may cause life insurance coverage</h5>
+                      <p class="text-400">In the aftermath of the Covid epidemic, life insurance firms have been more cautious and have tightened underwriting standards for policies with large cash values.......</p><a class="link-primary" href="#!">
+                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card p-3 h-100 card-soft-primary">
+                    <div class="card-body">
+                      <div class="d-flex flex-between-center">
+                        <p class="fw-normal mb-0 text-400">29 July, 2021</p>
+                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Health</span></h6>
+                      </div>
+                      <h5 class="fw-bold fs-2 text-200 my-3">Top 10 health insurance companies in the Germany</h5>
+                      <p class="text-400">There are numerous private healthcare insurance experts in Germany. Insurance protects against financial loss and reduces uncertainty. It ensures safety and security.......</p><a class="link-primary" href="#!">
+                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card p-3 h-100 card-soft-primary">
+                    <div class="card-body">
+                      <div class="d-flex flex-between-center">
+                        <p class="fw-normal mb-0 text-400">15 August, 2021</p>
+                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Life</span></h6>
+                      </div>
+                      <h5 class="fw-bold fs-2 text-200 my-3">Why do you need several life insurance policies?</h5>
+                      <p class="text-400">In the event of the insured's death, life insurance protects the nominees financially. It is possible to have several life insurance policies with various insurance providers.......</p><a class="link-primary" href="#!">
+                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-5 text-center text-sm-end"><a class="link-primary" href="#!">View all
+                  <svg class="bi bi-arrow-right" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section id="promociones">
+
+        <div class="container">
+          <div class="row">
+            <h2 class="text-light text-center my-5">Promociones</h2>
           </div>
           <div class="row flex-center h-100 circle-blend circle-blend-left circle-primary">
             <div class="col-12">
