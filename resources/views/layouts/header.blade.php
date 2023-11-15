@@ -15,12 +15,12 @@
               </ul>
           
             <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
-              <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#products">Participar</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#clientes">Próximo Sorteo</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#ultimosorteos">Último Sorteos</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#promociones">Promociones</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="#contact">Contáctanos</a></li>
+              <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="/#">Home</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="/#products">Participar</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="/#clientes">Próximo Sorteo</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="/#ultimosorteos">Último Sorteos</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="/#promociones">Promociones</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="/#contact">Contáctanos</a></li>
             </ul>
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
