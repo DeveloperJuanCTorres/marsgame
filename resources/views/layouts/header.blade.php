@@ -17,8 +17,8 @@
             <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
               <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="/#">Home</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="/#products">Participar</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="/#clientes">Próximo Sorteo</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="/#ultimosorteos">Último Sorteos</a></li>
+              <!-- <li class="nav-item px-2"><a class="nav-link" href="/#clientes">Próximo Sorteo</a></li>
+              <li class="nav-item px-2"><a class="nav-link" href="/#ultimosorteos">Último Sorteos</a></li> -->
               <li class="nav-item px-2"><a class="nav-link" href="/#promociones">Promociones</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="/#contact">Contáctanos</a></li>
             </ul>
@@ -30,9 +30,9 @@
                     <input class="form-control form-search-control border-100" type="search" placeholder="Search" aria-label="Search" />
                   </form>
                 </div> -->
-                <button class="btn btn-sm d-flex mx-2" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-user text-primary"> </i>
-                </button>
+                  <button class="btn btn-sm d-flex mx-2" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user text-primary"> </i>
+                  </button>                             
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth   
                   <li><a class="dropdown-item" href="#">Datos Personales</a></li>
@@ -61,6 +61,13 @@
               </div>                                 
                              
             </div>
+            <button class="btn btn-sm d-flex mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <i class="fas fa-shopping-cart text-primary"> </i>
+              <span class="position-absolute top-10 start-97 translate-middle badge rounded-pill bg-danger" style="font-size: 8px;">
+                9
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>  
           </div>
         </div>
     </nav>

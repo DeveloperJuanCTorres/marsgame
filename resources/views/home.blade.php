@@ -11,7 +11,7 @@
         <div class="container">
           <div class="row align-items-center min-vh-100">
             <div class="col-md-7 col-xl-7 pt-9 text-md-start text-center">
-              <h1 class="display-2 text-light fw-thin">We provide the best <br class="d-none d-xl-block" />value <strong class="fw-bolder">insurance </strong></h1>
+              <h1 class="display-2 text-light fw-thin">Obtendras grandes <br class="d-none d-xl-block" />beneficios <strong class="fw-bolder">MarsGame </strong></h1>
               <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
             </div>
             <div class="col-md-5 col-xl-5 pe-xxl-0">
@@ -79,7 +79,7 @@
                   <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                        <h2 class="text-light mb-md-5">Car Insurance</h2>
+                        <h2 class="text-light mb-md-5">Participar</h2>
                         <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
@@ -91,7 +91,7 @@
                   <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                        <h2 class="text-light mb-md-5">Home Insurance</h2>
+                        <h2 class="text-light mb-md-5">Próximo sorteo</h2>
                         <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
@@ -103,7 +103,7 @@
                   <div class="tab-pane fade" id="nav-paw" role="tabpanel" aria-labelledby="nav-paw-tab">
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                        <h2 class="text-light mb-md-5">Pet Insurance</h2>
+                        <h2 class="text-light mb-md-5">Último sorteo</h2>
                         <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
@@ -164,7 +164,7 @@
         <div class="container-fluid px-0">
           <div class="row g-0">
             <div class="col-12 col-xxl-11 offset-xxl-1">
-              <h2 class="text-light text-center">Próximo Sorteo</h2>
+              <h2 class="text-light text-center">Nuestros Ganadores</h2>
               <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carouse">
                 <div class="carousel-inner ps-md-5 ps-lg-11 py-4 py-md-5 py-lg-4 pb-lg-9">
                   <div class="carousel-item active">
@@ -252,75 +252,7 @@
 
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section id="ultimosorteos">
-
-        <div class="container">
-          <div class="row">
-            <h2 class="text-light text-center my-5">Últimos sorteos</h2>
-          </div>
-          <div class="row flex-center h-100 circle-blend circle-blend-left circle-primary">
-            <div class="col-12">
-              <div class="row align-items-center circle-blend circle-blend-right circle-warning">
-                <div class="col-md-6 col-lg-4 mb-4">
-                  <div class="card p-3 h-100 card-soft-primary">
-                    <div class="card-body">
-                      <div class="d-flex flex-between-center">
-                        <p class="fw-normal mb-0 text-400">24 July, 2021</p>
-                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Thoughts</span></h6>
-                      </div>
-                      <h5 class="fw-bold fs-2 text-200 my-3">A pandemic may cause life insurance coverage</h5>
-                      <p class="text-400">In the aftermath of the Covid epidemic, life insurance firms have been more cautious and have tightened underwriting standards for policies with large cash values.......</p><a class="link-primary" href="#!">
-                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                  <div class="card p-3 h-100 card-soft-primary">
-                    <div class="card-body">
-                      <div class="d-flex flex-between-center">
-                        <p class="fw-normal mb-0 text-400">29 July, 2021</p>
-                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Health</span></h6>
-                      </div>
-                      <h5 class="fw-bold fs-2 text-200 my-3">Top 10 health insurance companies in the Germany</h5>
-                      <p class="text-400">There are numerous private healthcare insurance experts in Germany. Insurance protects against financial loss and reduces uncertainty. It ensures safety and security.......</p><a class="link-primary" href="#!">
-                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                  <div class="card p-3 h-100 card-soft-primary">
-                    <div class="card-body">
-                      <div class="d-flex flex-between-center">
-                        <p class="fw-normal mb-0 text-400">15 August, 2021</p>
-                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Life</span></h6>
-                      </div>
-                      <h5 class="fw-bold fs-2 text-200 my-3">Why do you need several life insurance policies?</h5>
-                      <p class="text-400">In the event of the insured's death, life insurance protects the nominees financially. It is possible to have several life insurance policies with various insurance providers.......</p><a class="link-primary" href="#!">
-                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="my-5 text-center text-sm-end"><a class="link-primary" href="#!">View all
-                  <svg class="bi bi-arrow-right" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
-                  </svg></a></div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+      
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
@@ -414,10 +346,9 @@
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
-
-
-
-
-      
+     
+  @include('layouts.offcanvas')
 
 @endsection
+
+
