@@ -19869,9 +19869,9 @@ body {
   -ms-user-select: none;
   user-select: none;
   text-decoration: none;
-  background-color: white;
-  /* background-color: #222222; */
-  background-image: url("../img/building2.png");
+  /* background-color: white; */
+  background-color: #222222;
+  background-image: url("../img/building1.png");
 }
 
 pre,
