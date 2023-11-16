@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll" style="background-color: #2D2E83;" data-navbar-on-scroll="data-navbar-on-scroll">
         <div class="container">
           <a class="navbar-brand" href="/">
             <img src="{{asset('assets/img/logo1.png')}}" width="200" alt="">
@@ -24,13 +24,7 @@
             </ul>
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
-                <!-- <button class="btn btn-sm d-flex mx-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-search text-primary"></i></button>
-                <div class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton1" style="top:55px">
-                  <form>
-                    <input class="form-control form-search-control border-100" type="search" placeholder="Search" aria-label="Search" />
-                  </form>
-                </div> -->
-                  <button class="btn btn-sm d-flex mx-2" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-sm d-flex" style="font-size: 20px;" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user text-primary"> </i>
                   </button>                             
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
@@ -61,10 +55,10 @@
               </div>                                 
                              
             </div>
-            <button class="btn btn-sm d-flex mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button class="btn btn-sm d-flex" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               <i class="fas fa-shopping-cart text-primary"> </i>
               <span class="position-absolute top-10 start-97 translate-middle badge rounded-pill bg-danger" style="font-size: 8px;">
-                9
+                0
                 <span class="visually-hidden">unread messages</span>
               </span>
             </button>  

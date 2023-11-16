@@ -31,9 +31,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
+    <link href="{{asset('assets/css/mystyles.css')}}?v=<?php echo $version ?>" rel="stylesheet">
+    
     <link href="{{asset('vendor/prism/prism.css')}}?v=<?php echo $version ?>" rel="stylesheet">
     <link href="{{asset('assets/css/theme.css')}}?v=<?php echo $version ?>" rel="stylesheet">
     <link href="{{asset('assets/css/user.css')}}?v=<?php echo $version ?>" rel="stylesheet">
+    
 
     <!-- Scripts -->
     <!-- vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
@@ -109,5 +112,6 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="{{asset('vendors/prism/prism.js')}}"></script>
     <script src="{{asset('assets/js/theme.js')}}"></script>
+
 </body>
 </html>

@@ -4,9 +4,11 @@
 
     
       <section class="py-0">
-        <div class="bg-holder" style="background-image:url(assets/img/illustrations/bg.png);background-position:left center;background-size:auto 816px;">
-        </div>
+        <!-- <div class="bg-holder" style="background-image:url(assets/img/illustrations/bg.png);background-position:left center;background-size:auto 816px;">
+        </div> -->
         <!--/.bg-holder-->
+        
+        @include('layouts.carrousel')
 
         <div class="container">
           <div class="row align-items-center min-vh-100">
@@ -84,7 +86,7 @@
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/car.png" alt="..." /></div>
+                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
                       </div>
                     </div>
                   </div>
@@ -96,7 +98,7 @@
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/home.png" alt="..." /></div>
+                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
                       </div>
                     </div>
                   </div>
@@ -108,7 +110,7 @@
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/pets.png" alt="..." /></div>
+                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
                       </div>
                     </div>
                   </div>
@@ -120,7 +122,7 @@
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/travel.png" alt="..." /></div>
+                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
                       </div>
                     </div>
                   </div>
@@ -131,7 +133,7 @@
           <div class="row offset-xl-2">
             <div class="col-12">
               <div class="mb-3 mb-md-5">
-                <h2 class="text-light mb-7 text-center text-sm-start">Best Services</h2>
+                <h2 class="text-light mb-7 text-center text-sm-start">Nuestros servicios</h2>
               </div>
               <div class="row">
                 <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/support.png" height="60" alt="..." />
@@ -174,7 +176,7 @@
                           <div class="card-body pt-0 p-md-0">
                             <div class="d-flex flex-column flex-md-row align-items-center">
                               <div class="card-span-img">
-                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/1.jpg" alt="" /></div>
+                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/teamdefault.jpg" alt="" /></div>
                               </div>
                               <div class="mt-n6 mt-md-0 text-center text-md-start px-md-6 px-xl-8 px-xxl-10">
                                 <h4 class="mb-0 fw-medium text-white">Charlize Theron</h4>
@@ -194,7 +196,7 @@
                           <div class="card-body pt-0 p-md-0">
                             <div class="d-flex flex-column flex-md-row align-items-center">
                               <div class="card-span-img">
-                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/2.jpg" alt="" /></div>
+                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/teamdefault.jpg" alt="" /></div>
                               </div>
                               <div class="mt-n6 mt-md-0 text-center text-md-start px-md-6 px-xl-8 px-xxl-10">
                                 <h4 class="mb-0 fw-medium text-white">Edward Newgate</h4>
@@ -214,7 +216,7 @@
                           <div class="card-body pt-0 p-md-0">
                             <div class="d-flex flex-column flex-md-row align-items-center">
                               <div class="card-span-img">
-                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/3.jpg" alt="" /></div>
+                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/teamdefault.jpg" alt="" /></div>
                               </div>
                               <div class="mt-n6 mt-md-0 text-center text-md-start px-md-6 px-xl-8 px-xxl-10">
                                 <h4 class="mb-0 fw-medium text-white">Charlize Theron</h4>

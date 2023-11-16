@@ -34,7 +34,7 @@
             </div>
             <div class="row my-4">
                     <div class="col-6">
-                        <button class="btn btn-secondary" style="width: 100%; background-color: transparent !important;" type="submit">Limpiar carrito</button>
+                        <button class="btn btn-secondary" style="width: 100%; background-color: transparent !important;" type="submit">Limpiar</button>
                     </div>
                     <div class="col-6">
                         <button class="btn btn-primary" style="width: 100%;" type="submit">Comprar</button>

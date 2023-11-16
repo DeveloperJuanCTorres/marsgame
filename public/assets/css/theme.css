@@ -19869,8 +19869,9 @@ body {
   -ms-user-select: none;
   user-select: none;
   text-decoration: none;
-  background-color: #222222;
-  background-image: url("../img/building1.png");
+  background-color: white;
+  /* background-color: #222222; */
+  background-image: url("../img/building2.png");
 }
 
 pre,
@@ -20259,8 +20260,8 @@ ul {
 .btn-ensurance:hover, .btn-ensurance:focus {
   width: 210px;
   color: #fff;
-  background-color: #000;
-  border-color: #000;
+  background-color: #2D2E83;
+  border-color: #2D2E83;
 }
 .btn-ensurance .btn-icon {
   font-size: 10px;
