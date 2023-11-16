@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll" style="background-color: #2D2E83;" data-navbar-on-scroll="data-navbar-on-scroll">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"  data-navbar-on-scroll="data-navbar-on-scroll">
         <div class="container">
           <a class="navbar-brand" href="/">
             <img src="{{asset('assets/img/logo1.png')}}" width="200" alt="">
