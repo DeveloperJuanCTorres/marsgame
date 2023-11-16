@@ -1,6 +1,6 @@
 <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"  data-navbar-on-scroll="data-navbar-on-scroll"> -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"
-  style="border-radius: 20px;margin-top: 10px;margin-left: 20px;margin-right: 20px; border-color: blue;border-width: 2px;background-image: url('../../../assets/img/fondo-test.png');">
+  style="border-radius: 20px;margin-top: 10px;margin-left: 20px;margin-right: 20px; border-color: blue;border-width: 2px;background-image: url('../../../assets/img/fondo-test2.png');">
         <div class="container" style="border-width: 2px;border-color: blue;">
           <a class="navbar-brand" href="/">
             <img src="{{asset('assets/img/logo.png')}}" width="200" alt="">
