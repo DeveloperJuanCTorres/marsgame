@@ -1,7 +1,6 @@
 <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"  data-navbar-on-scroll="data-navbar-on-scroll"> -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"
-  style="border-radius: 20px;margin-top: 10px;margin-left: 20px;margin-right: 20px; border-color: blue;border-width: 2px;background-image: url('../../../assets/img/fondo-test2.png');">
-        <div class="container" style="border-width: 2px;border-color: blue;">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll nav-header">
+        <div class="container">
           <a class="navbar-brand" href="/">
             <img src="{{asset('assets/img/logo.png')}}" width="200" alt="">
             <!-- <span class="text-primary fs-3 ms-2 fw-bolder">Mars</span><span class="fw-thin text-300 fs-3">Game</span> -->
