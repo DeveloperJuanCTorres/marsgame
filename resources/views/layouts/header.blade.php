@@ -9,24 +9,24 @@
           <div class="collapse navbar-collapse pt-4 pt-lg-0" id="navbarSupportedContent">
           
               <ul class="list-unstyled list-inline my-2" style="margin-left: auto;margin-left: auto;">
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fa-2x social-icons"></i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram fa-2x social-icons"></i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x social-icons"> </i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-linkedin fa-2x social-icons"></i></a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fa-2x text-white"></i></a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram fa-2x text-white"></i></a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x text-white"> </i></a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-linkedin fa-2x text-white"></i></a></li>
               </ul>
           
             <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
-              <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="/#">Home</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="/#products">Participar</a></li>
+              <li class="nav-item px-2"><a class="nav-link text-white" aria-current="page" href="/#">Home</a></li>
+              <li class="nav-item px-2"><a class="nav-link text-white" href="/#products">Participar</a></li>
               <!-- <li class="nav-item px-2"><a class="nav-link" href="/#clientes">Próximo Sorteo</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="/#ultimosorteos">Último Sorteos</a></li> -->
-              <li class="nav-item px-2"><a class="nav-link" href="/#promociones">Promociones</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="/#contact">Contáctanos</a></li>
+              <li class="nav-item px-2"><a class="nav-link text-white" href="/#promociones">Promociones</a></li>
+              <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
                   <button class="btn btn-sm d-flex" style="font-size: 20px;" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-user text-primary"> </i>
+                    <i class="fas fa-user text-primary text-white"> </i>
                   </button>                             
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth   
@@ -57,7 +57,7 @@
                              
             </div>
             <button class="btn btn-sm d-flex" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <i class="fas fa-shopping-cart text-primary"> </i>
+              <i class="fas fa-shopping-cart text-primary text-white"> </i>
               <span class="position-absolute top-10 start-97 translate-middle badge rounded-pill bg-danger" style="font-size: 8px;">
                 0
                 <span class="visually-hidden">unread messages</span>
