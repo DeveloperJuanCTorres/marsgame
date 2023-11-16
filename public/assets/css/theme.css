@@ -47,7 +47,7 @@
   --ensurance-info-rgb: 28, 22, 175;
   --ensurance-warning-rgb: 215, 174, 32;
   --ensurance-danger-rgb: 214, 80, 37;
-  --ensurance-light-rgb: 219, 228, 231;
+  --ensurance-light-rgb: 45, 46, 131;
   --ensurance-dark-rgb: 49, 56, 57;
   --ensurance-white-rgb: 255, 255, 255;
   --ensurance-black-rgb: 0, 0, 0;
@@ -10073,7 +10073,7 @@ textarea.form-control-lg {
 }
 
 .text-400 {
-  color: #93AFB6 !important;
+  color: #00983A !important;
 }
 
 .text-500 {
@@ -19869,8 +19869,8 @@ body {
   -ms-user-select: none;
   user-select: none;
   text-decoration: none;
-  /* background-color: white; */
-  background-color: #222222;
+  background-color: white;
+  /* background-color: #222222; */
   background-image: url("../img/building1.png");
 }
 
@@ -20200,8 +20200,8 @@ ul {
 }
 
 .card-soft-primary {
-  background: rgba(24, 107, 232, 0.08);
-  border: 1px solid rgba(24, 107, 232, 0.4);
+  background: rgba(45, 46, 131);
+  border: 1px solid rgba(45, 46, 131, 0.4);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -21889,6 +21889,7 @@ iframe.yt-video.loaded {
   margin-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
 }
 .icon-box .car-insurance-icon-hover {
   display: none !important;
@@ -21899,7 +21900,7 @@ iframe.yt-video.loaded {
   margin-right: auto;
 }
 .icon-box:hover {
-  background-color: #2D2E83;
+  background-color: #00983A;
 }
 .icon-box:hover .car-insurance-icon {
   display: none !important;
@@ -21969,7 +21970,7 @@ iframe.yt-video.loaded {
   width: 100%;
   left: 0;
   top: 0;
-  border: 1px solid #5EDCD4;
+  border: 2px solid #00983A;
   border-radius: 50%;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);

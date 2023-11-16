@@ -1,7 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"  data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container">
+<!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"  data-navbar-on-scroll="data-navbar-on-scroll"> -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"
+  style="border-radius: 20px;margin-top: 10px;margin-left: 20px;margin-right: 20px; border-color: blue;border-width: 2px;background-image: url('../../../assets/img/fondo-test.png');">
+        <div class="container" style="border-width: 2px;border-color: blue;">
           <a class="navbar-brand" href="/">
-            <img src="{{asset('assets/img/logo1.png')}}" width="200" alt="">
+            <img src="{{asset('assets/img/logo.png')}}" width="200" alt="">
             <!-- <span class="text-primary fs-3 ms-2 fw-bolder">Mars</span><span class="fw-thin text-300 fs-3">Game</span> -->
           </a>
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>

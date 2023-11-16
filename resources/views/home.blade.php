@@ -56,7 +56,7 @@
         </div>
         <!--/.bg-holder-->
 
-        <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-left.png);background-position:left;background-size:15% 100%;">
+        <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-left1.png);background-position:left;background-size:15% 100%;">
         </div>
         <!--/.bg-holder-->
 
@@ -137,19 +137,19 @@
               </div>
               <div class="row">
                 <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/support.png" height="60" alt="..." />
-                  <h4 class="mt-4 fw-normal text-200">24x7 Support</h4>
+                  <h4 class="mt-4 fw-normal text-light">24x7 Support</h4>
                   <p class="text-400 mb-md-0">Client is our most <br> important priority</p>
                 </div>
                 <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/edit.png" height="60" alt="..." />
-                  <h4 class="mt-4 fw-normal text-200">Easy Claim System</h4>
+                  <h4 class="mt-4 fw-normal text-light">Easy Claim System</h4>
                   <p class="text-400 mb-md-0">Express your desires <br>and needs to us</p>
                 </div>
                 <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/money.png" height="60" alt="..." />
-                  <h4 class="mt-4 fw-normal text-200">Easy installments</h4>
+                  <h4 class="mt-4 fw-normal text-light">Easy installments</h4>
                   <p class="text-400 mb-md-0">It's quick, safe, and simple. Select several methods of payment</p>
                 </div>
                 <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/security.png" height="60" alt="..." />
-                  <h4 class="mt-4 fw-normal text-200">Strongly Secured</h4>
+                  <h4 class="mt-4 fw-normal text-light">Strongly Secured</h4>
                   <p class="text-400 mb-md-0">Food is made and delivered directly to your home.</p>
                 </div>
               </div>
@@ -331,7 +331,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-0">
+      <!-- <section class="py-0">
 
         <div class="container">
           <div class="row align-items-center justify-content-xl-between">
@@ -343,9 +343,9 @@
             <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="assets/img/gallery/partner-5.png" height="40" alt="Partner" /></div>
           </div>
         </div>
-        <!-- end of .container-->
 
-      </section>
+
+      </section> -->
       <!-- <section> close ============================-->
       <!-- ============================================-->
      
