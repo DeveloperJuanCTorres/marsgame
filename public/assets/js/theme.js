@@ -69,6 +69,7 @@ var rgbaColor = function rgbaColor() {
 };
 /* --------------------------------- Colors --------------------------------- */
 
+var blue = 'linear-gradient(to right, #FFFFFF 25%, #2D2E83 25%, #2D2E83 80%, #2D2E83 100%)';
 
 var colors = {
   primary: '#0057FF',
@@ -78,7 +79,7 @@ var colors = {
   warning: '#f5803e',
   danger: '#e63757',
   light: '#f9fafd',
-  dark: '#222222'
+  dark: '#222'
 };
 var grays = {
   white: '#fff',

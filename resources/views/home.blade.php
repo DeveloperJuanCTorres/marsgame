@@ -12,12 +12,13 @@
 
         <div class="container">
           <div class="row align-items-center min-vh-100">
-            <div class="col-md-7 col-xl-7 text-md-start text-center">
-              <h1 class="display-2 text-light fw-thin">Obtendras grandes <br class="d-none d-xl-block" />beneficios <strong class="fw-bolder">MarsGame </strong></h1>
-              <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
+            <div class="col-md-7 col-xl-7 pt-9 text-md-start text-center">
+              <img src="{{asset('assets/img/premio1.png')}}" width="100%" alt="">
+              <!-- <h1 class="display-2 text-light fw-thin">Obtendras grandes <br class="d-none d-xl-block" />beneficios <strong class="fw-bolder">MarsGame </strong></h1>
+              <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
             </div>
             <div class="col-md-5 col-xl-5 pe-xxl-0">
-              <div class="card card-bg shadow">
+              <div class="card card-bg shadow hero-header-form">
                 <div class="card-body p-4 p-xl-6">
                   <h2 class="text-100 text-center">¡Obtén tus beneficios aquí!</h2>
                   <form class="mb-3">

@@ -1,6 +1,7 @@
 @media (max-width: 539.98px) {
     .nav-header {
-        background: linear-gradient(to right, #FFFFFF 20%, #2D2E83 20%, #2D2E83 80%, #2D2E83 100%);
+        background-color: #2D2E83;
+        /* background: linear-gradient(to right, #FFFFFF 20%, #2D2E83 20%, #2D2E83 80%, #2D2E83 100%); */
       }
 }
 
