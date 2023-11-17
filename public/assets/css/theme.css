@@ -3307,7 +3307,7 @@ progress {
   .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }
+  }  
 }
 @media (max-width: 719.98px) {
   .table-responsive-sm {
@@ -22078,12 +22078,6 @@ iframe.yt-video.loaded {
   font-size: 16px;
 }
 
-.nav-header {
-  background: linear-gradient(to right, #FFFFFF 30%, #2D2E83 30%, #2D2E83 80%, #2D2E83 100%);
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px; 
-  /* background-image: url('../../../assets/img/fondo-test2.png'); */
-  border: 1px solid #2D2E83;
-}
+
+
+

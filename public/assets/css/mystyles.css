@@ -1,0 +1,17 @@
+@media (max-width: 539.98px) {
+    .nav-header {
+        background: linear-gradient(to right, #FFFFFF 20%, #2D2E83 20%, #2D2E83 80%, #2D2E83 100%);
+      }
+}
+
+@media (min-width: 539.99px) {
+    .nav-header {
+        background: linear-gradient(to right, #FFFFFF 25%, #2D2E83 25%, #2D2E83 80%, #2D2E83 100%);
+        /* border-radius: 50px; */
+        /* margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;  */
+        /* background-image: url('../../../assets/img/fondo-test2.png'); */
+        border: 1px solid #2D2E83;
+      }
+}

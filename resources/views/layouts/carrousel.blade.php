@@ -1,23 +1,23 @@
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" 
-    style="margin-top: 150px; margin-left: 20px;margin-right: 20px; border-radius: 20px;">
+    style="margin-top: 100px; margin-left: 20px;margin-right: 20px; border-radius: 20px;">
   
   <div class="carousel-inner" style="border-radius: 20px;">
     <div class="carousel-item active" data-bs-interval="10000">
-      <img src="{{asset('assets/img/banner1.jpg')}}" class="d-block w-100" alt="...">
+      <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="...">
       <!-- <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div> -->
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-      <img src="{{asset('assets/img/banner1.jpg')}}" class="d-block w-100" alt="...">
+      <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="...">
       <!-- <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div> -->
     </div>
     <div class="carousel-item">
-      <img src="{{asset('assets/img/banner1.jpg')}}" class="d-block w-100" alt="...">
+      <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="...">
       <!-- <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>

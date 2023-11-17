@@ -1,5 +1,5 @@
 <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll"  data-navbar-on-scroll="data-navbar-on-scroll"> -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll nav-header">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top data-navbar-on-scroll nav-header">
         <div class="container">
           <a class="navbar-brand" href="/">
             <img src="{{asset('assets/img/logo.png')}}" width="200" alt="">
