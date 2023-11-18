@@ -13,7 +13,7 @@
         <div class="container">
           <div class="row align-items-center min-vh-100">
             <div class="col-md-7 col-xl-7 pt-9 text-md-start text-center">
-              <img src="{{asset('assets/img/premio1.png')}}" width="100%" alt="">
+              <img src="{{asset('assets/img/premio2.gif')}}" width="100%" alt="">
               <!-- <h1 class="display-2 text-light fw-thin">Obtendras grandes <br class="d-none d-xl-block" />beneficios <strong class="fw-bolder">MarsGame </strong></h1>
               <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
             </div>
@@ -53,8 +53,8 @@
         </div>
       </section>
       <section id="products">
-        <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-car-insurance.png);background-position:0 200px;background-size:100% 45%;">
-        </div>
+        <!-- <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-car-insurance.png);background-position:0 200px;background-size:100% 45%;">
+        </div> -->
         <!--/.bg-holder-->
 
         <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-left1.png);background-position:left;background-size:15% 100%;">
