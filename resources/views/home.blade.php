@@ -13,7 +13,7 @@
         <div class="container">
           <div class="row align-items-center min-vh-100">
             <div class="col-md-7 col-xl-7 pt-9 text-md-start text-center">
-              <img src="{{asset('assets/img/premio2.gif')}}" width="100%" alt="">
+              <img src="{{asset('assets/img/premio2.png')}}" width="100%" alt="">
               <!-- <h1 class="display-2 text-light fw-thin">Obtendras grandes <br class="d-none d-xl-block" />beneficios <strong class="fw-bolder">MarsGame </strong></h1>
               <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
             </div>
@@ -87,7 +87,8 @@
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
+                      <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/Rmj-q6SfKaE?si=v9t1pdHBLLoxtLnj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                        <!-- <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div> -->
                       </div>
                     </div>
                   </div>
@@ -98,7 +99,7 @@
                         <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
-                      <div class="col-md-6 col-xl-8 text-end">
+                      <div class="col-md-6 col-xl-8 text-end">                        
                         <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
                       </div>
                     </div>

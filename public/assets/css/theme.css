@@ -3307,7 +3307,7 @@ progress {
   .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }  
+  }
 }
 @media (max-width: 719.98px) {
   .table-responsive-sm {
@@ -19871,7 +19871,7 @@ body {
   text-decoration: none;
   background-color: white;
   /* background-color: #222222; */
-  background-image: url("../img/building1.png");
+  background-image: url("../img/building3.png");
 }
 
 pre,
@@ -21852,12 +21852,12 @@ iframe.yt-video.loaded {
   }
 }
 
-.feature-img {
+/* .feature-img {
   max-width: 100%;
   height: auto;
   border: 1px solid #5EDCD4;
   border-radius: 1.125rem;
-}
+} */
 @media (min-width: 1140px) {
   .feature-img {
     border-radius: 3.125rem;

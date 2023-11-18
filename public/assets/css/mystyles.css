@@ -3,16 +3,28 @@
         background-color: #2D2E83;
         /* background: linear-gradient(to right, #FFFFFF 20%, #2D2E83 20%, #2D2E83 80%, #2D2E83 100%); */
       }
+      .feature-img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #5EDCD4;
+        border-radius: 1.125rem;
+      }
 }
 
 @media (min-width: 539.99px) {
     .nav-header {
         background: linear-gradient(to right, #FFFFFF 25%, #2D2E83 25%, #2D2E83 80%, #2D2E83 100%);
-        /* border-radius: 50px; */
-        /* margin-top: 10px;
+        border-radius: 50px;
+         margin-top: 10px;
         margin-left: 20px;
-        margin-right: 20px;  */
+        margin-right: 20px; 
         /* background-image: url('../../../assets/img/fondo-test2.png'); */
         border: 1px solid #2D2E83;
+      }
+      .feature-img {
+        width: 560px;
+        height: 390px;
+        border: 1px solid #5EDCD4;
+        border-radius: 1.125rem;
       }
 }
