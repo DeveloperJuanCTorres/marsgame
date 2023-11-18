@@ -17,7 +17,7 @@
           
             <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
               <li class="nav-item px-2"><a class="nav-link text-white" aria-current="page" href="/#">Home</a></li>
-              <li class="nav-item px-2"><a class="nav-link text-white" href="/#products">Participar</a></li>
+              <li class="nav-item px-2"><a class="nav-link text-white" href="/#participar">Participar</a></li>
               <!-- <li class="nav-item px-2"><a class="nav-link" href="/#clientes">Próximo Sorteo</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="/#ultimosorteos">Último Sorteos</a></li> -->
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#promociones">Promociones</a></li>

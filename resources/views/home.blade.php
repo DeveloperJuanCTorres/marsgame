@@ -52,7 +52,7 @@
           </div>
         </div>
       </section>
-      <section id="products">
+      <section id="participar">
         <!-- <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-car-insurance.png);background-position:0 200px;background-size:100% 45%;">
         </div> -->
         <!--/.bg-holder-->
