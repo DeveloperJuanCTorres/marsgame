@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@include('layouts.header')
 @section('content')
 
     
@@ -99,8 +99,31 @@
                         <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
-                      <div class="col-md-6 col-xl-8 text-end">                        
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
+                      <div class="col-md-6 col-xl-8 text-center">                          
+                        <div id="carouselproximosorteo" class="carousel carousel-dark slide" data-bs-ride="carousel" 
+                            style="border-radius: 20px;">
+                          
+                          <div class="carousel-inner" style="border-radius: 20px;">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                              <img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                              <img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." />
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselproximosorteo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselproximosorteo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>                 
+                        <!-- <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div> -->
                       </div>
                     </div>
                   </div>
@@ -351,7 +374,13 @@
       <!-- <section> close ============================-->
       <!-- ============================================-->
      
+
+  @include('layouts.footer') 
+      
   @include('layouts.offcanvas')
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 
 @endsection
 

@@ -16,18 +16,28 @@
               </ul>
           
             <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
-              <li class="nav-item px-2"><a class="nav-link text-white" aria-current="page" href="/#">Home</a></li>
+              <li class="nav-item px-2"><a class="nav-link text-white" aria-current="page" href="/#">Inicio</a></li>
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#participar">Participar</a></li>
               <!-- <li class="nav-item px-2"><a class="nav-link" href="/#clientes">Próximo Sorteo</a></li>
               <li class="nav-item px-2"><a class="nav-link" href="/#ultimosorteos">Último Sorteos</a></li> -->
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#promociones">Promociones</a></li>
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
+            <button class="btn btn-sm d-flex" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <i class="fas fa-shopping-cart text-primary text-white"> </i>
+              <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
+                0
+              </span>
+            </button>  
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
+                  @auth
                   <button class="btn btn-sm d-flex" style="font-size: 20px;" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user text-primary text-white"> </i>
-                  </button>                             
+                  </button>   
+                  @else
+                  <a href="/login" class="btn btn-primary rounded-pill" style="padding: 10px 20px !important;background-color: white;color: 2D2E83;border-color: white;">Iniciar sesión</a>
+                  @endauth
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth   
                   <li><a class="dropdown-item" href="#">Datos Personales</a></li>
@@ -55,14 +65,7 @@
                 </ul> 
               </div>                                 
                              
-            </div>
-            <button class="btn btn-sm d-flex" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <i class="fas fa-shopping-cart text-primary text-white"> </i>
-              <span class="position-absolute top-10 start-97 translate-middle badge rounded-pill bg-danger" style="font-size: 8px;">
-                0
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>  
+            </div>            
           </div>
         </div>
     </nav>

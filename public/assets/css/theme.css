@@ -430,7 +430,7 @@
   --ensurance-pagination-disabled-bg: #fff;
   /* ---------------------------------- Card ---------------------------------- */
   --ensurance-card-border-color: rgba(0, 152, 58, 0.125);
-  --ensurance-card-cap-bg: rgba(0, 0, 0, 0.03);
+  --ensurance-card-cap-bg: rgba(45, 46, 131);
   --ensurance-card-cap-color: null;
   --ensurance-card-color: null;
   /* --------------------------------- Tooltip -------------------------------- */
@@ -6461,7 +6461,7 @@ textarea.form-control-lg {
 
 .btn .badge {
   position: relative;
-  top: -1px;
+  top: -10px;
 }
 
 @-webkit-keyframes progress-bar-stripes {

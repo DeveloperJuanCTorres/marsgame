@@ -28,3 +28,52 @@
         border-radius: 1.125rem;
       }
 }
+
+/* CARRUSEL */
+.js-carrusel {
+  display: flex;
+  width: 600px;
+  margin: auto;
+  justify-contetn:center;
+  align-items: center;
+}
+
+.js-carrusel > .direction {
+  width: 50px;
+  text-align: center;
+  font-size: 40px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.js-carrusel > .direction.disabled {
+  color: grey;
+  cursor: not-allowed;
+}
+
+.js-carrusel > .container {
+  flex-grow: 1;
+  background: red;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+#all_content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  transition: .5s;
+}
+
+#all_content > .content {
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  
+}
+/* FIN DE CARRUSEL */

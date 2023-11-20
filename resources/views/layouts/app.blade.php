@@ -95,11 +95,11 @@
                 </div>
             </div>
         </nav> -->
-        @include('layouts.header')
+        <!-- include('layouts.header') -->
         <main>
             @yield('content')
         </main>
-        @include('layouts.footer')
+        <!-- include('layouts.footer') -->
     <!-- </div> -->
     <!-- JavaScript Libraries -->
 
@@ -112,6 +112,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="{{asset('vendors/prism/prism.js')}}"></script>
     <script src="{{asset('assets/js/theme.js')}}"></script>
+    <script src="{{asset('assets/js/mystyles.js')}}"></script>
 
 </body>
 </html>
