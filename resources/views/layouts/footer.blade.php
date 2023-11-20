@@ -1,10 +1,10 @@
 <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="contact">
+      <section id="contact" style="background-color: rgb( 33, 41, 66 );">
 
         <div class="container">
           <div class="row">
-            <h2 class="text-light text-center mb-8">Contact Us</h2>
+            <h2 class="text-white text-center mb-8">Contact Us</h2>
             <div class="col-12 col-lg-6 col-xl-7 mb-4 order-0 order-sm-0">
               <a class="logo-footer fs-7" href="/">
                 <img src="{{asset('assets/img/logo.png')}}" width="350" alt="">
@@ -37,7 +37,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-0">
+      <section class="py-0" style="background-color: rgb( 33, 41, 66 );">
 
         <div class="container">
           <div class="row">

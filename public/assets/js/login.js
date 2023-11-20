@@ -345,3 +345,71 @@ anime({
     return (l - i) * 100;
   }
 });
+
+// FECHA DE NACIMIENTO
+$(document).ready(function() {
+  $('.js-date--west').mask('00/00/0000');
+  $('.js-date--europe').mask('00-00-0000')
+  $('.js-date--japan').mask('0000年00月00日');
+  // Validation
+  $('#js-form').formValidation({
+    framework: 'bootstrap',
+    icon: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+      dobUk: {
+        trigger: 'blur',
+        validators: {
+          notEmpty: {
+            message: 'Your date of birth is required'
+          },
+          date: {
+            format: 'DD/MM/YYYY',
+            message: 'Your date of birth is not valid'
+          }
+        }
+      },
+      dobEs: {
+        trigger: 'blur',
+        validators: {
+          notEmpty: {
+            message: 'Se requiere su fecha de nacimiento'
+          },
+          date: {
+            format: 'DD-MM-YYYY',
+            message: 'Su fecha de nacimiento no es válida'
+          }
+        }
+      },
+      dobUs: {
+        trigger: 'blur',
+        validators: {
+          notEmpty: {
+            message: 'Your date of birth is required'
+          },
+          date: {
+            format: 'MM/DD/YYYY',
+            message: 'Your date of birth is not valid'
+          }
+        }
+      },
+      dobJp: {
+        trigger: 'blur',
+        validators: {
+          notEmpty: {
+            message: '生年月日が必要となります'
+          },
+          stringLength: {
+            min: 11,
+            max: 11,
+            message: '生年月日は有効ではありません'
+          }
+        }
+      }
+    }
+  });
+});
+// FIN FECHA DE NACIMIENTO
