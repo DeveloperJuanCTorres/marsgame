@@ -23,8 +23,6 @@
             <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
               <li class="nav-item px-2"><a class="nav-link text-white" aria-current="page" href="/#">Inicio</a></li>
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#participar">Participar</a></li>
-              <!-- <li class="nav-item px-2"><a class="nav-link" href="/#clientes">Próximo Sorteo</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="/#ultimosorteos">Último Sorteos</a></li> -->
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#promociones">Promociones</a></li>
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
@@ -38,18 +36,19 @@
               <div class="dropdown">
                   @auth
                   <button class="btn btn-sm d-flex" style="font-size: 20px;" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-user text-primary text-white"> </i>
+                    <!-- <i class="fas fa-user text-primary text-white"> </i> -->
+                    <img class="imgclass" src="storage/{{ Auth::user()->avatar }}" alt="" style="width: 40px;border-radius: 60px;border:1px solid white">
                   </button>   
                   @else
                   <a href="/login" class="btn btn-primary rounded-pill" style="padding: 10px 20px !important;background-color: white;color: 2D2E83;border-color: white;">Iniciar sesión</a>
                   @endauth
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth   
-                  <li><a class="dropdown-item" href="#">Datos Personales</a></li>
-                  <li><a class="dropdown-item" href="#">Mis jugadas</a></li>
+                  <li><a class="dropdown-item" href="/perfil">Mi Cuenta</a></li>
+                  <!-- <li><a class="dropdown-item" href="#">Mis jugadas</a></li>
                   <li><a class="dropdown-item" href="#">Mis movimientos</a></li>
                   <li><a class="dropdown-item" href="#">Puntos acumulados</a></li>
-                  <li><a class="dropdown-item" href="#">Mis premios</a></li>
+                  <li><a class="dropdown-item" href="#">Mis premios</a></li> -->
                   @else
                   <li><a class="dropdown-item" href="/login">Login</a></li>
                   <li><a class="dropdown-item" href="/register">Registrarme</a></li>

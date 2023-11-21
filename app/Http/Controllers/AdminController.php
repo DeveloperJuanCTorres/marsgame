@@ -10,4 +10,8 @@ class AdminController extends Controller
         $nav = 'Inicio';
         return view('home',compact('nav'));
     }
+
+    public function perfil(){
+        return view('profile');
+    }
 }

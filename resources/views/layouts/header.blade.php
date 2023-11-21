@@ -40,7 +40,7 @@
                   @endauth
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth   
-                  <li><a class="dropdown-item" href="#">Datos Personales</a></li>
+                  <li><a class="dropdown-item" href="/perfil">Mi Perfil</a></li>
                   <li><a class="dropdown-item" href="#">Mis jugadas</a></li>
                   <li><a class="dropdown-item" href="#">Mis movimientos</a></li>
                   <li><a class="dropdown-item" href="#">Puntos acumulados</a></li>

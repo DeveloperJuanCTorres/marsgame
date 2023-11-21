@@ -27,7 +27,7 @@
     <?php
         $version = '1993.1.4';
     ?>
-
+<link rel="stylesheet" href="{{asset('assets1/css/templatemo-cyborg-gaming.css')}}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
@@ -60,6 +60,9 @@
     <script src="{{asset('vendors/prism/prism.js')}}"></script>
     <script src="{{asset('assets/js/theme.js')}}"></script>
     <script src="{{asset('assets/js/mystyles.js')}}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+<script src="{{asset('assets/js/login.js')}}"></script>
 
 </body>
 </html>

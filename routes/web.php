@@ -26,7 +26,7 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::middleware(['auth'])->group(function(){
-    
+    Route::get('/perfil',[AdminController::class, 'perfil'])->name('perfil');
 });
 
 Auth::routes();
