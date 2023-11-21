@@ -44,11 +44,22 @@
                   @endauth
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth   
-                  <li><a class="dropdown-item" href="/perfil">Mi Cuenta</a></li>
-                  <!-- <li><a class="dropdown-item" href="#">Mis jugadas</a></li>
-                  <li><a class="dropdown-item" href="#">Mis movimientos</a></li>
-                  <li><a class="dropdown-item" href="#">Puntos acumulados</a></li>
-                  <li><a class="dropdown-item" href="#">Mis premios</a></li> -->
+                  <div class="row p-2">
+                    <div class="col-7">
+                      <span class="text-black">Juan Torres</span>
+                    </div>
+                    <div class="col-5">
+                      <span class="text-black">S/. 0.00</span>
+                    </div>
+                  </div>
+                  <div class="row p-2">
+                    <div class="col-6">
+                      <button class="btn btn-primary" style="padding: 10px;width: 100%;">Retirar</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="btn btn-secondary" style="padding: 10px;width: 100%;">Depositar</button>
+                    </div>
+                  </div>  
                   @else
                   <li><a class="dropdown-item" href="/login">Login</a></li>
                   <li><a class="dropdown-item" href="/register">Registrarme</a></li>
@@ -56,10 +67,15 @@
                   
                   @auth
                   <li><hr class="dropdown-divider"></li>
-                  <li>
+                  <li>                    
+                    <a class="dropdown-item" href="/perfil">
+                      <i class="fa fa-user" aria-hidden="true"></i>Mi Cuenta 
+                    </a>
+                  </li>
+                  <li class="pb-4">
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                        🚪 Cerrar sesión 
+                        <i class="fa fa-clone" aria-hidden="true"></i> Cerrar sesión
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
@@ -356,8 +372,78 @@
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section id="promociones" style="padding-top: 0;">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-light text-center my-5">Promociones</h2>
+        </div>
+        <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
+       
+          <div class="col-xs-12 col-lg-4 pt-4">
+            <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
+              <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
+              <div class="card1-header">
+                <h3 class="display-2 text-white"><span class="currency">S/.</span>19<span class="period">/1 mes</span></h3>
+              </div>
+              <div class="card1-block">
+                <h4 class="card1-title text-white"> 
+                  Plan Básico
+                </h4>
+                <ul class="list-group padding-left-0">
+                  <li class="list-group-item">Ultimate Features</li>
+                  <li class="list-group-item">Responsive Ready</li>
+                  <li class="list-group-item">Visual Composer Included</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
+              </div>
+            </div>
+          </div>
 
-        <div class="container">
+          <div class="col-xs-12 col-lg-4 pt-4">
+            <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
+              <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
+              <div class="card1-header">
+                <h3 class="display-2 text-white"><span class="currency">S/.</span>29<span class="period">/2 meses</span></h3>
+              </div>
+              <div class="card1-block">
+                <h4 class="card1-title text-white"> 
+                  Plan Regular
+                </h4>
+                <ul class="list-group padding-left-0">
+                  <li class="list-group-item">Ultimate Features</li>
+                  <li class="list-group-item">Responsive Ready</li>
+                  <li class="list-group-item">Visual Composer Included</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-lg-4 pt-4">
+            <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
+              <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
+              <div class="card1-header">                
+                <h3 class="display-2 text-white"><span class="currency">S/.</span>39<span class="period">/3 meses</span></h3>
+              </div>
+              <div class="card1-block">
+                <h4 class="card1-title text-white"> 
+                  Plan Premium
+                </h4>
+                <ul class="list-group padding-left-0">
+                  <li class="list-group-item">Ultimate Features</li>
+                  <li class="list-group-item">Responsive Ready</li>
+                  <li class="list-group-item">Visual Composer Included</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+        <!-- <div class="container">
           <div class="row">
             <h2 class="text-light text-center my-5">Promociones</h2>
           </div>
@@ -416,7 +502,9 @@
                   </svg></a></div>
             </div>
           </div>
-        </div>
+        </div> -->
+
+
         <!-- end of .container-->
 
       </section>

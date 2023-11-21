@@ -56,11 +56,22 @@
                   @endauth
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth
-                  <li><a class="dropdown-item" href="/perfil">Mi Cuenta </a></li>
-                  <!-- <li><a class="dropdown-item" href="#">Mis jugadas</a></li>
-                  <li><a class="dropdown-item" href="#">Mis movimientos</a></li>
-                  <li><a class="dropdown-item" href="#">Puntos acumulados</a></li>
-                  <li><a class="dropdown-item" href="#">Mis premios</a></li> -->
+                  <div class="row p-2">
+                    <div class="col-7">
+                      <span class="text-black">Juan Torres</span>
+                    </div>
+                    <div class="col-5">
+                      <span class="text-black">S/. 0.00</span>
+                    </div>
+                  </div>
+                  <div class="row p-2">
+                    <div class="col-6">
+                      <button class="btn btn-primary" style="padding: 10px;width: 100%;">Retirar</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="btn btn-secondary" style="padding: 10px;width: 100%;">Depositar</button>
+                    </div>
+                  </div>                  
                   @else
                   <li><a class="dropdown-item" href="/login">Login</a></li>
                   <li><a class="dropdown-item" href="/register">Registrarme</a></li>
@@ -68,10 +79,15 @@
 
                   @auth
                   <li><hr class="dropdown-divider"></li>
-                  <li>
+                  <li>                    
+                    <a class="dropdown-item" href="/perfil">
+                      <i class="fa fa-user" aria-hidden="true"></i>Mi Cuenta 
+                    </a>
+                  </li>
+                  <li class="pb-4">
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                        🚪 Cerrar sesión
+                        <i class="fa fa-clone" aria-hidden="true"></i> Cerrar sesión
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf

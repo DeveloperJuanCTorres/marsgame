@@ -4316,8 +4316,8 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color: #fff;
-  background-color: #186BE8;
-  border-color: #186BE8;
+  background-color: #2D2E83;
+  border-color: #2D2E83;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -21539,7 +21539,8 @@ html[dir=rtl] .googlemap .gm-style-iw.gm-style-iw-c button[title=Close] {
 |   Dropdown
 -----------------------------------------------*/
 .dropdown-menu {
-  font-size: 0.8rem;
+  width: 250px;
+  /* font-size: 0.8rem; */
   border-radius: 0.7rem;
 }
 
@@ -22077,6 +22078,102 @@ iframe.yt-video.loaded {
 .cti-3 {
   font-size: 16px;
 }
+
+.padding-left-0 {
+  padding-left: inherit;
+}
+
+
+/* CARD INICIO */
+
+
+/* .row1 {
+  min-height: 100vh;
+}  */
+
+.card1 {
+  max-width: 400px !important;
+  border: 0;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 0px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  padding: 0 0 2.25rem 0;
+  position: relative;
+  will-change: transform;
+}
+.card1:after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #00983A;
+  transition: 0.5s;
+}
+.card1:hover {
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.08);
+}
+.card1:hover:after {
+  width: 100%;
+}
+.card1 .card1-header {
+  /* background-color: white; */
+  padding-left: 2rem;
+  border-bottom: 0px;
+}
+.card1 .card1-title {
+  margin-bottom: 1rem;
+}
+.card1 .card1-block {
+  padding-top: 0;
+}
+.card1 .list-group-item {
+  border: 0px;
+  padding: 0.25rem;
+  color: #f1f1f1;
+  font-weight: 300;
+}
+
+.display-2 {
+  font-size: 7rem;
+  letter-spacing: -0.5rem;
+}
+.display-2 .currency {
+  font-size: 2.75rem;
+  position: relative;
+  font-weight: 400;
+  top: -45px;
+  letter-spacing: 0px;
+}
+.display-2 .period {
+  font-size: 1rem;
+  color: #b3b3b3;
+  letter-spacing: 0px;
+}
+
+.btn1 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 20px;
+  padding: 0.75rem 1.25rem;
+  letter-spacing: 1px;
+}
+
+.btn-gradient {
+  background-color: #00983A;
+  transition: background 0.3s ease-in-out;
+}
+.btn-gradient:hover {
+  color: #2D2E83;
+  background-color: white;
+}
+/* CARD FIN */
 
 
 

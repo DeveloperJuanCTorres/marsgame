@@ -1,4 +1,4 @@
-<div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">   
+<div class="offcanvas offcanvas-end bg-primary" style="display: block;height: 100%;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">   
     <div class="offcanvas-header">
         <h4 class="text-white" id="offcanvasRightLabel">
             <i class="fas fa-shopping-cart text-white mx-2"> </i> Tu carrito
@@ -37,9 +37,10 @@
                         <button class="btn btn-secondary" style="width: 100%; background-color: transparent !important;" type="submit">Limpiar</button>
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-primary" style="width: 100%;" type="submit">Comprar</button>
+                        <button class="btn btn-primary" id="btn_pagar" style="width: 100%;" type="submit">Comprar</button>
                     </div>
             </div>
         </div>
     </div>
 </div>
+

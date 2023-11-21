@@ -41,7 +41,11 @@
     <!-- Scripts -->
     <!-- vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 </head>
-<body>    
+<body>
+<script src="https://checkout.culqi.com/js/v4"></script>
+  <script>
+    Culqi.publicKey = 'sk_test_07e2b9f728f921sd';
+  </script>    
         <!-- include('layouts.header') -->
         <main>
             @yield('content')
@@ -63,6 +67,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
 <script src="{{asset('assets/js/login.js')}}"></script>
+
+<script src="{{asset('assets/js/culqi.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://checkout.culqi.com/js/v4"></script>
 
 </body>
 </html>
