@@ -47,9 +47,10 @@
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
                   @auth
-                  <button class="btn btn-sm d-flex" style="font-size: 20px;" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-sm d-flex" style="border: 1px solid white;border-radius: 25px;" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     <!-- <i class="fas fa-user text-primary text-white"> </i> -->
-                    <img class="imgclass" src="storage/{{ Auth::user()->avatar }}" alt="" style="width: 40px;border-radius: 60px;border:1px solid white">
+                    <img class="imgclass" src="storage/{{ Auth::user()->avatar }}" alt="" style="width: 30px;border-radius: 60px;">
+                    <span class="text-white text-justify-center px-2" style="display: block;margin-top: auto;margin-bottom: auto;">S/. 0.00</span>
                   </button>
                   @else
                   <a href="/login" class="btn btn-primary rounded-pill" style="padding: 10px 20px !important;background-color: white;color: 2D2E83;border-color: white;">Iniciar sesión</a>
@@ -58,7 +59,7 @@
                   @auth
                   <div class="row p-2">
                     <div class="col-7">
-                      <span class="text-black">Juan Torres</span>
+                      <span class="text-black" style="font-size: small;font-weight: bold;">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</span>
                     </div>
                     <div class="col-5">
                       <span class="text-black">S/. 0.00</span>
@@ -114,7 +115,7 @@
               <div class="main-profile ">
                 <div class="row">
                   <div class="col-lg-4">
-                    <img class="imgclass" src="storage/{{ Auth::user()->avatar }}" alt="" style="border-radius: 23px;">
+                    <img class="imgclass1" src="storage/{{ Auth::user()->avatar }}" alt="">
                   </div>
                   <div class="col-lg-4 align-self-center">
                     <div class="main-info header-text">

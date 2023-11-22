@@ -111,6 +111,12 @@ p {
   color: #fff;
 }
 
+.imgclass1 {
+  max-width: 350px;
+  border-radius: 700px;
+  overflow: hidden;
+}
+
 .imgclass {
   width: 100%;
   overflow: hidden;

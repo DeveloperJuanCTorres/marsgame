@@ -46,7 +46,7 @@
 
 <div class="animated bounceInDown">
     <div class="p-2" style="position: fixed;">
-      <span><i class="fa fa-reply"></i><a href="/"> Regresar</a></span>
+      <a class="btn-l btn-login px-4" href="/"><i class="fa fa-reply"></i>   Página de inicio</a>
     </div>
   <div class="container-register">
     <span class="error animated tada" id="msg"></span>
@@ -88,7 +88,7 @@
 
 <link href="{{asset('assets/css/login.css')}}?v=1993.0.4" rel="stylesheet">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
 @endsection

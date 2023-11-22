@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <?php
-        $version = '1993.2.0';
+        $version = '1993.2.1';
     ?>
 <link rel="stylesheet" href="{{asset('assets1/css/templatemo-cyborg-gaming.css')}}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -66,11 +66,13 @@
     <script src="{{asset('assets/js/mystyles.js')}}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-<script src="{{asset('assets/js/login.js')}}"></script>
+    <script src="{{asset('assets/js/login.js')}}"></script>
 
-<script src="{{asset('assets/js/culqi.js')}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://checkout.culqi.com/js/v4"></script>
+    <script src="{{asset('assets/js/culqi.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://checkout.culqi.com/js/v4"></script>
+    @stack('script')
+
 
 </body>
 </html>
