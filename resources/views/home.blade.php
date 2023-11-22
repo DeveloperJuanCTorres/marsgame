@@ -111,7 +111,7 @@
               <div class="text-center">
                 <a class="btn btn-primary" style="color: white;border-radius: 15px;width: 250px;" href="">Quiero registrarme</a>
               </div> -->
-              <img src="{{asset('assets/img/gane.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="50%" alt="">
+              <img src="{{asset('assets/img/gane.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="50%">
               <div class="card card-bg shadow">
                 <div class="card-body p-4 p-xl-6">
                   <h2 class="text-100 text-white">Tenemos premios todas las semanas, ¡Ven y participa Aquí!</h2>
