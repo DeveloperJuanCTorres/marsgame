@@ -5,19 +5,19 @@
     
     <div class="carousel-item active contenedor" data-bs-interval="10000">
       <div class="container py-1 ben-banner"
-            style="background-image: url(http://127.0.0.1:8000/assets/img/banner5.jpg)">      
+            style="background-image: url(https://marsgame.pe/assets/img/banner5.jpg)">      
       </div>
       <!-- <img src="{{asset('assets/img/banner2.jpg')}}" class="img-contenedor" alt="..."> -->
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <div class="container py-1 ben-banner"
-            style="background-image: url(http://127.0.0.1:8000/assets/img/banner3.jpg)">      
+            style="background-image: url(https://marsgame.pe/assets/img/banner3.jpg)">      
       </div>
       <!-- <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="..."> -->
     </div>
     <div class="carousel-item">
       <div class="container py-1 ben-banner"
-            style="background-image: url(http://127.0.0.1:8000/assets/img/banner4.jpg)">      
+            style="background-image: url(https://marsgame.pe/assets/img/banner4.jpg)">      
       </div>
       <!-- <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="..."> -->
     </div>
