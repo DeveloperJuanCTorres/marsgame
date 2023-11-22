@@ -2,14 +2,24 @@
     style="margin-top: 100px; margin-left: 20px;margin-right: 20px; border-radius: 20px;">
   
   <div class="carousel-inner" style="border-radius: 20px;">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="...">
+    
+    <div class="carousel-item active contenedor" data-bs-interval="10000">
+      <div class="container py-1 ben-banner"
+            style="background-image: url(http://127.0.0.1:8000/assets/img/banner5.jpg)">      
+      </div>
+      <!-- <img src="{{asset('assets/img/banner2.jpg')}}" class="img-contenedor" alt="..."> -->
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-      <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="...">
+      <div class="container py-1 ben-banner"
+            style="background-image: url(http://127.0.0.1:8000/assets/img/banner3.jpg)">      
+      </div>
+      <!-- <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="..."> -->
     </div>
     <div class="carousel-item">
-      <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="...">
+      <div class="container py-1 ben-banner"
+            style="background-image: url(http://127.0.0.1:8000/assets/img/banner4.jpg)">      
+      </div>
+      <!-- <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="..."> -->
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">

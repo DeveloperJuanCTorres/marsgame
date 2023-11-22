@@ -101,16 +101,21 @@
         <div class="container">
           <div class="row align-items-center min-vh-100">
             <div class="col-md-7 col-xl-7 pt-9 text-md-start text-center">
-              <img src="{{asset('assets/img/premio2.png')}}" width="100%" alt="">
+              <img src="{{asset('assets/img/premio.png')}}" width="100%" alt="">
               <!-- <h1 class="display-2 text-light fw-thin">Obtendras grandes <br class="d-none d-xl-block" />beneficios <strong class="fw-bolder">MarsGame </strong></h1>
               <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
             </div>
             <div class="col-md-5 col-xl-5 pe-xxl-0">
-              <div class="card card-bg shadow hero-header-form">
+              <!-- <h1 class="text-light" style="width: 400px;">¡Ven y participa aquí!</h1>
+              <div class="text-center">
+                <a class="btn btn-primary" style="color: white;border-radius: 15px;width: 250px;" href="">Quiero registrarme</a>
+              </div> -->
+              <img src="{{asset('assets/img/gane.gif')}}" style="display: block;margin-left: auto;margin-right: auto;" width="50%" alt="">
+              <div class="card card-bg shadow">
                 <div class="card-body p-4 p-xl-6">
-                  <h2 class="text-100 text-center">¡Obtén tus beneficios aquí!</h2>
-                  <form class="mb-3">
-                    <div class="form-floating mb-3">
+                  <h2 class="text-100 text-white">Tenemos premios todas las semanas, ¡Ven y participa Aquí!</h2>
+                  <form class="mb-3 mt-4">
+                    <!-- <div class="form-floating mb-3">
                       <input class="form-control input-box form-ensurance-header-control" id="floatingName" type="text" placeholder="name" />
                       <label for="floatingName">Your name</label>
                     </div>
@@ -129,9 +134,9 @@
                     <div class="form-floating mb-3">
                       <textarea class="form-control input-box form-ensurance-header-control" id="floatingTextarea" placeholder="Leave a comment here"></textarea>
                       <label for="floatingTextarea">Comments</label>
-                    </div>
+                    </div> -->
                     <div class="col-12 d-grid">
-                      <button class="btn btn-primary rounded-pill" type="submit">Quiero ser suscriptor</button>
+                      <a class="btn btn-primary rounded-pill text-white" href="/register">Quiero Registrarme</a>
                     </div>
                   </form>
                 </div>
