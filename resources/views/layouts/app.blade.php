@@ -25,9 +25,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <?php
-        $version = '1993.2.3';
+        $version = '1993.2.4';
     ?>
-<link rel="stylesheet" href="{{asset('assets1/css/templatemo-cyborg-gaming.css')}}">
+    <link rel="stylesheet" href="{{asset('assets1/css/templatemo-cyborg-gaming.css')}}?v=<?php echo $version ?>">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
