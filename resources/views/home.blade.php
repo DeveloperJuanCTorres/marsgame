@@ -5,7 +5,7 @@
 <!-- HEADER -->
 <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll nav-header"  data-navbar-on-scroll="data-navbar-on-scroll"> -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top data-navbar-on-scroll nav-header">
-        <div class="container">
+        <div class="container-xxl">
           <a class="navbar-brand" href="/">
             <img src="{{asset('assets/img/logo.png')}}" width="200" alt="">
             <!-- <span class="text-primary fs-3 ms-2 fw-bolder">Mars</span><span class="fw-thin text-300 fs-3">Game</span> -->
