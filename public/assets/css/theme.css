@@ -1230,6 +1230,9 @@ progress {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1480px;
   }
+  .container-carrusel {
+    max-width: 3800px;
+  }
 }
 .row {
   --ensurance-gutter-x: 2rem;
