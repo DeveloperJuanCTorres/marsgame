@@ -165,7 +165,7 @@ p {
 .main-button a {
   font-size: 14px;
   color: #fff;
-  background-color: #e75e8d;
+  background-color: #00983A;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -205,13 +205,13 @@ p {
 }
 
 .border-no-active a {
-  border-color: #666;
-  color: #666;
+  border-color: #00983A;
+  color: #00983A;
 }
 
 .border-no-active a:hover{
-  border-color: #666;
-  color: #666;
+  border-color: white;
+  color: white;
   background-color: transparent;
 }
 
@@ -220,7 +220,7 @@ p {
 } */
 
 .heading-section h4 {
-  color: #2D2E83;
+  color: white;
   font-size: 34px;
   text-decoration: none;
   margin-bottom: 30px;
@@ -931,7 +931,7 @@ Gaming Library Style
 }
 
 .gaming-library .item ul li span {
-  color: #666;
+  color: #00983A;
   font-size: 14px;
 }
 
