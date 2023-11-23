@@ -41,7 +41,7 @@
                     <span class="text-white text-justify-center px-2" style="display: block;margin-top: auto;margin-bottom: auto;">S/. 0.00</span>
                   </button>   
                   @else
-                  <a href="/login" class="btn btn-primary rounded-pill" style="padding: 10px 20px !important;background-color: white;color: 2D2E83;border-color: white;">Iniciar sesión</a>
+                  <a href="/login" class="btn btn-sm d-flex btn-border text-white">Iniciar sesión</a>
                   @endauth
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth   
@@ -388,7 +388,7 @@
             <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
               <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
               <div class="card1-header">
-                <h3 class="display-2 text-white"><span class="currency">S/.</span>19<span class="period">/1 mes</span></h3>
+                <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>19<span class="period">/1 mes</span></h3>
               </div>
               <div class="card1-block">
                 <h4 class="card1-title text-white"> 
@@ -409,7 +409,7 @@
             <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
               <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
               <div class="card1-header">
-                <h3 class="display-2 text-white"><span class="currency">S/.</span>29<span class="period">/2 meses</span></h3>
+                <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>29<span class="period">/2 meses</span></h3>
               </div>
               <div class="card1-block">
                 <h4 class="card1-title text-white"> 
@@ -430,7 +430,7 @@
             <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
               <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
               <div class="card1-header">                
-                <h3 class="display-2 text-white"><span class="currency">S/.</span>39<span class="period">/3 meses</span></h3>
+                <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>39<span class="period">/3 meses</span></h3>
               </div>
               <div class="card1-block">
                 <h4 class="card1-title text-white"> 
