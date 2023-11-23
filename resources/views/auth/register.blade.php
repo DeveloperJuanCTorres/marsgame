@@ -54,7 +54,14 @@
         @csrf
     
       <img class="mt-4" src="{{asset('assets/img/logo.png')}}" width="300" alt="">
-        <input id="name" type="text" placeholder="Nombre" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+        <div>
+          <input id="name" type="text" class="@error('name') is-invalid @enderror" placeholder="Nombre" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+          @error('name')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+        </div>
         <input id="last_name" type="text" placeholder="Apellidos" name="last_name" value="{{ old('last_name') }}" required autocomplete="name">
         <select name="tipo_doc" id="tipodoc" value="{{ old('tipodoc') }}" required>
             <option value="DNI">DNI</option>
@@ -68,16 +75,17 @@
         <div>
             <i class="typcn typcn-eye" id="eye"></i>
             <input id="pwd" placeholder="Password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+            @error('password')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+            @enderror
         </div>
         <div>
             <i class="typcn typcn-eye" id="eye"></i>
             <input placeholder="Confirmar Password" id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
         </div>
         <div class="mx-5 g-recaptcha" data-sitekey="6LdgFhopAAAAAFEizQmgWxRVgWhBKM6XCnNIf_lx"></div>
-        <!-- <button type="submit" class="btn1 g-recaptcha" 
-        data-sitekey="6LdHHhopAAAAAHVrAJpHWfl_xZPL-1RClLAauEgS" 
-        data-callback='onSubmit' 
-        data-action='submit'>Registrarme</button> -->
         <input type="submit" value="Registrarme" class="btn1">
       </form>
         <a href="/login" class="dnthave">¿Ya tienes cuenta? Iniciar Sesión</a>

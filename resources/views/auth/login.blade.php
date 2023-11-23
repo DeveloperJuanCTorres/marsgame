@@ -55,9 +55,23 @@
       <!-- <h4>Admin<span>Dashboard</span></h4>
       <h5>Sign in to your account.</h5> -->
       <img class="mt-4" src="{{asset('assets/img/logo.png')}}" width="300" alt="">
-        <input type="text" name="email" placeholder="Email" autocomplete="off">
-        <i class="typcn typcn-eye" id="eye"></i>
-        <input type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off">
+        <div>
+          <input type="text" name="email" class="@error('email') is-invalid @enderror" placeholder="Email" autocomplete="off">
+          @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+          @enderror
+        </div>
+        <div>
+          <i class="typcn typcn-eye" id="eye"></i>
+          <input type="password" name="password" class="@error('password') is-invalid @enderror" placeholder="Passsword" id="pwd" autocomplete="off">
+          @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+          @enderror
+        </div>
         <label>
           <input type="checkbox">
           <span></span>
