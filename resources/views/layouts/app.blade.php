@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'MarsGame') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <?php
-        $version = '1993.2.8';
+        $version = '1993.2.9';
     ?>
     <link rel="stylesheet" href="{{asset('assets1/css/templatemo-cyborg-gaming.css')}}?v=<?php echo $version ?>">
     <link rel="preconnect" href="https://fonts.gstatic.com">
