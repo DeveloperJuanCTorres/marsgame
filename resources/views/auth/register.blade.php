@@ -74,7 +74,13 @@
             <input placeholder="Confirmar Password" id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
         </div>
 
-        
+        <div style="margin-left: 50px;">
+          <form action="?" method="POST">
+            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+            <br/>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
 
         <input type="submit" value="Registrarme" class="btn1">
       </form>
