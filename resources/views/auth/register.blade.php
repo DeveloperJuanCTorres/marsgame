@@ -73,12 +73,12 @@
             <i class="typcn typcn-eye" id="eye"></i>
             <input placeholder="Confirmar Password" id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
         </div>
-
-        <button type="submit" class="btn1 g-recaptcha" 
+        <div class="mx-5 g-recaptcha" data-sitekey="6LdgFhopAAAAAFEizQmgWxRVgWhBKM6XCnNIf_lx"></div>
+        <!-- <button type="submit" class="btn1 g-recaptcha" 
         data-sitekey="6LdHHhopAAAAAHVrAJpHWfl_xZPL-1RClLAauEgS" 
         data-callback='onSubmit' 
-        data-action='submit'>Registrarme</button>
-        <!-- <input type="submit" value="Registrarme" class="btn1"> -->
+        data-action='submit'>Registrarme</button> -->
+        <input type="submit" value="Registrarme" class="btn1">
       </form>
         <a href="/login" class="dnthave">¿Ya tienes cuenta? Iniciar Sesión</a>
   </div> 
@@ -92,7 +92,7 @@
         data-callback='onSubmit' 
         data-action='submit'>Submit</button> -->
 
-<link href="{{asset('assets/css/login.css')}}?v=1993.0.6" rel="stylesheet">
+<link href="{{asset('assets/css/login.css')}}?v=1993.0.7" rel="stylesheet">
 
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel="stylesheet">
