@@ -74,7 +74,11 @@
             <input placeholder="Confirmar Password" id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
         </div>
 
-        <input type="submit" value="Registrarme" class="btn1">
+        <button type="submit" class="btn1 g-recaptcha" 
+        data-sitekey="6LdHHhopAAAAAHVrAJpHWfl_xZPL-1RClLAauEgS" 
+        data-callback='onSubmit' 
+        data-action='submit'>Registrarme</button>
+        <!-- <input type="submit" value="Registrarme" class="btn1"> -->
       </form>
         <a href="/login" class="dnthave">¿Ya tienes cuenta? Iniciar Sesión</a>
   </div> 
@@ -83,10 +87,10 @@
     </div> -->
 </div>
 
-<button class="g-recaptcha" 
+<!-- <button class="g-recaptcha" 
         data-sitekey="6LdHHhopAAAAAHVrAJpHWfl_xZPL-1RClLAauEgS" 
         data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+        data-action='submit'>Submit</button> -->
 
 <link href="{{asset('assets/css/login.css')}}?v=1993.0.6" rel="stylesheet">
 
