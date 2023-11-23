@@ -39,7 +39,6 @@
     
 
     <!-- Scripts -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 </head>
 <body>
@@ -72,6 +71,8 @@
     <script src="{{asset('assets/js/culqi.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://checkout.culqi.com/js/v4"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     @stack('script')
 
 

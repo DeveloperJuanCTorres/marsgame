@@ -50,7 +50,7 @@
     </div>
   <div class="container-register">
     <span class="error animated tada" id="msg"></span>
-    <form method="POST" action="{{ route('register') }}" name="form1" class="box" onsubmit="return checkStuff()">
+    <form method="POST" action="{{ route('register') }}" name="form1" id="form1" class="box" onsubmit="return checkStuff()">
         @csrf
     
       <img class="mt-4" src="{{asset('assets/img/logo.png')}}" width="300" alt="">
@@ -74,14 +74,6 @@
             <input placeholder="Confirmar Password" id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
         </div>
 
-        <div style="margin-left: 50px;">
-          <form action="?" method="POST">
-            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-            <br/>
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-
         <input type="submit" value="Registrarme" class="btn1">
       </form>
         <a href="/login" class="dnthave">¿Ya tienes cuenta? Iniciar Sesión</a>
@@ -91,10 +83,20 @@
     </div> -->
 </div>
 
+<button class="g-recaptcha" 
+        data-sitekey="6LdHHhopAAAAAHVrAJpHWfl_xZPL-1RClLAauEgS" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
 
-<link href="{{asset('assets/css/login.css')}}?v=1993.0.5" rel="stylesheet">
+<link href="{{asset('assets/css/login.css')}}?v=1993.0.6" rel="stylesheet">
 
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+
+<script>
+   function onSubmit(token) {
+     document.getElementById("form1").submit();
+   }
+ </script>
 @endsection
