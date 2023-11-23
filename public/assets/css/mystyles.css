@@ -1,6 +1,7 @@
 @media (max-width: 539.98px) {
     .nav-header {
-        background-color: #2D2E83;
+        background-color: white;
+        color: blue;
         /* background: linear-gradient(to right, #FFFFFF 20%, #2D2E83 20%, #2D2E83 80%, #2D2E83 100%); */
       }
       .feature-img {
@@ -8,6 +9,13 @@
         height: auto;
         border: 1px solid #5EDCD4;
         border-radius: 1.125rem;
+      }
+      .text-white {
+        color: #2D2E83 !important;
+      }
+      .btn-border {
+        border: 1px solid #2D2E83 !important;
+        border-radius: 25px !important;
       }
 }
 
@@ -26,6 +34,13 @@
         height: 390px;
         border: 1px solid #5EDCD4;
         border-radius: 1.125rem;
+      }
+      .text-white {
+        color: #fff !important;
+      }
+      .btn-border {
+        border: 1px solid white !important;
+        border-radius: 25px !important;
       }
 }
 

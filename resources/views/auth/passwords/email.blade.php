@@ -52,7 +52,7 @@
     <span class="error animated tada" id="msg"></span>
     @if (session('status'))
         <div class="alert alert-success" role="alert">
-            ¡Le hemos enviado por correo electrónico el enlace para restablecer su contraseña!
+            ¡Le hemos enviado por correo electrónico el enlace para restablecer su contraseña!, revisar su carpeta de SPAN
         </div>
     @endif
     <form method="POST" action="{{ route('password.email') }}" name="form1" class="box" onsubmit="return checkStuff()">

@@ -1,5 +1,5 @@
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" 
-    style="margin-top: 100px; margin-left: 20px;margin-right: 20px; border-radius: 20px;">
+    style="margin-top: 130px; margin-left: 20px;margin-right: 20px; border-radius: 20px;">
   
   <div class="carousel-inner" style="border-radius: 20px;">
     

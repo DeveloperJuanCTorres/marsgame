@@ -9721,10 +9721,10 @@ textarea.form-control-lg {
   color: rgba(var(--ensurance-black-rgb), var(--ensurance-text-opacity)) !important;
 }
 
-.text-white {
+/* .text-white {
   --ensurance-text-opacity: 1;
   color: rgba(var(--ensurance-white-rgb), var(--ensurance-text-opacity)) !important;
-}
+} */
 
 .text-body {
   --ensurance-text-opacity: 1;
@@ -10108,9 +10108,9 @@ textarea.form-control-lg {
   color: #313839 !important;
 }
 
-.text-white {
+/* .text-white {
   color: #fff !important;
-}
+} */
 
 .max-vh-25 {
   max-height: 25vh !important;

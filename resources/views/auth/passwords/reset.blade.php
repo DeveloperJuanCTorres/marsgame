@@ -46,7 +46,7 @@
 
 <div class="animated bounceInDown">
     <div class="p-2" style="position: fixed;">
-      <span><i class="fa fa-reply"></i><a href="/"> Regresar</a></span>
+        <a class="btn-l btn-login px-4" href="/"><i class="fa fa-reply"></i>   Página de inicio</a>
     </div>
   <div class="container">
     <span class="error animated tada" id="msg"></span>

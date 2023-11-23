@@ -27,7 +27,7 @@
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
             <button class="btn btn-sm d-flex" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <i class="fas fa-shopping-cart text-primary text-white"> </i>
+              <i class="fas fa-shopping-cart text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
                 0
               </span>
@@ -35,7 +35,7 @@
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
                   @auth
-                  <button class="btn btn-sm d-flex" style="border: 1px solid white;border-radius: 25px;" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-sm d-flex btn-border" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     <!-- <i class="fas fa-user text-primary text-white"> </i> -->
                     <img class="imgclass" src="storage/{{ Auth::user()->avatar }}" alt="" style="width: 30px;border-radius: 60px;">
                     <span class="text-white text-justify-center px-2" style="display: block;margin-top: auto;margin-bottom: auto;">S/. 0.00</span>

@@ -1,6 +1,6 @@
 <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="contact" style="background-color: rgb( 33, 41, 66 );">
+      <section id="contact">
 
         <div class="container">
           <div class="row">
@@ -37,7 +37,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-0" style="background-color: rgb( 33, 41, 66 );">
+      <section class="py-0"">
 
         <div class="container">
           <div class="row">
