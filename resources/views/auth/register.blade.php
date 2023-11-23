@@ -71,7 +71,14 @@
         <input id="numero_doc" type="number" placeholder="Nro Documento" name="numero_doc" value="{{ old('numero_doc') }}" required autocomplete="numero_doc">
         <input id="direccion" type="text" placeholder="Dirección" name="direccion" value="{{ old('direccion') }}" required autocomplete="direccion">
         <input id="fecha_nac" type="date" name="fecha_nac" class="input-lg js-date--west" type="text" placeholder="dd /mm /AAAA">
-        <input placeholder="Email" id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+          <div>
+            <input placeholder="Email" id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+            @error('email')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+            @enderror
+          </div>
         <div>
             <i class="typcn typcn-eye" id="eye"></i>
             <input id="pwd" placeholder="Password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
