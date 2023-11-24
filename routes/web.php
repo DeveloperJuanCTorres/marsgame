@@ -15,20 +15,26 @@ use Doctrine\DBAL\Driver\Middleware;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+      return view('home');
+      });
 
-Route::get('/',[AdminController::class, 'index'])->name('index');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::middleware(['auth'])->group(function(){
-    Route::get('/perfil',[AdminController::class, 'perfil'])->name('perfil');
-});
+Route::get('/home',[AdminController::class, 'index'])->name('index');
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Auth::routes(['verify' => true]);
+Route::middleware(['auth'])->group(function(){
+    
+    Route::get('/perfil',[AdminController::class, 'perfil'])->name('perfil');
+});
