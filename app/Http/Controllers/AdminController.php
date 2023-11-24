@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class AdminController extends Controller
 {
@@ -12,8 +13,9 @@ class AdminController extends Controller
     }
 
     public function index(){
-        $nav = 'Inicio';
-        return view('home',compact('nav'));
+        $products = Product::all();
+        dd($products);
+        return view('home',compact('products'));
     }
 
     public function perfil(){

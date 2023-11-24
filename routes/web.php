@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use Doctrine\DBAL\Driver\Middleware;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,10 @@ use Doctrine\DBAL\Driver\Middleware;
 |
 */
 
-Route::get('/', function () {
-      return view('home');
-      });
+ Route::get('/', function () {
+    $products = Product::all();
+       return view('home',compact('products'));   
+ });
 
 
 

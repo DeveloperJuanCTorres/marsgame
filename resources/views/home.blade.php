@@ -386,28 +386,31 @@
         </div>
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
        
+        @if($products != null)
+          @foreach($products as $item)
           <div class="col-xs-12 col-lg-4 pt-4">
             <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
-              <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
+              <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
               <div class="card1-header">
-                <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>19<span class="period">/1 mes</span></h3>
+                <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
               </div>
               <div class="card1-block">
                 <h4 class="card1-title text-white"> 
-                  Plan Básico
+                  {{$item->promocion}} 
                 </h4>
                 <ul class="list-group padding-left-0">
-                  <li class="list-group-item">Ultimate Features</li>
-                  <li class="list-group-item">Responsive Ready</li>
-                  <li class="list-group-item">Visual Composer Included</li>
-                  <li class="list-group-item">24/7 Support System</li>
+                  <li class="list-group-item">{{$item->beneficio1}}</li>
+                  <li class="list-group-item">{{$item->beneficio2}}</li>
+                  <li class="list-group-item">{{$item->beneficio3}}</li>
+                  <li class="list-group-item">{{$item->beneficio4}}</li>
                 </ul>
                 <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
               </div>
             </div>
           </div>
-
-          <div class="col-xs-12 col-lg-4 pt-4">
+          @endforeach
+          @endif
+          <!-- <div class="col-xs-12 col-lg-4 pt-4">
             <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
               <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
               <div class="card1-header">
@@ -426,9 +429,9 @@
                 <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-xs-12 col-lg-4 pt-4">
+          <!-- <div class="col-xs-12 col-lg-4 pt-4">
             <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
               <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
               <div class="card1-header">                
@@ -447,7 +450,7 @@
                 <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
               </div>
             </div>
-          </div>
+          </div> -->
          
         </div>
       </div>
