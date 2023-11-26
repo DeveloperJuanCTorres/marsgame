@@ -1,3 +1,8 @@
+function onSubmit(token) {
+  document.getElementById("form1").submit();
+  console.log('paso por aqui');
+}
+
 /* CARRUSEL */
 $(() => {
     let position = 0;

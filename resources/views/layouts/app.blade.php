@@ -71,7 +71,6 @@
     <script src="{{asset('assets/js/ubigeo1.js')}}"></script>
     <script src="{{asset('assets/js/selectubigeo.js')}}"></script>
     <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
-    <script src="bootstrap.min.js"></script>
 
     <script src="{{asset('assets/js/culqi.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
