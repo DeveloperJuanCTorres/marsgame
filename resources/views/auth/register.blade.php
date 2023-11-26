@@ -50,7 +50,7 @@
     </div>
   <div class="container-register">
     <span class="error animated tada" id="msg"></span>
-    <form method="POST" action="{{ route('register') }}" name="form1" id="form1" class="box" onsubmit="return checkStuff()">
+    <form method="POST" action="{{ route('register') }}" name="form1" id="form1" class="box">
         @csrf
     
       <img class="mt-4" src="{{asset('assets/img/logo.png')}}" width="300" alt="">
@@ -70,6 +70,26 @@
         </select>
         <input id="numero_doc" type="number" placeholder="Nro Documento" name="numero_doc" value="{{ old('numero_doc') }}" required autocomplete="numero_doc">
         <input id="direccion" type="text" placeholder="Dirección" name="direccion" value="{{ old('direccion') }}" required autocomplete="direccion">
+        
+        <!-- <select name="departamento" id="departamento" value="{{ old('departamento') }}" required>
+            <option value="0">--Departamento--</option>    
+        </select> -->
+        <select class="form-control" id="ubigeo_dep" name="departamento" value="{{ old('departamento') }}" required>		
+          <option value="0">--Departamento--</option>	  
+			  </select>
+        <!-- <select name="provincia" id="provincia" value="{{ old('provincia') }}" required>
+            <option value="0">--Provincia--</option>
+        </select> -->
+        <select class="form-control" id="ubigeo_pro" name="provincia" value="{{ old('provincia') }}" required>
+          <option value="0">--Provincia--</option>	
+			  </select>
+        <!-- <select name="distrito" id="distrito" value="{{ old('distrito') }}" required>
+            <option value="0">--Distrito--</option>
+        </select> -->
+        <select class="form-control" id="ubigeo_dis" name="distrito" value="{{ old('distrito') }}" required>
+          <option value="0">--Distrito--</option>	
+			  </select>
+        
         <input id="fecha_nac" type="date" name="fecha_nac" class="input-lg js-date--west" type="text" placeholder="dd /mm /AAAA">
           <div>
             <input placeholder="Email" id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -113,9 +133,16 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
 
+<script src="{{asset('assets/js/ubigeo.js')}}"></script>
+<script src="{{asset('assets/js/selectubigeo.js')}}"></script>
+<script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
+<script src="bootstrap.min.js"></script>
+
 <script>
    function onSubmit(token) {
      document.getElementById("form1").submit();
+     console.log('paso por aqui');
    }
  </script>
+ 
 @endsection

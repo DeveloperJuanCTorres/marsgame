@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use Doctrine\DBAL\Driver\Middleware;
 use App\Models\Product;
+use App\Models\Departamento;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,11 @@ use App\Models\Product;
     $products = Product::all();
        return view('home',compact('products'));   
  });
+
+//  Route::get('/register', function () {
+//     $departamentos = Departamento::all();
+//        return view('auth.passwords.register',compact('departamentos'));   
+//  });
 
 
 

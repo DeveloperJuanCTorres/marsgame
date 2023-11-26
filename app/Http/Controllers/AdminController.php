@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Departamento;
 
 class AdminController extends Controller
 {
@@ -20,5 +21,10 @@ class AdminController extends Controller
 
     public function perfil(){
         return view('profile');
+    }
+
+    public function register(){
+        $departamentos = Departamento::all();
+        return view('auth.passwords.register',compact('departamentos'));
     }
 }
