@@ -75,76 +75,11 @@
                         </form>
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-primary" id="btn_participar" style="width: 100%;" type="submit">Comprar</button>
+                        <a href="/checkout" class="btn btn-primary" style="width: 100%;" type="submit">Comprar</a>
+                        <!-- <button class="btn btn-primary" id="btn_participar" style="width: 100%;" type="submit">Comprar</button> -->
                     </div>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-    const btn_participar = document.getElementById('btn_participar');
-    const btn_limpiar = document.getElementById('btn_limpiar');
-
-
-    btn_participar.addEventListener('click', function (e){
-        var formData = new FormData();
-        var id = $("#id").val();
-   
-        formData.append('id',id);
-        console.log(formData);
-        $.ajax({
-            url: "/participar",
-            type: "POST",
-            headers: {
-              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-            },
-            data: formData,
-            contentType: false,
-            processData: false,
-            beforeSend: function () {
-                Swal.fire({
-                    header: '...',
-                    title: "cargando",
-                    allowOutsideClick:false,
-                    didOpen: () => {
-                      Swal.showLoading()
-                    }
-                });
-            },
-            success: function (response) {
-              //cambiar gracias por tu compra Swal
-                  // window.location.href = "/";
-                  if (response.status) {
-                  Swal.fire({
-                      icon: 'success',
-                      title: response.msg,
-                      text: "Participación realizada con exito",
-                      allowOutsideClick: false,
-                      confirmButtonText: "Ok",
-                  })
-                  .then(resultado => {
-                      window.location.href = "/";
-                  }) 
-                  }
-                  else{
-                  Swal.fire({
-                      icon: 'error',
-                      title: response.msg,
-                      text: response.msg,
-                  })
-                  }
-                  
-            },
-            error: function (response) {
-              Swal.fire({
-                  icon: 'error',
-                  title: "Upps, sucedio un error",
-                  text: response.msg,
-              })
-            }
-        });
-    })
-    
-  </script>
 

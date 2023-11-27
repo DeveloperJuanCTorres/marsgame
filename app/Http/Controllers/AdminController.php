@@ -33,6 +33,17 @@ class AdminController extends Controller
         return view('profile',compact('smash'));
     }
 
+    public function codigos()
+    {
+        $codigos = Code::where('user_id',Auth::user()->id)->get();
+        return view('codigos',compact('codigos'));
+    }
+
+    public function checkout()
+    {
+        return view('checkout');
+    }
+
     public function participar(Request $request){
         try {
             $user_id = Auth::user()->id;

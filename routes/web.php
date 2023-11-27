@@ -52,4 +52,6 @@ Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
     
     Route::get('/perfil',[AdminController::class, 'perfil'])->name('perfil');
+    Route::get('/codigos',[AdminController::class, 'codigos'])->name('codigos');
+    Route::get('/checkout',[AdminController::class, 'checkout'])->name('checkout');
 });

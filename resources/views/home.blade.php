@@ -81,6 +81,11 @@
                       <i class="fa fa-user" aria-hidden="true"></i>Mi Cuenta 
                     </a>
                   </li>
+                  <li>                    
+                    <a class="dropdown-item" href="/codigos">
+                      <i class="fa fa-code" aria-hidden="true"></i>Mis códigos
+                    </a>
+                  </li>
                   <li class="pb-4">
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">

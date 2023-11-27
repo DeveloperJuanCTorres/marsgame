@@ -120,142 +120,32 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="page-content">
-
-          <!-- ***** Banner Start ***** -->
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="main-profile ">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img class="imgclass1" src="storage/{{ Auth::user()->avatar }}" alt="">
-                  </div>
-                  <div class="col-lg-4 align-self-center">
-                    <div class="main-info header-text">
-                      <span>Cambiar Foto</span>
-                      <h4>{{ Auth::user()->name }} {{ Auth::user()->last_name }}</h4>
-                      <p>You Haven't Gone Live yet. Go Live By Touching The Button Below.</p>
-                      <div class="btn btn-primary rounded-pill">
-                        <a href="password/reset">Cambiar contraseña</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 align-self-center">
-                    <ul>
-                      <li>Premios ganados <span>0</span></li>
-                      <li>Puntos Smash <span>{{$smash}}</span></li>
-                      <li>Saldo actual <span>S/. 0.00</span></li>
-                      <li>Codigo usuario <span>{{Auth::user()->id}}</span></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="clips">
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class="heading-section">
-                            <h4>Mis Jugadas</h4>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                          <div class="item">
-                            <div class="thumb">
-                              <img class="imgclass" src="{{asset('assets1/images/clip-01.jpg')}}" alt="" style="border-radius: 23px;">
-                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
-                            </div>
-                            <div class="down-content">
-                              <h4 class="text-white">First Clip</h4>
-                              <span><i class="fa fa-eye"></i> 250</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                          <div class="item">
-                            <div class="thumb">
-                              <img class="imgclass" src="{{asset('assets1/images/clip-02.jpg')}}" alt="" style="border-radius: 23px;">
-                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
-                            </div>
-                            <div class="down-content">
-                              <h4 class="text-white">Second Clip</h4>
-                              <span><i class="fa fa-eye"></i> 183</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                          <div class="item">
-                            <div class="thumb">
-                              <img class="imgclass" src="{{asset('assets1/images/clip-03.jpg')}}" alt="" style="border-radius: 23px;">
-                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
-                            </div>
-                            <div class="down-content">
-                              <h4 class="text-white">Third Clip</h4>
-                              <span><i class="fa fa-eye"></i> 141</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                          <div class="item">
-                            <div class="thumb">
-                              <img class="imgclass" src="{{asset('assets1/images/clip-04.jpg')}}" alt="" style="border-radius: 23px;">
-                              <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
-                            </div>
-                            <div class="down-content">
-                              <h4 class="text-white">Fourth Clip</h4>
-                              <span><i class="fa fa-eye"></i> 91</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-12">
-                          <div class="main-button">
-                            <a href="#">Load More Clips</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ***** Banner End ***** -->
+        <div class="page-content">          
 
           <!-- ***** Gaming Library Start ***** -->
           <div class="gaming-library profile-library">
             <div class="col-lg-12">
               <div class="heading-section">
-                <h4>Mis Movimientos</h4>
+                <h4>Mis Códigos activos</h4>
               </div>
+              @foreach ($codigos as $item)
               <div class="item">
                 <ul>
-                  <li><img src="{{asset('assets1/images/game-01.jpg')}}" alt="" class="templatemo-item imgclass"></li>
-                  <li><h4>Dota 2</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>24/08/2036</span></li>
-                  <li><h4>Hours Played</h4><span>634 H 22 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                    <li><img src="{{asset('assets1/images/game-01.jpg')}}" alt="" class="templatemo-item imgclass"></li>
+                    <li><h4>Ptos Samsh</h4><span>1</span></li>
+                    <li><h4>Vence</h4><span>30/11/2023</span></li>
+                    <li><h4>Código</h4><span>{{$item->codigo}}</span></li>
+                    <li><h4>Estado</h4>
+                        @if($item->estado==0)
+                        <span>Activo</span>                            
+                        @else
+                        <span>Inactivo</span>  
+                        @endif                        
+                    </li>
+                    <li><div class="main-border-button border-no-active"><a href="#">Copiar codigo</a></div></li>
                 </ul>
               </div>
-              <div class="item">
-                <ul>
-                  <li><img src="{{asset('assets1/images/game-02.jpg')}}" alt="" class="templatemo-item imgclass"></li>
-                  <li><h4>Fortnite</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>22/06/2036</span></li>
-                  <li><h4>Hours Played</h4><span>745 H 22 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
-              </div>
-              <div class="item last-item">
-                <ul>
-                  <li><img src="{{asset('assets1/images/game-03.jpg')}}" alt="" class="templatemo-item imgclass"></li>
-                  <li><h4>CS-GO</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>21/04/2022</span></li>
-                  <li><h4>Hours Played</h4><span>632 H 46 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
-              </div>
+              @endforeach
             </div>
           </div>
           <!-- ***** Gaming Library End ***** -->
