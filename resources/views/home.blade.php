@@ -379,12 +379,61 @@
       <!-- ============================================-->
 
 
-
+<!-- ============================================-->
+      <!-- <section> PROMOCIONES ============================-->
+      <section id="promociones" style="padding-top: 0;">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-light text-center my-5">Tickets</h2>
+        </div>
+        <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
+       
+        @if($tickets != null)
+          @foreach($tickets as $item)          
+            <div class="col-xs-12 col-lg-4 pt-4">
+              <form method="POST" action="{{route('cart.store')}}">
+              @csrf
+              <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
+                <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
+                <div class="card1-header">
+                  <input style="display: none;" type="text" name="id" id="id" value="{{$item->id}}">
+                  <input style="display: none;" type="text" name="name" id="name" value="{{$item->nombre}}">
+                  <input style="display: none;" type="text" name="price" id="price" value="{{$item->monto}}">
+                  <input style="display: none;" type="text" name="quantity" id="quantity" value="1">
+                  <input style="display: none;" type="text" name="codigos" id="codigos" value="{{$item->cantidad_codigos}}">
+                  <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
+                </div>
+                <div class="card1-block">
+                  <h4 class="card1-title text-white"> 
+                    {{$item->nombre}} 
+                  </h4>
+                  <ul class="list-group padding-left-0">
+                    <li class="list-group-item">{{$item->beneficio1}}</li>
+                    <li class="list-group-item">{{$item->beneficio2}}</li>
+                    <li class="list-group-item">{{$item->beneficio3}}</li>
+                    <li class="list-group-item">{{$item->beneficio4}}</li>
+                  </ul>
+                  <button type="submit" class="btn1 btn-gradient mt-2 padding-left-0">Comprar</button>
+                </div>
+              </div>
+              </form>
+            </div>
+          
+          @endforeach
+          @endif         
+         
+        </div>
+      </div>
+        
+        <!-- end of .container-->
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
 
       
 
       <!-- ============================================-->
-      <!-- <section> begin ============================-->
+      <!-- <section> PROMOCIONES ============================-->
       <section id="promociones" style="padding-top: 0;">
       <div class="container">
         <div class="row">
@@ -424,113 +473,11 @@
             </div>
           
           @endforeach
-          @endif
-          <!-- <div class="col-xs-12 col-lg-4 pt-4">
-            <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
-              <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
-              <div class="card1-header">
-                <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>29<span class="period">/2 meses</span></h3>
-              </div>
-              <div class="card1-block">
-                <h4 class="card1-title text-white"> 
-                  Plan Regular
-                </h4>
-                <ul class="list-group padding-left-0">
-                  <li class="list-group-item">Ultimate Features</li>
-                  <li class="list-group-item">Responsive Ready</li>
-                  <li class="list-group-item">Visual Composer Included</li>
-                  <li class="list-group-item">24/7 Support System</li>
-                </ul>
-                <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- <div class="col-xs-12 col-lg-4 pt-4">
-            <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
-              <img src="assets/img/banner.jpg" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
-              <div class="card1-header">                
-                <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>39<span class="period">/3 meses</span></h3>
-              </div>
-              <div class="card1-block">
-                <h4 class="card1-title text-white"> 
-                  Plan Premium
-                </h4>
-                <ul class="list-group padding-left-0">
-                  <li class="list-group-item">Ultimate Features</li>
-                  <li class="list-group-item">Responsive Ready</li>
-                  <li class="list-group-item">Visual Composer Included</li>
-                  <li class="list-group-item">24/7 Support System</li>
-                </ul>
-                <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
-              </div>
-            </div>
-          </div> -->
+          @endif         
          
         </div>
       </div>
-        <!-- <div class="container">
-          <div class="row">
-            <h2 class="text-light text-center my-5">Promociones</h2>
-          </div>
-          <div class="row flex-center h-100 circle-blend circle-blend-left circle-primary">
-            <div class="col-12">
-              <div class="row align-items-center circle-blend circle-blend-right circle-warning">
-                <div class="col-md-6 col-lg-4 mb-4">
-                  <div class="card p-3 h-100 card-soft-primary">
-                    <div class="card-body">
-                      <div class="d-flex flex-between-center">
-                        <p class="fw-normal mb-0 text-400">24 July, 2021</p>
-                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Thoughts</span></h6>
-                      </div>
-                      <h5 class="fw-bold fs-2 text-200 my-3">A pandemic may cause life insurance coverage</h5>
-                      <p class="text-400">In the aftermath of the Covid epidemic, life insurance firms have been more cautious and have tightened underwriting standards for policies with large cash values.......</p><a class="link-primary" href="#!">
-                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                  <div class="card p-3 h-100 card-soft-primary">
-                    <div class="card-body">
-                      <div class="d-flex flex-between-center">
-                        <p class="fw-normal mb-0 text-400">29 July, 2021</p>
-                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Health</span></h6>
-                      </div>
-                      <h5 class="fw-bold fs-2 text-200 my-3">Top 10 health insurance companies in the Germany</h5>
-                      <p class="text-400">There are numerous private healthcare insurance experts in Germany. Insurance protects against financial loss and reduces uncertainty. It ensures safety and security.......</p><a class="link-primary" href="#!">
-                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                  <div class="card p-3 h-100 card-soft-primary">
-                    <div class="card-body">
-                      <div class="d-flex flex-between-center">
-                        <p class="fw-normal mb-0 text-400">15 August, 2021</p>
-                        <h6><span class="badge rounded-pill text-primary" style="background:#224E8F;">Life</span></h6>
-                      </div>
-                      <h5 class="fw-bold fs-2 text-200 my-3">Why do you need several life insurance policies?</h5>
-                      <p class="text-400">In the event of the insured's death, life insurance protects the nominees financially. It is possible to have several life insurance policies with various insurance providers.......</p><a class="link-primary" href="#!">
-                        <svg class="bi bi-arrow-right text-primary" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="my-5 text-center text-sm-end"><a class="link-primary" href="#!">View all
-                  <svg class="bi bi-arrow-right" xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"> </path>
-                  </svg></a></div>
-            </div>
-          </div>
-        </div> -->
-
-
+        
         <!-- end of .container-->
                         <input style="display: none;" type="text" id="id" value="10">
       </section>

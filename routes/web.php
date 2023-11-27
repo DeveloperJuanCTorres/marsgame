@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use Doctrine\DBAL\Driver\Middleware;
 use App\Models\Product;
+use App\Models\Ticket;
 use App\Models\Departamento;
 
 /*
@@ -20,7 +21,8 @@ use App\Models\Departamento;
 
  Route::get('/', function () {
     $products = Product::all();
-       return view('home',compact('products'));   
+    $tickets = Ticket::all();
+       return view('home',compact('products','tickets'));   
  });
 
 //  Route::get('/register', function () {

@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\SorteoSimple;
 use App\Models\SorteoSmash;
 use App\Models\Code;
+use App\Models\Ticket;
 use Carbon\Carbon;
 use GuzzleHttp\Psr7\Message;
 use Hamcrest\Core\HasToString;
@@ -23,8 +24,8 @@ class AdminController extends Controller
 
     public function index(){
         $products = Product::all();
-        dd($products);
-        return view('home',compact('products'));
+        $tickets = Ticket::all();
+        return view('home',compact('products','tickets'));
     }
 
     public function perfil(){
