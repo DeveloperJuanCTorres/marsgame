@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 use Doctrine\DBAL\Driver\Middleware;
 use App\Models\Product;
 use App\Models\Departamento;
@@ -40,6 +41,10 @@ Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::post('/participar', [AdminController::class, 'participar'])->name('participar');
+
+Route::post('/limpiar', [AdminController::class, 'clear'])->name('limpiar');
+Route::resource('/cart', CartController::class);
 
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){

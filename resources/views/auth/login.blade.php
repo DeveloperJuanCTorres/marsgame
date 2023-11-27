@@ -56,7 +56,7 @@
       <h5>Sign in to your account.</h5> -->
       <img class="mt-4" src="{{asset('assets/img/logo.png')}}" width="300" alt="">
         <div>
-          <input type="text" name="email" class="@error('email') is-invalid @enderror" placeholder="Email" autocomplete="off">
+          <input type="email" name="email" class="@error('email') is-invalid @enderror" placeholder="Email" autocomplete="email">
           @error('email')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

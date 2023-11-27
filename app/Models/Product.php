@@ -19,5 +19,6 @@ class Product extends Model
         'beneficio2',
         'beneficio4',
         'imagen',
+        'cantidad_codigos',
     ];
 }

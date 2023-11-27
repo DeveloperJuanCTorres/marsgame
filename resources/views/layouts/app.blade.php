@@ -77,6 +77,8 @@
     <script src="https://checkout.culqi.com/js/v4"></script>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     @stack('script')
 
 

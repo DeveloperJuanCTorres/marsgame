@@ -27,10 +27,16 @@
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
             @auth
-            <button class="btn btn-sm d-flex" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
+              <i class="fa fa-bell text-white"> </i>
+              <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
+              {{Cart::getContent()->count()}}
+              </span>
+            </button> 
+            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               <i class="fas fa-shopping-cart text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-                0
+              {{Cart::getContent()->count()}}
               </span>
             </button> 
             @endauth 
@@ -387,27 +393,36 @@
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
        
         @if($products != null)
-          @foreach($products as $item)
-          <div class="col-xs-12 col-lg-4 pt-4">
-            <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
-              <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
-              <div class="card1-header">
-                <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
+          @foreach($products as $item)          
+            <div class="col-xs-12 col-lg-4 pt-4">
+              <form method="POST" action="{{route('cart.store')}}">
+              @csrf
+              <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
+                <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
+                <div class="card1-header">
+                  <input style="display: none;" type="text" name="id" id="id" value="{{$item->id}}">
+                  <input style="display: none;" type="text" name="name" id="name" value="{{$item->promocion}}">
+                  <input style="display: none;" type="text" name="price" id="price" value="{{$item->monto}}">
+                  <input style="display: none;" type="text" name="quantity" id="quantity" value="1">
+                  <input style="display: none;" type="text" name="codigos" id="codigos" value="{{$item->cantidad_codigos}}">
+                  <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
+                </div>
+                <div class="card1-block">
+                  <h4 class="card1-title text-white"> 
+                    {{$item->promocion}} 
+                  </h4>
+                  <ul class="list-group padding-left-0">
+                    <li class="list-group-item">{{$item->beneficio1}}</li>
+                    <li class="list-group-item">{{$item->beneficio2}}</li>
+                    <li class="list-group-item">{{$item->beneficio3}}</li>
+                    <li class="list-group-item">{{$item->beneficio4}}</li>
+                  </ul>
+                  <button type="submit" class="btn1 btn-gradient mt-2 padding-left-0">Comprar</button>
+                </div>
               </div>
-              <div class="card1-block">
-                <h4 class="card1-title text-white"> 
-                  {{$item->promocion}} 
-                </h4>
-                <ul class="list-group padding-left-0">
-                  <li class="list-group-item">{{$item->beneficio1}}</li>
-                  <li class="list-group-item">{{$item->beneficio2}}</li>
-                  <li class="list-group-item">{{$item->beneficio3}}</li>
-                  <li class="list-group-item">{{$item->beneficio4}}</li>
-                </ul>
-                <a href="#" class="btn1 btn-gradient mt-2 padding-left-0">Comprar Plan</a>
-              </div>
+              </form>
             </div>
-          </div>
+          
           @endforeach
           @endif
           <!-- <div class="col-xs-12 col-lg-4 pt-4">
@@ -517,7 +532,7 @@
 
 
         <!-- end of .container-->
-
+                        <input style="display: none;" type="text" id="id" value="10">
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
@@ -549,8 +564,11 @@
   @include('layouts.footer') 
       
   @include('layouts.offcanvas')
+  @include('layouts.noticanvas')
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 @endsection

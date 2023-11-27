@@ -38,12 +38,20 @@
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#promociones">Promociones</a></li>
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
-            <button class="btn btn-sm d-flex" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <i class="fas fa-shopping-cart text-primary text-white"> </i>
+            @auth
+            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
+              <i class="fa fa-bell text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-                0
+              {{Cart::getContent()->count()}}
               </span>
-            </button>
+            </button> 
+            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <i class="fas fa-shopping-cart text-white"> </i>
+              <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
+              {{Cart::getContent()->count()}}
+              </span>
+            </button> 
+            @endauth 
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
                   @auth
@@ -129,10 +137,10 @@
                   </div>
                   <div class="col-lg-4 align-self-center">
                     <ul>
-                      <li>Premios ganados <span>3</span></li>
-                      <li>Puntos acumulados <span>16</span></li>
+                      <li>Premios ganados <span>0</span></li>
+                      <li>Puntos Smash <span>{{$smash}}</span></li>
                       <li>Saldo actual <span>S/. 0.00</span></li>
-                      <li>Codigo usuario <span>0012</span></li>
+                      <li>Codigo usuario <span>{{Auth::user()->id}}</span></li>
                     </ul>
                   </div>
                 </div>
@@ -255,6 +263,7 @@
   @include('layouts.footer')
 
       @include('layouts.offcanvas')
+      @include('layouts.noticanvas')
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="vendor1/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
