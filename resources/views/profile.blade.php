@@ -42,16 +42,16 @@
             <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
               <i class="fa fa-bell text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-              {{Cart::getContent()->count()}}
+              3
               </span>
-            </button> 
+            </button>             
+            @endauth 
             <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               <i class="fas fa-shopping-cart text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
               {{Cart::getContent()->count()}}
               </span>
             </button> 
-            @endauth 
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
                   @auth
