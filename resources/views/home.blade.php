@@ -30,7 +30,7 @@
             <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
               <i class="fa fa-bell text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-              3
+              0
               </span>
             </button>             
             @endauth 
@@ -110,7 +110,7 @@
         <div class="container">
           <div class="row align-items-center min-vh-100">
             <div class="col-md-7 col-xl-7 pt-9 text-md-start text-center">
-              <img src="{{asset('assets/img/premio.png')}}" width="100%" alt="">
+              <img src="{{asset('assets/img/premio1.png')}}" width="100%" alt="">
               <!-- <h1 class="display-2 text-light fw-thin">Obtendras grandes <br class="d-none d-xl-block" />beneficios <strong class="fw-bolder">MarsGame </strong></h1>
               <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
             </div>
@@ -124,26 +124,6 @@
                 <div class="card-body p-4 p-xl-6">
                   <h2 class="text-100 text-white">Tenemos premios todas las semanas, ¡Ven y participa Aquí!</h2>
                   <form class="mb-3 mt-4">
-                    <!-- <div class="form-floating mb-3">
-                      <input class="form-control input-box form-ensurance-header-control" id="floatingName" type="text" placeholder="name" />
-                      <label for="floatingName">Your name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input class="form-control input-box form-ensurance-header-control" id="floatingPhone" type="number" placeholder="name@example.com" />
-                      <label for="floatingPhone">Phone</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input class="form-control input-box form-ensurance-header-control" id="floatingEmail" type="email" placeholder="name@example.com" />
-                      <label for="floatingEmail">Email</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input class="form-control input-box form-ensurance-header-control" id="floatingCatrgory" type="text" placeholder="Insurance Category" />
-                      <label for="floatingCatrgory">Insurance Category</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <textarea class="form-control input-box form-ensurance-header-control" id="floatingTextarea" placeholder="Leave a comment here"></textarea>
-                      <label for="floatingTextarea">Comments</label>
-                    </div> -->
                     <div class="col-12 d-grid">
                       <a class="btn btn-primary rounded-pill text-white" href="/register">Quiero Registrarme</a>
                     </div>
@@ -155,9 +135,6 @@
         </div>
       </section>
       <section id="participar">
-        <!-- <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-car-insurance.png);background-position:0 200px;background-size:100% 45%;">
-        </div> -->
-        <!--/.bg-holder-->
 
         <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-left1.png);background-position:left;background-size:15% 100%;">
         </div>
@@ -485,27 +462,6 @@
       <!-- ============================================-->
 
 
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <!-- <section class="py-0">
-
-        <div class="container">
-          <div class="row align-items-center justify-content-xl-between">
-            <h2 class="text-light text-center my-5">Partners</h2>
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="assets/img/gallery/partner-1.png" height="40" alt="Partner" /></div>
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="assets/img/gallery/partner-2.png" height="40" alt="Partner" /></div>
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="assets/img/gallery/partner-3.png" height="40" alt="Partner" /></div>
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="assets/img/gallery/partner-4.png" height="40" alt="Partner" /></div>
-            <div class="col-auto col-md-4 col-lg-auto my-3 text-xl-start"><img src="assets/img/gallery/partner-5.png" height="40" alt="Partner" /></div>
-          </div>
-        </div>
-
-
-      </section> -->
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
      
 
   @include('layouts.footer') 
