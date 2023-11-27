@@ -70,9 +70,9 @@
             </div>
             <div class="row my-4">
                     <div class="col-6">
-                        <!-- <form method="Cart::clear()"> -->
+                        <form method="GET" action="{{ route('cart.create') }}">
                             <button type="submit" class="btn btn-secondary" style="width: 100%; background-color: transparent !important;">Limpiar</button>
-                        <!-- </form> -->
+                        </form>
                     </div>
                     <div class="col-6">
                         <button class="btn btn-primary" id="btn_participar" style="width: 100%;" type="submit">Comprar</button>

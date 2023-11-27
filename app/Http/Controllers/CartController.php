@@ -25,7 +25,8 @@ class CartController extends Controller
      */
     public function create()
     {
-        //
+        Cart::clear();
+        return back();
     }
 
     /**
@@ -93,7 +94,13 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+    }
+
+    public function clear()
+    {
+        Cart::clear();
+        return back();
     }
 
     

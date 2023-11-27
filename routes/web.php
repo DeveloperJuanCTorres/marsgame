@@ -45,7 +45,7 @@ Auth::routes();
 
 Route::post('/participar', [AdminController::class, 'participar'])->name('participar');
 
-Route::post('/limpiar', [AdminController::class, 'clear'])->name('limpiar');
+Route::post('/limpiar', [CartController::class, 'clear'])->name('limpiar');
 Route::resource('/cart', CartController::class);
 
 Auth::routes(['verify' => true]);
