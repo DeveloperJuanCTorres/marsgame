@@ -1,4 +1,4 @@
-<div class="offcanvas offcanvas-end bg-primary" style="display: block;height: 100%;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">   
+<div  class="offcanvas offcanvas-end bg-primary" style="display: block;height: 100%;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">   
     <div class="offcanvas-header">
         <h4 class="text-ligth" id="offcanvasRightLabel">
             <i class="fas fa-shopping-cart text-ligth mx-2"> </i> Tu carrito
@@ -17,24 +17,6 @@
         @else
         <div>
             @foreach (Cart::getContent() as $item)
-            <!-- <div class="card-total-items card-bg-secondary p-6" style="border-radius: 15px;">
-                <div class="d-flex justify-content-between cti-1 text-ligth">
-                    <span>Subtotal</span>
-                    <h5 class="ct-subtotal">{{$item->name}}</h5>
-                </div>
-
-                <div class="d-flex justify-content-between cti-2 text-ligth">
-                    <span>Descuento</span>
-                    <span class="ct-discount">-s/. 0.00</span>
-                </div>
-
-                <hr>
-
-                <div class="d-flex justify-content-between cti-3 text-ligth">
-                    <h3>S/ {{$item->price}}</h3>
-                    <h3>{{$item->quantity}}</h3>
-                </div>
-            </div> -->
             <div class="row">
                 <div class="col-6">
                     <h4>{{$item->name}}</h4>

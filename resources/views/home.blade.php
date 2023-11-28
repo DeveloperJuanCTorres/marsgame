@@ -4,105 +4,12 @@
 
 <!-- HEADER -->
 <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll nav-header"  data-navbar-on-scroll="data-navbar-on-scroll"> -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top data-navbar-on-scroll nav-header">
-        <div class="container">
-          <a class="navbar-brand" href="/">
-            <img src="{{asset('assets/img/logo.png')}}" width="200" alt="">
-            <!-- <span class="text-primary fs-3 ms-2 fw-bolder">Mars</span><span class="fw-thin text-300 fs-3">Game</span> -->
-          </a>
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse pt-4 pt-lg-0" id="navbarSupportedContent">
-          
-              <ul class="list-unstyled list-inline my-2" style="margin-left: auto;margin-left: auto;">
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fa-2x text-white"></i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram fa-2x text-white"></i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x text-white"> </i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-linkedin fa-2x text-white"></i></a></li>
-              </ul>
-          
-            <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
-              <li class="nav-item px-2"><a class="nav-link text-white" aria-current="page" href="/#">Inicio</a></li>
-              <li class="nav-item px-2"><a class="nav-link text-white" href="/#participar">Participar</a></li>
-              <li class="nav-item px-2"><a class="nav-link text-white" href="/#promociones">Promociones</a></li>
-              <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
-            </ul>
-            @auth
-            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
-              <i class="fa fa-bell text-white"> </i>
-              <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-              0
-              </span>
-            </button>             
-            @endauth 
-            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <i class="fas fa-shopping-cart text-white"> </i>
-              <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-              {{Cart::getContent()->count()}}
-              </span>
-            </button> 
-            <div class="d-flex mt-2 align-items-center mt-lg-0">
-              <div class="dropdown">
-                  @auth
-                  <button class="btn btn-sm d-flex btn-border" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <!-- <i class="fas fa-user text-primary text-white"> </i> -->
-                    <img class="imgclass" src="storage/{{ Auth::user()->avatar }}" alt="" style="width: 30px;border-radius: 60px;">
-                    <span class="text-white text-justify-center px-2" style="display: block;margin-top: auto;margin-bottom: auto;">S/. 0.00</span>
-                  </button>   
-                  @else
-                  <a href="/login" class="btn btn-sm d-flex btn-border text-white">Iniciar sesión</a>
-                  @endauth
-                <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
-                  @auth   
-                  <div class="row p-2">
-                    <div class="col-7">
-                      <span class="text-black" style="font-size: small;font-weight: bold;">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</span>
-                    </div>
-                    <div class="col-5">
-                      <span class="text-black">S/. 0.00</span>
-                    </div>
-                  </div>
-                  <div class="row p-2">
-                    <div class="col-6">
-                      <button class="btn btn-primary" style="padding: 10px;width: 100%;">Retirar</button>
-                    </div>
-                    <div class="col-6">
-                      <button class="btn btn-secondary" style="padding: 10px;width: 100%;">Depositar</button>
-                    </div>
-                  </div>  
-                  @else
-                  <li><a class="dropdown-item" href="/login">Login</a></li>
-                  <li><a class="dropdown-item" href="/register">Registrarme</a></li>
-                  @endauth
-                  
-                  @auth
-                  <li><hr class="dropdown-divider"></li>
-                  <li>                    
-                    <a class="dropdown-item" href="/perfil">
-                      <i class="fa fa-user" aria-hidden="true"></i>Mi Cuenta 
-                    </a>
-                  </li>
-                  <li>                    
-                    <a class="dropdown-item" href="/codigos">
-                      <i class="fa fa-code" aria-hidden="true"></i>Mis códigos
-                    </a>
-                  </li>
-                  <li class="pb-4">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                        <i class="fa fa-clone" aria-hidden="true"></i> Cerrar sesión
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                  </li>
-                  @endauth
-                </ul> 
-              </div>                                 
-                             
-            </div>            
-          </div>
-        </div>
-    </nav>
+<div id="headerview">
+@include('layouts.header')
+@include('layouts.offcanvas')
+</div>
+
+<!-- include('layouts.header') -->
 <!-- FIN HEADER -->
     
       <section class="py-0">
@@ -374,8 +281,6 @@
         @if($tickets != null)
           @foreach($tickets as $item)          
             <div class="col-xs-12 col-lg-4 pt-4">
-              <form method="POST" action="{{route('cart.store')}}">
-              @csrf
               <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
                 <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
                 <div class="card1-header">
@@ -396,10 +301,15 @@
                     <li class="list-group-item">{{$item->beneficio3}}</li>
                     <li class="list-group-item">{{$item->beneficio4}}</li>
                   </ul>
-                  <button type="submit" class="btn1 btn-gradient mt-2 padding-left-0">Comprar</button>
+                  <button type="button"
+                  data-id='{{$item->id}}' 
+                      data-name='{{$item->nombre}}' 
+                      data-price='{{$item->monto}}' 
+                      data-quantity='1' 
+                      data-codigos='{{$item->cantidad_codigos}}' 
+                       class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
                 </div>
               </div>
-              </form>
             </div>
           
           @endforeach
@@ -427,16 +337,10 @@
         @if($products != null)
           @foreach($products as $item)          
             <div class="col-xs-12 col-lg-4 pt-4">
-              <form method="POST" action="{{route('cart.store')}}">
-              @csrf
+             
               <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
                 <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
                 <div class="card1-header">
-                  <input style="display: none;" type="text" name="id" id="id" value="{{$item->id}}">
-                  <input style="display: none;" type="text" name="name" id="name" value="{{$item->promocion}}">
-                  <input style="display: none;" type="text" name="price" id="price" value="{{$item->monto}}">
-                  <input style="display: none;" type="text" name="quantity" id="quantity" value="1">
-                  <input style="display: none;" type="text" name="codigos" id="codigos" value="{{$item->cantidad_codigos}}">
                   <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
                 </div>
                 <div class="card1-block">
@@ -449,10 +353,15 @@
                     <li class="list-group-item">{{$item->beneficio3}}</li>
                     <li class="list-group-item">{{$item->beneficio4}}</li>
                   </ul>
-                  <button type="submit" class="btn1 btn-gradient mt-2 padding-left-0">Comprar</button>
+                  <button type="button"
+                      data-id='{{$item->id}}' 
+                      data-name='{{$item->promocion}}' 
+                      data-price='{{$item->monto}}' 
+                      data-quantity='1' 
+                      data-codigos='{{$item->cantidad_codigos}}' 
+                      class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
                 </div>
               </div>
-              </form>
             </div>
           
           @endforeach
@@ -472,13 +381,88 @@
 
   @include('layouts.footer') 
       
-  @include('layouts.offcanvas')
+ 
   @include('layouts.noticanvas')
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script>
+  // const btn_comprar = document.getElementById('btn_comprar');
+  //   console.log('hola');
+
+    // btn_comprar.addEventListener('click', function (e){
+    $(".btn_comprar").click(function (e) {
+      e.preventDefault();
+        var ele = $(this);
+        var id = ele.attr("data-id");
+        var name = ele.attr("data-name");
+        var price = ele.attr("data-price");
+        var quantity = ele.attr("data-quantity");
+        var codigos = ele.attr("data-codigos");
+
+        console.log(codigos);
+
+        $.ajax({
+            url: "/cart",
+            method: "post",
+						dataType: 'json',
+						data: {
+							_token: $('meta[name="csrf-token"]').attr('content'),           
+              id: id,
+              name: name,
+              price: price,
+              quantity: quantity,
+              codigos: codigos
+            },
+            beforeSend: function () {
+                Swal.fire({
+                    header: '...',
+                    title: "cargando",
+                    allowOutsideClick:false,
+                    didOpen: () => {
+                    Swal.showLoading()
+                    }
+                });
+            },
+            success: function (response) {
+                 if (response) {
+                 Swal.fire({
+                     icon: 'success',
+                     title: 'Exito',
+                     text: "Participación realizada con exito",
+                     allowOutsideClick: false,
+                     confirmButtonText: "Ok",
+                 })
+                 .then(resultado => {
+                    // location.reload();
+                    $("#headerview").load('home');
+                    // $("#totalCheckou").html(response.count);
+                    //  $('#offcanvasRight').load('codigos');
+                    // location.reload(true);
+                    //  $("#headerview").html(response);
+                 }) 
+                 }
+                 else{
+                 Swal.fire({
+                     icon: 'error',
+                     title: 'response.msg',
+                     text: 'response.msg',
+                 })
+                }
+                
+             },
+            error: function (response) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...!!',
+                    text: 'Something went wrong!!',
+                  })
+            }
+        });
+    })
+</script>
 
 @endsection
 

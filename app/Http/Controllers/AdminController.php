@@ -7,6 +7,8 @@ use App\Models\Product;
 use App\Models\SorteoSimple;
 use App\Models\SorteoSmash;
 use App\Models\Code;
+use App\Models\Term;
+use App\Models\Policy;
 use App\Models\Ticket;
 use Carbon\Carbon;
 use GuzzleHttp\Psr7\Message;
@@ -90,5 +92,19 @@ class AdminController extends Controller
     {
         Cart::clear();
         return back();
+    }
+
+    public function terminos()
+    {
+       $terminos = Term::first();
+
+       return view('terminos',compact('terminos'));
+    }
+
+    public function politicas()
+    {
+       $politicas = Policy::first();
+
+       return view('politicas',compact('politicas'));
     }
 }

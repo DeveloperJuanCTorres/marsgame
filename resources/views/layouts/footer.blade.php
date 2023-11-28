@@ -23,6 +23,12 @@
                 </div>
                 <button class="btn btn-primary btn-subscribe" type="submit">Subscribe now</button>
               </form>
+              <div class="position-relative my-4 d-table mx-auto" >
+                <a href="#" class="py-4">
+                  <i style="font-size: 80px;" class="fa fa-book-open d-block mx-auto"></i>
+                  Libro de Reclamaciones
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -45,11 +51,8 @@
               <div class="d-md-flex justify-content-between pb-1 pt-4">
                 <div class="pb-4">
                   <ul class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
-                    <li><a class="widget-list-link fs-ms" href="#">Home</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="#">About Us</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="#">Blog</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="#">Services</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="#">Terms &amp; Conditions</a></li>
+                    <li class="ms-4"><a class="widget-list-link fs-ms" href="/politicas">Políticas  de Seguridad</a></li>
+                    <li class="ms-4"><a class="widget-list-link fs-ms" href="/terminos">Términos &amp; Condiciones</a></li>
                   </ul>
                 </div>
                 <div class="pb-4">

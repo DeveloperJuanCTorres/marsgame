@@ -1,4 +1,3 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 data-navbar-on-scroll nav-header"  data-navbar-on-scroll="data-navbar-on-scroll"> -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top data-navbar-on-scroll nav-header">
         <div class="container">
           <a class="navbar-brand" href="/">
@@ -18,33 +17,52 @@
             <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
               <li class="nav-item px-2"><a class="nav-link text-white" aria-current="page" href="/#">Inicio</a></li>
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#participar">Participar</a></li>
-              <!-- <li class="nav-item px-2"><a class="nav-link" href="/#clientes">Próximo Sorteo</a></li>
-              <li class="nav-item px-2"><a class="nav-link" href="/#ultimosorteos">Último Sorteos</a></li> -->
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#promociones">Promociones</a></li>
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
-            <button class="btn btn-sm d-flex" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <i class="fas fa-shopping-cart text-primary text-white"> </i>
+            @auth
+            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
+              <i class="fa fa-bell text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-                0
+              0
               </span>
-            </button>  
+            </button>             
+            @endauth 
+            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <i class="fas fa-shopping-cart text-white"> </i>
+              <span class="badge rounded-pill bg-danger" id="totalCheckou" style="font-size: 8px;float: right;display:block;position:relative;">
+              {{Cart::getContent()->count()}}
+              </span>
+            </button> 
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
                   @auth
-                  <button class="btn btn-sm d-flex" style="font-size: 20px;" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-user text-primary text-white"> </i>
+                  <button class="btn btn-sm d-flex btn-border" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!-- <i class="fas fa-user text-primary text-white"> </i> -->
+                    <img class="imgclass" src="storage/{{ Auth::user()->avatar }}" alt="" style="width: 30px;border-radius: 60px;">
+                    <span class="text-white text-justify-center px-2" style="display: block;margin-top: auto;margin-bottom: auto;">S/. 0.00</span>
                   </button>   
                   @else
-                  <a href="/login" class="btn btn-primary rounded-pill" style="padding: 10px 20px !important;background-color: white;color: 2D2E83;border-color: white;">Iniciar sesión</a>
+                  <a href="/login" class="btn btn-sm d-flex btn-border text-white">Iniciar sesión</a>
                   @endauth
                 <ul class="dropdown-menu dropdown-menu-lg-end p-0 rounded" aria-labelledby="dropdownMenuButton2" style="top:55px;">
                   @auth   
-                  <li><a class="dropdown-item" href="/perfil">Mi Perfil</a></li>
-                  <li><a class="dropdown-item" href="#">Mis jugadas</a></li>
-                  <li><a class="dropdown-item" href="#">Mis movimientos</a></li>
-                  <li><a class="dropdown-item" href="#">Puntos acumulados</a></li>
-                  <li><a class="dropdown-item" href="#">Mis premios</a></li>
+                  <div class="row p-2">
+                    <div class="col-7">
+                      <span class="text-black" style="font-size: small;font-weight: bold;">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</span>
+                    </div>
+                    <div class="col-5">
+                      <span class="text-black">S/. 0.00</span>
+                    </div>
+                  </div>
+                  <div class="row p-2">
+                    <div class="col-6">
+                      <button class="btn btn-primary" style="padding: 10px;width: 100%;">Retirar</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="btn btn-secondary" style="padding: 10px;width: 100%;">Depositar</button>
+                    </div>
+                  </div>  
                   @else
                   <li><a class="dropdown-item" href="/login">Login</a></li>
                   <li><a class="dropdown-item" href="/register">Registrarme</a></li>
@@ -52,10 +70,20 @@
                   
                   @auth
                   <li><hr class="dropdown-divider"></li>
-                  <li>
+                  <li>                    
+                    <a class="dropdown-item" href="/perfil">
+                      <i class="fa fa-user" aria-hidden="true"></i>Mi Cuenta 
+                    </a>
+                  </li>
+                  <li>                    
+                    <a class="dropdown-item" href="/codigos">
+                      <i class="fa fa-code" aria-hidden="true"></i>Mis códigos
+                    </a>
+                  </li>
+                  <li class="pb-4">
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                        🚪 Cerrar sesión 
+                        <i class="fa fa-clone" aria-hidden="true"></i> Cerrar sesión
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
@@ -68,4 +96,5 @@
             </div>            
           </div>
         </div>
+        
     </nav>

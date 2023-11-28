@@ -448,7 +448,7 @@
     <script src="{{asset('assets1/js/tabs.js')}}"></script>
     <script src="{{asset('assets1/js/popup.js')}}"></script>
     <script src="{{asset('assets1/js/custom.js')}}"></script>
-
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
     <script src="https://use.fontawesome.com/83fc84333f.js"></script>   
     <script>       
 
@@ -520,8 +520,10 @@
         });
 
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const btn_participar = document.getElementById('btn_participar');
+   
 
         btn_participar.addEventListener('click', function (e){
             var formData = new FormData();

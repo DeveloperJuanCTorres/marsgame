@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Cart;
+use League\CommonMark\Extension\CommonMark\Node\Block\HtmlBlock;
+use PhpParser\Node\Stmt\InlineHTML;
 
 class CartController extends Controller
 {
@@ -37,19 +39,30 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::add(array(
-            'id' => $request->id?$request->id:'1', // inique row ID
-            'name' => $request->name?$request->name:'example',
-            'price' =>$request->price?$request->price:20.20,
-            'associatedModel' => $request->codigos?$request->codigos:3,
-            'quantity' => $request->quantity?$request->quantity:1,
-            
-            'attributes' => array(
-                 'codigos' => $request->codigos?$request->codigos:3,
-                //  'size' => $request->size?$request->size:'Big',
-             )
-        ));
-        return back();
+         try {
+            Cart::add(array(
+                'id' => $request->id?$request->id:'1', // inique row ID
+                'name' => $request->name?$request->name:'example',
+                'price' =>$request->price?$request->price:20.20,
+                'associatedModel' => $request->codigos?$request->codigos:3,
+                'quantity' => $request->quantity?$request->quantity:1,
+                
+                'attributes' => array(
+                     'codigos' => $request->codigos?$request->codigos:3,
+                    //  'size' => $request->size?$request->size:'Big',
+                 )
+            ));
+         } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => 'Error']); 
+         }        
+
+         
+
+        return response()->json(['status' => true, 'msg' => 'Éxito', 
+                'count' => Cart::getContent()->count(),
+                'listcart' => view('layouts.offcanvas')]); 
+        //return view('home');
+        //return back();
     }
 
     /**

@@ -39,6 +39,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/home',[AdminController::class, 'index'])->name('index');
 
 
+
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -47,6 +48,9 @@ Route::post('/participar', [AdminController::class, 'participar'])->name('partic
 
 Route::post('/limpiar', [CartController::class, 'clear'])->name('limpiar');
 Route::resource('/cart', CartController::class);
+
+Route::get('/terminos',[AdminController::class, 'terminos'])->name('terminos');
+Route::get('/politicas',[AdminController::class, 'politicas'])->name('politicas');
 
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
