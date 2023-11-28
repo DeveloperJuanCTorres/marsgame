@@ -141,7 +141,8 @@
       </section>
       <section id="participar">
 
-        <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-left1.png);background-position:left;background-size:15% 100%;">
+        <!-- <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-left1.png);background-position:left;background-size:15% 100%;"> -->
+        <div class="bg-holder d-none d-md-block">
         </div>
         <!--/.bg-holder-->
 
@@ -154,13 +155,13 @@
             <div class="col-12 mt-6">
               <div class="d-flex align-items-start">
                 <div class="nav flex-column nav-tab" id="nav-tab" role="tablist" aria-orientation="vertical"><a class="circle-hover-wrapper nav-link mb-lg-4 active" id="nav-car-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/car.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/car-hover.png" alt="..." /></div>
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/car-hover.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/car-hover.png" alt="..." /></div>
                   </a><a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-home-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/home.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/home-hover.png" alt="..." /></div>
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/home-hover.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/home-hover.png" alt="..." /></div>
                   </a><a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-paw-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-paw" role="tab" aria-controls="nav-paw" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/paw.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/paw-hover.png" alt="..." /></div>
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/paw-hover.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/paw-hover.png" alt="..." /></div>
                   </a><a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-plane-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-plane" role="tab" aria-controls="nav-plane" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/plane.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/plane-hover.png" alt="..." /></div>
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/plane-hover.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/plane-hover.png" alt="..." /></div>
                   </a></div>
                 <div class="tab-content w-100" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">

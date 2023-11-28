@@ -313,7 +313,7 @@
 
           <!-- ***** Gaming Library Start ***** -->
           
-            <h1 class="title text-center py-6"> Carrito de compras</h1>
+            <h1 class="title text-center py-8"> Carrito de compras</h1>
             <!-- multistep form -->
             
             @if (Cart::getContent()->count() > 0)

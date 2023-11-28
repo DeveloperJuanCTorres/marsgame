@@ -120,17 +120,17 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="page-content">          
+        <div class="page-content pt-0">          
 
           <!-- ***** Gaming Library Start ***** -->
           <div class="gaming-library profile-library">
             <div class="col-lg-12">
               <div class="heading-section">
-                <h4>Mis Códigos activos</h4>
+                <h4 class="text-center">Mis Códigos activos</h4>
               </div>
               @foreach ($codigos as $item)
               <div class="item">
-                <ul>
+                <ul class="p-0">
                     <li><img src="{{asset('assets1/images/game-01.jpg')}}" alt="" class="templatemo-item imgclass"></li>
                     <li><h4>Ptos Samsh</h4><span>1</span></li>
                     <li><h4>Vence</h4><span>30/11/2023</span></li>

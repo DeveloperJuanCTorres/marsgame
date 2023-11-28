@@ -21894,7 +21894,7 @@ iframe.yt-video.loaded {
   margin-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
+  /* background-color: white; */
 }
 .icon-box .car-insurance-icon-hover {
   display: none !important;
