@@ -49,6 +49,9 @@
                 url: "/culqi",
                 method: "post",
                 dataType: 'json',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                    },
                 data: {
                     token: token,
                     email: email

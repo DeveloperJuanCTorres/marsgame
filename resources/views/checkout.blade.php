@@ -451,6 +451,7 @@
     <script src="{{asset('assets1/js/custom.js')}}"></script>
 
     <script src="https://checkout.culqi.com/js/v4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         Culqi.publicKey = 'pk_test_ecfa72b4b25716be';
     </script>
