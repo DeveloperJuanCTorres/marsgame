@@ -1,10 +1,10 @@
 
-    // const btn_pagar = document.getElementById('btn_pagar');
+    const btn_pagar = document.getElementById('btn_pagar');
 
     btn_pagar.addEventListener('click', function (e) {
         
         Culqi.settings({
-            title: 'Pasarela de pagos',
+            title: 'MARS INVESTMENTS S.A.C.',
             currency: 'PEN',  // Este parámetro es requerido para realizar pagos yape
             amount: 1000,  // Este parámetro es requerido para realizar pagos yape
             order: 'ord_test_0CjjdWhFpEAZlxlz' // Este parámetro es requerido para realizar pagos con pagoEfectivo, billeteras y Cuotéalo
@@ -30,18 +30,22 @@
 
         Culqi.open();
         e.preventDefault();
+
+        
     })
+
+    
 
     function culqi() {
         console.log('INICIO DE PRUEBA');
         if (Culqi.token) {  // ¡Objeto Token creado exitosamente!
-        const token = Culqi.token.id;
-        const email = Culqi.token.email;
-        console.log('Se ha creado un Token: ', token);
-        //En esta linea de codigo debemos enviar el "Culqi.token.id"
-        //hacia tu servidor con Ajax
+            const token = Culqi.token.id;
+            const email = Culqi.token.email;
+            console.log('Se ha creado un Token: ', token);
+            //En esta linea de codigo debemos enviar el "Culqi.token.id"
+            //hacia tu servidor con Ajax
         
-        $.ajax({
+            $.ajax({
                 url: "/culqi",
                 method: "post",
                 dataType: 'json',
@@ -65,13 +69,13 @@
                         if (response.status) {
                         Swal.fire({
                             icon: 'success',
-                            title: Response,
+                            title: 'Titulo',
                             text: "Compra realizada con exito",
                             allowOutsideClick: false,
                             confirmButtonText: "Regresar al Inicio",
                         })
                         .then(resultado => {
-                            //window.location.href = "/";
+                            window.location.href = "/";
                         }) 
                         }
                         else{

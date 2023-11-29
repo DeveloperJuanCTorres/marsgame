@@ -38,14 +38,12 @@
     <link href="{{asset('assets/css/user.css')}}?v=<?php echo $version ?>" rel="stylesheet">
     
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Scripts -->
     <!-- vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 </head>
 <body>
-<script src="https://checkout.culqi.com/js/v4"></script>
-  <script>
-    Culqi.publicKey = 'sk_test_07e2b9f728f921sd';
-  </script>    
+   
         <!-- include('layouts.header') -->
         <main>
             @yield('content')
@@ -78,9 +76,12 @@
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
     @stack('script')
 
-
+    <script src="https://checkout.culqi.com/js/v4"></script>
+    <script>
+        Culqi.publicKey = 'pk_test_ecfa72b4b25716be';
+    </script>
 </body>
 </html>

@@ -52,6 +52,8 @@ Route::resource('/cart', CartController::class);
 Route::get('/terminos',[AdminController::class, 'terminos'])->name('terminos');
 Route::get('/politicas',[AdminController::class, 'politicas'])->name('politicas');
 
+Route::post('/culqi',[CulqiController::class, 'culqi'])->name('culqi');
+
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
     
