@@ -4,17 +4,26 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Culqi\Culqi;
 use Illuminate\Http\Request;
+// use App\Http\Controllers\Requests;
+
+// use App\Http\Controllers\Requests\library\Requests;
+// use App\Http\Controllers\culqiphp\lib\culqi;
 
 include_once dirname(__FILE__).'/Requests/library/Requests.php';
-        include_once dirname(__FILE__).'/culqi-php/lib/culqi.php';  
-        // Requests::register_autoloader();
+        include_once dirname(__FILE__).'/culqiphp/lib/culqi.php';  
+        Requests::register_autoloader();
 
 class CulqiController extends Controller
 {   
-    public function culqi(Request $request)
+    public function index()
     {
+        Requests::register_autoloader();
+    }
+
+    public function store(Request $request)
+    {      
         
-        
+
         // Configurar tu API Key y autenticación
         $SECRET_KEY = "sk_test_70af522ab336bbda";
         $culqi = new Culqi(array('api_key' => $SECRET_KEY));
@@ -35,7 +44,7 @@ class CulqiController extends Controller
         //Respuesta
         // print_r($charge);
 
-        return response()->json(['status' => true, 'msg' => 'Éxito']); 
+        // return response()->json(['status' => true, 'msg' => 'Éxito']); 
     }
     
 }
