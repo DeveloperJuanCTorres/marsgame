@@ -48,6 +48,9 @@
             $.ajax({
                 url: "/culqi",
                 type: "POST",
+                headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                },
                 data: {
                     token: token,
                     email: email

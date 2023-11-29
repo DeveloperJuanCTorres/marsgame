@@ -5,14 +5,15 @@ use App\Http\Controllers\Controller;
 use Culqi\Culqi;
 use Illuminate\Http\Request;
 
+include_once dirname(__FILE__).'/Requests/library/Requests.php';
+        include_once dirname(__FILE__).'/culqi-php/lib/culqi.php';  
+        // Requests::register_autoloader();
 
 class CulqiController extends Controller
 {   
     public function culqi(Request $request)
     {
-        include_once dirname(__FILE__).'/Requests/library/Requests.php';
-        include_once dirname(__FILE__).'/Culqiphp/lib/culqi.php';  
-        Requests::register_autoloader();
+        
         
         // Configurar tu API Key y autenticación
         $SECRET_KEY = "sk_test_70af522ab336bbda";
