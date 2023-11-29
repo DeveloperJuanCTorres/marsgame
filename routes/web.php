@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CulqiController;
 use Doctrine\DBAL\Driver\Middleware;
 use App\Models\Product;
 use App\Models\Ticket;

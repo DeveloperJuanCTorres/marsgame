@@ -58,7 +58,6 @@
                 },
                 beforeSend: function () {
                     Swal.fire({
-                        header: '...',
                         title: "cargando",
                         allowOutsideClick:false,
                         didOpen: () => {
