@@ -407,9 +407,10 @@
                 <div class="btn btn-primary my-4 btn-next d-block"> Siguiente</div>
             </section>
             <section id="section3" class="section3" style="display:none;">
-                <button class="btn btn-secondary btn-submit" id="btn_participar" style="background-color: transparent !important;display:none;">
+            <button type="button" id="btn_pagar" class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
+                <!-- <button class="btn btn-secondary btn-submit" id="btn_participar" style="background-color: transparent !important;display:none;">
                     Pagar
-                </button>
+                </button> -->
                 <!-- <div class="btn btn-submit" style="display:none;">Submit</div> -->
             </section>
             <section id="section4" class="section4" style="display:none;">
@@ -448,7 +449,13 @@
     <script src="{{asset('assets1/js/tabs.js')}}"></script>
     <script src="{{asset('assets1/js/popup.js')}}"></script>
     <script src="{{asset('assets1/js/custom.js')}}"></script>
-    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
+    <script src="https://checkout.culqi.com/js/v4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Culqi.publicKey = 'pk_test_ecfa72b4b25716be';
+    </script>
+
     <script src="https://use.fontawesome.com/83fc84333f.js"></script>   
     <script>       
 
