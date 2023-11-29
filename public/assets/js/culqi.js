@@ -54,9 +54,49 @@
                 data: {
                     token: token,
                     email: email
+                },
+                beforeSend: function () {
+                    Swal.fire({
+                        title: "cargando",
+                        allowOutsideClick:false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        }
+                    });
+                },
+                success: function (response) {
+                    //cambiar gracias por tu compra Swal
+                    // window.location.href = "/";
+                    if (response.status) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Titulo',
+                        text: "Compra realizada con exito",
+                        allowOutsideClick: false,
+                        confirmButtonText: "Regresar al Inicio",
+                    })
+                    .then(resultado => {
+                        window.location.href = "/";
+                    }) 
+                    }
+                    else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Algo salió mal',
+                        text: response.msg,
+                    })
+                    }
+                
+                },
+                error: function () {
+                    Swal.fire({
+                        icon: 'error',
+                        title: "Upps, sucedio un error",
+                        text: "Something went wrong!",
+                    })
                 }
-            }).done(function(resp){
-                alert(resp);
+            }).done(function(response){
+                alert(response.msg);
             });
         
             // $.ajax({
