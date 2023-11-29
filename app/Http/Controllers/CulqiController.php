@@ -8,6 +8,9 @@ use App\Http\Controllers\Requests;
 use Culqi\Culqi;
 use Requests as GlobalRequests;
 
+include_once dirname(__FILE__).'/Requests/library/Requests.php';
+        include_once dirname(__FILE__).'/culqiphp/lib/culqi.php';  
+        GlobalRequests::register_autoloader();
 class CulqiController extends Controller
 {   
     public function index()
@@ -17,9 +20,7 @@ class CulqiController extends Controller
 
     public function store(Request $request)
     {      
-        include_once dirname(__FILE__).'/Requests/library/Requests.php';
-        include_once dirname(__FILE__).'/culqiphp/lib/culqi.php';  
-        GlobalRequests::register_autoloader();
+        
         // Requests::register_autoloader(); 
 
         // Configurar tu API Key y autenticación
