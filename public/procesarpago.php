@@ -20,6 +20,6 @@ $charge = $culqi->Charges->create(
 );
 
 //Respuesta
-echo "exito";
-return response()->json(['status' => true, 'msg' => 'Éxito']); 
+echo 'exito';
+// return response()->json(['status' => true, 'msg' => 'Éxito']); 
 // print_r($charge);
