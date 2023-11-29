@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Requests;
+// use App\Http\Controllers\Requests;
 use Culqi\Culqi;
-use Requests as GlobalRequests;
+// use Requests as GlobalRequests;
 
-include_once dirname(__FILE__).'/Requests/library/Requests.php';
-        include_once dirname(__FILE__).'/culqi-php/lib/culqi.php';  
-        GlobalRequests::register_autoloader();
+// require 'vendor/autoload.php';
+require __DIR__.'/../../../vendor/autoload.php';
+// require __DIR__.'\../../vendor/autoload.php';
+// require __DIR__ . '/vendor/autoload.php';
+// require_once "vendor/autoload.php";
+// include_once dirname(__FILE__).'/Requests/library/Requests.php';
+//         include_once dirname(__FILE__).'/culqi-php/lib/culqi.php';  
+//  Requests::register_autoloader();
 class CulqiController extends Controller
 {   
     public function index()
