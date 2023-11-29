@@ -9,6 +9,7 @@ use App\Models\Product;
 use App\Models\Ticket;
 use App\Models\Departamento;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,6 +55,7 @@ Route::get('/terminos',[AdminController::class, 'terminos'])->name('terminos');
 Route::get('/politicas',[AdminController::class, 'politicas'])->name('politicas');
 
 Route::resource('/culqi',CulqiController::class);
+
 
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
