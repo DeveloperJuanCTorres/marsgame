@@ -46,7 +46,7 @@
             //hacia tu servidor con Ajax
         
             $.ajax({
-                url: "/culqi",
+                url: "procesarpago.php",
                 type: "POST",
                 data: {
                     token: token,

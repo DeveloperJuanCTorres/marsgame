@@ -2,11 +2,13 @@
 namespace App\Http\Controllers;
 
 include_once dirname(__FILE__).'/Requests/library/Requests.php';
-include_once dirname(__FILE__).'/Culqiphp/lib/culqi.php';  
-Requests::register_autoloader();
+
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
+include_once dirname(__FILE__).'/Culqiphp/lib/culqi.php';  
+Requests::register_autoloader();
 
 class CulqiController extends Controller
 {   
