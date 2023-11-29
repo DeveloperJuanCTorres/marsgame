@@ -59,7 +59,8 @@ Route::resource('/culqi',CulqiController::class);
 
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
-    
+    Route::post('/pasarelapagos', [AdminController::class, 'pasarelapagos'])->name('pasarelapagos');
+    Route::get('/thanks',[AdminController::class, 'thanks'])->name('thanks');
     Route::get('/perfil',[AdminController::class, 'perfil'])->name('perfil');
     Route::get('/codigos',[AdminController::class, 'codigos'])->name('codigos');
     Route::get('/checkout',[AdminController::class, 'checkout'])->name('checkout');

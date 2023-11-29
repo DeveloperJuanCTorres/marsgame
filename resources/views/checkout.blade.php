@@ -20,7 +20,7 @@
   position: absolute;
   left: 0;
   top: 50%;
-  height: 20px;
+  height: 10px;
   width: 100%;
   background-color: #ccc;
   -webkit-transform: translateY(-50%) perspective(1000px);
@@ -31,7 +31,7 @@
   position: absolute;
   left: 0;
   top: 50%;
-  height: 20px;
+  height: 10px;
   width: 100%;
   background-color: #2C3E50;
   -webkit-transform: scaleX(0) translateY(-50%) perspective(1000px);
@@ -93,7 +93,7 @@
 #checkout-progress .progress-bar1 .step span {
   color: #ccc;
   transition: 0.3s ease;
-  display: block;
+  /* display: block; */
   -webkit-transform: translate3d(0, 0, 0) scale(1) perspective(1000px);
           transform: translate3d(0, 0, 0) scale(1) perspective(1000px);
 }
@@ -131,8 +131,8 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%) perspective(1000px);
           transform: translate(-50%, -50%) perspective(1000px);
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   background-color: #fff;
   border-radius: 50%;
   border: 5px solid #ccc;
@@ -190,7 +190,18 @@
 
 
 </style>
-
+@push('izipay')
+        <!-- Javascript library. Should be loaded in head section -->
+        <script 
+        src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js" 
+        kr-public-key="56249706:testpublickey_RjNK14o5KUo9DSurAdvpHpHaJaPHhTpRGJrcy6iwD1lvE" 
+        kr-post-url-success="{{route('pasarelapagos')}}">
+        </script>
+        <!-- theme and plugins. should be loaded after the javascript library -->
+        <!-- not mandatory but helps to have a nice payment form out of the box -->
+        <link rel="stylesheet" href="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic-reset.css">
+        <script src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic.js"></script>         
+    @endpush
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -313,7 +324,7 @@
 
           <!-- ***** Gaming Library Start ***** -->
           
-            <h1 class="title text-center py-8"> Carrito de compras</h1>
+            <h1 class="title text-center pt-8"> Carrito de compras</h1>
             <!-- multistep form -->
             
             @if (Cart::getContent()->count() > 0)
@@ -341,7 +352,7 @@
             
             <section id="section1" class="section1" style="display:block;">
                 <div class="row pt-0">
-                    <div class="col-md-8">
+                    <div class="col-xl-8 col-md-12 col-sm-4">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -375,7 +386,7 @@
                             <i class="fa fa-trash mx-2" style="color: white;"> </i> Limpiar carrito</button>
                         </form>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xl-4 col-md-6 col-sm-12 p-4">
                         <div class="card p-2 bg-primary" style="border-radius: 20px !important;">
                             <h3 class="text-center my-4">Resumen del pedido</h3>
                             <table class="table py-4">
@@ -407,7 +418,24 @@
                 <div class="btn btn-primary my-4 btn-next d-block"> Siguiente</div>
             </section>
             <section id="section3" class="section3" style="display:none;">
-            <button type="button" id="btn_pagar" class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
+            <div class="col-md-4">
+              @if(isset($formToken))
+                  <!-- payment form -->
+                  <div class="kr-embedded"  kr-form-token="{{$formToken}}" style="width:100%">
+                      <!-- payment form fields -->
+                      <div class="kr-pan"></div>
+                      <div class="kr-expiry"></div>
+                      <div class="kr-security-code"></div>  
+                      <!-- payment form submit button -->
+                      <button class="kr-payment-button"></button>
+                      <!-- error zone -->
+                      <div class="kr-form-error"></div>
+                  </div>
+              @else
+                  <h3>Error</h3>
+              @endif
+              </div>
+            <!-- <button type="button" id="btn_pagar" class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button> -->
                 <!-- <button class="btn btn-secondary btn-submit" id="btn_participar" style="background-color: transparent !important;display:none;">
                     Pagar
                 </button> -->

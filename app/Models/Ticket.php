@@ -20,5 +20,7 @@ class Ticket extends Model
         'beneficio4',
         'imagen',
         'cantidad_codigos',
+        'mensual',
+        'cantidad_meses'
     ];
 }

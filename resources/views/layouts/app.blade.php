@@ -37,8 +37,9 @@
     <link href="{{asset('assets/css/theme.css')}}?v=<?php echo $version ?>" rel="stylesheet">
     <link href="{{asset('assets/css/user.css')}}?v=<?php echo $version ?>" rel="stylesheet">
     
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    @stack('izipay')
     <!-- Scripts -->
     <!-- vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 </head>

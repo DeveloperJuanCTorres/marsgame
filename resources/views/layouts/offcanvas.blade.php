@@ -19,7 +19,7 @@
             @foreach (Cart::getContent() as $item)
             <div class="row">
                 <div class="col-6">
-                    <h4>{{$item->name}}</h4>
+                    <h4>{{$item->name}} - {{$item->attributes->mensual}} - {{$item->attributes->cantidadmeses}}</h4>
                 </div>
                 <div class="col-3">
                     <h5>S/ {{$item->price}}</h5>

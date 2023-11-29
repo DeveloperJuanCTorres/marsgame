@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Cart;
+use Illuminate\Console\View\Components\Alert;
 use League\CommonMark\Extension\CommonMark\Node\Block\HtmlBlock;
 use PhpParser\Node\Stmt\InlineHTML;
+use lluminate\Routing\Redirector;
 
 class CartController extends Controller
 {
@@ -47,10 +49,13 @@ class CartController extends Controller
                 'associatedModel' => $request->codigos?$request->codigos:3,
                 'quantity' => $request->quantity?$request->quantity:1,
                 
+                
                 'attributes' => array(
-                     'codigos' => $request->codigos?$request->codigos:3,
-                    //  'size' => $request->size?$request->size:'Big',
-                 )
+                    'mensual' => $request->mensual,
+                    'cantidadmeses' => $request->cantidadmeses
+                    //  'codigos' => $request->codigos?$request->codigos:3,
+                    //  'size' => $request->size?$request->size:0,
+                )
             ));
          } catch (\Throwable $th) {
             return response()->json(['status' => false, 'msg' => 'Error']); 
@@ -115,6 +120,8 @@ class CartController extends Controller
         Cart::clear();
         return back();
     }
+
+    
 
     
 }
