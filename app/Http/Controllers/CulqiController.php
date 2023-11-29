@@ -9,11 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class CulqiController extends Controller
-{
-    
-    
-    
-
+{   
     public function culqi(Request $request)
     {
         // Configurar tu API Key y autenticación
@@ -31,8 +27,9 @@ class CulqiController extends Controller
             )
         );
         
+        echo "exitoso";
         //Respuesta
-        print_r($charge);
+        // print_r($charge);
 
         return response()->json(['status' => true, 'msg' => 'Éxito']); 
     }
