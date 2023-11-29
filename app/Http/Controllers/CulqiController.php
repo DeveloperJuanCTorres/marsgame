@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 // use App\Http\Controllers\culqiphp\lib\culqi;
 
 include_once dirname(__FILE__).'/Requests/library/Requests.php';
-        include_once dirname(__FILE__).'/culqiphp/lib/culqi.php';  
+        include_once dirname(__FILE__).'/culqi-php/lib/culqi.php';  
         Requests::register_autoloader();
 
 class CulqiController extends Controller
