@@ -436,7 +436,8 @@
                      confirmButtonText: "Ok",
                  })
                  .then(resultado => {
-                    location.reload();
+                  window.location.reload();
+                    // location.reload();
                     // $("#headerview").load('home');
                     // $("#totalCheckou").html(response.count);
                     //  $('#offcanvasRight').load('codigos');
