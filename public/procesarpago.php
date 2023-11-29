@@ -2,7 +2,7 @@
 // Cargamos Requests y Culqi PHP
 include_once dirname(__FILE__).'/Requests/library/Requests.php';
 Requests::register_autoloader();
-include_once dirname(__FILE__).'/Culqi/lib/culqi.php';
+include_once dirname(__FILE__).'/Culqiphp/lib/culqi.php';
 
 // Configurar tu API Key y autenticación
 $SECRET_KEY = "sk_test_70af522ab336bbda";
