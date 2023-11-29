@@ -1,16 +1,12 @@
 <?php
-// namespace App\Http\Controllers;
+
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-// use Culqi\Culqi;
-
 use Illuminate\Http\Request;
-// use App\Http\Controllers\Requests;
-
-// use App\Http\Controllers\Requests\library\Requests;
-// use App\Http\Controllers\culqiphp\lib\culqi;
-
-
+use App\Http\Controllers\Requests;
+use Culqi\Culqi;
+use Requests as GlobalRequests;
 
 class CulqiController extends Controller
 {   
@@ -23,11 +19,12 @@ class CulqiController extends Controller
     {      
         include_once dirname(__FILE__).'/Requests/library/Requests.php';
         include_once dirname(__FILE__).'/culqiphp/lib/culqi.php';  
-        Requests::register_autoloader(); 
+        GlobalRequests::register_autoloader();
+        // Requests::register_autoloader(); 
 
         // Configurar tu API Key y autenticación
         $SECRET_KEY = "sk_test_70af522ab336bbda";
-        $culqi = new Culqi\Culqi(array('api_key' => $SECRET_KEY));
+        $culqi = new Culqi(array('api_key' => $SECRET_KEY));
         // $culqi = new Culqi\Culqi(array('api_key' => $SECRET_KEY));
 
         $charge = $culqi->Charges->create(

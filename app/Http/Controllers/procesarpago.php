@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+// namespace App\Http\Controllers;
 // Cargamos Requests y Culqi PHP
 include_once dirname(__FILE__).'/Requests/library/Requests.php';
 Requests::register_autoloader();
