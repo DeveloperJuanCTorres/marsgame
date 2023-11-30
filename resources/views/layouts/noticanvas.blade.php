@@ -6,14 +6,15 @@
     </button>
   </div>
   <div class="offcanvas-body">
-    @if($notificaciones->count()==0)
+    @auth
+ 
     <div>
         <img src="{{asset('assets/img/illustrations/notificacion.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="200" alt="">
         <h4 class="p-2 text-center text-ligth">No tienes mensajes por ahora</h4>
         <p class="text-ligth text-center" style="font-size: 16px;">Aquí podras aceptar o rechazar los codigos promocionales que compartiste a tus amigos.</p>
     </div>
-    @else
-    <table class="table" style="border-color: #01983A;">
+   @endauth
+    <!-- <table class="table" style="border-color: #01983A;">
     <thead>
         <tr>
         <th class="text-ligth" scope="col">Cod.</th>
@@ -22,10 +23,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($notificaciones as $item)
+       
         <tr>
-            <th scope="row"><span class="text-ligth">{{$item->user_id}}</span></th>
-            <td><span class="text-ligth">{{$item->user->name}}</span></td>
+            <th scope="row"><span class="text-ligth">$item->user_id</span></th>
+            <td><span class="text-ligth">$item->user->name</span></td>
             <td>
                 <div class="row">
                     <div class="col-6">
@@ -41,9 +42,8 @@
                 </div>
             </td>
         </tr> 
-        @endforeach      
-        @endif
+       
   </tbody>
-</table>
+</table> -->
   </div>
 </div>

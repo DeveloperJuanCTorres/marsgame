@@ -25,8 +25,9 @@ use App\Models\Departamento;
  Route::get('/', function () {
     $products = Product::all();
     $tickets = Ticket::all();
-    $notificaciones = Notification::where('user_id_original',Auth::user()->id)->get();
-       return view('home',compact('products','tickets','notificaciones'));   
+    
+    // $notificaciones = Notification::where('user_id_original',Auth::user()->id)->get();
+       return view('home',compact('products','tickets'));   
  });
 
 //  Route::get('/register', function () {

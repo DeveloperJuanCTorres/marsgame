@@ -24,7 +24,7 @@
             <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
               <i class="fa fa-bell text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-              {{$notificaciones->count()}}
+              <!-- $notificaciones->count() -->0
               </span>
             </button>             
             @endauth 
