@@ -3,10 +3,14 @@ $(document).on('click', '.aceptar', function(event) {
     var ele = $(this);
     var id = ele.attr("data-id");
     Swal.fire({
+      icon: 'success',
       title: 'Estás apunto de aceptar este código smash',
       showCancelButton: true,
-      confirmButtonText: 'Continuar',
-      cancelButtonText: 'Cancelar'
+      confirmButtonText: 'Aceptar',
+      cancelButtonText: 'Cancelar',
+      confirmButtonColor: '#00983A',
+      background: '#2D2E83',
+      color: 'white'
     }).then((result) => {
       if (result.isConfirmed) {
         $(this).closest('tr').remove();
@@ -70,10 +74,14 @@ $(document).on('click', '.aceptar', function(event) {
     var ele = $(this);
     var id = ele.attr("data-id");
     Swal.fire({
+      icon: 'question',
       title: 'Estás seguro de rechazar este código smash?',
       showCancelButton: true,
-      confirmButtonText: 'Continuar',
-      cancelButtonText: 'Cancelar'
+      confirmButtonText: 'SÍ, Rechazar',
+      cancelButtonText: 'Cancelar',
+      confirmButtonColor: '#00983A',
+      background: '#2D2E83',
+      color: 'white'
     }).then((result) => {
       if (result.isConfirmed) {
         $(this).closest('tr').remove();
@@ -135,11 +143,14 @@ $(document).on('click', '.aceptar', function(event) {
     Swal.fire({
     title: 'Ingresa tu código smash',
     input: 'text',
+    background: '#2D2E83',
+    color: 'white',
     inputAttributes: {
       autocapitalize: 'off'
     },
     showCancelButton: true,
-    confirmButtonText: 'Enviar',
+    confirmButtonText: 'Enviar solicitud',
+    confirmButtonColor: '#00983A',
     cancelButtonText:'Cancelar',
     showLoaderOnConfirm: true,
     preConfirm: (codigo) => {
