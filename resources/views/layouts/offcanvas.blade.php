@@ -7,7 +7,7 @@
             <i class="fas fa-times text-ligth mx-2" aria-hidden="true"> </i> Cerrar
         </button>
     </div>
-    <div class="offcanvas-body p-0">
+    <div class="offcanvas-body">
         @if(Cart::getContent()->count()==0)
         <div>
             <img src="{{asset('assets/img/illustrations/carritocompras.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="150" alt="">
@@ -19,7 +19,7 @@
             @foreach (Cart::getContent() as $item)
             <div class="row">
                 <div class="col-6">
-                    <h4>{{$item->name}} - {{$item->attributes->mensual}} - {{$item->attributes->cantidadmeses}}</h4>
+                    <h4>{{$item->name}} </h4>
                 </div>
                 <div class="col-3">
                     <h5>S/ {{$item->price}}</h5>

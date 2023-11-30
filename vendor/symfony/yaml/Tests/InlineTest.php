@@ -827,7 +827,7 @@ class InlineTest extends TestCase
     /**
      * @dataProvider getNotPhpCompatibleMappingKeyData
      */
-    public function testImplicitStringCastingOfMappingKeysThrows($yaml, $expected)
+    public function testImplicitStringCastingOfMappingKeysIsDeprecated($yaml, $expected)
     {
         $this->expectException(ParseException::class);
         $this->expectExceptionMessage('Implicit casting of incompatible mapping keys to strings is not supported. Quote your evaluable mapping keys instead');

@@ -4,12 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CulqiController;
+use App\Http\Controllers\HomeController;
 use Doctrine\DBAL\Driver\Middleware;
 use App\Models\Product;
 use App\Models\Ticket;
 use App\Models\Notification;
 use App\Models\Departamento;
-
+use TCG\Voyager\Commands\AdminCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +23,12 @@ use App\Models\Departamento;
 |
 */
 
- Route::get('/', function () {
-    $products = Product::all();
-    $tickets = Ticket::all();
-    
-    // $notificaciones = Notification::where('user_id_original',Auth::user()->id)->get();
-       return view('home',compact('products','tickets'));   
- });
+//  Route::get('/', function () {
+//     $products = Product::all();
+//     $tickets = Ticket::all();
+
+//        return view('home',compact('products','tickets'));   
+//  });
 
 //  Route::get('/register', function () {
 //     $departamentos = Departamento::all();
@@ -41,7 +41,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/home',[AdminController::class, 'index'])->name('index');
+Route::get('/',[HomeController::class, 'index'])->name('index');
 
 
 
@@ -54,14 +54,16 @@ Route::post('/participar', [AdminController::class, 'participar'])->name('partic
 Route::post('/limpiar', [CartController::class, 'clear'])->name('limpiar');
 Route::resource('/cart', CartController::class);
 
-Route::get('/terminos',[AdminController::class, 'terminos'])->name('terminos');
-Route::get('/politicas',[AdminController::class, 'politicas'])->name('politicas');
+Route::get('/terminos',[HomeController::class, 'terminos'])->name('terminos');
+Route::get('/politicas',[HomeController::class, 'politicas'])->name('politicas');
 
 Route::resource('/culqi',CulqiController::class);
 
 
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
+    Route::post('/aceptarcodigo', [AdminController::class, 'aceptarcodigo'])->name('aceptarcodigo');
+    Route::post('/rechazarcodigo', [AdminController::class, 'rechazarcodigo'])->name('rechazarcodigo');
     Route::post('/pasarelapagos', [AdminController::class, 'pasarelapagos'])->name('pasarelapagos');
     Route::post('/enviarcodigo', [AdminController::class, 'enviarcodigo'])->name('enviarcodigo');
     Route::get('/thanks',[AdminController::class, 'thanks'])->name('thanks');

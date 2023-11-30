@@ -20,4 +20,7 @@
 @include('layouts.footer')  
 @include('layouts.noticanvas')
 
+<script src="{{asset('vendor1/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('assets/js/header.js')}}"></script>
+
 @endsection

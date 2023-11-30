@@ -385,77 +385,15 @@
 
   @include('layouts.footer') 
       
- 
   @include('layouts.noticanvas')
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="{{asset('assets/js/header.js')}}"></script>
 <script>
-  $(".add_codigo").click(function (e) {
-    e.preventDefault();
-    Swal.fire({
-    title: 'Ingresa tu código smash',
-    input: 'text',
-    inputAttributes: {
-      autocapitalize: 'off'
-    },
-    showCancelButton: true,
-    confirmButtonText: 'Enviar',
-    cancelButtonText:'Cancelar',
-    showLoaderOnConfirm: true,
-    preConfirm: (codigo) => {
-      // return fetch(`//api.github.com/users/${login}`)
-      $.ajax({
-        url: "/enviarcodigo",
-        method: "post",
-        dataType: 'json',
-        data: {
-          _token: $('meta[name="csrf-token"]').attr('content'),           
-          code: codigo
-        } ,
-        success: function (response) {
-            if (response.status==true) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Exito',
-                text: response.msg,
-                allowOutsideClick: false,
-                confirmButtonText: "Ok",
-            })
-            .then(resultado => {
-            // window.location.reload();
-            }) 
-            }
-            else{
-              Swal.fire({
-                  icon: 'error',
-                  title: 'Error',
-                  text: response.msg,
-              })
-            }                
-          },
-          error: function (response) {
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...!!',
-              text: response.msg,
-            })
-          }
-      })        
-    },
-    allowOutsideClick: () => !Swal.isLoading()
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: `${result.value.login}'s avatar`,
-        imageUrl: result.value.avatar_url
-      })
-    }
-  })
-  })
-
   // const btn_comprar = document.getElementById('btn_comprar');
   //   console.log('hola');
 

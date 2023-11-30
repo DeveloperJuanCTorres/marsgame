@@ -7,8 +7,6 @@ use App\Models\Product;
 use App\Models\SorteoSimple;
 use App\Models\SorteoSmash;
 use App\Models\Code;
-use App\Models\Term;
-use App\Models\Policy;
 use App\Models\Ticket;
 use App\Models\Pay;
 use App\Models\Suscription;
@@ -31,16 +29,13 @@ class AdminController extends Controller
          $this->middleware(['auth','verified']);
     }
 
-    public function index(){
-        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->get();
-        $products = Product::all();
-        $tickets = Ticket::all();
-        return view('home',compact('products','tickets','notificaciones'));
-    }
+    
 
     public function perfil(){
         $smash = SorteoSmash::where('user_id',Auth::user()->id)->count();
-        return view('profile',compact('smash'));
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+        $noticount = $notificaciones->count();
+        return view('profile',compact('smash','notificaciones','noticount'));
     }
 
     public function codigos()
@@ -58,6 +53,8 @@ class AdminController extends Controller
     {
         $amount = intval(Cart::getTotal() *100);
         $keyOrder = Str::random(9);
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+        $noticount = $notificaciones->count();
         $store = array(
             "amount"=>  $amount,
             "currency"=> "PEN",
@@ -78,7 +75,45 @@ class AdminController extends Controller
 
 
 
-        return view('checkout',compact('formToken'));
+        return view('checkout',compact('formToken','notificaciones','noticount'));
+    }
+
+    public function aceptarcodigo(Request $request)
+    {
+        try {
+            $notificacion = Notification::where('id',$request->id)->first();
+            $fecha_registro = Carbon::now();
+
+            SorteoSmash::create([
+                'user_id' => $notificacion->user_id,
+                'fecha_registro' => $fecha_registro
+            ]);
+            SorteoSmash::create([
+                'user_id' => $notificacion->user_id_original,
+                'fecha_registro' => $fecha_registro
+            ]);
+
+            $notificacion->estado = 1;
+            $notificacion->save();
+
+            return response()->json(['status' => true, 'msg' => 'Aceptaste el código smash con éxito']);
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]);
+        }   
+    }
+
+    public function rechazarcodigo(Request $request)
+    {
+        try {
+            $notificacion = Notification::where('id',$request->id)->first();
+            $codigo = Code::where('id',$notificacion->codigo_id)->first();
+            $notificacion->delete();
+            $codigo->estado = 0;
+            $codigo->save();
+            return response()->json(['status' => true, 'msg' => 'Rechazaste el código smash con éxito']); 
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
+        }        
     }
 
     public function participar(Request $request){
@@ -128,20 +163,6 @@ class AdminController extends Controller
         return back();
     }
 
-    public function terminos()
-    {
-       $terminos = Term::first();
-
-       return view('terminos',compact('terminos'));
-    }
-
-    public function politicas()
-    {
-       $politicas = Policy::first();
-
-       return view('politicas',compact('politicas'));
-    }
-
     public function enviarcodigo(Request $request)
     {
         try {
@@ -162,7 +183,7 @@ class AdminController extends Controller
                         Notification::create([
                             'user_id' => $user_id,
                             'codigo_id' => $codigo->id,
-                            'estado' => 1,
+                            'estado' => 0,
                             'user_id_original' => $user_original
                         ]);
                         $codigo->estado = 1;
