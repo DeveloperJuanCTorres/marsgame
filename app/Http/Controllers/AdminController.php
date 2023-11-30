@@ -33,7 +33,7 @@ class AdminController extends Controller
 
     public function perfil(){
         $smash = SorteoSmash::where('user_id',Auth::user()->id)->count();
-        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         return view('profile',compact('smash','notificaciones','noticount'));
     }
@@ -41,7 +41,7 @@ class AdminController extends Controller
     public function codigos()
     {
         $codigos = Code::where('user_id',Auth::user()->id)->get();
-        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         return view('codigos',compact('codigos','notificaciones','noticount'));
     }
@@ -49,7 +49,7 @@ class AdminController extends Controller
     public function thanks()
     {
         Cart::clear();
-        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         return view('thanks',compact('notificaciones','noticount'));
     }
@@ -58,7 +58,7 @@ class AdminController extends Controller
     {
         $amount = intval(Cart::getTotal() *100);
         $keyOrder = Str::random(9);
-        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         $store = array(
             "amount"=>  $amount,

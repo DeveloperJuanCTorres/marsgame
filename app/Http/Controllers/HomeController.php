@@ -51,7 +51,7 @@ class HomeController extends Controller
     {
         if (Auth::user()) {
             $terminos = Term::first();
-            $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+            $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
             $noticount = $notificaciones->count();
 
             return view('terminos',compact('terminos','notificaciones','noticount'));
@@ -71,7 +71,7 @@ class HomeController extends Controller
     {
         if (Auth::user()) {
             $politicas = Policy::first();
-            $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+            $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
             $noticount = $notificaciones->count();
 
             return view('politicas',compact('politicas','notificaciones','noticount'));
