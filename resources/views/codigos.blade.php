@@ -76,4 +76,5 @@
     <script src="{{asset('assets1/js/tabs.js')}}"></script>
     <script src="{{asset('assets1/js/popup.js')}}"></script>
     <script src="{{asset('assets1/js/custom.js')}}"></script>
+    <script src="{{asset('assets/js/header.js')}}"></script>
   @endsection

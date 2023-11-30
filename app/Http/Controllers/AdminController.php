@@ -41,7 +41,9 @@ class AdminController extends Controller
     public function codigos()
     {
         $codigos = Code::where('user_id',Auth::user()->id)->get();
-        return view('codigos',compact('codigos'));
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+        $noticount = $notificaciones->count();
+        return view('codigos',compact('codigos','notificaciones','noticount'));
     }
 
     public function thanks()
@@ -69,6 +71,7 @@ class AdminController extends Controller
         );
 
         $authorization = base64_encode('56249706' . ':' . 'testpassword_PQo7foKLFDEin3YPNDeP8e8A7AhF7pYCjB64O3KRYvn02');
+        
         $response = Http::withHeaders([
             'Authorization' => 'Basic ' . $authorization,
             'Content-Type' => 'application/json'
