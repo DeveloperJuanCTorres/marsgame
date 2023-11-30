@@ -71,15 +71,23 @@ class AdminController extends Controller
         );
 
         $authorization = base64_encode('56249706' . ':' . 'testpassword_PQo7foKLFDEin3YPNDeP8e8A7AhF7pYCjB64O3KRYvn02');
-        
-        $response = Http::withHeaders([
-            'Authorization' => 'Basic ' . $authorization,
-            'Content-Type' => 'application/json'
-        ])->post('https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment',$store);
-        
-        $formToken = $response["answer"]["formToken"];
 
-        return view('checkout',compact('formToken','notificaciones','noticount'));
+        if (Cart::getContent()->count() > 0) {
+            $response = Http::withHeaders([
+                'Authorization' => 'Basic ' . $authorization,
+                'Content-Type' => 'application/json'
+            ])->post('https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment',$store);
+            
+            $formToken = $response["answer"]["formToken"];
+    
+            return view('checkout',compact('formToken','notificaciones','noticount'));
+        }
+        else
+        {
+            return view('checkout',compact('notificaciones','noticount'));
+        }
+        
+        
     }
 
     public function aceptarcodigo(Request $request)

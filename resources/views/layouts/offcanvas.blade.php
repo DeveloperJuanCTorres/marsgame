@@ -50,17 +50,19 @@
                     <span class="ct-total">S/. {{Cart::getTotal()}}</span>
                 </div>
             </div>
+            
             <div class="row my-4">
-                    <div class="col-6">
-                        <form method="GET" action="{{ route('cart.create') }}">
-                            <button type="submit" class="btn btn-secondary" style="width: 100%; background-color: transparent !important;">Limpiar</button>
-                        </form>
-                    </div>
-                    <div class="col-6">
-                        <a href="/checkout" class="btn btn-primary" style="width: 100%;" type="submit">Comprar</a>
-                        <!-- <button class="btn btn-primary" id="btn_participar" style="width: 100%;" type="submit">Comprar</button> -->
-                    </div>
-            </div>
+            
+                <div class="col-6">
+                    <form method="GET" action="{{ route('cart.create') }}">
+                        <button type="submit" class="btn btn-secondary" style="width: 100%; background-color: transparent !important;">Limpiar</button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <a href="/checkout" class="btn btn-primary" style="width: 100%;" type="submit">Pagar</a>
+                </div>
+                
+            </div>            
         </div>
     </div>
 </div>
