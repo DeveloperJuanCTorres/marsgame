@@ -69,18 +69,12 @@ class AdminController extends Controller
         );
 
         $authorization = base64_encode('56249706' . ':' . 'testpassword_PQo7foKLFDEin3YPNDeP8e8A7AhF7pYCjB64O3KRYvn02');
-       try {
         $response = Http::withHeaders([
             'Authorization' => 'Basic ' . $authorization,
             'Content-Type' => 'application/json'
         ])->post('https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment',$store);
-       } catch (\Throwable $th) {
-        dd($th->getMessage());
-       }
         
         $formToken = $response["answer"]["formToken"];
-
-
 
         return view('checkout',compact('formToken','notificaciones','noticount'));
     }
