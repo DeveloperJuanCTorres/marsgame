@@ -13,6 +13,7 @@ use App\Models\Ticket;
 use App\Models\Pay;
 use App\Models\Suscription;
 use App\Models\Suscriptions;
+use App\Models\Notification;
 use Carbon\Carbon;
 use GuzzleHttp\Psr7\Message;
 use Hamcrest\Core\HasToString;
@@ -31,9 +32,10 @@ class AdminController extends Controller
     }
 
     public function index(){
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->get();
         $products = Product::all();
         $tickets = Ticket::all();
-        return view('home',compact('products','tickets'));
+        return view('home',compact('products','tickets','notificaciones'));
     }
 
     public function perfil(){
@@ -138,6 +140,45 @@ class AdminController extends Controller
        $politicas = Policy::first();
 
        return view('politicas',compact('politicas'));
+    }
+
+    public function enviarcodigo(Request $request)
+    {
+        try {
+            $codigo = Code::where('codigo',$request->code)->first();
+            
+            $user_id = Auth::user()->id;
+
+            if ($codigo) {
+                $user_original = $codigo->user_id;
+                if ($codigo->user_id == $user_id) {
+                    return response()->json(['status' => false, 'msg' => 'No puedes usar un código generado por tí.']);
+                }
+                else{
+                    if ($codigo->estado==1) {
+                        return response()->json(['status' => false, 'msg' => 'Éste código ya está en uso, ingrese otro código.']);
+                    }
+                    elseif($codigo->estado==0){                    
+                        Notification::create([
+                            'user_id' => $user_id,
+                            'codigo_id' => $codigo->id,
+                            'estado' => 1,
+                            'user_id_original' => $user_original
+                        ]);
+                        $codigo->estado = 1;
+                        $codigo->save();
+                        return response()->json(['status' => true, 'msg' => 'Tu solicitud fue enviada con éxito']);
+                    } 
+                }                               
+            }
+            else{
+                return response()->json(['status' => false, 'msg' => 'No se encontro el código o ya se encuentra vencido']);
+            }
+
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]);
+        }
+       
     }
 
     public function pasarelapagos(Request $request)

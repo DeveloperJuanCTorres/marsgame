@@ -7,6 +7,7 @@ use App\Http\Controllers\CulqiController;
 use Doctrine\DBAL\Driver\Middleware;
 use App\Models\Product;
 use App\Models\Ticket;
+use App\Models\Notification;
 use App\Models\Departamento;
 
 
@@ -24,7 +25,8 @@ use App\Models\Departamento;
  Route::get('/', function () {
     $products = Product::all();
     $tickets = Ticket::all();
-       return view('home',compact('products','tickets'));   
+    $notificaciones = Notification::where('user_id_original',Auth::user()->id)->get();
+       return view('home',compact('products','tickets','notificaciones'));   
  });
 
 //  Route::get('/register', function () {
@@ -60,6 +62,7 @@ Route::resource('/culqi',CulqiController::class);
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
     Route::post('/pasarelapagos', [AdminController::class, 'pasarelapagos'])->name('pasarelapagos');
+    Route::post('/enviarcodigo', [AdminController::class, 'enviarcodigo'])->name('enviarcodigo');
     Route::get('/thanks',[AdminController::class, 'thanks'])->name('thanks');
     Route::get('/perfil',[AdminController::class, 'perfil'])->name('perfil');
     Route::get('/codigos',[AdminController::class, 'codigos'])->name('codigos');

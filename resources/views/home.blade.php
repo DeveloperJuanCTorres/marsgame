@@ -393,6 +393,69 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
+  $(".add_codigo").click(function (e) {
+    e.preventDefault();
+    Swal.fire({
+    title: 'Ingresa tu código smash',
+    input: 'text',
+    inputAttributes: {
+      autocapitalize: 'off'
+    },
+    showCancelButton: true,
+    confirmButtonText: 'Enviar',
+    cancelButtonText:'Cancelar',
+    showLoaderOnConfirm: true,
+    preConfirm: (codigo) => {
+      // return fetch(`//api.github.com/users/${login}`)
+      $.ajax({
+        url: "/enviarcodigo",
+        method: "post",
+        dataType: 'json',
+        data: {
+          _token: $('meta[name="csrf-token"]').attr('content'),           
+          code: codigo
+        } ,
+        success: function (response) {
+            if (response.status==true) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Exito',
+                text: response.msg,
+                allowOutsideClick: false,
+                confirmButtonText: "Ok",
+            })
+            .then(resultado => {
+            // window.location.reload();
+            }) 
+            }
+            else{
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Error',
+                  text: response.msg,
+              })
+            }                
+          },
+          error: function (response) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...!!',
+              text: response.msg,
+            })
+          }
+      })        
+    },
+    allowOutsideClick: () => !Swal.isLoading()
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: `${result.value.login}'s avatar`,
+        imageUrl: result.value.avatar_url
+      })
+    }
+  })
+  })
+
   // const btn_comprar = document.getElementById('btn_comprar');
   //   console.log('hola');
 
@@ -445,12 +508,6 @@
                  })
                  .then(resultado => {
                   window.location.reload();
-                    // location.reload();
-                    // $("#headerview").load('home');
-                    // $("#totalCheckou").html(response.count);
-                    //  $('#offcanvasRight').load('codigos');
-                    // location.reload(true);
-                    //  $("#headerview").html(response);
                  }) 
                  }
                  else{

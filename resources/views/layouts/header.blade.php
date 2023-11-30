@@ -24,7 +24,7 @@
             <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
               <i class="fa fa-bell text-white"> </i>
               <span class="badge rounded-pill bg-danger" style="font-size: 8px;float: right;display:block;position:relative;">
-              0
+              {{$notificaciones->count()}}
               </span>
             </button>             
             @endauth 
@@ -80,6 +80,11 @@
                       <i class="fa fa-code" aria-hidden="true"></i>Mis códigos
                     </a>
                   </li>
+                  <li>                    
+                    <button class="dropdown-item add_codigo" id="add_codigo">
+                      <i class="fa fa-code" aria-hidden="true"></i>Agregar código
+                    </button>
+                  </li>
                   <li class="pb-4">
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -98,3 +103,17 @@
         </div>
         
     </nav>
+
+  <script>
+   
+
+    $(".btn_comprar").click(function (e) {
+      e.preventDefault();
+      swal("Write something here:", {
+        content: "input",
+      })
+      .then((value) => {
+        swal(`You typed: ${value}`);
+      });
+    })
+  </script>

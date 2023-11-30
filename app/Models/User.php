@@ -31,6 +31,11 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
         'password',
     ];
 
+    public function notificacion()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

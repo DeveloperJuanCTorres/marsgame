@@ -7,10 +7,10 @@
             <i class="fas fa-times text-ligth mx-2" aria-hidden="true"> </i> Cerrar
         </button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body p-0">
         @if(Cart::getContent()->count()==0)
         <div>
-            <img src="{{asset('assets/img/illustrations/carritocompras.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="200" alt="">
+            <img src="{{asset('assets/img/illustrations/carritocompras.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="150" alt="">
             <h4 class="p-2 text-center text-ligth">No hay compras por aquí</h4>
             <p class="text-ligth text-center" style="font-size: 16px;">Todavía no tienes ningún artículo dentro de tu carrito de compras</p>
         </div>
