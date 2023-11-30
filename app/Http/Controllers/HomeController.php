@@ -70,19 +70,19 @@ class HomeController extends Controller
     public function politicas()
     {
         if (Auth::user()) {
-            $terminos = Term::first();
+            $politicas = Policy::first();
             $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
             $noticount = $notificaciones->count();
 
-            return view('politicas',compact('terminos','notificaciones','noticount'));
+            return view('politicas',compact('politicas','notificaciones','noticount'));
         }
         else
         {
-            $terminos = Term::first();
+            $politicas = Policy::first();
             $notificaciones = null;
             $noticount = 0;
 
-            return view('politicas',compact('terminos','notificaciones','noticount'));
+            return view('politicas',compact('politicas','notificaciones','noticount'));
         }
     }
 }

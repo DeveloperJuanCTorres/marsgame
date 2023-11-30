@@ -46,7 +46,10 @@ class AdminController extends Controller
 
     public function thanks()
     {
-        return view('thanks');
+        Cart::clear();
+        $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',1)->get();
+        $noticount = $notificaciones->count();
+        return view('thanks',compact('notificaciones','noticount'));
     }
 
     public function checkout()
@@ -66,11 +69,15 @@ class AdminController extends Controller
         );
 
         $authorization = base64_encode('56249706' . ':' . 'testpassword_PQo7foKLFDEin3YPNDeP8e8A7AhF7pYCjB64O3KRYvn02');
-       
+       try {
         $response = Http::withHeaders([
             'Authorization' => 'Basic ' . $authorization,
             'Content-Type' => 'application/json'
         ])->post('https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment',$store);
+       } catch (\Throwable $th) {
+        dd($th->getMessage());
+       }
+        
         $formToken = $response["answer"]["formToken"];
 
 
