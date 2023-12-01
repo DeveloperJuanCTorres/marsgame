@@ -17,17 +17,30 @@
         @else
         <div>
             @foreach (Cart::getContent() as $item)
-            <div class="row">
-                <div class="col-6">
-                    <h4>{{$item->name}} </h4>
+            <div class="row p-2">
+                <div class="col-3 pt-2">
+                    <span class="text-ligth">{{$item->name}} </span>
                 </div>
-                <div class="col-3">
-                    <h5>S/ {{$item->price}}</h5>
+                <div class="col-3 pt-2">
+                    <span class="text-ligth">S/ {{$item->price}}</span>
                 </div>
-                <div class="col-3">
-                    <h5>{{$item->quantity}}</h5>
+                <div class="col-4">
+                    <div class="input-group">
+                        <input class="btn btn-outline-secondary p-2 restar" type="button" value="-" style="width: 30px;"
+                            onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) - 1">                       
+                        <input type="text" class="form-control p-2 text-center" id="{{$item->name}}" placeholder="" value="{{$item->quantity}}" disabled>
+                        <input class="btn btn-outline-secondary p-2 sumar" data-id="{{$item->name}}" type="button" value="+" style="width: 30px;"
+                            onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) + 1">                        
+                    </div>                    
+                    <!-- <h5>{{$item->quantity}}</h5> -->
+                </div>
+                <div class="col-2">
+                    <button class="btn p-0 ml-2 d-block mx-auto" type="button" style="font-size: 20px;">
+                        <i class="fa fa-trash" style="color: gray;"> </i>
+                    </button>   
                 </div>
             </div>
+            <hr class="dropdown-divider">
             @endforeach
         </div>
         <div style="position: absolute;bottom: 0px;right: 15px;left: 15px;">

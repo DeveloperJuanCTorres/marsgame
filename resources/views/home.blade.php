@@ -260,11 +260,6 @@
               <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
                 <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
                 <div class="card1-header">
-                  <input style="display: none;" type="text" name="id" id="id" value="{{$item->id}}">
-                  <input style="display: none;" type="text" name="name" id="name" value="{{$item->nombre}}">
-                  <input style="display: none;" type="text" name="price" id="price" value="{{$item->monto}}">
-                  <input style="display: none;" type="text" name="quantity" id="quantity" value="1">
-                  <input style="display: none;" type="text" name="codigos" id="codigos" value="{{$item->cantidad_codigos}}">
                   <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
                 </div>
                 <div class="card1-block">
@@ -278,14 +273,14 @@
                     <li class="list-group-item">{{$item->beneficio4}}</li>
                   </ul>
                   <button type="button"
-                  data-id='{{$item->id}}' 
+                      data-id='{{$item->nombre}}' 
                       data-name='{{$item->nombre}}' 
                       data-price='{{$item->monto}}' 
                       data-quantity='1' 
                       data-codigos='{{$item->cantidad_codigos}}' 
                       data-mensual='{{$item->mensual}}'
                       data-cantidadmeses='{{$item->cantidad_meses}}'
-                       class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
+                      class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
                 </div>
               </div>
             </div>
@@ -332,7 +327,7 @@
                     <li class="list-group-item">{{$item->beneficio4}}</li>
                   </ul>
                   <button type="button"
-                      data-id='{{$item->id}}' 
+                      data-id='{{$item->promocion}}' 
                       data-name='{{$item->promocion}}' 
                       data-price='{{$item->monto}}' 
                       data-quantity='1' 
@@ -374,6 +369,15 @@
   //   console.log('hola');
 
     // btn_comprar.addEventListener('click', function (e){
+
+    $(".sumar").click(function (e){
+      e.preventDefault();
+      var ele = $(this);
+      var id = ele.attr("data-id"); 
+
+      $("#id").val(10);
+    })
+
     $(".btn_comprar").click(function (e) {
       e.preventDefault();
         var ele = $(this);
@@ -412,11 +416,11 @@
                 });
             },
             success: function (response) {
-                 if (response) {
+                 if (response.status == true) {
                  Swal.fire({
                      icon: 'success',
-                     title: 'Exito',
-                     text: "Participación realizada con exito",
+                     title: 'Éxito!',
+                     text: response.msg,
                      allowOutsideClick: false,
                      confirmButtonText: "Ok",
                  })
@@ -426,9 +430,9 @@
                  }
                  else{
                  Swal.fire({
-                     icon: 'error',
-                     title: 'response.msg',
-                     text: 'response.msg',
+                     icon: 'info',
+                     title: 'Advertencia!',
+                     text: response.msg,
                  })
                 }
                 

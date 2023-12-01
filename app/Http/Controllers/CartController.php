@@ -42,30 +42,38 @@ class CartController extends Controller
     public function store(Request $request)
     {
          try {
-            Cart::add(array(
-                'id' => $request->id?$request->id:'1', // inique row ID
-                'name' => $request->name?$request->name:'example',
-                'price' =>$request->price?$request->price:20.20,
-                'associatedModel' => $request->codigos?$request->codigos:3,
-                'quantity' => $request->quantity?$request->quantity:1,
-                
-                
-                'attributes' => array(
-                    'mensual' => $request->mensual,
-                    'cantidadmeses' => $request->cantidadmeses
-                    //  'codigos' => $request->codigos?$request->codigos:3,
-                    //  'size' => $request->size?$request->size:0,
-                )
-            ));
-         } catch (\Throwable $th) {
-            return response()->json(['status' => false, 'msg' => 'Error']); 
-         }        
+            $plan = 0;
+            foreach (Cart::getContent() as $item) {
+                if ($item->attributes->mensual == 1) {
+                    $plan = 1;
+                }
+            }
+            if ($request->mensual == 0 || $plan == 0) {
+                Cart::add(array(
+                    'id' => $request->id?$request->id:'1', // inique row ID
+                    'name' => $request->name?$request->name:'example',
+                    'price' =>$request->price?$request->price:20.20,
+                    'associatedModel' => $request->codigos?$request->codigos:3,
+                    'quantity' => $request->quantity?$request->quantity:1,                                
+                    'attributes' => array(
+                        'mensual' => $request->mensual,
+                        'cantidadmeses' => $request->cantidadmeses
+                    )
+                ));
 
-         
-
-        return response()->json(['status' => true, 'msg' => 'Éxito', 
+                return response()->json(['status' => true, 'msg' => 'Se agregó el artículo a su carrito de compras', 
                 'count' => Cart::getContent()->count(),
-                'listcart' => view('layouts.offcanvas')]); 
+                'listcart' => view('layouts.offcanvas')]);
+            }
+            else{
+                $plan = 0;
+                return response()->json(['status' => false, 'msg' => 'Ya tienes un plan agregado a tu carrito de compras, para agregar otro tipo de plan deberas eliminar el plan anterior de tu carrito.']); 
+            }
+            
+         } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => 'Algo salió mal, por favor intentelo más tarde.']); 
+         }       
+         
         //return view('home');
         //return back();
     }
@@ -101,7 +109,17 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if ($request->variable == 'suma') {
+            Cart::update(456, array(
+                'quantity' => +1, // so if the current product has a quantity of 4, it will subtract 1 and will result to 3
+              ));
+        }
+        if ($request->variable == 'resta') {
+            Cart::update(456, array(
+                'quantity' => -1, // so if the current product has a quantity of 4, it will subtract 1 and will result to 3
+              ));
+        }
+        
     }
 
     /**
