@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-4">
                     <div class="input-group">
-                        <input class="btn btn-secondary p-2 restar" type="button" value="-" style="width: 30px;"
+                        <input class="btn btn-secondary p-2 restar" type="button" value="-" style="width: 30px; "
                             onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) - 1">                       
                         <input type="text" class="form-control p-2 text-center" id="{{$item->name}}" placeholder="" value="{{$item->quantity}}" disabled>
                         <input class="btn btn-secondary p-2 sumar" data-id="{{$item->name}}" type="button" value="+" style="width: 30px;"
