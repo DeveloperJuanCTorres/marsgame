@@ -1,6 +1,6 @@
 <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="contact">
+      <section id="contact" class="pb-0">
 
         <div class="container">
           <div class="row">
@@ -16,19 +16,26 @@
               <p class="text-light"> <i class="fas fa-phone-alt me-3 text-primary"> </i><a href="tel:1-800-800-2299">-51 978209130 (Soporte)</a></p>
             </div>
             <div class="col-12 col-lg-6 col-xl-5">
-              <h3 class="text-200 my-4">Subscribe to newsletter </h3>
-              <form class="position-relative">
-                <div class="input-group-icon">
-                  <input class="form-control form-ensurance-control" type="email" placeholder="Enter your email " aria-label="email" />
-                </div>
-                <button class="btn btn-primary btn-subscribe" type="submit">Subscribe now</button>
-              </form>
+              <div class="pb-4 text-center">
+                <ul class="list-unstyled list-inline my-2">
+                  <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fa-2x social-icons"></i></a></li>
+                  <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram fa-2x social-icons"></i></a></li>
+                  <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x social-icons"> </i></a></li>
+                  <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-linkedin fa-2x social-icons"></i></a></li>
+                </ul>
+              </div>
+              <div class="pb-4 text-center">
+                <ul class="widget-list d-flex flex-wrap justify-content-center">
+                  <li class="ms-4"><a class="widget-list-link fs-ms" href="/politicas">Políticas  de Seguridad</a></li>
+                  <li class="ms-4"><a class="widget-list-link fs-ms" href="/terminos">Términos &amp; Condiciones</a></li>
+                </ul>
+              </div>
               <div class="position-relative my-4 d-table mx-auto" >
                 <a href="#" class="py-4">
                   <i style="font-size: 80px;" class="fa fa-book-open d-block mx-auto"></i>
                   Libro de Reclamaciones
                 </a>
-              </div>
+              </div>              
             </div>
           </div>
         </div>
@@ -37,43 +44,6 @@
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
-
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0"">
-
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="d-md-flex justify-content-between pb-1 pt-4">
-                <div class="pb-4">
-                  <ul class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="/politicas">Políticas  de Seguridad</a></li>
-                    <li class="ms-4"><a class="widget-list-link fs-ms" href="/terminos">Términos &amp; Condiciones</a></li>
-                  </ul>
-                </div>
-                <div class="pb-4">
-                  <ul class="list-unstyled list-inline my-2">
-                    <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fa-2x social-icons"></i></a></li>
-                    <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram fa-2x social-icons"></i></a></li>
-                    <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x social-icons"> </i></a></li>
-                    <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-linkedin fa-2x social-icons"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of .container-->
-
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
 
 
       <!-- ============================================-->

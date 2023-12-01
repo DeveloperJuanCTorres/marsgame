@@ -46,7 +46,7 @@
           </div>
         </div>
       </section>
-      <section id="participar">
+      <section id="participar" class="py-0">
 
         <!-- <div class="bg-holder d-none d-md-block" style="background-image:url(assets/img/illustrations/bg-left1.png);background-position:left;background-size:15% 100%;"> -->
         <div class="bg-holder d-none d-md-block">
@@ -62,13 +62,13 @@
             <div class="col-12 mt-6">
               <div class="d-flex align-items-start">
                 <div class="nav flex-column nav-tab" id="nav-tab" role="tablist" aria-orientation="vertical"><a class="circle-hover-wrapper nav-link mb-lg-4 active" id="nav-car-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/car-hover.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/car-hover.png" alt="..." /></div>
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/participar.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/participar.png" alt="..." /></div>
                   </a><a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-home-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/home-hover.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/home-hover.png" alt="..." /></div>
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/proximosorteo.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/proximosorteo.png" alt="..." /></div>
                   </a><a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-paw-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-paw" role="tab" aria-controls="nav-paw" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/paw-hover.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/paw-hover.png" alt="..." /></div>
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/ultimosorteo.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/ultimosorteo.png" alt="..." /></div>
                   </a><a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-plane-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-plane" role="tab" aria-controls="nav-plane" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/plane-hover.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/plane-hover.png" alt="..." /></div>
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/comunidad.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/comunidad.png" alt="..." /></div>
                   </a></div>
                 <div class="tab-content w-100" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
@@ -134,7 +134,7 @@
                   <div class="tab-pane fade" id="nav-plane" role="tabpanel" aria-labelledby="nav-plane-tab">
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                        <h2 class="text-light mb-md-5">Travel Insurance</h2>
+                        <h2 class="text-light mb-md-5">Comunidad</h2>
                         <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
                         <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
                       </div>
@@ -147,43 +147,19 @@
               </div>
             </div>
           </div>
-          <div class="row offset-xl-2">
-            <div class="col-12">
-              <div class="mb-3 mb-md-5">
-                <h2 class="text-light mb-7 text-center text-sm-start">Nuestros servicios</h2>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/support.png" height="60" alt="..." />
-                  <h4 class="mt-4 fw-normal text-light">24x7 Support</h4>
-                  <p class="text-400 mb-md-0">Client is our most <br> important priority</p>
-                </div>
-                <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/edit.png" height="60" alt="..." />
-                  <h4 class="mt-4 fw-normal text-light">Easy Claim System</h4>
-                  <p class="text-400 mb-md-0">Express your desires <br>and needs to us</p>
-                </div>
-                <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/money.png" height="60" alt="..." />
-                  <h4 class="mt-4 fw-normal text-light">Easy installments</h4>
-                  <p class="text-400 mb-md-0">It's quick, safe, and simple. Select several methods of payment</p>
-                </div>
-                <div class="col-sm-6 col-lg-3 mb-6 text-center text-sm-start"><img class="shadow-icon" src="assets/img/icons/security.png" height="60" alt="..." />
-                  <h4 class="mt-4 fw-normal text-light">Strongly Secured</h4>
-                  <p class="text-400 mb-md-0">Food is made and delivered directly to your home.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
 
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="clientes" class="py-8">
+      <section id="clientes" class="pt-0">
 
         <div class="container-fluid px-0">
           <div class="row g-0">
             <div class="col-12 col-xxl-11 offset-xxl-1">
-              <h2 class="text-light text-center">Nuestros Ganadores</h2>
+              <h2 class="text-light text-center">Últimos Ganadores</h2>
               <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carouse">
                 <div class="carousel-inner ps-md-5 ps-lg-11 py-4 py-md-5 py-lg-4 pb-lg-9">
                   <div class="carousel-item active">
@@ -193,7 +169,7 @@
                           <div class="card-body pt-0 p-md-0">
                             <div class="d-flex flex-column flex-md-row align-items-center">
                               <div class="card-span-img">
-                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/teamdefault.jpg" alt="" /></div>
+                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/teamdefault.png" alt="" /></div>
                               </div>
                               <div class="mt-n6 mt-md-0 text-center text-md-start px-md-6 px-xl-8 px-xxl-10">
                                 <h4 class="mb-0 fw-medium text-white">Charlize Theron</h4>
@@ -274,7 +250,7 @@
       <section id="promociones" style="padding-top: 0;">
       <div class="container">
         <div class="row">
-          <h2 class="text-light text-center my-5">Tickets</h2>
+          <h2 class="text-light text-center my-5">Tarifa Regular</h2>
         </div>
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
        
@@ -332,7 +308,7 @@
       <section id="promociones" style="padding-top: 0;">
       <div class="container">
         <div class="row">
-          <h2 class="text-light text-center my-5">Promociones</h2>
+          <h2 class="text-light text-center my-5">Tarifa Promocional</h2>
         </div>
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
        

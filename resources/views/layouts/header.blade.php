@@ -72,23 +72,25 @@
                   <li><hr class="dropdown-divider"></li>
                   <li>                    
                     <a class="dropdown-item" href="/perfil">
-                      <i class="fa fa-user" aria-hidden="true"></i>Mi Cuenta 
+                      <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp; Mi Cuenta 
                     </a>
                   </li>
                   <li>                    
                     <a class="dropdown-item" href="/codigos">
-                      <i class="fa fa-code" aria-hidden="true"></i>Mis códigos
+                      <i class="fa fa-code" aria-hidden="true"></i>&nbsp; Mis códigos
                     </a>
                   </li>
                   <li>                    
                     <button class="dropdown-item add_codigo" id="add_codigo">
-                      <i class="fa fa-code" aria-hidden="true"></i>Agregar código
+                      <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;&nbsp; Agregar código
                     </button>
                   </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
                   <li class="pb-4">
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                        <i class="fa fa-clone" aria-hidden="true"></i> Cerrar sesión
+                        <i class="fa fa-clone" aria-hidden="true"></i>&nbsp;&nbsp; Cerrar sesión
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
