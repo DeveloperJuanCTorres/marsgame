@@ -57,7 +57,8 @@ class CartController extends Controller
                     'quantity' => $request->quantity?$request->quantity:1,                                
                     'attributes' => array(
                         'mensual' => $request->mensual,
-                        'cantidadmeses' => $request->cantidadmeses
+                        'cantidadmeses' => $request->cantidadmeses,
+                        'productid' => $request->productid
                     )
                 ));
 
@@ -109,16 +110,23 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if ($request->variable == 'suma') {
-            Cart::update(456, array(
-                'quantity' => +1, // so if the current product has a quantity of 4, it will subtract 1 and will result to 3
-              ));
+        try {
+            if ($request->tipo == 'suma') {
+                Cart::update($id, array(
+                    'quantity' => +1
+                  ));
+                  return response()->json(['status' => true, 'subtotal' => Cart::getSubTotal(), 'total' => Cart::getTotal()]);
+            }
+            if ($request->tipo == 'resta') {
+                Cart::update($id, array(
+                    'quantity' => -1,
+                  ));
+                  return response()->json(['status' => true, 'subtotal' => Cart::getSubTotal(), 'total' => Cart::getTotal()]);
+            }
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]);
         }
-        if ($request->variable == 'resta') {
-            Cart::update(456, array(
-                'quantity' => -1, // so if the current product has a quantity of 4, it will subtract 1 and will result to 3
-              ));
-        }
+        
         
     }
 
@@ -130,6 +138,12 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
+        try {
+            Cart::remove($id);
+            return response()->json(['status' => true, 'subtotal' => Cart::getSubTotal(), 'total' => Cart::getTotal(), 'carcount' => Cart::getContent()->count()]);
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]);
+        }
         
     }
 

@@ -15,9 +15,41 @@
             <p class="text-ligth text-center" style="font-size: 16px;">Todavía no tienes ningún artículo dentro de tu carrito de compras</p>
         </div>
         @else
-        <div>
+        <table class="table" style="border-color: #01983A;">
+        <thead>
+            <tr>
+            <th class="text-ligth col-3" scope="col">Prod.</th>
+            <th class="text-ligth col-3" scope="col">P/U.</th>
+            <th class="text-ligth col-4" scope="col"></th>
+            <th class="text-ligth col-2" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody> 
             @foreach (Cart::getContent() as $item)
-            <div class="row p-2">
+            <tr>
+                <th scope="row"><span class="text-ligth">{{$item->name}}</span></th>
+                <td><span class="text-ligth">S/ {{$item->price}}</span></td>
+                <td>
+                    <div class="input-group">
+                        <input class="btn btn-secondary p-2 restar" data-id="{{$item->name}}" type="button" value="-" style="width: 30px;"
+                            onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) - 1">                       
+                        <input type="text" class="form-control p-2 text-center" id="{{$item->name}}" placeholder="" value="{{$item->quantity}}" disabled>
+                        <input class="btn btn-secondary p-2 sumar" data-id="{{$item->name}}" type="button" value="+" style="width: 30px;"
+                            onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) + 1">                        
+                    </div> 
+                </td>
+                <td>
+                    <button data-id="{{$item->name}}" class="btn p-0 ml-2 d-block mx-auto eliminar" type="button" style="font-size: 20px;">
+                        <i class="fa fa-trash" style="color: gray;"> </i>
+                    </button>
+                </td>
+            </tr> 
+            @endforeach
+        </tbody>
+        </table>
+        <!-- <div> -->
+            <!-- foreach (Cart::getContent() as $item) -->
+            <!-- <div class="row p-2">
                 <div class="col-3 pt-2">
                     <span class="text-ligth">{{$item->name}} </span>
                 </div>
@@ -26,40 +58,39 @@
                 </div>
                 <div class="col-4">
                     <div class="input-group">
-                        <input class="btn btn-secondary p-2 restar" type="button" value="-" style="width: 30px; "
+                        <input class="btn btn-secondary p-2 restar" data-id="{{$item->name}}" type="button" value="-" style="width: 30px; "
                             onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) - 1">                       
                         <input type="text" class="form-control p-2 text-center" id="{{$item->name}}" placeholder="" value="{{$item->quantity}}" disabled>
                         <input class="btn btn-secondary p-2 sumar" data-id="{{$item->name}}" type="button" value="+" style="width: 30px;"
                             onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) + 1">                        
                     </div>                    
-                    <!-- <h5>{{$item->quantity}}</h5> -->
                 </div>
                 <div class="col-2">
-                    <button class="btn p-0 ml-2 d-block mx-auto" type="button" style="font-size: 20px;">
+                    <button data-id="{{$item->name}}" class="btn p-0 ml-2 d-block mx-auto eliminar" type="button" style="font-size: 20px;">
                         <i class="fa fa-trash" style="color: gray;"> </i>
                     </button>   
                 </div>
             </div>
-            <hr class="dropdown-divider">
-            @endforeach
-        </div>
+            <hr class="dropdown-divider"> -->
+            <!-- endforeach -->
+        <!-- </div> -->
         <div style="position: absolute;bottom: 0px;right: 15px;left: 15px;">
             <div class="card-total-items card-bg-secondary p-4" style="border-radius: 15px;">
                 <div class="d-flex justify-content-between cti-1 text-ligth">
                     <span>Subtotal</span>
-                    <span class="ct-subtotal">S/. {{Cart::getSubTotal()}}</span>
+                    <span class="ct-subtotal ml-0">S/. <input class="input-none" type="text" id="subtotal" value="{{Cart::getSubTotal()}}"></span>
                 </div>
 
                 <div class="d-flex justify-content-between cti-2 text-ligth">
                     <span>Descuento</span>
-                    <span class="ct-discount">-s/. 0.00</span>
+                    <span class="ct-subtotal ml-0">S/. <input class="input-none" type="text" id="descuento" value="0.00"></span>
                 </div>
 
                 <hr>
 
                 <div class="d-flex justify-content-between cti-3 text-ligth">
                     <span>Total</span>
-                    <span class="ct-total">S/. {{Cart::getTotal()}}</span>
+                    <span class="ct-total">S/.  <input class="input-none" type="text" id="total" value="{{Cart::getTotal()}}"> </span>
                 </div>
             </div>
             

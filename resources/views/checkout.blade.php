@@ -216,7 +216,7 @@
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
-  @include('layouts.header')
+  @include('layouts.header1')
   <!-- ***** Header Area End ***** -->
 
   <div class="container">
@@ -254,7 +254,7 @@
             
             <section id="section1" class="section1" style="display:block;">
                 <div class="row pt-0">
-                    <div class="col-xl-8 col-md-12 col-sm-4">
+                    <div class="col-xl-8 col-md-12 col-sm-12" style="overflow-x:auto;">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -273,7 +273,16 @@
                                 </th>
                                 <td style="vertical-align: middle;" class="text-ligth">{{$item->name}}</td>
                                 <td style="vertical-align: middle;" class="text-ligth text-center">{{$item->price}}</td>
-                                <td style="vertical-align: middle;" class="text-ligth text-center">{{$item->quantity}}</td>
+                                <td style="vertical-align: middle;" class="table-min">
+                                  <div class="input-group">
+                                    <input class="btn btn-secondary p-2 restar1" data-id="{{$item->name}}" type="button" value="-" style="width: 50px;"
+                                        onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) - 1">                       
+                                    <input style="width: 10px;" type="text" class="form-control p-2 text-center" id="{{$item->name}}" placeholder="" value="{{$item->quantity}}" disabled>
+                                    <input class="btn btn-secondary p-2 sumar1" data-id="{{$item->name}}" type="button" value="+" style="width: 50px;"
+                                        onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) + 1">                        
+                                  </div> 
+                                </td>
+                                <!-- <td style="vertical-align: middle;" class="text-ligth text-center">$item->quantity</td> -->
                                 <td style="vertical-align: middle;" class="text-ligth text-center">
                                     <button type="submit" class="btn btn-secondary" style="background-color: transparent !important;">
                                         <i class="fa fa-trash" style="color: white;"> </i>
@@ -295,15 +304,23 @@
                                 <tbody>
                                     <tr>
                                     <th scope="row"><h5>Subtotal:</h5></th>
-                                    <td><h5>S/ {{Cart::getSubTotal()}}</h5></td>
-                                    </tr>
-                                    <tr>
-                                    <th scope="row"><h5>Descuento:</h5></th>
-                                    <td><h5>S/ 0.00</h5></td>
-                                    </tr>
-                                    <tr>
-                                    <th scope="row"><h4>Total</h4></th>
-                                    <td><h4>S/ {{Cart::getTotal()}}</h4></td>
+                                      <td>
+                                        <h5>S/ 
+                                          <input class="input-none" type="text" id="subtotal" value="{{Cart::getSubTotal()}}">
+                                        </h5>
+                                      </td>
+                                      </tr>
+                                      <tr>
+                                      <th scope="row"><h5>Descuento:</h5></th>
+                                      <td><h5>S/ 0.00</h5></td>
+                                      </tr>
+                                      <tr>
+                                      <th scope="row"><h4>Total</h4></th>
+                                      <td>
+                                        <h4>S/ 
+                                          <input class="input-none" type="text" id="total" value="{{Cart::getTotal()}}">
+                                        </h4>
+                                      </td>
                                     </tr>
                             </tbody>
                             </table>
@@ -387,6 +404,7 @@
     </script>
 
     <script src="https://use.fontawesome.com/83fc84333f.js"></script>   
+    <script src="{{asset('assets/js/header.js')}}"></script>
     <script>       
 
 

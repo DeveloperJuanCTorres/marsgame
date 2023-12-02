@@ -263,16 +263,15 @@ class AdminController extends Controller
 
                 $multiplicador = $item->associatedModel*$item->quantity;
                  for ($i=0; $i < $multiplicador; $i++) { 
-                     $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
+                    $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
                      Code::create([
                         'user_id' => $user_id,
-                        'product_id' => $item->id,
+                        'product_id' => $item->attributes->productid,
                         'codigo' => $random,
-                        'estado' => 0,
+                        'estado' => 0
                      ]);
                  }
             }
-
             
              return redirect()->route('thanks');  
         } catch (\Throwable $th) {

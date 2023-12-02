@@ -280,6 +280,7 @@
                       data-codigos='{{$item->cantidad_codigos}}' 
                       data-mensual='{{$item->mensual}}'
                       data-cantidadmeses='{{$item->cantidad_meses}}'
+                      data-productid='{{$item->id}}'
                       class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
                 </div>
               </div>
@@ -334,6 +335,7 @@
                       data-codigos='{{$item->cantidad_codigos}}' 
                       data-mensual='{{$item->mensual}}'
                       data-cantidadmeses='{{$item->cantidad_meses}}'
+                      data-productid='{{$item->id}}'
                       class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
                 </div>
               </div>
@@ -370,13 +372,7 @@
 
     // btn_comprar.addEventListener('click', function (e){
 
-    $(".sumar").click(function (e){
-      e.preventDefault();
-      var ele = $(this);
-      var id = ele.attr("data-id"); 
-
-      $("#id").val(10);
-    })
+    
 
     $(".btn_comprar").click(function (e) {
       e.preventDefault();
@@ -388,6 +384,7 @@
         var codigos = ele.attr("data-codigos");
         var mensual = ele.attr("data-mensual");
         var cantidad_meses = ele.attr("data-cantidadmeses");
+        var product_id = ele.attr("data-productid");
 
         console.log(codigos);
 
@@ -403,7 +400,8 @@
               quantity: quantity,
               codigos: codigos,
               mensual: mensual,
-              cantidadmeses: cantidad_meses
+              cantidadmeses: cantidad_meses,
+              productid: product_id
             },
             beforeSend: function () {
                 Swal.fire({
@@ -417,6 +415,7 @@
             },
             success: function (response) {
                  if (response.status == true) {
+                  // $('#carcount').val(response.count); Esto es para actualizar el contador del carrito
                  Swal.fire({
                      icon: 'success',
                      title: 'Éxito!',

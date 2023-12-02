@@ -28,12 +28,6 @@
               </span>
             </button>             
             @endauth 
-            <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <i class="fas fa-shopping-cart text-white"> </i>
-              <span class="badge rounded-pill bg-danger" id="totalCheckou" style="font-size: 8px;float: right;display:block;position:relative;">
-               <input id="carcount" class="input-none p-0 text-center" style="width: 8px;" type="text" value="{{Cart::getContent()->count()}}">
-              </span>
-            </button> 
             <div class="d-flex mt-2 align-items-center mt-lg-0">
               <div class="dropdown">
                   @auth

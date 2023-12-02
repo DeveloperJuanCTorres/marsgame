@@ -21,6 +21,9 @@
         color: white !important;
         font-size: 88px !important;
       }
+      .table-min{
+        min-width: 200px;
+      }
 }
 
 @media (max-width: 959px)  {
@@ -45,6 +48,9 @@
   .text-white-promo {
     color: white !important;
     font-size: 88px !important;
+  }
+  .table-min{
+    min-width: 170px;
   }
 }
 
@@ -73,6 +79,9 @@
       }
       .text-white-promo {
         color: white !important;
+      }
+      .table-min{
+        width: 170px;
       }
 }
 
@@ -177,4 +186,11 @@
 
 .text-ligth {
   color: white !important;
+}
+
+.input-none {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: white;
+  width: 50px;
 }

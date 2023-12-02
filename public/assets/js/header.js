@@ -1,3 +1,156 @@
+$(".sumar").click(function (e){
+  e.preventDefault();
+  var ele = $(this);
+  var id = ele.attr("data-id"); 
+
+  $.ajax({
+      url: "/cart/"+id,
+      method: "PUT",
+      dataType: 'json',
+      data: {
+        _token: $('meta[name="csrf-token"]').attr('content'),           
+        tipo: 'suma'
+      },
+      success: function (response) {
+          if (response.status == true) {
+            $('#subtotal').val(response.subtotal);
+            $('#total').val(response.total);
+          }              
+        },
+      error: function (response) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...!!',
+              text: response.msg,
+            })
+      }
+  });
+
+})
+
+$(".restar").click(function (e){
+  e.preventDefault();
+  var ele = $(this);
+  var id = ele.attr("data-id"); 
+
+  $.ajax({
+      url: "/cart/"+id,
+      method: "PUT",
+      dataType: 'json',
+      data: {
+        _token: $('meta[name="csrf-token"]').attr('content'),           
+        tipo: 'resta'
+      },
+      success: function (response) {
+          if (response.status == true) {
+            $('#subtotal').val(response.subtotal);
+            $('#total').val(response.total);
+          }              
+        },
+      error: function (response) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...!!',
+              text: response.msg,
+            })
+      }
+  });
+
+})
+
+$(".sumar1").click(function (e){
+  e.preventDefault();
+  var ele = $(this);
+  var id = ele.attr("data-id"); 
+
+  $.ajax({
+      url: "/cart/"+id,
+      method: "PUT",
+      dataType: 'json',
+      data: {
+        _token: $('meta[name="csrf-token"]').attr('content'),           
+        tipo: 'suma'
+      },
+      success: function (response) {
+          if (response.status == true) {
+            $('#subtotal').val(response.subtotal);
+            $('#total').val(response.total);
+            window.location.reload();
+          }              
+        },
+      error: function (response) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...!!',
+              text: response.msg,
+            })
+      }
+  });
+
+})
+
+$(".restar1").click(function (e){
+  e.preventDefault();
+  var ele = $(this);
+  var id = ele.attr("data-id"); 
+
+  $.ajax({
+      url: "/cart/"+id,
+      method: "PUT",
+      dataType: 'json',
+      data: {
+        _token: $('meta[name="csrf-token"]').attr('content'),           
+        tipo: 'resta'
+      },
+      success: function (response) {
+          if (response.status == true) {
+            $('#subtotal').val(response.subtotal);
+            $('#total').val(response.total);
+            window.location.reload();
+          }              
+        },
+      error: function (response) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...!!',
+              text: response.msg,
+            })
+      }
+  });
+
+})
+
+$(".eliminar").click(function (e){
+  e.preventDefault();
+  var ele = $(this);
+  var id = ele.attr("data-id"); 
+
+  $.ajax({
+      url: "/cart/"+id,
+      method: "DELETE",
+      dataType: 'json',
+      data: {
+        _token: $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function (response) {
+          if (response.status == true) {
+            $('#subtotal').val(response.subtotal);
+            $('#total').val(response.total);
+            $('#carcount').val(response.carcount);
+          }              
+        },
+      error: function (response) {
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...!!',
+              text: response.msg,
+            })
+      }
+  });
+  $(this).closest('tr').remove();
+
+})
+
 $(document).on('click', '.aceptar', function(event) {
     event.preventDefault();
     var ele = $(this);
@@ -203,3 +356,5 @@ $(document).on('click', '.aceptar', function(event) {
     }
   })
   })
+
+  
