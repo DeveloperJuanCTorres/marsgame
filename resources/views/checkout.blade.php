@@ -192,15 +192,15 @@
 </style>
 @push('izipay')
         <!-- Javascript library. Should be loaded in head section -->
-        <script 
-        src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js" 
-        kr-public-key="56249706:testpublickey_RjNK14o5KUo9DSurAdvpHpHaJaPHhTpRGJrcy6iwD1lvE" 
+        <script
+        src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
+        kr-public-key="56249706:testpublickey_RjNK14o5KUo9DSurAdvpHpHaJaPHhTpRGJrcy6iwD1lvE"
         kr-post-url-success="{{route('pasarelapagos')}}">
         </script>
         <!-- theme and plugins. should be loaded after the javascript library -->
         <!-- not mandatory but helps to have a nice payment form out of the box -->
         <link rel="stylesheet" href="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic-reset.css">
-        <script src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic.js"></script>         
+        <script src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic.js"></script>
     @endpush
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -222,13 +222,13 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <div class="page-content m-0">          
+        <div class="page-content m-0">
 
           <!-- ***** Gaming Library Start ***** -->
-          
+
             <h1 class="title text-center pt-8"> Carrito de compras</h1>
             <!-- multistep form -->
-            
+
             @if (Cart::getContent()->count() > 0)
             <div class="step-1" id="checkout-progress" data-current-step="1">
                 <div class="progress-bar1">
@@ -248,10 +248,10 @@
                     <div class="fa fa-check opaque"></div>
                     <div class="step-label"> Pagar</div>
                     </div>
-                    
+
                 </div>
             </div>
-            
+
             <section id="section1" class="section1" style="display:block;">
                 <div class="row pt-0">
                     <div class="col-xl-8 col-md-12 col-sm-12" style="overflow-x:auto;">
@@ -276,11 +276,11 @@
                                 <td style="vertical-align: middle;" class="table-min">
                                   <div class="input-group">
                                     <input class="btn btn-secondary p-2 restar1" data-id="{{$item->name}}" type="button" value="-" style="width: 50px;"
-                                        onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) - 1">                       
+                                        onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) - 1">
                                     <input style="width: 10px;" type="text" class="form-control p-2 text-center" id="{{$item->name}}" placeholder="" value="{{$item->quantity}}" disabled>
                                     <input class="btn btn-secondary p-2 sumar1" data-id="{{$item->name}}" type="button" value="+" style="width: 50px;"
-                                        onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) + 1">                        
-                                  </div> 
+                                        onclick="document.getElementById('{{$item->name}}').value = parseInt(document.getElementById('{{$item->name}}').value) + 1">
+                                  </div>
                                 </td>
                                 <!-- <td style="vertical-align: middle;" class="text-ligth text-center">$item->quantity</td> -->
                                 <td style="vertical-align: middle;" class="text-ligth text-center">
@@ -305,7 +305,7 @@
                                     <tr>
                                     <th scope="row"><h5>Subtotal:</h5></th>
                                       <td>
-                                        <h5>S/ 
+                                        <h5>S/
                                           <input class="input-none" type="text" id="subtotal" value="{{Cart::getSubTotal()}}">
                                         </h5>
                                       </td>
@@ -317,7 +317,7 @@
                                       <tr>
                                       <th scope="row"><h4>Total</h4></th>
                                       <td>
-                                        <h4>S/ 
+                                        <h4>S/
                                           <input class="input-none" type="text" id="total" value="{{Cart::getTotal()}}">
                                         </h4>
                                       </td>
@@ -333,26 +333,170 @@
                     </div>
                 </div>
             </section>
+
             <section id="section2" class="section2" style="display:none;">
-                <div class="btn btn-primary my-4 btn-next d-block"> Siguiente</div>
+              <div class="row pt-0">
+                <div class="col-xl-6 col-md-6 col-sm-12 p-4">
+                  <div class="card p-2 bg-primary" style="border-radius: 15px !important;">
+                    <h4 class="p-2 text-center">Datos Personales</h4>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                      <input type="text" class="form-control" value="{{Auth::user()->name}} {{Auth::user()->last_name}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                      <input type="text" class="form-control" value="{{Auth::user()->email}}" disabled aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Dirección</span>
+                      <input type="text" class="form-control" value="{{Auth::user()->direccion}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Departamento</span>
+                      <input type="hidden" id="depart" value="{{ Auth::user()->departamento }}">
+                      <select class="form-select" id="ubigeo_dep" name="departamento" value="{{ Auth::user()->departamento }}" required >
+                        
+                      </select>
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Provincia</span>
+                      <input type="hidden" id="prov" value="{{ Auth::user()->provincia }}">
+                      <select class="form-select" id="ubigeo_pro" name="provincia" value="{{ Auth::user()->departamento }}" required >
+                        
+                      </select>
+                    </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Distrito</span>
+                      <input type="hidden" id="dist" value="{{ Auth::user()->distrito }}">
+                      <select class="form-select" id="ubigeo_dis" name="distrito" value="{{ Auth::user()->departamento }}" required >
+                        
+                      </select>
+                    </div>
+                    <div class="btn btn-primary my-4 btn-next d-block"> Siguiente</div>
+                  </div>                  
+                </div>
+                <div class="col-xl-6 col-md-12 col-sm-12" style="overflow-x:auto;">
+                <h4 class="text-center pt-2">Resumen de tu Compra</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col"></th>
+                            <th style="color: #00983A;font-weight: bold;" scope="col">Producto</th>
+                            <th style="color: #00983A;font-weight: bold;" class="text-center" scope="col">Precio</th>
+                            <th style="color: #00983A;font-weight: bold;" class="text-center" scope="col">Cantidad</th>
+                            <th style="color: #00983A;font-weight: bold;" class="text-center" scope="col">Sub Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(Cart::getContent() as $item)
+                            <tr>
+                            <th class="text-ligth" scope="row">
+                                <img style="border-radius: 15px;" src="{{asset('assets/img/illustrations/imagentest.jpg')}}" width="100" alt="">
+                            </th>
+                            <td style="vertical-align: middle;" class="text-ligth">{{$item->name}}</td>
+                            <td style="vertical-align: middle;" class="text-ligth text-center">S/. {{$item->price}}</td>
+                            <td style="vertical-align: middle;" class="text-ligth text-center">{{$item->quantity}}</td>
+                            <td style="vertical-align: middle;" class="text-ligth text-center">S/. {{$item->price*$item->quantity}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                        <tfooter>
+                            <tr>
+                              <th colspan="4" style="vertical-align: middle;"><h5 class="text-center">Total</h5></th>
+                              <th style="vertical-align: middle;"><h5 class="text-center">S/. {{Cart::getTotal()}}</h5></th>
+                            </tr>
+                        </tfooter>
+                    </table>
+                    <div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" checked name="terminos" id="terminos" value="terminos" disabled>
+                        <label class="form-check-label text-ligth" for="terminos">
+                          Al pagar estas aceptando los <a target="_blank" href="/terminos">Términos & Condiciones</a>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" checked name="politicas" id="politicas" value="politicas" disabled>
+                        <label class="form-check-label text-ligth" for="politicas">
+                          Al pagar estas aceptando las <a target="_blank" href="/politicas">Políticas de Seguridad</a>
+                        </label>
+                      </div>
+                    </div>                    
+                </div>
+              </div>
+                
             </section>
+
             <section id="section3" class="section3" style="display:none;">
-            <div class="col-md-4">
-              @if(isset($formToken))
-                  <!-- payment form -->
-                  <div class="kr-embedded"  kr-form-token="{{$formToken}}" style="width:100%">
-                      <!-- payment form fields -->
-                      <div class="kr-pan"></div>
-                      <div class="kr-expiry"></div>
-                      <div class="kr-security-code"></div>  
-                      <!-- payment form submit button -->
-                      <button class="kr-payment-button"></button>
-                      <!-- error zone -->
-                      <div class="kr-form-error"></div>
-                  </div>
-              @else
-                  <h3>Error</h3>
-              @endif
+              <div class="row pt-0">
+                <div class="col-xl-4 col-md-6 col-sm-12 p-4">
+                  @if(isset($formToken))
+                  <div class="card p-2" style="border-radius: 10px !important;background-color: #FF4240;">
+                    <div class="d-block mx-auto p-2">
+                      <img src="{{asset('assets/img/gallery/izipay.png')}}" width="200" alt="">
+                    </div>
+                      <!-- payment form -->
+                      <div class="kr-embedded"  kr-form-token="{{$formToken}}" style="width:100%">
+                          <!-- payment form fields -->
+                          <div class="kr-pan"></div>
+                          <div class="kr-expiry"></div>
+                          <div class="kr-security-code"></div>
+                          <!-- payment form submit button -->
+                          <button class="kr-payment-button"></button>
+                          <!-- error zone -->
+                          <div class="kr-form-error"></div>
+                      </div>
+                    </div>
+                  @else
+                      <h3>Error</h3>
+                  @endif
+                </div>
+                <div class="col-xl-8 col-md-12 col-sm-12" style="overflow-x:auto;">
+                <h4 class="text-center pt-2">Resumen de tu Compra</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col"></th>
+                            <th style="color: #00983A;font-weight: bold;" scope="col">Producto</th>
+                            <th style="color: #00983A;font-weight: bold;" class="text-center" scope="col">Precio</th>
+                            <th style="color: #00983A;font-weight: bold;" class="text-center" scope="col">Cantidad</th>
+                            <th style="color: #00983A;font-weight: bold;" class="text-center" scope="col">Sub Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(Cart::getContent() as $item)
+                            <tr>
+                            <th class="text-ligth" scope="row">
+                                <img style="border-radius: 15px;" src="{{asset('assets/img/illustrations/imagentest.jpg')}}" width="100" alt="">
+                            </th>
+                            <td style="vertical-align: middle;" class="text-ligth">{{$item->name}}</td>
+                            <td style="vertical-align: middle;" class="text-ligth text-center">S/. {{$item->price}}</td>
+                            <td style="vertical-align: middle;" class="text-ligth text-center">{{$item->quantity}}</td>
+                            <td style="vertical-align: middle;" class="text-ligth text-center">S/. {{$item->price*$item->quantity}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                        <tfooter>
+                            <tr>
+                              <th colspan="4" style="vertical-align: middle;"><h5 class="text-center">Total</h5></th>
+                              <th style="vertical-align: middle;"><h5 class="text-center">S/. {{Cart::getTotal()}}</h5></th>
+                            </tr>
+                        </tfooter>
+                    </table>
+                    <div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" checked name="terminos1" id="terminos1" value="terminos1" disabled>
+                        <label class="form-check-label text-ligth" for="terminos1">
+                          Al pagar estas aceptando los <a target="_blank" href="/terminos">Términos & Condiciones</a>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" checked name="politicas1" id="politicas1" value="politicas1" disabled>
+                        <label class="form-check-label text-ligth" for="politicas1">
+                          Al pagar estas aceptando las <a target="_blank" href="/politicas">Políticas de Seguridad</a>
+                        </label>
+                      </div>
+                    </div>
+                </div>
               </div>
             <!-- <button type="button" id="btn_pagar" class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button> -->
                 <!-- <button class="btn btn-secondary btn-submit" id="btn_participar" style="background-color: transparent !important;display:none;">
@@ -396,20 +540,20 @@
     <script src="{{asset('assets1/js/tabs.js')}}"></script>
     <script src="{{asset('assets1/js/popup.js')}}"></script>
     <script src="{{asset('assets1/js/custom.js')}}"></script>
-
+    <script src="{{asset('assets/js/ubigeo.js')}}"></script>
+  <script src="{{asset('assets/js/selectubigeo1.js')}}"></script>
     <script src="https://checkout.culqi.com/js/v4"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         Culqi.publicKey = 'pk_test_ecfa72b4b25716be';
     </script>
 
-    <script src="https://use.fontawesome.com/83fc84333f.js"></script>   
+    <script src="https://use.fontawesome.com/83fc84333f.js"></script>
     <script src="{{asset('assets/js/header.js')}}"></script>
-    <script>       
-
+    <script>
 
         $('.btn-next').on('click', function() {
-	
+
             var currentStepNum = $('#checkout-progress').data('current-step');
             var nextStepNum = (currentStepNum + 1);
             var currentStep = $('.step.step-' + currentStepNum);
@@ -426,11 +570,11 @@
                 $(this).addClass('disabled');
             }*/
             $('.checkout-progress').removeClass('.step-' + currentStepNum).addClass('.step-' + (currentStepNum + 1));
-            
+
             currentStep.removeClass('active').addClass('valid');
             currentStep.find('span').addClass('opaque');
             currentStep.find('.fa.fa-check').removeClass('opaque');
-            
+
             nextStep.addClass('active');
             progressBar.removeAttr('class').addClass('step-' + nextStepNum).data('current-step', nextStepNum);
         });
@@ -445,7 +589,7 @@
         });
 
         $('.btn-prev').on('click', function() {
-            
+
             var currentStepNum = $('#checkout-progress').data('current-step');
             var prevStepNum = (currentStepNum - 1);
             var currentStep = $('.step.step-' + currentStepNum);
@@ -465,11 +609,11 @@
                 $(this).addClass('disabled');
             }
             $('.checkout-progress').removeClass('.step-' + currentStepNum).addClass('.step-' + (prevStepNum));
-            
+
             currentStep.removeClass('active');
             prevStep.find('span').removeClass('opaque');
             prevStep.find('.fa.fa-check').addClass('opaque');
-            
+
             prevStep.addClass('active').removeClass('valid');
             progressBar.removeAttr('class').addClass('step-' + prevStepNum).data('current-step', prevStepNum);
         });
@@ -478,7 +622,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const btn_participar = document.getElementById('btn_participar');
-   
+
 
         btn_participar.addEventListener('click', function (e){
             var formData = new FormData();
@@ -518,7 +662,7 @@
                     })
                     .then(resultado => {
                         window.location.href = "/";
-                    }) 
+                    })
                     }
                     else{
                     Swal.fire({
@@ -527,7 +671,7 @@
                         text: response.msg,
                     })
                     }
-                    
+
                 },
                 error: function (response) {
                 Swal.fire({
