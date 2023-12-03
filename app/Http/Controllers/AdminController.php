@@ -37,7 +37,13 @@ class AdminController extends Controller
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         $cuenta = Account::where('user_id',Auth::user()->id)->first();
-        $saldo = $cuenta->saldo;
+        if ($cuenta == null) {
+            $saldo = 0.00;
+        }
+        else{
+            $saldo = $cuenta->saldo;
+        }
+        
         return view('profile',compact('smash','notificaciones','noticount','saldo'));
     }
 
@@ -47,7 +53,12 @@ class AdminController extends Controller
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         $cuenta = Account::where('user_id',Auth::user()->id)->first();
+        if ($cuenta == null) {
+            $saldo = 0.00;
+        }
+        else{
             $saldo = $cuenta->saldo;
+        }
         return view('codigos',compact('codigos','notificaciones','noticount','saldo'));
     }
 
@@ -57,7 +68,12 @@ class AdminController extends Controller
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         $cuenta = Account::where('user_id',Auth::user()->id)->first();
+        if ($cuenta == null) {
+            $saldo = 0.00;
+        }
+        else{
             $saldo = $cuenta->saldo;
+        }
         return view('thanks',compact('notificaciones','noticount','saldo'));
     }
 
@@ -68,7 +84,12 @@ class AdminController extends Controller
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         $cuenta = Account::where('user_id',Auth::user()->id)->first();
-        $saldo = $cuenta->saldo;
+        if ($cuenta == null) {
+            $saldo = 0.00;
+        }
+        else{
+            $saldo = $cuenta->saldo;
+        }
         $store = array(
             "amount"=>  $amount,
             "currency"=> "PEN",
@@ -107,7 +128,12 @@ class AdminController extends Controller
             $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
             $noticount = $notificaciones->count();
             $cuenta = Account::where('user_id',Auth::user()->id)->first();
-            $saldo = $cuenta->saldo;
+            if ($cuenta == null) {
+                $saldo = 0.00;
+            }
+            else{
+                $saldo = $cuenta->saldo;
+            }
             $store = array(
                 "amount"=>  $amount,
                 "currency"=> "PEN",
