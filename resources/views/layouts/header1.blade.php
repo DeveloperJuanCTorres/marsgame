@@ -33,7 +33,7 @@
                   @auth
                   <button class="btn btn-sm d-flex btn-border" type="submit" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     <!-- <i class="fas fa-user text-primary text-white"> </i> -->
-                    <img class="imgclass" src="{{asset('storage/')}}{{ Auth::user()->avatar }}" alt="" style="width: 30px;border-radius: 60px;">
+                    <img class="imgclass" src="{{asset('storage/'Auth::user()->avatar)}}" alt="" style="width: 30px;border-radius: 60px;">
                     <span class="text-white text-justify-center px-2" style="display: block;margin-top: auto;margin-bottom: auto;">S/. {{$saldo}}</span>
                   </button>   
                   @else
