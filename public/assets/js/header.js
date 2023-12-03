@@ -305,9 +305,7 @@ $(document).on('click', '.aceptar', function(event) {
     confirmButtonText: 'Enviar solicitud',
     confirmButtonColor: '#00983A',
     cancelButtonText:'Cancelar',
-    showLoaderOnConfirm: true,
     preConfirm: (codigo) => {
-      // return fetch(`//api.github.com/users/${login}`)
       $.ajax({
         url: "/enviarcodigo",
         method: "post",
@@ -347,13 +345,36 @@ $(document).on('click', '.aceptar', function(event) {
       })        
     },
     allowOutsideClick: () => !Swal.isLoading()
-  }).then((result) => {
-    if (result.isConfirmed) {
+  })
+  })
+
+  $(".depositar").click(function (e) {
+    e.preventDefault();
+    Swal.fire({
+    title: 'Ingresa el monto a depositar',
+    input: 'number',
+    background: '#2D2E83',
+    color: 'white',
+    inputAttributes: {
+      autocapitalize: 'off'
+    },
+    showCancelButton: true,
+    confirmButtonText: 'Depositar',
+    confirmButtonColor: '#00983A',
+    cancelButtonText:'Cancelar',
+    preConfirm: (monto) => {
       Swal.fire({
-        title: `${result.value.login}'s avatar`,
-        imageUrl: result.value.avatar_url
+        icon: 'success',
+        title: 'Exito',
+        text: 'Está apunto de realizar un depósito',
+        allowOutsideClick: false,
+        confirmButtonText: "Aceptar",
       })
-    }
+      .then(resultado => {
+        window.location.href = "http://127.0.0.1:8000/depositar/" + monto;
+      }) 
+    },
+    allowOutsideClick: () => !Swal.isLoading()
   })
   })
 

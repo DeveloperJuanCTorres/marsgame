@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use Illuminate\Http\Request;
 use App\Models\Ticket;
 use App\Models\Notification;
@@ -33,8 +34,10 @@ class HomeController extends Controller
             $tickets = Ticket::all();        
             $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
             $noticount = $notificaciones->count();
+            $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            $saldo = $cuenta->saldo;
 
-            return view('home',compact('products','tickets','notificaciones','noticount'));
+            return view('home',compact('products','tickets','notificaciones','noticount','saldo'));
         }
         else
         {
@@ -42,7 +45,8 @@ class HomeController extends Controller
             $tickets = Ticket::all();
             $notificaciones = null;
             $noticount = 0;
-            return view('home',compact('products','tickets','notificaciones','noticount'));
+            $saldo = 0.00;
+            return view('home',compact('products','tickets','notificaciones','noticount','saldo'));
         }        
         
     }
@@ -53,16 +57,19 @@ class HomeController extends Controller
             $terminos = Term::first();
             $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
             $noticount = $notificaciones->count();
+            $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            $saldo = $cuenta->saldo;
 
-            return view('terminos',compact('terminos','notificaciones','noticount'));
+            return view('terminos',compact('terminos','notificaciones','noticount','saldo'));
         }
         else
         {
             $terminos = Term::first();
             $notificaciones = null;
             $noticount = 0;
+            $saldo = 0.00;
 
-            return view('terminos',compact('terminos','notificaciones','noticount'));
+            return view('terminos',compact('terminos','notificaciones','noticount','saldo'));
         }
         
     }
@@ -73,16 +80,19 @@ class HomeController extends Controller
             $politicas = Policy::first();
             $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
             $noticount = $notificaciones->count();
+            $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            $saldo = $cuenta->saldo;
 
-            return view('politicas',compact('politicas','notificaciones','noticount'));
+            return view('politicas',compact('politicas','notificaciones','noticount','saldo'));
         }
         else
         {
             $politicas = Policy::first();
             $notificaciones = null;
             $noticount = 0;
+            $saldo = 0.00;
 
-            return view('politicas',compact('politicas','notificaciones','noticount'));
+            return view('politicas',compact('politicas','notificaciones','noticount','saldo'));
         }
     }
 }

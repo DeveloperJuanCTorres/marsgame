@@ -38,7 +38,8 @@ use TCG\Voyager\Commands\AdminCommand;
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+    Voyager::routes();    
+
 });
 
 Route::get('/',[HomeController::class, 'index'])->name('index');
@@ -65,6 +66,10 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/aceptarcodigo', [AdminController::class, 'aceptarcodigo'])->name('aceptarcodigo');
     Route::post('/rechazarcodigo', [AdminController::class, 'rechazarcodigo'])->name('rechazarcodigo');
     Route::post('/pasarelapagos', [AdminController::class, 'pasarelapagos'])->name('pasarelapagos');
+
+    Route::get('/depositar/{monto}',[AdminController::class, 'depositar'])->name('depositar');
+    Route::post('/pasareladeposito', [AdminController::class, 'pasareladeposito'])->name('pasareladeposito');
+
     Route::post('/enviarcodigo', [AdminController::class, 'enviarcodigo'])->name('enviarcodigo');
     Route::get('/thanks',[AdminController::class, 'thanks'])->name('thanks');
     Route::get('/perfil',[AdminController::class, 'perfil'])->name('perfil');

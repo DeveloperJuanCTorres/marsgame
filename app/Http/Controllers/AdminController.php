@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\SorteoSimple;
@@ -35,7 +36,9 @@ class AdminController extends Controller
         $smash = SorteoSmash::where('user_id',Auth::user()->id)->count();
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
-        return view('profile',compact('smash','notificaciones','noticount'));
+        $cuenta = Account::where('user_id',Auth::user()->id)->first();
+        $saldo = $cuenta->saldo;
+        return view('profile',compact('smash','notificaciones','noticount','saldo'));
     }
 
     public function codigos()
@@ -43,7 +46,9 @@ class AdminController extends Controller
         $codigos = Code::where('user_id',Auth::user()->id)->where('estado',0)->get();
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
-        return view('codigos',compact('codigos','notificaciones','noticount'));
+        $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            $saldo = $cuenta->saldo;
+        return view('codigos',compact('codigos','notificaciones','noticount','saldo'));
     }
 
     public function thanks()
@@ -51,7 +56,9 @@ class AdminController extends Controller
         Cart::clear();
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
-        return view('thanks',compact('notificaciones','noticount'));
+        $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            $saldo = $cuenta->saldo;
+        return view('thanks',compact('notificaciones','noticount','saldo'));
     }
 
     public function checkout()
@@ -60,6 +67,8 @@ class AdminController extends Controller
         $keyOrder = Str::random(9);
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
+        $cuenta = Account::where('user_id',Auth::user()->id)->first();
+        $saldo = $cuenta->saldo;
         $store = array(
             "amount"=>  $amount,
             "currency"=> "PEN",
@@ -80,14 +89,91 @@ class AdminController extends Controller
             
             $formToken = $response["answer"]["formToken"];
     
-            return view('checkout',compact('formToken','notificaciones','noticount'));
+            return view('checkout',compact('formToken','notificaciones','noticount','saldo'));
         }
         else
         {
-            return view('checkout',compact('notificaciones','noticount'));
+            return view('checkout',compact('notificaciones','noticount','saldo'));
         }
         
         
+    }
+
+    public function depositar($monto)
+    {
+        try {
+            $amount = intval($monto *100);
+            $keyOrder = Str::random(9);
+            $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
+            $noticount = $notificaciones->count();
+            $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            $saldo = $cuenta->saldo;
+            $store = array(
+                "amount"=>  $amount,
+                "currency"=> "PEN",
+                "transactionId"=>  "myOrderId-".$keyOrder,
+                "orderId"=> $keyOrder,
+                "customer"=> array(
+                    "email"=> Auth::user()->email,
+                )
+            );
+
+            $authorization = base64_encode('56249706' . ':' . 'testpassword_PQo7foKLFDEin3YPNDeP8e8A7AhF7pYCjB64O3KRYvn02');
+
+            $response = Http::withHeaders([
+                'Authorization' => 'Basic ' . $authorization,
+                'Content-Type' => 'application/json'
+            ])->post('https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment',$store);
+            
+            $formToken = $response["answer"]["formToken"];
+                // dd($formToken);
+            return view('depositar',compact('formToken','notificaciones','noticount','monto','saldo'));  
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]);
+        }            
+        
+    }
+
+    public function pasareladeposito(Request $request)
+    {
+
+    $user_id = Auth::user()->id;
+    $date_now = Carbon::now();
+    $limit = 6;
+    $answer = json_decode($request->get("kr-answer"));
+
+    if ($answer->orderStatus == "PAID") {      
+        try {
+            $cuenta = Account::where('user_id',$user_id)->first();
+            $pay = Pay::create([
+                'user_id' => $user_id,
+                'transaction_id' => $answer->shopId,
+                'monto' => ($answer->transactions[0]->amount/100),
+                'estado' => 'pagado',
+                'fecha_pago' => $date_now,
+                'tipo_pago' => $answer->transactions[0]->operationType
+            ]);
+
+            if ($cuenta->count() == 0) {
+                Account::create([
+                    'user_id' => $user_id,
+                    'saldo' => ($answer->transactions[0]->amount/100)
+                ]);                
+            }
+            else{
+                $cuenta->saldo += ($answer->transactions[0]->amount/100);
+                $cuenta->save();
+            }
+                        
+             return redirect()->route('codigos');  
+        } catch (\Throwable $th) {
+             return redirect()->route('checkout');
+        }      
+                        
+    }else{
+        dd('El pago no procede, comunicate con soporte');
+        return abort(404);
+    }
     }
 
     public function aceptarcodigo(Request $request)

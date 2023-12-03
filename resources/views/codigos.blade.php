@@ -36,7 +36,7 @@
                 <ul class="p-0">
                     <li><img src="{{asset('assets1/images/game-01.jpg')}}" alt="" class="templatemo-item imgclass"></li>
                     <li><h4>Ptos Samsh</h4><span>1</span></li>
-                    <li><h4>Vence</h4><span>30/11/2023</span></li>
+                    <li><h4>Vence</h4><span>Sin definir</span></li>
                     <li><h4>Código</h4><span>{{$item->codigo}}</span></li>
                     <li><h4>Estado</h4>
                         @if($item->estado==0)

@@ -46,7 +46,7 @@
                     <ul>
                       <li>Premios ganados <span>0</span></li>
                       <li>Puntos Smash <span>{{$smash}}</span></li>
-                      <li>Saldo actual <span>S/. 0.00</span></li>
+                      <li>Saldo actual <span>S/. {{$saldo}}</span></li>
                       <li>Codigo usuario <span>{{Auth::user()->id}}</span></li>
                     </ul>
                   </div>
