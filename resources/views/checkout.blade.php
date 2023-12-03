@@ -340,35 +340,35 @@
                   <div class="card p-2 bg-primary" style="border-radius: 15px !important;">
                     <h4 class="p-2 text-center">Datos Personales</h4>
                     <div class="input-group mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
-                      <input type="text" class="form-control" value="{{Auth::user()->name}} {{Auth::user()->last_name}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+                      <input style="background-color: transparent;color: white;" type="text" class="form-control" value="{{Auth::user()->name}} {{Auth::user()->last_name}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                      <input type="text" class="form-control" value="{{Auth::user()->email}}" disabled aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                      <input style="background-color: transparent;color: white;" type="text" class="form-control" value="{{Auth::user()->email}}" disabled aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Dirección</span>
-                      <input type="text" class="form-control" value="{{Auth::user()->direccion}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Dirección</span>
+                      <input style="background-color: transparent;color: white;" type="text" class="form-control" value="{{Auth::user()->direccion}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Departamento</span>
+                      <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Departamento</span>
                       <input type="hidden" id="depart" value="{{ Auth::user()->departamento }}">
-                      <select class="form-select" id="ubigeo_dep" name="departamento" value="{{ Auth::user()->departamento }}" required >
+                      <select style="background-color: transparent;color: white;" class="form-select" id="ubigeo_dep" name="departamento" value="{{ Auth::user()->departamento }}" required >
                         
                       </select>
                     </div>
                     <div class="input-group mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Provincia</span>
+                      <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Provincia</span>
                       <input type="hidden" id="prov" value="{{ Auth::user()->provincia }}">
-                      <select class="form-select" id="ubigeo_pro" name="provincia" value="{{ Auth::user()->departamento }}" required >
+                      <select style="background-color: transparent;color: white;" class="form-select" id="ubigeo_pro" name="provincia" value="{{ Auth::user()->departamento }}" required >
                         
                       </select>
                     </div>
                     <div class="input-group mb-3">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Distrito</span>
+                      <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Distrito</span>
                       <input type="hidden" id="dist" value="{{ Auth::user()->distrito }}">
-                      <select class="form-select" id="ubigeo_dis" name="distrito" value="{{ Auth::user()->departamento }}" required >
+                      <select style="background-color: transparent;color: white;" class="form-select" id="ubigeo_dis" name="distrito" value="{{ Auth::user()->departamento }}" required >
                         
                       </select>
                     </div>

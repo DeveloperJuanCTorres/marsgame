@@ -45,7 +45,12 @@
                         <span>Inactivo</span>  
                         @endif                        
                     </li>
-                    <li><div class="main-border-button border-no-active"><a href="#">Copiar codigo</a></div></li>
+                    <li>
+                      <button data-codigo="{{$item->codigo}}" style="border-radius: 30px;background-color: transparent;" 
+                          class="btn btn-secondary main-border-button border-no-active copiar_codigo">
+                      Copiar codigo
+                      </button>
+                    </li>
                 </ul>
               </div>
               @endforeach
@@ -77,4 +82,29 @@
     <script src="{{asset('assets1/js/popup.js')}}"></script>
     <script src="{{asset('assets1/js/custom.js')}}"></script>
     <script src="{{asset('assets/js/header.js')}}"></script>
+    <script>
+  $(".copiar_codigo").click(function (e) {
+    e.preventDefault();
+    var ele = $(this);
+    var codigo = ele.attr("data-codigo");
+    navigator.clipboard.writeText(codigo);
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Tu código se copió en el portapapeles"
+    });
+  })
+      
+    </script>
   @endsection

@@ -40,7 +40,7 @@ class AdminController extends Controller
 
     public function codigos()
     {
-        $codigos = Code::where('user_id',Auth::user()->id)->get();
+        $codigos = Code::where('user_id',Auth::user()->id)->where('estado',0)->get();
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
         $noticount = $notificaciones->count();
         return view('codigos',compact('codigos','notificaciones','noticount'));
@@ -271,11 +271,12 @@ class AdminController extends Controller
                         'estado' => 0
                      ]);
                  }
+                 Cart::clear();
             }
             
-             return redirect()->route('thanks');  
+             return redirect()->route('codigos');  
         } catch (\Throwable $th) {
-             return redirect()->route('perfil');
+             return redirect()->route('checkout');
         }      
                         
     }else{
