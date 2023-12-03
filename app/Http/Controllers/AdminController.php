@@ -180,7 +180,7 @@ class AdminController extends Controller
                 'tipo_pago' => $answer->transactions[0]->operationType
             ]);
 
-            if ($cuenta->count() == 0) {
+            if ($cuenta->count() == null) {
                 Account::create([
                     'user_id' => $user_id,
                     'saldo' => ($answer->transactions[0]->amount/100)
