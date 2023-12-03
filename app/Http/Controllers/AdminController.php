@@ -191,7 +191,7 @@ class AdminController extends Controller
                 $cuenta->save();
             }
                         
-             return redirect()->route('codigos');  
+             return redirect()->route('login');  
         } catch (\Throwable $th) {
              return redirect()->route('checkout');
         }      
