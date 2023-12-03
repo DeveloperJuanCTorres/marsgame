@@ -371,7 +371,7 @@ $(document).on('click', '.aceptar', function(event) {
         confirmButtonText: "Aceptar",
       })
       .then(resultado => {
-        window.location.href = "http://127.0.0.1:8000/depositar/" + monto;
+        window.location.href = "https://marsgame.pe/depositar/" + monto;
       }) 
     },
     allowOutsideClick: () => !Swal.isLoading()
