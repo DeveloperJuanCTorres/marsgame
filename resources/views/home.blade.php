@@ -101,13 +101,37 @@
                           
                           <div class="carousel-inner" style="border-radius: 20px;">
                             <div class="carousel-item active" data-bs-interval="10000">
-                              <img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." />
+                              <img class="feature-img" src="assets/img/sorteos/1.jpg" alt="..." />
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                              <img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." />
+                              <img class="feature-img" src="assets/img/sorteos/2.jpg" alt="..." />
                             </div>
                             <div class="carousel-item">
-                              <img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." />
+                              <img class="feature-img" src="assets/img/sorteos/3.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/4.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/5.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/6.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/7.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/8.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/9.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/10.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/11.jpg" alt="..." />
                             </div>
                           </div>
                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselproximosorteo" data-bs-slide="prev">
