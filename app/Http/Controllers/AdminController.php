@@ -101,7 +101,7 @@ class AdminController extends Controller
             )
         );
 
-        $authorization = base64_encode('56249706' . ':' . 'testpassword_PQo7foKLFDEin3YPNDeP8e8A7AhF7pYCjB64O3KRYvn02');
+        $authorization = base64_encode('56249706' . ':' . 'prodpassword_3dNR01csdddnAxOiWBlkwdLhd60JiRgsHE14OPEg5LrvF');
 
         if (Cart::getContent()->count() > 0) {
             $response = Http::withHeaders([
@@ -145,7 +145,7 @@ class AdminController extends Controller
                 )
             );
 
-            $authorization = base64_encode('56249706' . ':' . 'testpassword_PQo7foKLFDEin3YPNDeP8e8A7AhF7pYCjB64O3KRYvn02');
+            $authorization = base64_encode('56249706' . ':' . 'prodpassword_3dNR01csdddnAxOiWBlkwdLhd60JiRgsHE14OPEg5LrvF');
 
             $response = Http::withHeaders([
                 'Authorization' => 'Basic ' . $authorization,

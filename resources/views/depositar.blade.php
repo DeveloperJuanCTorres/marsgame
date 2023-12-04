@@ -194,7 +194,7 @@
         <!-- Javascript library. Should be loaded in head section -->
         <script
         src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
-        kr-public-key="56249706:testpublickey_RjNK14o5KUo9DSurAdvpHpHaJaPHhTpRGJrcy6iwD1lvE"
+        kr-public-key="56249706:publickey_sXXZLrJ0sFXul61ndNcBJxzcj3DriaMFBKgXa1VW0BQVw"
         kr-post-url-success="{{route('pasareladeposito')}}">
         </script>
         <!-- theme and plugins. should be loaded after the javascript library -->
