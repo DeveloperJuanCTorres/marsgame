@@ -4,24 +4,24 @@
 
         <div class="container">
           <div class="row">
-            <h2 class="text-light text-center mb-8">Contact Us</h2>
+            <h2 class="text-light text-center mb-8">Contáctanos</h2>
             <div class="col-12 col-lg-6 col-xl-7 mb-4 order-0 order-sm-0">
               <a class="logo-footer fs-7" href="/">
                 <img src="{{asset('assets/img/logo.png')}}" width="350" alt="">
                 <!-- <span class="text-primary fw-bolder">Mars</span>
                 <span class="fw-thin text-300">Game</span> -->
               </a>
-              <p class="text-light my-4"> <i class="fas fa-map-marker-alt me-3"></i><span class="text-light">1500 Treat Ave, Suite 200  &nbsp;</span><a class="text-light" href="tel:+604-680-9785">+604-680-9785</a><br />San Francisco, CA 94110</p>
-              <p class="text-light"> <i class="fas fa-envelope me-3 text-primary"> </i><a href="mailto:vctung@outlook.com">email@marsgame.pe </a></p>
-              <p class="text-light"> <i class="fas fa-phone-alt me-3 text-primary"> </i><a href="tel:1-800-800-2299">-51 978209130 (Soporte)</a></p>
+              <p class="text-light my-4"> <i class="fas fa-map-marker-alt me-3"></i><span class="text-light">Lima - Perú &nbsp;</span></p>
+              <p class="text-light"> <i class="fas fa-envelope me-3 text-primary"> </i><a href="mailto:vctung@outlook.com">soporte@marsgame.pe </a></p>
+              <!-- <p class="text-light"> <i class="fas fa-phone-alt me-3 text-primary"> </i><a href="tel:1-800-800-2299">-51 978209130 (Soporte)</a></p> -->
             </div>
             <div class="col-12 col-lg-6 col-xl-5">
               <div class="pb-4 text-center">
                 <ul class="list-unstyled list-inline my-2">
-                  <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fa-2x social-icons"></i></a></li>
-                  <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram fa-2x social-icons"></i></a></li>
-                  <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x social-icons"> </i></a></li>
-                  <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-linkedin fa-2x social-icons"></i></a></li>
+                  <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.facebook.com/groups/7721005837927044/?ref=share&mibextid=KtfwRi"><i class="fab fa-facebook-square fa-2x social-icons"></i></a></li>
+                  <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.instagram.com/adm.marsgame/"><i class="fab fa-instagram fa-2x social-icons"></i></a></li>
+                  <!-- <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="#!"><i class="fab fa-twitter-square fa-2x social-icons"> </i></a></li> -->
+                  <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.tiktok.com/@adm.marsgame"><i class="fab fa-tiktok fa-2x social-icons"></i></a></li>
                 </ul>
               </div>
               <div class="pb-4 text-center">

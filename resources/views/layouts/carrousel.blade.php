@@ -11,13 +11,13 @@
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <div class="container-carrusel py-1 ben-banner"
-            style="background-image: url(https://marsgame.pe/assets/img/banner3.jpg)">      
+            style="background-image: url(https://marsgame.pe/assets/img/banner6.jpg)">      
       </div>
       <!-- <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="..."> -->
     </div>
     <div class="carousel-item">
       <div class="container-carrusel py-1 ben-banner"
-            style="background-image: url(https://marsgame.pe/assets/img/banner4.jpg)">      
+            style="background-image: url(https://marsgame.pe/assets/img/banner7.jpg)">      
       </div>
       <!-- <img src="{{asset('assets/img/banner.jpg')}}" class="d-block w-100" alt="..."> -->
     </div>

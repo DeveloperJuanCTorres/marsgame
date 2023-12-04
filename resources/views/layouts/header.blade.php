@@ -8,10 +8,10 @@
           <div class="collapse navbar-collapse pt-4 pt-lg-0" id="navbarSupportedContent">
           
               <ul class="list-unstyled list-inline my-2" style="margin-left: auto;margin-left: auto;">
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fa-2x text-white"></i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram fa-2x text-white"></i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x text-white"> </i></a></li>
-                <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-linkedin fa-2x text-white"></i></a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.facebook.com/groups/7721005837927044/?ref=share&mibextid=KtfwRi"><i class="fab fa-facebook-square fa-2x text-white"></i></a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.instagram.com/adm.marsgame/"><i class="fab fa-instagram fa-2x text-white"></i></a></li>
+                <!-- <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fa-2x text-white"> </i></a></li> -->
+                <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.tiktok.com/@adm.marsgame"><i class="fab fa-tiktok fa-2x text-white"></i></a></li>
               </ul>
           
             <ul class="navbar-nav ms-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">

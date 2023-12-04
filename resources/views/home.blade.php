@@ -75,8 +75,11 @@
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
                         <h2 class="text-light mb-md-5">Participar</h2>
-                        <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
-                        <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
+                        <p class="text-400 movil">¡Es hora de participar en nuestros emocionantes sorteos, repletos de increíbles premios que te dejarán sin aliento! 
+                          Nuestro compromiso es mantener la emoción y sorprender a nuestros participantes con premios emocionantes y variados.
+                          En nuestros sorteos, no solo encontrarás una amplia gama de premios tentadores, sino también la oportunidad de entrar con mayor fuerza para los proximos sorteos en el Smash!!.</p>
+                        <p class="text-400 mt-3">¡No te pierdas la oportunidad! Participa en nuestro sorteo y podrías ser el próximo ganador. ¡Inscríbete ahora!</p>
+                        <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
                       <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/Rmj-q6SfKaE?si=v9t1pdHBLLoxtLnj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
@@ -88,8 +91,9 @@
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
                         <h2 class="text-light mb-md-5">Próximo sorteo</h2>
-                        <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
-                        <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
+                        <p class="text-400 movil">¡La emoción continúa y te invitamos a participar en nuestro próximo sorteo a lo grande! No te pierdas la oportunidad de ganar increíbles premios desde lo que imaginas y mucho más. Solo tienes que inscribirte y estarás un paso más cerca de convertirte en uno de nuestros afortunados ganadores</p>
+                        <p class="text-400 mt-3">¡Sigue participando y mantén viva la emoción! ¡No te lo puedes perder! con el Smash el que sigue la consigue!</p>
+                        <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
                       </div>
                       <div class="col-md-6 col-xl-8 text-center">                          
                         <div id="carouselproximosorteo" class="carousel carousel-dark slide" data-bs-ride="carousel" 
@@ -123,8 +127,9 @@
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
                         <h2 class="text-light mb-md-5">Último sorteo</h2>
-                        <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
-                        <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
+                        <p class="text-400 movil">¡Felicidades a todos los afortunados ganadores de nuestro emocionante ultimo sorteo! Les extendemos nuestras más sinceras felicitaciones por su gran logro. Esperamos que disfruten de sus increíbles premios y que les brinden momentos de felicidad y satisfacción.</p>
+                        <p class="text-400 mt-3">Agradecemos a todos los participantes por hacer de este sorteo un éxito. ¡Sigan atentos a futuros sorteos y quizás puedan ser los próximos en celebrar una victoria! ¡Enhorabuena una vez más!</p>
+                        <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
                         <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
@@ -135,11 +140,12 @@
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
                         <h2 class="text-light mb-md-5">Comunidad</h2>
-                        <p class="text-400">Make a plan for the emergence of life. We protect your most precious assets, allowing you to devote your time and energy to more essential things in life.</p>
-                        <p class="text-400 mt-3">Discover the most appropriate fit for you and your Family.</p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a>
+                        <p class="text-400 movil">¡Únete a nuestra emocionante comunidad de redes sociales y descubre la magia de los sorteos! En nuestra página, te mantendremos al día con los últimos sorteos cargados de fabulosos premios. Productos diversos para todos los gustos, siempre hay algo emocionante en juego. Participa, comparte con tus amigos y aumenta tus posibilidades de ganar.</p>
+                        <p class="text-400 mt-3">No te pierdas la oportunidad de ser parte de nuestra comunidad de ganadores. ¡Síguenos en nuestras redes sociales y deja que la suerte esté de tu lado! #Sorteos #LasCosasSucedenCuandoParticipas</p>
+                        <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
+                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/unetecomunidad.jpg" alt="..." /></div>
                       </div>
                     </div>
                   </div>
