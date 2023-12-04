@@ -198,6 +198,17 @@
           })
         }
         else{
+            const MAXIMO_TAMANIO_BYTES = 2000000;
+            var archivo = $('#avatar')[0].files[0];
+            if (archivo.size > MAXIMO_TAMANIO_BYTES) {
+                Swal.fire({
+                    icon:'warning',
+                    text: 'Tamaño máximo de imagen 2MB',
+                });
+                return false;
+            }
+        }
+        
           formData.append('file',$('#avatar')[0].files[0]);
           $.ajax({
             url: "/avatar",
@@ -248,7 +259,7 @@
                   })
             }
           });
-        }        
+                
     })
     </script>
   @endsection
