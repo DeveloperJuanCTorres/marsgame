@@ -76,4 +76,5 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/codigos',[AdminController::class, 'codigos'])->name('codigos');
     Route::get('/checkout',[AdminController::class, 'checkout'])->name('checkout');
     Route::post('/pagarsaldo',[AdminController::class, 'pagarsaldo'])->name('chepagarsaldockout');
+    Route::post('/avatar', [AdminController::class, 'avatar'])->name('avatar');
 });

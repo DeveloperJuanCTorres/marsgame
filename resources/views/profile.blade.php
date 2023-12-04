@@ -34,10 +34,16 @@
                   </div>
                   <div class="col-lg-4 align-self-center">
                     <div class="main-info header-text">
-                      <span>Cambiar Foto</span>
+                      <div class="mb-3 pt-2">
+                        <label for="exampleFormControlInput1" class="form-label">Subir nuevo avatar</label>
+                        <input style="border-radius: 10px;" type="file" class="form-control" id="avatar" name="avatar">                                                                 
+                      </div>
+                      <button class="btn btn-primary main-button m-2 text-ligth btn-avatar" style="background-color: transparent !important;border-radius: 30px;">
+                        Cambiar avatar
+                      </button>
                       <h4>{{ Auth::user()->name }} {{ Auth::user()->last_name }}</h4>
-                      <p>You Haven't Gone Live yet. Go Live By Touching The Button Below.</p>
-                      <div class="btn btn-primary rounded-pill">
+                      <p>Gracias por ser parte la comunidad MarsGame, tendrás la oportunidad se ser nuestro próximo ganador.</p>
+                      <div class="main-button">
                         <a href="password/reset">Cambiar contraseña</a>
                       </div>
                     </div>
@@ -174,4 +180,75 @@
     <script src="{{asset('assets1/js/popup.js')}}"></script>
     <script src="{{asset('assets1/js/custom.js')}}"></script>
     <script src="{{asset('assets/js/header.js')}}"></script>
+
+    <script>
+      $(".btn-avatar").click(function (e) {
+      e.preventDefault();
+        var ele = $(this);
+        var formData = new FormData();
+        var avatar = $("#avatar").val();
+
+        if (avatar == '') {
+          Swal.fire({
+              icon: 'info',
+              title: 'Alerta!',
+              text: 'Tienes que seleccionar una imagen',
+              allowOutsideClick: false,
+              confirmButtonText: "Ok",
+          })
+        }
+        else{
+          formData.append('file',$('#avatar')[0].files[0]);
+          $.ajax({
+            url: "/avatar",
+            type: "post",
+						headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            },
+						data: formData,
+            contentType: false,
+            processData: false,
+            beforeSend: function () {
+                Swal.fire({
+                    header: '...',
+                    title: "cargando",
+                    allowOutsideClick:false,
+                    didOpen: () => {
+                    Swal.showLoading()
+                    }
+                });
+            },
+            success: function (response) {
+                 if (response.status == true) {
+                 Swal.fire({
+                     icon: 'success',
+                     title: 'Éxito!',
+                     text: response.msg,
+                     allowOutsideClick: false,
+                     confirmButtonText: "Ok",
+                 })
+                 .then(resultado => {
+                  window.location.reload();
+                 }) 
+                 }
+                 else{
+                 Swal.fire({
+                     icon: 'info',
+                     title: 'Advertencia!',
+                     text: response.msg,
+                 })
+                }
+                
+             },
+            error: function (response) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...!',
+                    text: 'Ocurrió un error',
+                  })
+            }
+          });
+        }        
+    })
+    </script>
   @endsection

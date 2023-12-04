@@ -103,13 +103,13 @@
   <script>
    
 
-    $(".btn_comprar").click(function (e) {
-      e.preventDefault();
-      swal("Write something here:", {
-        content: "input",
-      })
-      .then((value) => {
-        swal(`You typed: ${value}`);
-      });
-    })
+    // $(".btn_comprar").click(function (e) {
+    //   e.preventDefault();
+    //   swal("Write something here:", {
+    //     content: "input",
+    //   })
+    //   .then((value) => {
+    //     swal(`You typed: ${value}`);
+    //   });
+    // })
   </script>

@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\SorteoSimple;
 use App\Models\SorteoSmash;
 use App\Models\Code;
+use App\Models\User;
 use App\Models\Ticket;
 use App\Models\Pay;
 use App\Models\Suscription;
@@ -21,6 +22,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Nette\Utils\Random;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 use Cart;
 
 class AdminController extends Controller
@@ -472,5 +474,23 @@ class AdminController extends Controller
         }else{
             return response()->json(['status' => false, 'msg' => 'No cuentas con saldo suficiente para esta transacción']);
         }
+    }
+
+    public function avatar(Request $request)
+    { 
+        $usuario = User::where('id',Auth::user()->id)->first();
+        try {    
+            $imagen=$request->file("file"); 
+            $extension = $imagen->getClientOriginalExtension();
+            $filename  = 'avatar-' . str::random(32) . '.' . $extension;
+            $paths = Storage::putFileAs('public/avatar',$imagen,$filename);
+            $ruta = "/avatar/".$filename;
+         
+            $usuario->avatar = $ruta;
+            $usuario->save();
+            return response()->json(['status' => true, 'msg' => 'Se actualizó correctamente tu avatar']); 
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => 'Error:'.$th->getMessage()]);
+        }    
     }
 }
