@@ -35,6 +35,7 @@ class AdminController extends Controller
     public function perfil(){
         $smash = SorteoSmash::where('user_id',Auth::user()->id)->count();
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
+        $movimientos = Pay::where('user_id',Auth::user()->id)->get();
         $noticount = $notificaciones->count();
         $cuenta = Account::where('user_id',Auth::user()->id)->first();
         if ($cuenta == null) {
@@ -44,7 +45,7 @@ class AdminController extends Controller
             $saldo = $cuenta->saldo;
         }
         
-        return view('profile',compact('smash','notificaciones','noticount','saldo'));
+        return view('profile',compact('smash','notificaciones','noticount','saldo','movimientos'));
     }
 
     public function codigos()

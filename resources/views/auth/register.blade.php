@@ -68,7 +68,14 @@
             <option value="PASAPORTE">PASAPORTE</option>
             <option value="CARNET DE EXTRANJERIA">CARNET DE EXTRANJERÍA</option>
         </select>
-        <input id="numero_doc" type="number" placeholder="Nro Documento" name="numero_doc" value="{{ old('numero_doc') }}" required autocomplete="numero_doc">
+        <div>
+          <input id="numero_doc" class="@error('numero_doc') is-invalid @enderror" type="number" placeholder="Nro Documento" name="numero_doc" value="{{ old('numero_doc') }}" required autocomplete="numero_doc">
+          @error('numero_doc')
+            <span class="invalid-feedback" role="alert">
+                <strong>El número de documento ya esta registrado</strong>
+            </span>
+          @enderror
+        </div>
         <input id="direccion" type="text" placeholder="Dirección" name="direccion" value="{{ old('direccion') }}" required autocomplete="direccion">
         
         <!-- <select name="departamento" id="departamento" value="{{ old('departamento') }}" required>

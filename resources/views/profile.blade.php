@@ -60,7 +60,12 @@
                             <h4>Mis Jugadas</h4>
                           </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div>
+                          <img src="{{asset('assets/img/illustrations/jugadas.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="200" alt="">
+                          <h4 class="p-2 text-center text-ligth">No tienes jugadas por ahora</h4>
+                          <p class="text-ligth text-center" style="font-size: 16px;">Aquí podrás ver todas tus jugadas.</p>
+                        </div>
+                        <!-- <div class="col-lg-3 col-sm-6">
                           <div class="item">
                             <div class="thumb">
                               <img class="imgclass" src="{{asset('assets1/images/clip-01.jpg')}}" alt="" style="border-radius: 23px;">
@@ -112,7 +117,7 @@
                           <div class="main-button">
                             <a href="#">Load More Clips</a>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>
@@ -128,36 +133,26 @@
               <div class="heading-section">
                 <h4>Mis Movimientos</h4>
               </div>
-              <div class="item">
-                <ul>
-                  <li><img src="{{asset('assets1/images/game-01.jpg')}}" alt="" class="templatemo-item imgclass"></li>
-                  <li><h4>Dota 2</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>24/08/2036</span></li>
-                  <li><h4>Hours Played</h4><span>634 H 22 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
+              @if($movimientos->count()==0)
+              <div>
+                <img src="{{asset('assets/img/illustrations/transacciones.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="200" alt="">
+                <h4 class="p-2 text-center text-ligth">No has realizado transacciones por ahora</h4>
+                <p class="text-ligth text-center" style="font-size: 16px;">Aquí podrás ver todos tus movimientos.</p>
               </div>
-              <div class="item">
-                <ul>
-                  <li><img src="{{asset('assets1/images/game-02.jpg')}}" alt="" class="templatemo-item imgclass"></li>
-                  <li><h4>Fortnite</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>22/06/2036</span></li>
-                  <li><h4>Hours Played</h4><span>745 H 22 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
-              </div>
-              <div class="item last-item">
-                <ul>
-                  <li><img src="{{asset('assets1/images/game-03.jpg')}}" alt="" class="templatemo-item imgclass"></li>
-                  <li><h4>CS-GO</h4><span>Sandbox</span></li>
-                  <li><h4>Date Added</h4><span>21/04/2022</span></li>
-                  <li><h4>Hours Played</h4><span>632 H 46 Mins</span></li>
-                  <li><h4>Currently</h4><span>Downloaded</span></li>
-                  <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
-                </ul>
-              </div>
+              @else
+                @foreach($movimientos as $item)
+                <div class="item">
+                  <ul>
+                    <li><img style="border-radius: 0px !important;" src="{{asset('assets/img/illustrations/transacciones.png')}}" alt="" class="templatemo-item imgclass"></li>
+                    <li><h4>Transacción Id</h4><span>{{$item->transaction_id}}</span></li>
+                    <li><h4>Tipo de Pago</h4><span>{{$item->tipo_pago}}</span></li>
+                    <li><h4>Fecha</h4><span>{{$item->fecha_pago}}</span></li>
+                    <li><h4>Monto</h4><span>S/. {{$item->monto}}</span></li>                    
+                    <li><div class="main-border-button border-no-active"><a href="#">Donwloaded</a></div></li>
+                  </ul>
+                </div>
+                @endforeach
+              @endif              
             </div>
           </div>
           <!-- ***** Gaming Library End ***** -->
