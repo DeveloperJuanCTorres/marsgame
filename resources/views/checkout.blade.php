@@ -430,7 +430,7 @@
               <div class="row pt-0">
                 <div class="col-xl-4 col-md-6 col-sm-12 p-4">
                   @if(isset($formToken))
-                  <div class="card p-2" style="border-radius: 10px !important;background-color: #FF4240;">
+                  <div class="card p-2" id="pasarela" style="border-radius: 10px !important;background-color: #FF4240;">
                     <div class="d-block mx-auto p-2">
                       <img src="{{asset('assets/img/gallery/izipay.png')}}" width="200" alt="">
                     </div>
@@ -448,6 +448,15 @@
                     </div>
                   @else
                       <h3>Error</h3>
+                  @endif
+                  @if ($saldo >= Cart::getTotal())
+                  <button id="botonPagarSaldo" class="btn btn-primary btn-pagar" style="width: 200px; background-color: transparent !important;color: white !important;display: none;"> Pagar (Saldo: S/. {{$saldo}})</button>
+                  <div class="form-check p-2" style="margin-left: 15px;">
+                    <input class="form-check-input" type="checkbox" value="" id="check" onchange="javascript:PagarSaldo()">
+                    <label class="form-check-label text-light" for="flexCheckDefault">
+                      Usar mi saldo disponible
+                    </label>
+                  </div>
                   @endif
                 </div>
                 <div class="col-xl-8 col-md-12 col-sm-12" style="overflow-x:auto;">
@@ -550,7 +559,75 @@
 
     <script src="https://use.fontawesome.com/83fc84333f.js"></script>
     <script src="{{asset('assets/js/header.js')}}"></script>
+
+    <script type="text/javascript">
+        function PagarSaldo() {
+            element = document.getElementById("pasarela");
+            boton = document.getElementById("botonPagarSaldo");
+            check = document.getElementById("check");
+            if (check.checked) {
+                element.style.display='none';
+                boton.style.display='block';
+            }
+            else {
+                element.style.display='block';
+                boton.style.display='none';
+            }
+        }
+    </script>
+
     <script>
+      $('.btn-pagar').on('click', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: "/pagarsaldo",
+            method: "post",
+						dataType: 'json',
+						data: {
+							_token: $('meta[name="csrf-token"]').attr('content')
+            },
+            beforeSend: function () {
+                Swal.fire({
+                    header: '...',
+                    title: "cargando",
+                    allowOutsideClick:false,
+                    didOpen: () => {
+                    Swal.showLoading()
+                    }
+                });
+            },
+            success: function (response) {
+                 if (response.status == true) {
+                 Swal.fire({
+                     icon: 'success',
+                     title: 'Éxito!',
+                     text: response.msg,
+                     allowOutsideClick: false,
+                     confirmButtonText: "Ok",
+                 })
+                 .then(resultado => {
+                  window.location.reload();
+                 }) 
+                 }
+                 else{
+                 Swal.fire({
+                     icon: 'error',
+                     title: 'Error',
+                     text: response.msg,
+                 })
+                }
+                
+             },
+            error: function (response) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...!!',
+                    text: 'Algo ocurrió, por favor inténtelo más tarde!',
+                  })
+            }
+        });
+       
+      });
 
         $('.btn-next').on('click', function() {
 

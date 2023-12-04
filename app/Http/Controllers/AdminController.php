@@ -120,6 +120,7 @@ class AdminController extends Controller
         
         
     }
+    
 
     public function depositar($monto)
     {
@@ -361,7 +362,7 @@ class AdminController extends Controller
                     }
                 }
                 elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
-                    $dias = $item->attributes->cantidadmeses*30;
+                    $dias = $item->attributes->cantidadmeses*30+7;
                     $sumarfecha= Carbon::now()->addDays($dias);
                     $suscripcion = Suscription::create([
                         'user_id' => $user_id,
@@ -392,9 +393,84 @@ class AdminController extends Controller
              return redirect()->route('checkout');
         }      
                         
-    }else{
-        dd('El pago no procede, comunicate con soporte');
-        return abort(404);
+        }else{
+            dd('El pago no procede, comunicate con soporte');
+            return abort(404);
+        }
     }
+
+    public function pagarsaldo(Request $request)
+    {
+
+    $user_id = Auth::user()->id;
+    $date_now = Carbon::now();
+    $keyOrder = Str::random(9);
+    $limit = 6;
+    $cuenta = Account::where('user_id',Auth::user()->id)->first();
+
+    if ($cuenta->saldo >= Cart::getTotal()) {      
+        try {
+            $pay = Pay::create([
+                'user_id' => $user_id,
+                'transaction_id' => $keyOrder,
+                'monto' => Cart::getTotal(),
+                'estado' => 'pagado',
+                'fecha_pago' => $date_now,
+                'tipo_pago' => 'CUENTA SALDO'
+            ]);
+
+            $cuenta->saldo -= Cart::getTotal();
+            $cuenta->save();
+
+            foreach (Cart::getContent() as $item)
+            {
+                if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
+                    for ($i=0; $i < $item->quantity; $i++) { 
+                        SorteoSimple::create([
+                            'user_id' => $user_id,
+                            'fecha_registro' => $date_now
+                        ]);
+                        SorteoSmash::create([
+                            'user_id' => $user_id,
+                            'fecha_registro' => $date_now
+                        ]);
+                    }
+                }
+                elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
+                    $dias = $item->attributes->cantidadmeses*30+7;
+                    $sumarfecha= Carbon::now()->addDays($dias);
+                    $suscripcion = Suscription::create([
+                        'user_id' => $user_id,
+                        'pay_id' => $pay->id,
+                        'fecha_inicio' => $date_now,
+                        'fecha_fin' => $sumarfecha,
+                        // 'fecha_fin' => strtotime('+'.$dias.'day',strtotime($date_now)),
+                        'estado' => 1,
+                        'fecha' => $date_now
+                    ]);
+                }
+
+                $multiplicador = $item->associatedModel*$item->quantity;
+                 for ($i=0; $i < $multiplicador; $i++) { 
+                    $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
+                     Code::create([
+                        'user_id' => $user_id,
+                        'product_id' => $item->attributes->productid,
+                        'codigo' => $random,
+                        'estado' => 0
+                     ]);
+                 }
+                 
+            }
+
+            Cart::clear();
+            return response()->json(['status' => true, 'msg' => 'Su compra se realizó con exito']); 
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]);
+        }      
+                        
+        }else{
+            return response()->json(['status' => false, 'msg' => 'No cuentas con saldo suficiente para esta transacción']);
+        }
     }
 }
