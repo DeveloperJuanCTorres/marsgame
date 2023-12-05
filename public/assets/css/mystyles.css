@@ -1,6 +1,9 @@
 @media (max-width: 539.98px) {
   .movil{
-    display: none;
+    display: none !important;
+  }
+  .movil-block{
+    display: block !important;
   }
   .nav-header {
       background-color: white;
@@ -31,7 +34,10 @@
 
 @media (max-width: 959px)  {
   .movil{
-    display: none;
+    display: none !important;
+  }
+  .movil-block{
+    display: block !important;
   }
   .nav-header {
     background-color: white;
@@ -62,7 +68,10 @@
 
 @media (min-width: 960px) {
   .movil{
-    display: block;
+    display: block !important;
+  }
+  .movil-block{
+    display: none !important;
   }
   .nav-header {
       background: linear-gradient(to right, #FFFFFF 25%, #2D2E83 25%, #2D2E83 80%, #2D2E83 100%);
