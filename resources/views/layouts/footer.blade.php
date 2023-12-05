@@ -26,8 +26,8 @@
               </div>
               <div class="pb-4 text-center">
                 <ul class="widget-list d-flex flex-wrap justify-content-center">
-                  <li class="ms-4"><a class="widget-list-link fs-ms" target="_blank" href="{{asset('TyC.pdf')}}">Políticas  de Seguridad</a></li>
-                  <li class="ms-4"><a class="widget-list-link fs-ms" target="_blank" href="{{asset('TyC.pdf')}}">Términos &amp; Condiciones</a></li>
+                  <li class="ms-4"><a class="widget-list-link fs-ms" target="_blank" href="{{asset('TyCPoliticas.pdf')}}">Políticas  de Seguridad</a></li>
+                  <li class="ms-4"><a class="widget-list-link fs-ms" target="_blank" href="{{asset('TyCPoliticas.pdf')}}">Términos &amp; Condiciones</a></li>
                 </ul>
               </div>
               <div class="position-relative my-4 d-table mx-auto" >
