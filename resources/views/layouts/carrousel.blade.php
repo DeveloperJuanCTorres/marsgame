@@ -8,7 +8,7 @@
             style="background-image: url(https://marsgame.pe/assets/img/banner5.jpg)">      
       </div>
       <div class="container-carrusel py-1 ben-banner movil-block"
-            style="height: 650px !important;background-image: url(http://127.0.0.1:8000/assets/img/banner8.jpg)">      
+            style="height: 650px !important;background-image: url(https://marsgame.pe/assets/img/banner8.jpg)">      
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
@@ -16,7 +16,7 @@
             style="background-image: url(https://marsgame.pe/assets/img/banner6.jpg)">      
       </div>
       <div class="container-carrusel py-1 ben-banner movil-block"
-            style="height: 650px !important;background-image: url(http://127.0.0.1:8000/assets/img/banner9.jpg)">      
+            style="height: 650px !important;background-image: url(https://marsgame.pe/assets/img/banner9.jpg)">      
       </div>
     </div>
     <div class="carousel-item">
@@ -24,7 +24,7 @@
             style="background-image: url(https://marsgame.pe/assets/img/banner7.jpg)">      
       </div>
       <div class="container-carrusel py-1 ben-banner movil-block"
-            style="height: 650px !important;background-image: url(http://127.0.0.1:8000/assets/img/banner10.jpg)">      
+            style="height: 650px !important;background-image: url(https://marsgame.pe/assets/img/banner10.jpg)">      
       </div>
     </div>    
   </div>
