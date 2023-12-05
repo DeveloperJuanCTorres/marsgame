@@ -193,7 +193,7 @@
               <div class="p-4">
                 <img src="{{asset('assets/img/illustrations/jugadas.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="200" alt="">
                 <h4 class="p-2 text-center text-ligth">No tenemos ganadores aún</h4>
-                <p class="text-ligth text-center" style="font-size: 16px;">Aquí podrás a nuestros ganadores.</p>
+                <p class="text-ligth text-center" style="font-size: 16px;">Aquí podrás ver a nuestros ganadores.</p>
               </div>
               <!-- <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carouse">
                 <div class="carousel-inner ps-md-5 ps-lg-11 py-4 py-md-5 py-lg-4 pb-lg-9">
