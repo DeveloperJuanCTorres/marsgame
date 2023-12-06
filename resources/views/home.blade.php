@@ -11,12 +11,12 @@
 
 <!-- include('layouts.header') -->
 <!-- FIN HEADER -->
-    
+
       <section class="py-0">
         <!-- <div class="bg-holder" style="background-image:url(assets/img/illustrations/bg.png);background-position:left center;background-size:auto 816px;">
         </div> -->
         <!--/.bg-holder-->
-        
+
         @include('layouts.carrousel')
 
         <div class="container">
@@ -75,7 +75,7 @@
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
                         <h2 class="text-light mb-md-5">Participar</h2>
-                        <p class="text-400 movil">¡Es hora de participar en nuestros emocionantes sorteos, repletos de increíbles premios que te dejarán sin aliento! 
+                        <p class="text-400 movil">¡Es hora de participar en nuestros emocionantes sorteos, repletos de increíbles premios que te dejarán sin aliento!
                           Nuestro compromiso es mantener la emoción y sorprender a nuestros participantes con premios emocionantes y variados.
                           En nuestros sorteos, no solo encontrarás una amplia gama de premios tentadores, sino también la oportunidad de entrar con mayor fuerza para los proximos sorteos en el Smash!!.</p>
                         <p class="text-400 mt-3">¡No te pierdas la oportunidad! Participa en nuestro sorteo y podrías ser el próximo ganador. ¡Inscríbete ahora!</p>
@@ -95,10 +95,10 @@
                         <p class="text-400 mt-3">¡Sigue participando y mantén viva la emoción! ¡No te lo puedes perder! con el Smash el que sigue la consigue!</p>
                         <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
                       </div>
-                      <div class="col-md-6 col-xl-8 text-center">                          
-                        <div id="carouselproximosorteo" class="carousel carousel-dark slide" data-bs-ride="carousel" 
+                      <div class="col-md-6 col-xl-8 text-center">
+                        <div id="carouselproximosorteo" class="carousel carousel-dark slide" data-bs-ride="carousel"
                             style="border-radius: 20px;">
-                          
+
                           <div class="carousel-inner" style="border-radius: 20px;">
                             <div class="carousel-item active" data-bs-interval="10000">
                               <img class="feature-img" src="assets/img/sorteos/1.jpg" alt="..." />
@@ -142,7 +142,7 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                           </button>
-                        </div>                 
+                        </div>
                         <!-- <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div> -->
                       </div>
                     </div>
@@ -177,7 +177,7 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </section>
 
@@ -288,9 +288,9 @@
           <h2 class="text-light text-center my-5">Tarifa Regular</h2>
         </div>
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
-       
+
         @if($tickets != null)
-          @foreach($tickets as $item)          
+          @foreach($tickets as $item)
             <div class="col-xs-12 col-lg-4 pt-4">
               <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
                 <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
@@ -298,8 +298,8 @@
                   <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
                 </div>
                 <div class="card1-block">
-                  <h4 class="card1-title text-white"> 
-                    {{$item->nombre}} 
+                  <h4 class="card1-title text-white">
+                    {{$item->nombre}}
                   </h4>
                   <ul class="list-group padding-left-0">
                     <li class="list-group-item">{{$item->beneficio1}}</li>
@@ -308,11 +308,11 @@
                     <li class="list-group-item">{{$item->beneficio4}}</li>
                   </ul>
                   <button type="button"
-                      data-id='{{$item->nombre}}' 
-                      data-name='{{$item->nombre}}' 
-                      data-price='{{$item->monto}}' 
-                      data-quantity='1' 
-                      data-codigos='{{$item->cantidad_codigos}}' 
+                      data-id='{{$item->nombre}}'
+                      data-name='{{$item->nombre}}'
+                      data-price='{{$item->monto}}'
+                      data-quantity='1'
+                      data-codigos='{{$item->cantidad_codigos}}'
                       data-mensual='{{$item->mensual}}'
                       data-cantidadmeses='{{$item->cantidad_meses}}'
                       data-productid='{{$item->id}}'
@@ -320,19 +320,19 @@
                 </div>
               </div>
             </div>
-          
+
           @endforeach
-          @endif         
-         
+          @endif
+
         </div>
       </div>
-        
+
         <!-- end of .container-->
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
-      
+
 
       <!-- ============================================-->
       <!-- <section> PROMOCIONES ============================-->
@@ -342,19 +342,19 @@
           <h2 class="text-light text-center my-5">Tarifa Promocional</h2>
         </div>
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
-       
+
         @if($products != null)
-          @foreach($products as $item)          
+          @foreach($products as $item)
             <div class="col-xs-12 col-lg-4 pt-4">
-             
+
               <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
                 <img src="{{config('env')}}/storage/{{$item->imagen}}" style="width:100%;height: 80px;border-radius: 20px 20px 0 0;" alt="..." />
                 <div class="card1-header">
                   <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
                 </div>
                 <div class="card1-block">
-                  <h4 class="card1-title text-white"> 
-                    {{$item->promocion}} 
+                  <h4 class="card1-title text-white">
+                    {{$item->promocion}}
                   </h4>
                   <ul class="list-group padding-left-0">
                     <li class="list-group-item">{{$item->beneficio1}}</li>
@@ -363,11 +363,11 @@
                     <li class="list-group-item">{{$item->beneficio4}}</li>
                   </ul>
                   <button type="button"
-                      data-id='{{$item->promocion}}' 
-                      data-name='{{$item->promocion}}' 
-                      data-price='{{$item->monto}}' 
-                      data-quantity='1' 
-                      data-codigos='{{$item->cantidad_codigos}}' 
+                      data-id='{{$item->promocion}}'
+                      data-name='{{$item->promocion}}'
+                      data-price='{{$item->monto}}'
+                      data-quantity='1'
+                      data-codigos='{{$item->cantidad_codigos}}'
                       data-mensual='{{$item->mensual}}'
                       data-cantidadmeses='{{$item->cantidad_meses}}'
                       data-productid='{{$item->id}}'
@@ -375,13 +375,13 @@
                 </div>
               </div>
             </div>
-          
+
           @endforeach
-          @endif         
-         
+          @endif
+
         </div>
       </div>
-        
+
         <!-- end of .container-->
                         <input style="display: none;" type="text" id="id" value="10">
       </section>
@@ -389,10 +389,23 @@
       <!-- ============================================-->
 
 
-     
+<!-- Modal -->
+<div class="modal fade" id="premios" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2D2E83;">
+        <h5 class="modal-title text-ligth" id="exampleModalToggleLabel">Premios Sroteo 16/12/2023</h5>
+        <button type="button" class="btn-close" style="background-color:white;" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding: 0;">
+        <img src="{{asset('assets/img/premios.jpg')}}" width="100%" alt="">        
+      </div>
+    </div>
+  </div>
+</div>
 
-  @include('layouts.footer') 
-      
+  @include('layouts.footer')
+
   @include('layouts.noticanvas')
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -401,13 +414,16 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="{{asset('assets/js/header.js')}}"></script>
+
 <script>
-  // const btn_comprar = document.getElementById('btn_comprar');
-  //   console.log('hola');
+  $(document).ready(function()
+      {
+        $('#premios').modal("show");
+      });
+  
+</script>
 
-    // btn_comprar.addEventListener('click', function (e){
-
-    
+<script>
 
     $(".btn_comprar").click(function (e) {
       e.preventDefault();
@@ -428,7 +444,7 @@
             method: "post",
 						dataType: 'json',
 						data: {
-							_token: $('meta[name="csrf-token"]').attr('content'),           
+							_token: $('meta[name="csrf-token"]').attr('content'),
               id: id,
               name: name,
               price: price,
@@ -460,7 +476,7 @@
                  })
                  .then(resultado => {
                   window.location.reload();
-                 }) 
+                 })
                  }
                  else{
                  Swal.fire({
@@ -469,7 +485,7 @@
                      text: response.msg,
                  })
                 }
-                
+
              },
             error: function (response) {
                 Swal.fire({
@@ -481,6 +497,7 @@
         });
     })
 </script>
+
 
 @endsection
 
