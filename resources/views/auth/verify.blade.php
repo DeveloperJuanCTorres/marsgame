@@ -62,7 +62,7 @@
                 </div>
             @endif
 
-            Antes de continuar, consulte su correo electrónico para obtener un enlace de verificación.
+            Antes de continuar, consulte su correo electrónico (carpeta SPAM) para obtener un enlace de verificación.
             Si no recibió el correo electrónico,
             <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                 @csrf
