@@ -394,7 +394,7 @@
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #2D2E83;">
-        <h5 class="modal-title text-ligth" id="exampleModalToggleLabel">Premios Sroteo 16/12/2023</h5>
+        <h5 class="modal-title text-ligth" id="exampleModalToggleLabel">Premios Sorteo 16/12/2023</h5>
         <button type="button" class="btn-close" style="background-color:white;" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" style="padding: 0;">
