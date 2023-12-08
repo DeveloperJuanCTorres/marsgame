@@ -97,7 +97,10 @@
           <option value="0">--Distrito--</option>	
 			  </select>
         
-        <input id="fecha_nac" type="date" name="fecha_nac" class="input-lg js-date--west" type="text" placeholder="dd /mm /AAAA">
+        <div class="text-start mx-5">
+          <span>Fecha Nacimiento:</span>
+        </div>        
+        <input id="fecha_nac" type="date" name="fecha_nac" class="input-lg js-date--west">
           <div>
             <input placeholder="Email" id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
             @error('email')
