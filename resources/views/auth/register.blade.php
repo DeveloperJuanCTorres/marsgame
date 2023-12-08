@@ -99,8 +99,8 @@
         
         <div class="text-start mx-5">
           <span>Fecha Nacimiento:</span>
-        </div>        
-        <input id="fecha_nac" type="date" name="fecha_nac" class="input-lg" onfocus="(this.type='date')" placeholder="Fecha">
+        </div>  
+        <input id="fecha_nac" type="date" name="fecha_nac" class="input-lg" value="10/10/2000">
           <div>
             <input placeholder="Email" id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
             @error('email')
