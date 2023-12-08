@@ -354,21 +354,21 @@
                     <div class="input-group mb-3">
                       <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Departamento</span>
                       <input type="hidden" id="depart" value="{{ Auth::user()->departamento }}">
-                      <select style="background-color: transparent;color: white;" class="form-select" id="ubigeo_dep" name="departamento" value="{{ Auth::user()->departamento }}" required >
+                      <select style="background-color: #2D2E83;color: white;" class="form-select" id="ubigeo_dep" name="departamento" value="{{ Auth::user()->departamento }}" required >
                         
                       </select>
                     </div>
                     <div class="input-group mb-3">
                       <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Provincia</span>
                       <input type="hidden" id="prov" value="{{ Auth::user()->provincia }}">
-                      <select style="background-color: transparent;color: white;" class="form-select" id="ubigeo_pro" name="provincia" value="{{ Auth::user()->departamento }}" required >
+                      <select style="background-color: #2D2E83;color: white;" class="form-select" id="ubigeo_pro" name="provincia" value="{{ Auth::user()->departamento }}" required >
                         
                       </select>
                     </div>
                     <div class="input-group mb-3">
                       <span style="background-color: #1d243d;color: #00983A" class="input-group-text" id="inputGroup-sizing-default">Distrito</span>
                       <input type="hidden" id="dist" value="{{ Auth::user()->distrito }}">
-                      <select style="background-color: transparent;color: white;" class="form-select" id="ubigeo_dis" name="distrito" value="{{ Auth::user()->departamento }}" required >
+                      <select style="background-color: #2D2E83;color: white;" class="form-select" id="ubigeo_dis" name="distrito" value="{{ Auth::user()->departamento }}" required >
                         
                       </select>
                     </div>
