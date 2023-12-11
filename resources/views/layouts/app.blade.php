@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <?php
-        $version = '1993.4.5';
+        $version = '1993.4.6';
     ?>
     <link rel="stylesheet" href="{{asset('assets1/css/templatemo-cyborg-gaming.css')}}?v=<?php echo $version ?>">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -82,7 +82,7 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="{{asset('vendors/prism/prism.js')}}"></script>
     <script src="{{asset('assets/js/theme.js')}}"></script>
-    <script src="{{asset('assets/js/mystyles.js')}}"></script>
+    <script src="{{asset('assets/js/mystyles.js')}}?v=<?php echo $version ?>"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
     <script src="{{asset('assets/js/login.js')}}"></script>
