@@ -48,6 +48,26 @@
         <!-- include('layouts.header') -->
         <main>
             @yield('content')
+            <div class="nav-bottom">
+                <div class="popup-whatsapp fadeIn">
+                    <div class="content-whatsapp -top"><button type="button" class="closePopup">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                        <p>Hola, 😊 tienes alguna duda o consulta?</p>
+                    </div>
+                    <div class="content-whatsapp -bottom">
+                    <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+                        <button class="send-msPopup" id="send-btn" type="button">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>    
+                        </button>
+
+                    </div>
+                </div>
+                <button type="button" id="whats-openPopup" class="whatsapp-button">
+                    <img class="icon-whatsapp" src="https://cdn-icons-png.flaticon.com/512/134/134937.png">
+                </button>
+                <div class="circle-anime"></div>
+            </div>
         </main>
         <!-- include('layouts.footer') -->
     <!-- </div> -->
