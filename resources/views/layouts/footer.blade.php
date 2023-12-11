@@ -12,7 +12,7 @@
                 <span class="fw-thin text-300">Game</span> -->
               </a>
               <p class="text-light my-4"> <i class="fas fa-map-marker-alt me-3"></i><span class="text-light">Lima - Perú &nbsp;</span></p>
-              <p class="text-light"> <i class="fas fa-envelope me-3 text-primary"> </i><a href="mailto:vctung@outlook.com">soporte@marsgame.pe </a></p>
+              <p class="text-light"> <i class="fas fa-envelope me-3 text-primary"> </i><a href="mailto:soporte@marsgame.pe">soporte@marsgame.pe </a></p>
               <!-- <p class="text-light"> <i class="fas fa-phone-alt me-3 text-primary"> </i><a href="tel:1-800-800-2299">-51 978209130 (Soporte)</a></p> -->
             </div>
             <div class="col-12 col-lg-6 col-xl-5">
