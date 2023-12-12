@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Cart;
+use culqi;
 
 class AdminController extends Controller
 {
@@ -492,5 +493,31 @@ class AdminController extends Controller
         } catch (\Throwable $th) {
             return response()->json(['status' => false, 'msg' => 'Error:'.$th->getMessage()]);
         }    
+    }
+
+    public function culqi(Request $request)
+    {
+        $SECRET_KEY = "sk_test_475ccb7171e14916";
+        $culqi = new Culqi\Culqi(array('api_key' => $SECRET_KEY));
+        $charge = $culqi->Charges->create(
+            array(
+              "amount" => 1000,
+              "capture" => true,
+              "currency_code" => "PEN",
+              "description" => "Venta de prueba",
+              "email" => "jctorresdelcastillo@gmail.com",
+              "installments" => 0,
+              "antifraud_details" => array(
+                  "address" => "Av. Lima 123",
+                  "address_city" => "LIMA",
+                  "country_code" => "PE",
+                  "first_name" => "Test_Nombre",
+                  "last_name" => "Test_apellido",
+                  "phone_number" => "9889678986",
+              ),
+              "source_id" => $request->token
+            )
+        );
+        return response()->json($charge);        
     }
 }

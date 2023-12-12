@@ -429,20 +429,22 @@
             <section id="section3" class="section3" style="display:none;">
               <div class="row pt-0">
                 <div class="col-xl-4 col-md-6 col-sm-12 p-4">
+                   
+                <!-- <input type="button" id="btn_pagar" value="pagar"> -->
                   @if(isset($formToken))
                   <div class="card p-2" id="pasarela" style="border-radius: 10px !important;background-color: #FF4240;">
                     <div class="d-block mx-auto p-2">
                       <img src="{{asset('assets/img/gallery/izipay.png')}}" width="200" alt="">
                     </div>
-                      <!-- payment form -->
+                     
                       <div class="kr-embedded"  kr-form-token="{{$formToken}}" style="width:100%">
-                          <!-- payment form fields -->
+                       
                           <div class="kr-pan"></div>
                           <div class="kr-expiry"></div>
                           <div class="kr-security-code"></div>
-                          <!-- payment form submit button -->
+                      
                           <button class="kr-payment-button"></button>
-                          <!-- error zone -->
+                        
                           <div class="kr-form-error"></div>
                       </div>
                     </div>
@@ -552,6 +554,7 @@
     <script src="{{asset('assets/js/ubigeo.js')}}"></script>
   <script src="{{asset('assets/js/selectubigeo1.js')}}"></script>
     <script src="https://checkout.culqi.com/js/v4"></script>
+    <script src="{{asset('assets/js/culqi.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         Culqi.publicKey = 'pk_test_ecfa72b4b25716be';

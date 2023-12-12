@@ -1,5 +1,5 @@
 
-    const btn_pagar = document.getElementById('btn_pagar');
+    const btn_pagar = document.getElementById('btn_pagar_culqi');
 
     btn_pagar.addEventListener('click', function (e) {
         
@@ -47,11 +47,9 @@
 
             $.ajax({
                 url: "/culqi",
-                type: "POST",
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-                },
+                method: "POST",
                 data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
                     token: token,
                     email: email
                 },

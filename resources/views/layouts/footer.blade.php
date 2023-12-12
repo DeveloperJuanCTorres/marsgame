@@ -33,8 +33,11 @@
               <div class="position-relative my-4 d-table mx-auto" >
                 <a href="#" class="py-4">
                   <i style="font-size: 80px;" class="fa fa-book-open d-block mx-auto"></i>
-                  Libro de Reclamaciones
+                  <span class="d-block mx-2">Libro de Reclamaciones</span>                  
                 </a>
+                <span class="d-block text-center">MARS INVESTMENTS S.A.C.</span>
+                <span class="d-block mx-3">RUC: RUC: 20611806401</span>
+                
               </div>              
             </div>
           </div>

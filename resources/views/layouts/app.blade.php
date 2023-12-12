@@ -91,18 +91,20 @@
     <script src="{{asset('assets/js/selectubigeo.js')}}"></script>
     <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
 
-    <script src="{{asset('assets/js/culqi.js')}}"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://checkout.culqi.com/js/v4"></script>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-    @stack('script')
 
     <script src="https://checkout.culqi.com/js/v4"></script>
-    <script>
-        Culqi.publicKey = 'pk_test_ecfa72b4b25716be';
+        <script>
+            Culqi.publicKey = 'pk_test_da4970e15748d419';
     </script>
+    @stack('script')
+
+    
 </body>
 </html>

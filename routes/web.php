@@ -58,11 +58,14 @@ Route::resource('/cart', CartController::class);
 Route::get('/terminos',[HomeController::class, 'terminos'])->name('terminos');
 Route::get('/politicas',[HomeController::class, 'politicas'])->name('politicas');
 
-Route::resource('/culqi',CulqiController::class);
+
 
 
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
+
+    Route::post('/culqi', [AdminController::class, 'culqi'])->name('culqi');
+
     Route::post('/aceptarcodigo', [AdminController::class, 'aceptarcodigo'])->name('aceptarcodigo');
     Route::post('/rechazarcodigo', [AdminController::class, 'rechazarcodigo'])->name('rechazarcodigo');
     Route::post('/pasarelapagos', [AdminController::class, 'pasarelapagos'])->name('pasarelapagos');
