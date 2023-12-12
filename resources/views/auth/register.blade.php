@@ -77,7 +77,14 @@
           @enderror
         </div>
         <input id="direccion" type="text" placeholder="Dirección" name="direccion" value="{{ old('direccion') }}" required autocomplete="direccion">
-        
+        <div>
+          <input id="phone" class="@error('phone') is-invalid @enderror" type="number" placeholder="Teléfono de contacto" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+          @error('phone')
+            <span class="invalid-feedback" role="alert">
+                <strong>Ingrese un teléfono de contacto</strong>
+            </span>
+          @enderror
+        </div>
         <!-- <select name="departamento" id="departamento" value="{{ old('departamento') }}" required>
             <option value="0">--Departamento--</option>    
         </select> -->

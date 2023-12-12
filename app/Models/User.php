@@ -29,6 +29,7 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
         'fecha_nac',
         'email',
         'password',
+        'phone'
     ];
 
     public function notificacion()
