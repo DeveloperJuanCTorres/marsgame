@@ -36,7 +36,7 @@
                   <span class="d-block mx-2">Libro de Reclamaciones</span>                  
                 </a>
                 <span class="d-block text-center">MARS INVESTMENTS S.A.C.</span>
-                <span class="d-block mx-3">RUC: 20611806401</span>
+                <span class="d-block mx-4">RUC: 20611806401</span>
                 
               </div>              
             </div>
