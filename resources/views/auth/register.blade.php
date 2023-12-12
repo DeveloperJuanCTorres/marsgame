@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.carrousel')
 <body id="particles-js-register"></body>
 
 <div class="dust-paarticle">
