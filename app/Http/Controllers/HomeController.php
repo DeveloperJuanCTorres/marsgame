@@ -10,6 +10,8 @@ use App\Models\Product;
 use App\Models\Term;
 use App\Models\Policy;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Reclamos;
 
 class HomeController extends Controller
 {
@@ -81,6 +83,25 @@ class HomeController extends Controller
 
             return view('reclamos',compact('notificaciones','noticount','saldo'));
         }  
+        
+    }
+
+    public function enviar(Request $request)
+    {
+        
+        $correo = new Reclamos($request);
+        try {
+            Mail::to('jctorresdelcastillo@gmail.com')->send($correo);
+            return "<script>
+                    alert('Su pedido fue enviado');
+                    window.location.href = '/';
+                </script>";
+        } catch (\Exception $e) {
+            return "<script>
+                    alert('Algo salió mal, vuelve a intentarlo');
+                    window.location.href = '/reclamos';
+                </script>";
+        }
         
     }
 

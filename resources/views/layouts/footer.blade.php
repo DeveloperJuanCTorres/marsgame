@@ -31,7 +31,7 @@
                 </ul>
               </div>
               <div class="position-relative my-4 d-table mx-auto" >
-                <a href="#" class="py-4">
+                <a href="/reclamos" class="py-4">
                   <i style="font-size: 80px;" class="fa fa-book-open d-block mx-auto"></i>
                   <span class="d-block mx-2">Libro de Reclamaciones</span>                  
                 </a>
