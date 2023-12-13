@@ -57,13 +57,27 @@
         </div>
         <!--/.bg-holder-->
 
-        <div class="container-lg">
-          <div class="row flex-center py-8 py-md-10">
+        <div class="container">
+          <div class="row flex-center py-4 px-4">
+            <!-- <div class="col-md-6 col-xl-6">
+              <h2 class="mb-md-5" style="color: #00983A;font-weight: bold;">Participar</h2>
+              <p class="text-light movil">¡Es hora de participar en nuestros emocionantes sorteos, repletos de increíbles premios que te dejarán sin aliento!
+                Nuestro compromiso es mantener la emoción y sorprender a nuestros participantes con premios emocionantes y variados.
+                En nuestros sorteos, no solo encontrarás una amplia gama de premios tentadores, sino también la oportunidad de entrar con mayor fuerza para los proximos sorteos en el Smash!!.</p>
+              <p class="text-light mt-3">¡No te pierdas la oportunidad! Participa en nuestro sorteo y podrías ser el próximo ganador. ¡Inscríbete ahora!</p>
+            </div>
+            <div class="col-md-6 col-xl-6">
+            <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/mCkBLdlovSs?si=7jzGqpKs7KpvT1w_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            </div> -->
             <div class="col-12 mt-6">
               <div class="d-flex align-items-start">
-                <div class="nav flex-column nav-tab" id="nav-tab" role="tablist" aria-orientation="vertical"><a class="circle-hover-wrapper nav-link mb-lg-4 active" id="nav-car-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/participar.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/participar.png" alt="..." /></div>
-                  </a><a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-home-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">
+                <div class="nav flex-column nav-tab" id="nav-tab" role="tablist" aria-orientation="vertical">
+                  <a class="circle-hover-wrapper nav-link mb-lg-4 active" id="nav-car-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">
+                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/participar.png" alt="..." />
+                      <img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/participar.png" alt="..." />
+                    </div>
+                  </a>
+                  <a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-home-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">
                     <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/proximosorteo.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/proximosorteo.png" alt="..." /></div>
                   </a><a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-paw-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-paw" role="tab" aria-controls="nav-paw" aria-selected="false">
                     <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/ultimosorteo.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/ultimosorteo.png" alt="..." /></div>
@@ -79,11 +93,11 @@
                           Nuestro compromiso es mantener la emoción y sorprender a nuestros participantes con premios emocionantes y variados.
                           En nuestros sorteos, no solo encontrarás una amplia gama de premios tentadores, sino también la oportunidad de entrar con mayor fuerza para los proximos sorteos en el Smash!!.</p>
                         <p class="text-400 mt-3">¡No te pierdas la oportunidad! Participa en nuestro sorteo y podrías ser el próximo ganador. ¡Inscríbete ahora!</p>
-                        <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
+      
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
                       <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/mCkBLdlovSs?si=7jzGqpKs7KpvT1w_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                        <!-- <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div> -->
+                 
                       </div>
                     </div>
                   </div>
@@ -93,7 +107,7 @@
                         <h2 class="text-light mb-md-5">Premios</h2>
                         <p class="text-400 movil">¡La emoción continúa y te invitamos a participar en nuestro próximo sorteo a lo grande! No te pierdas la oportunidad de ganar increíbles premios desde lo que imaginas y mucho más. Solo tienes que inscribirte y estarás un paso más cerca de convertirte en uno de nuestros afortunados ganadores</p>
                         <p class="text-400 mt-3">¡Sigue participando y mantén viva la emoción! ¡No te lo puedes perder! con el Smash el que sigue la consigue!</p>
-                        <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
+                       
                       </div>
                       <div class="col-md-6 col-xl-8 text-center">
                         <div id="carouselproximosorteo" class="carousel carousel-dark slide" data-bs-ride="carousel"
@@ -143,7 +157,7 @@
                             <span class="visually-hidden">Next</span>
                           </button>
                         </div>
-                        <!-- <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div> -->
+                        
                       </div>
                     </div>
                   </div>
@@ -153,7 +167,7 @@
                         <h2 class="text-light mb-md-5">Último sorteo</h2>
                         <p class="text-400 movil">¡Felicidades a todos los afortunados ganadores de nuestro emocionante ultimo sorteo! Les extendemos nuestras más sinceras felicitaciones por su gran logro. Esperamos que disfruten de sus increíbles premios y que les brinden momentos de felicidad y satisfacción.</p>
                         <p class="text-400 mt-3">Agradecemos a todos los participantes por hacer de este sorteo un éxito. ¡Sigan atentos a futuros sorteos y quizás puedan ser los próximos en celebrar una victoria! ¡Enhorabuena una vez más!</p>
-                        <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
+                       
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
                         <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
@@ -166,7 +180,7 @@
                         <h2 class="text-light mb-md-5">Comunidad</h2>
                         <p class="text-400 movil">¡Únete a nuestra emocionante comunidad de redes sociales y descubre la magia de los sorteos! En nuestra página, te mantendremos al día con los últimos sorteos cargados de fabulosos premios. Productos diversos para todos los gustos, siempre hay algo emocionante en juego. Participa, comparte con tus amigos y aumenta tus posibilidades de ganar.</p>
                         <p class="text-400 mt-3">No te pierdas la oportunidad de ser parte de nuestra comunidad de ganadores. ¡Síguenos en nuestras redes sociales y deja que la suerte esté de tu lado! #Sorteos #LasCosasSucedenCuandoParticipas</p>
-                        <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
+                       
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
                         <div class="img-shape"><img class="feature-img" src="assets/img/gallery/unetecomunidad.jpg" alt="..." /></div>
@@ -184,7 +198,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="clientes" class="pt-0">
+      <section id="clientes" class="py-6">
 
         <div class="container-fluid px-0">
           <div class="row g-0">
@@ -387,6 +401,143 @@
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
+
+      <!-- <section>
+        <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-8 col-xl-8 col-sm-12 col-12">
+                <div class="row justify-content-center">
+                  <div class="nav nav-tab" id="nav-tab" role="tablist">
+                    <div class="col-sm-4 col-md-4 col-xl-4 col-4">
+                      <div class="accordion" id="accordionExample">
+                        <div class="">
+                          <a class="circle-hover-wrapper nav-link active d-block mx-auto" href="#!" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/proximosorteo.png" alt="..." />
+                              <img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/proximosorteo.png" alt="..." />              
+                            </div>
+                            <div class="text-center">
+                              <span class="text-center text-light">Premios</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xl-4 col-4">
+                      <a class="circle-hover-wrapper nav-link d-block mx-auto" id="nav-paw-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-paw"  aria-controls="nav-paw" aria-selected="false">
+                        <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/ultimosorteo.png" alt="..." />
+                          <img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/ultimosorteo.png" alt="..." />              
+                        </div>
+                        <div class="text-center">
+                          <span class="text-center text-light">Último Sorteo</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xl-4 col-4">
+                      <a class="circle-hover-wrapper nav-link d-block mx-auto" id="nav-plane-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-plane" aria-controls="nav-plane" aria-selected="false">
+                        <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/comunidad.png" alt="..." />
+                          <img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/comunidad.png" alt="..." />              
+                        </div>
+                        <div class="text-center">
+                          <span class="text-center text-light">Smash</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>              
+              </div>
+              <div class="col-md-8 col-xl-8 col-sm-12 col-12">
+                <div class="tab-content w-100" id="nav-tabContent">
+                  <div class="tab-pane fade" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="row align-items-center offset-sm-1 g-3">
+                      <div class="col-md-6 col-xl-4 order-1 order-md-0">
+                        <h2 class="text-light mb-md-5">Premios</h2>
+                        <p class="text-400 movil">¡La emoción continúa y te invitamos a participar en nuestro próximo sorteo a lo grande! No te pierdas la oportunidad de ganar increíbles premios desde lo que imaginas y mucho más. Solo tienes que inscribirte y estarás un paso más cerca de convertirte en uno de nuestros afortunados ganadores</p>
+                        <p class="text-400 mt-3">¡Sigue participando y mantén viva la emoción! ¡No te lo puedes perder! con el Smash el que sigue la consigue!</p>
+                        
+                      </div>
+                      <div class="col-md-6 col-xl-8 text-center">
+                        <div id="carouselproximosorteo" class="carousel carousel-dark slide" data-bs-ride="carousel"
+                            style="border-radius: 20px;">
+
+                          <div class="carousel-inner" style="border-radius: 20px;">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                              <img class="feature-img" src="assets/img/sorteos/1.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                              <img class="feature-img" src="assets/img/sorteos/2.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/3.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/4.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/5.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/6.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/7.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/8.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/9.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/10.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/11.jpg" alt="..." />
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselproximosorteo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselproximosorteo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-paw" role="tabpanel" aria-labelledby="nav-paw-tab">
+                    <div class="row align-items-center offset-sm-1 g-3">
+                      <div class="col-md-6 col-xl-4 order-1 order-md-0">
+                        <h2 class="text-light mb-md-5">Último sorteo</h2>
+                        <p class="text-400 movil">¡Felicidades a todos los afortunados ganadores de nuestro emocionante ultimo sorteo! Les extendemos nuestras más sinceras felicitaciones por su gran logro. Esperamos que disfruten de sus increíbles premios y que les brinden momentos de felicidad y satisfacción.</p>
+                        <p class="text-400 mt-3">Agradecemos a todos los participantes por hacer de este sorteo un éxito. ¡Sigan atentos a futuros sorteos y quizás puedan ser los próximos en celebrar una victoria! ¡Enhorabuena una vez más!</p>
+                        
+                      </div>
+                      <div class="col-md-6 col-xl-8 text-end">
+                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-plane" role="tabpanel" aria-labelledby="nav-plane-tab">
+                    <div class="row align-items-center offset-sm-1 g-3">
+                      <div class="col-md-6 col-xl-4 order-1 order-md-0">
+                        <h2 class="text-light mb-md-5">Comunidad</h2>
+                        <p class="text-400 movil">¡Únete a nuestra emocionante comunidad de redes sociales y descubre la magia de los sorteos! En nuestra página, te mantendremos al día con los últimos sorteos cargados de fabulosos premios. Productos diversos para todos los gustos, siempre hay algo emocionante en juego. Participa, comparte con tus amigos y aumenta tus posibilidades de ganar.</p>
+                        <p class="text-400 mt-3">No te pierdas la oportunidad de ser parte de nuestra comunidad de ganadores. ¡Síguenos en nuestras redes sociales y deja que la suerte esté de tu lado! #Sorteos #LasCosasSucedenCuandoParticipas</p>
+                        
+                      </div>
+                      <div class="col-md-6 col-xl-8 text-end">
+                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/unetecomunidad.jpg" alt="..." /></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>          
+        </div>
+      </section> -->
 
 
       <section>
