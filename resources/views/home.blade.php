@@ -31,7 +31,7 @@
               <div class="text-center">
                 <a class="btn btn-primary" style="color: white;border-radius: 15px;width: 250px;" href="">Quiero registrarme</a>
               </div> -->
-              <img src="{{asset('assets/img/mascota.png')}}" style="display: block;margin-left: auto;margin-right: auto;position: relative;z-index: 1;margin-bottom: -70px;" width="50%">
+              <img class="mascota" src="{{asset('assets/img/mascota.png')}}" width="50%">
               <div class="card card-bg shadow">
                 <div class="card-body p-4 p-xl-6">
                   <h2 class="text-100 text-white">Tenemos premios todas las semanas, ¡Ven y participa Aquí!</h2>
@@ -82,7 +82,7 @@
                         <!-- <a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
                       </div>
                       <div class="col-md-6 col-xl-8 text-end">
-                      <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/I6ILDChCaUY?si=k4k3Uv8Sire6JHZS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                      <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/mCkBLdlovSs?si=7jzGqpKs7KpvT1w_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
                         <!-- <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div> -->
                       </div>
                     </div>
@@ -388,6 +388,150 @@
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <h2 class="text-light text-center my-5">Preguntas Frecuentes</h2>
+          </div>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  ¿Cómo particio?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light"> Para participar, debes tener una cuenta en www.marsgame.pe 
+                      Al registrarte te llegara un mail a tu correo para verificar la cuenta. No olvides revisar tu carpeta de SPAM.
+                      Luego elegir el plan de tu elección (ticket y/o suscripcion), hacer el pago correspondiente y estarás ya participando en los sorteos Simple y Smash.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  ¿Debo elegir un tipo de sorteo, Simple o Smash?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light">
+                  Al comprar un ticket o una suscripción, estarás habilitado automáticamente para participar en AMBOS SORTEOS.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  ¿Qué es el Sorteo Smash?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light">
+                    El un tipo de sorteo que consiste  en acumular puntos Smash, estos se generan usando los códigos Smash.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingCuatro">
+                <button class="accordion-button collapsed" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCuatro" aria-expanded="false" aria-controls="collapseCuatro">
+                  ¿Donde consigo códigos Smash?
+                </button>
+              </h2>
+              <div id="collapseCuatro" class="accordion-collapse collapse" aria-labelledby="headingCuatro" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light">
+                    Al comprar cualquiera de los productos ofrecidos, tickets o suscripciones, estos siempre vienen acompañados de códigos Smash, lo cuales podrás ver en tu cuenta, en la sección "Mis códigos". 
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingCinco">
+                <button class="accordion-button collapsed" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false" aria-controls="collapseCinco">
+                  ¿Qué son los puntos Smash?
+                </button>
+              </h2>
+              <div id="collapseCinco" class="accordion-collapse collapse" aria-labelledby="headingCinco" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light">
+                    Los puntos Smash representan tus oportunidades en el sorteo Smash. En términos prácticos, se podría decir que los puntos Smash serían los tickets para este tipo de sorteo.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeis">
+                <button class="accordion-button collapsed" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false" aria-controls="collapseSeis">
+                  ¿Como obtengo puntos Smash?
+                </button>
+              </h2>
+              <div id="collapseSeis" class="accordion-collapse collapse" aria-labelledby="headingSeis" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light">
+                    <strong>
+                      Seguir los siguientes pasos:
+                    </strong>
+                  </span><br>
+                  <span class="text-light">a. Compartir tus códigos Smash (ej: via WhatsApp) con algún amigo que también tenga cuenta registrada en MarsGame </span><br>
+                  <span class="text-light">b. Tu amigo deberá ir a su cuenta y en la sección "Agregar código" ingresar el código</span><br>
+                  <span class="text-light">c. Esa transacción se notificará a tu cuenta y deberás aceptarla, con ello estarás generando un punto Smash para cada usuario involucrado en la transacción. El beneficio es para ambos!</span><br>
+                  <span class="text-light">d. Nota: Cada código Smash permite un solo uso, luego caduca. El primero que lo use, y sea aceptado, será el beneficiado.</span>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSiete">
+                <button class="accordion-button collapsed" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSiete" aria-expanded="false" aria-controls="collapseSiete">
+                  Tengo puntos Smash sin haber adquirido ningún producto (ticket y/o suscripcion), ¿podre participar en los sorteos?
+                </button>
+              </h2>
+              <div id="collapseSiete" class="accordion-collapse collapse" aria-labelledby="headingSiete" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light">
+                    Al tener cuenta en MarsGame podrás ayudar a tus amigos a generar puntos Smash y por ende obtendran tambien podras obtener estos puntos, pero los sorteos son para participantes habilitados quienes hayan comprado al menos un ticket para el evento próximo y/o mantengan suscripción vigente.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOcho">
+                <button class="accordion-button collapsed" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOcho" aria-expanded="false" aria-controls="collapseOcho">
+                  ¿Cuantos ganadores habrán en los sorteos?
+                </button>
+              </h2>
+              <div id="collapseOcho" class="accordion-collapse collapse" aria-labelledby="headingOcho" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light">
+                    En cada evento resultaran 10 ganadores como mínimo y diferentes entre sí, osea ningún ganador podrá obtener más de un premio en un solo evento.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNueve">
+                <button class="accordion-button collapsed" style="background-color: transparent !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNueve" aria-expanded="false" aria-controls="collapseNueve">
+                  En el listado de premios veo variedad de productos, ¿el ganador de cada puesto se lleva todo?
+                </button>
+              </h2>
+              <div id="collapseNueve" class="accordion-collapse collapse" aria-labelledby="headingNueve" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <span class="text-light">
+                    En MarsGame nos preocupamos por satisfacer a nuestros usuarios y por ello ofrecemos opciones para cada puesto. Para el evento venidero el primer ganador podrá elegir un producto de entre las opciones que corresponden al primer puesto, y así sucesivamente para cada puesto.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 <!-- Modal -->
 <div class="modal fade" id="premios" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
