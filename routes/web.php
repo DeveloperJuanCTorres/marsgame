@@ -57,6 +57,7 @@ Route::resource('/cart', CartController::class);
 
 Route::get('/terminos',[HomeController::class, 'terminos'])->name('terminos');
 Route::get('/politicas',[HomeController::class, 'politicas'])->name('politicas');
+Route::get('/reclamos',[HomeController::class, 'reclamos'])->name('reclamos');
 
 
 

@@ -451,6 +451,10 @@
                   @else
                       <h3>Error</h3>
                   @endif
+                  <div class="p-2">
+                    <h4>Recordatorio:</h4>
+                    <span class="text-light">Para realizar pagos con tarjeta debes tener habilitado la opción de pagos online de tu tarjeta</span>
+                  </div>
                   @if ($saldo >= Cart::getTotal())
                   <button id="botonPagarSaldo" class="btn btn-primary btn-pagar" style="width: 200px; background-color: transparent !important;color: white !important;display: none;"> Pagar (Saldo: S/. {{$saldo}})</button>
                   <div class="form-check p-2" style="margin-left: 15px;">
@@ -460,10 +464,7 @@
                     </label>
                   </div>
                   @endif
-                  <div class="p-2">
-                    <h4>Recordatorio:</h4>
-                    <span class="text-light">Para realizar pagos con tarjeta debes tener habilitado la opción de pagos online de tu tarjeta</span>
-                  </div>
+                  
                 </div>
                 <div class="col-xl-8 col-md-12 col-sm-12" style="overflow-x:auto;">
                 <h4 class="text-center pt-2">Resumen de tu Compra</h4>

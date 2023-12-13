@@ -56,6 +56,34 @@ class HomeController extends Controller
         
     }
 
+    public function reclamos()
+    {     
+        if (Auth::user()) {
+            $terminos = Term::first();
+            $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
+            $noticount = $notificaciones->count();
+            $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            if ($cuenta == null) {
+                $saldo = 0.00;
+            }
+            else{
+                $saldo = $cuenta->saldo;
+            }
+
+            return view('reclamos',compact('notificaciones','noticount','saldo'));
+        }
+        else
+        {
+            $terminos = Term::first();
+            $notificaciones = null;
+            $noticount = 0;
+            $saldo = 0.00;
+
+            return view('reclamos',compact('notificaciones','noticount','saldo'));
+        }  
+        
+    }
+
     public function terminos()
     {
         if (Auth::user()) {
