@@ -251,6 +251,10 @@
                   @else
                       <h3>Error</h3>
                   @endif
+                  <div class="p-2">
+                    <h4>Recordatorio:</h4>
+                    <span class="text-light">Para realizar pagos con tarjeta debes tener habilitado la opción de pagos online de tu tarjeta</span>
+                  </div>
                 </div>
                 <div class="col-xl-8 col-md-12 col-sm-12" style="overflow-x:auto;">
                 <h4 class="text-center pt-4">Resumen de tu Compra</h4>
