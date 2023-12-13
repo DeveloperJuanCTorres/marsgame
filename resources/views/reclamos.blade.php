@@ -109,8 +109,8 @@
                             <label class="text-light" for="tipo_documento">Moneda:</label>
                             <select class="form-control p-2" style="background-color: transparent;color: #00983A;" name="moneda" id="moneda">
                                 <option value="0">Seleccionar</option>
-                                <option value="1">Soles</option>
-                                <option value="2">Dólares</option>
+                                <option value="Soles">Soles</option>
+                                <option value="Dolares">Dólares</option>
                             </select>
                         </div>
                         <div class="col-md-12 col-xl-12 my-2">
