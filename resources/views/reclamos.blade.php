@@ -76,15 +76,15 @@
                         </div>
                         <div class="col-md-12 col-xl-12 my-2">
                             <label class="text-light" for="tipo_documento">Dirección:</label>
-                            <input class="form-control p-2" id="direccion" name="direccion" style="background-color: transparent;color: #00983A;" type="text">
+                            <input class="form-control p-2" id="direccion" name="direccion" style="background-color: transparent;color: #00983A;" type="text" required>
                         </div>
                         <div class="col-md-6 col-xl-6 my-2">
                             <label class="text-light" for="tipo_documento">Teléfono:</label>
-                            <input class="form-control p-2" id="telefono" name="telefono" style="background-color: transparent;color: #00983A;" type="number">
+                            <input class="form-control p-2" id="telefono" name="telefono" style="background-color: transparent;color: #00983A;" type="number" required>
                         </div>
                         <div class="col-md-6 col-xl-6 my-2">
                             <label class="text-light" for="tipo_documento">Correo:</label>
-                            <input class="form-control p-2" id="email" name="email" style="background-color: transparent;color: #00983A;" type="email">
+                            <input class="form-control p-2" id="email" name="email" style="background-color: transparent;color: #00983A;" type="email" required>
                         </div>
                         <p style="color: #00983A;">*En caso se trate de un menor de edad, se consignan los datos del apoderado.</p>
                     </div>
@@ -98,12 +98,12 @@
                     </div>
                     <div class="row container py-2 justify-content-center">
                         <div class="col-md-12 col-xl-12 my-4">
-                            <label class="text-light" for="tipo_documento">Orden de compra, Identificación del producto o servicio contratado:</label>
-                            <input class="form-control p-2" id="orden" name="orden" style="background-color: transparent;color: #00983A;" type="text">
+                            <label class="text-light" for="orden">Orden de compra, Identificación del producto o servicio contratado:</label>
+                            <input class="form-control p-2" id="orden" name="orden" style="background-color: transparent;color: #00983A;" type="text" required>
                         </div>
                         <div class="col-md-8 col-xl-8 my-2">
                             <label class="text-light" for="tipo_documento">Monto del producto o servicio contratado:</label>
-                            <input class="form-control p-2" id="orden" name="orden" style="background-color: transparent;color: #00983A;" type="text">
+                            <input class="form-control p-2" id="monto" name="monto" style="background-color: transparent;color: #00983A;" type="text">
                         </div>
                         <div class="col-md-4 col-xl-4 my-2">
                             <label class="text-light" for="tipo_documento">Moneda:</label>

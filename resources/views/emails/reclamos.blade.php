@@ -15,7 +15,7 @@
                 </td>
             </tr>
             <tr>
-                <td align='center' valign='middle' style='color:#000; font-size:18px; font-weight:bold'>Se realizó u¿una reclamación desde la web..</td>
+                <td align='center' valign='middle' style='color:#000; font-size:18px; font-weight:bold'>Se realizó una reclamación desde la web..</td>
             </tr>
             <tr>
                 <td align='center' valign='middle'>&nbsp;</td>
@@ -42,6 +42,34 @@
             <tr>
                 <td align='center' colspan="1" style='font-weight:bold'>Nombre completo</td>
                 <td align='center'>{{$reclamo['nombre']}}</td>
+            </tr>
+            <tr>
+                <td align='center' colspan="1" style='font-weight:bold'>Dirección</td>
+                <td align='center'>{{$reclamo['direccion']}}</td>
+            </tr>
+            <tr>
+                <td align='center' colspan="1" style='font-weight:bold'>Teléfono</td>
+                <td align='center'>{{$reclamo['telefono']}}</td>
+            </tr>
+            <tr>
+                <td align='center' colspan="1" style='font-weight:bold'>Correo</td>
+                <td align='center'>{{$reclamo['email']}}</td>
+            </tr>
+            <tr>
+                <td align='center' colspan="1" style='font-weight:bold'>Orden de compra, Identificación del producto o servicio contratado</td>
+                <td align='center'>{{$reclamo['orden']}}</td>
+            </tr>
+            <tr>
+                <td align='center' colspan="1" style='font-weight:bold'>Monto del producto o servicio contratado</td>
+                <td align='center'>{{$reclamo['monto']}}</td>
+            </tr>
+            <tr>
+                <td align='center' colspan="1" style='font-weight:bold'>Moneda</td>
+                <td align='center'>{{$reclamo['moneda']}}</td>
+            </tr>
+            <tr>
+                <td align='center' colspan="1" style='font-weight:bold'>Detalle del reclamo o queja</td>
+                <td align='center'>{{$reclamo['detalle']}}</td>
             </tr>
             <tr>
                 <td align='center' colspan="1" style='font-weight:bold'>Pedido</td>

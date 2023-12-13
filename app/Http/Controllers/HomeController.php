@@ -91,7 +91,7 @@ class HomeController extends Controller
         
         $correo = new Reclamos($request);
         try {
-            Mail::to('jctorresdelcastillo@gmail.com')->send($correo);
+            Mail::to('soporte@marsgame.pe')->send($correo);
             return "<script>
                     alert('Su pedido fue enviado');
                     window.location.href = '/';
