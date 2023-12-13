@@ -14,7 +14,7 @@
             <div class="col-md-6 col-xl-6">
                 <div class="card p-2 bg-primary" style="border-radius: 20px !important;">
                     <div class="container">
-                        <span class="text-light">MARS INVESTMENTS S.A.C. ("MarsGame", en adelante), identificada con RUC N° 20611806401, con domicilio para estos efectos en Av. Los Nogales N° 251 Dpto. 1404 Cnd. Nuevo Nogales, distrito de El Agustino, provincia de Lima, departamento de Lima y país de Perú.
+                        <span class="text-light">MARS INVESTMENTS S.A.C. ("MarsGame", en adelante), identificada con RUC N° 20611806401, con domicilio para estos efectos en Av. Los Nogales N° 251, distrito de El Agustino, provincia de Lima, departamento de Lima y país de Perú.
                             De conformidad con lo establecido en el Código de Protección al Consumidor - Ley N° 29571 y el Reglamento del Libro de Reclamaciones del Código de Protección del Consumidor - Decreto Supremo N° 011-2011-PCM, el Sitio Web cuenta con un Libro de Reclamaciones de naturaleza virtual.
                         </span>
                     </div>
