@@ -254,7 +254,7 @@
                   <div class="p-2">
                     <h4>Recordatorio:</h4>
                     <span class="text-light">Para realizar pagos con tarjeta debes tener habilitado la opción de pagos online de tu tarjeta</span><br>
-                    <span class="text-light">"Contactar a soporte para consultar o validar el pago"</span>
+                    <span style="color: #00983A;">"Contactar a soporte para consultar o validar el pago"</span>
                   </div>
                 </div>
                 <div class="col-xl-8 col-md-12 col-sm-12" style="overflow-x:auto;">
