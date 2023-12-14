@@ -81,7 +81,7 @@
                         <!-- <a class="card-image" href="#!" style="background-image: url(http://127.0.0.1:8000/storage/$item->image);" data-image-full="http://127.0.0.1:8000/storage/{{$item->image}}">
                             <img class="card-image" src="http://127.0.0.1:8000/storage/{{$item->image}}" alt="Psychopomp" />
                         </a> -->
-                        <img class="card-image w-100" src="http://127.0.0.1:8000/storage/{{$item->image}}" alt="Psychopomp" />
+                        <img class="card-image w-100" src="https://marsgame.pe/storage/{{$item->image}}" alt="{{$item->name}}" />
                         <a class="card-description" href="#!">
                             <h5>{{$item->name}}</h5>
                             <div class="row">
