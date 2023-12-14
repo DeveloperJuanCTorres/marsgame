@@ -59,6 +59,7 @@ Route::get('/terminos',[HomeController::class, 'terminos'])->name('terminos');
 Route::get('/politicas',[HomeController::class, 'politicas'])->name('politicas');
 Route::get('/reclamos',[HomeController::class, 'reclamos'])->name('reclamos');
 Route::post('/enviar-reclamo',[HomeController::class, 'enviar'])->name('enviar-reclamo');
+Route::get('/tienda',[HomeController::class, 'tienda'])->name('tienda');
 
 
 

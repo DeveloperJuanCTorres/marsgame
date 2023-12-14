@@ -269,7 +269,11 @@
                                 @foreach(Cart::getContent() as $item)
                                 <tr>
                                 <th class="text-ligth" scope="row">
+                                    @if($item->attributes->imagen == 0)
                                     <img style="border-radius: 15px;" src="{{asset('assets/img/illustrations/imagentest.jpg')}}" width="100" alt="">
+                                    @else
+                                    <img style="border-radius: 15px;" src="{{$item->attributes->imagen}}" width="100" alt="">
+                                    @endif
                                 </th>
                                 <td style="vertical-align: middle;" class="text-ligth">{{$item->name}}</td>
                                 <td style="vertical-align: middle;" class="text-ligth text-center">{{$item->price}}</td>

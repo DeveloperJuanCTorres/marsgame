@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\SorteoSimple;
 use App\Models\SorteoSmash;
 use App\Models\Code;
+use App\Models\Order;
 use App\Models\User;
 use App\Models\Ticket;
 use App\Models\Pay;
@@ -352,45 +353,58 @@ class AdminController extends Controller
 
                 foreach (Cart::getContent() as $item)
                 {
-                    if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
-                        for ($i=0; $i < $item->quantity; $i++) { 
-                            SorteoSimple::create([
+                    if ($item->attributes->imagen==0) {
+                        if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
+                            for ($i=0; $i < $item->quantity; $i++) { 
+                                SorteoSimple::create([
+                                    'user_id' => $user_id,
+                                    'fecha_registro' => $date_now
+                                ]);
+                                SorteoSmash::create([
+                                    'user_id' => $user_id,
+                                    'fecha_registro' => $date_now
+                                ]);
+                            }
+                        }
+                        elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
+                            $dias = $item->attributes->cantidadmeses*30+7;
+                            $sumarfecha= Carbon::now()->addDays($dias);
+    
+                            $suscripcion = Suscription::create([
                                 'user_id' => $user_id,
-                                'fecha_registro' => $date_now
+                                'pay_id' => $pay->id,
+                                'fecha_inicio' => $date_now,
+                                'fecha_fin' => $sumarfecha,
+                                // 'fecha_fin' => strtotime('+'.$dias.'day',strtotime($date_now)),
+                                'estado' => 1,
+                                'fecha' => $date_now
                             ]);
-                            SorteoSmash::create([
+                        }
+    
+                        $multiplicador = $item->associatedModel*$item->quantity;
+                        for ($i=0; $i < $multiplicador; $i++) { 
+                            $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
+                            Code::create([
                                 'user_id' => $user_id,
-                                'fecha_registro' => $date_now
+                                'product_id' => $item->attributes->productid,
+                                'codigo' => $random,
+                                'estado' => 0
                             ]);
                         }
                     }
-                    elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
-                        $dias = $item->attributes->cantidadmeses*30+7;
-                        $sumarfecha= Carbon::now()->addDays($dias);
-
-                        $suscripcion = Suscription::create([
+                    else
+                    {
+                        Order::create([
                             'user_id' => $user_id,
-                            'pay_id' => $pay->id,
-                            'fecha_inicio' => $date_now,
-                            'fecha_fin' => $sumarfecha,
-                            // 'fecha_fin' => strtotime('+'.$dias.'day',strtotime($date_now)),
-                            'estado' => 1,
-                            'fecha' => $date_now
+                            'store_id' => $item->attributes->productid,
+                            'cantidad' => $item->quantity,
+                            'precio' => $item->price,
+                            'total' => $item->quantity*$item->price
                         ]);
                     }
-
-                    $multiplicador = $item->associatedModel*$item->quantity;
-                    for ($i=0; $i < $multiplicador; $i++) { 
-                        $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
-                        Code::create([
-                            'user_id' => $user_id,
-                            'product_id' => $item->attributes->productid,
-                            'codigo' => $random,
-                            'estado' => 0
-                        ]);
-                    }
-                    Cart::clear();
+                    
                 }
+                Cart::clear();
             
                 return redirect()->route('codigos');  
             } catch (\Throwable $th) {

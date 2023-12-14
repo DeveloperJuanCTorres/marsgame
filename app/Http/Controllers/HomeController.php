@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Ticket;
 use App\Models\Notification;
 use App\Models\Product;
+use App\Models\Store;
 use App\Models\Term;
 use App\Models\Policy;
 use Illuminate\Support\Facades\Auth;
@@ -56,6 +57,33 @@ class HomeController extends Controller
             return view('home',compact('products','tickets','notificaciones','noticount','saldo'));
         }        
         
+    }
+
+    public function tienda()
+    {
+        if (Auth::user()) {
+            $store = Store::all();
+            $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
+            $noticount = $notificaciones->count();
+            $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            if ($cuenta == null) {
+                $saldo = 0.00;
+            }
+            else{
+                $saldo = $cuenta->saldo;
+            }
+
+            return view('tienda',compact('notificaciones','noticount','saldo','store'));
+        }
+        else
+        {
+            $store = Store::all();
+            $notificaciones = null;
+            $noticount = 0;
+            $saldo = 0.00;
+
+            return view('tienda',compact('notificaciones','noticount','saldo','store'));
+        }  
     }
 
     public function reclamos()
