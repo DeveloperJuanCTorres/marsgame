@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="col-6">
                                     <button type="button" class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar"
-                                        data-id='{{$item->name}}'
+                                        data-id='{{$item->id}}{{$item->name}}'
                                         data-name='{{$item->name}}'
                                         data-price='{{$item->price}}'
                                         data-quantity='1'
