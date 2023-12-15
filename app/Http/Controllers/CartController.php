@@ -58,6 +58,7 @@ class CartController extends Controller
                     'attributes' => array(
                         'mensual' => $request->mensual,
                         'cantidadmeses' => $request->cantidadmeses,
+                        'cantidadticket' => $request->cantidadticket,
                         'productid' => $request->productid,
                         'imagen' => $request->imagen?$request->imagen:0
                     )

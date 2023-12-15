@@ -330,6 +330,7 @@
                       data-mensual='{{$item->mensual}}'
                       data-cantidadmeses='{{$item->cantidad_meses}}'
                       data-productid='{{$item->id}}'
+                      data-cantidadticket='{{$item->cantidad_ticket}}'
                       class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
                 </div>
               </div>
@@ -385,6 +386,7 @@
                       data-mensual='{{$item->mensual}}'
                       data-cantidadmeses='{{$item->cantidad_meses}}'
                       data-productid='{{$item->id}}'
+                      data-cantidadticket='{{$item->cantidad_ticket}}'
                       class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
                 </div>
               </div>
@@ -731,6 +733,7 @@
         var mensual = ele.attr("data-mensual");
         var cantidad_meses = ele.attr("data-cantidadmeses");
         var product_id = ele.attr("data-productid");
+        var cantidad_ticket = ele.attr("data-cantidadticket");
 
         console.log(codigos);
 
@@ -747,7 +750,8 @@
               codigos: codigos,
               mensual: mensual,
               cantidadmeses: cantidad_meses,
-              productid: product_id
+              productid: product_id,
+              cantidadticket:cantidad_ticket
             },
             beforeSend: function () {
                 Swal.fire({

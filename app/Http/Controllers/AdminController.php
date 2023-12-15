@@ -356,14 +356,16 @@ class AdminController extends Controller
                     if ($item->attributes->imagen==0) {
                         if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
                             for ($i=0; $i < $item->quantity; $i++) { 
-                                SorteoSimple::create([
-                                    'user_id' => $user_id,
-                                    'fecha_registro' => $date_now
-                                ]);
-                                SorteoSmash::create([
-                                    'user_id' => $user_id,
-                                    'fecha_registro' => $date_now
-                                ]);
+                                for ($i=0; $i < $item->attributes->cantidadticket; $i++) { 
+                                    SorteoSimple::create([
+                                        'user_id' => $user_id,
+                                        'fecha_registro' => $date_now
+                                    ]);
+                                    SorteoSmash::create([
+                                        'user_id' => $user_id,
+                                        'fecha_registro' => $date_now
+                                    ]);
+                                }                                
                             }
                         }
                         elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual

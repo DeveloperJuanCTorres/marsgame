@@ -21,6 +21,7 @@ class Product extends Model
         'imagen',
         'cantidad_codigos',
         'mensual',
-        'cantidad_meses'
+        'cantidad_meses',
+        'cantidad_ticket'
     ];
 }
