@@ -51,7 +51,8 @@
                   <div class="col-lg-4 align-self-center">
                     <ul>
                       <li>Premios ganados <span>0</span></li>
-                      <li>Puntos Smash <span>{{$smash}}</span></li>
+                      <li>Puntos Simples <span>{{$simple}}Pts</span></li>
+                      <li>Puntos Smash <span>{{$smash}}Pts</span></li>
                       <li>Saldo actual <span>S/. {{$saldo}}</span></li>
                       <li>Codigo usuario <span>{{Auth::user()->id}}</span></li>
                     </ul>
@@ -150,7 +151,7 @@
                 <div class="item">
                   <ul>
                     <li><img style="border-radius: 0px !important;" src="{{asset('assets/img/illustrations/transacciones.png')}}" alt="" class="templatemo-item imgclass"></li>
-                    <li><h4>Transacción Id</h4><span>{{$item->transaction_id}}</span></li>
+                    <li><h4>Transacción Type</h4><span>{{$item->transaction_id}}</span></li>
                     <li><h4>Tipo de Pago</h4><span>{{$item->tipo_pago}}</span></li>
                     <li><h4>Fecha</h4><span>{{$item->fecha_pago}}</span></li>
                     <li><h4>Monto</h4><span>S/. {{$item->monto}}</span></li>                    
