@@ -715,7 +715,7 @@
 <script>
   $(document).ready(function()
       {
-        $('#premios').modal("show");
+        // $('#premios').modal("show");
       });
   
 </script>
