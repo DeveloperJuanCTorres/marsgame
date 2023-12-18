@@ -357,7 +357,7 @@ class AdminController extends Controller
                     if ($item->attributes->imagen==0) {
                         if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
                             for ($i=0; $i < $item->quantity; $i++) { 
-                                for ($i=0; $i < $item->attributes->cantidadticket; $i++) { 
+                                for ($j=0; $j < $item->attributes->cantidadticket; $j++) { 
                                     SorteoSimple::create([
                                         'user_id' => $user_id,
                                         'fecha_registro' => $date_now
@@ -370,7 +370,7 @@ class AdminController extends Controller
                             }
                         }
                         elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
-                            $dias = $item->attributes->cantidadmeses*30+7;
+                            $dias = $item->attributes->cantidadmeses*30;
                             $sumarfecha= Carbon::now()->addDays($dias);
     
                             $suscripcion = Suscription::create([
@@ -446,49 +446,106 @@ class AdminController extends Controller
             $cuenta->save();
 
             foreach (Cart::getContent() as $item)
-            {
-                if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
-                    for ($i=0; $i < $item->quantity; $i++) { 
-                        SorteoSimple::create([
+                {
+                    if ($item->attributes->imagen==0) {
+                        if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
+                            for ($i=0; $i < $item->quantity; $i++) { 
+                                for ($j=0; $j < $item->attributes->cantidadticket; $j++) { 
+                                    SorteoSimple::create([
+                                        'user_id' => $user_id,
+                                        'fecha_registro' => $date_now
+                                    ]);
+                                    SorteoSmash::create([
+                                        'user_id' => $user_id,
+                                        'fecha_registro' => $date_now
+                                    ]);
+                                }                                                                
+                            }
+                        }
+                        elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
+                            $dias = $item->attributes->cantidadmeses*30;
+                            $sumarfecha= Carbon::now()->addDays($dias);
+    
+                            $suscripcion = Suscription::create([
+                                'user_id' => $user_id,
+                                'pay_id' => $pay->id,
+                                'fecha_inicio' => $date_now,
+                                'fecha_fin' => $sumarfecha,
+                                // 'fecha_fin' => strtotime('+'.$dias.'day',strtotime($date_now)),
+                                'estado' => 1,
+                                'fecha' => $date_now
+                            ]);
+                        }
+    
+                        $multiplicador = $item->associatedModel*$item->quantity;
+                        for ($i=0; $i < $multiplicador; $i++) { 
+                            $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
+                            Code::create([
+                                'user_id' => $user_id,
+                                'product_id' => $item->attributes->productid,
+                                'codigo' => $random,
+                                'estado' => 0
+                            ]);
+                        }
+                    }
+                    else
+                    {
+                        Order::create([
                             'user_id' => $user_id,
-                            'fecha_registro' => $date_now
-                        ]);
-                        SorteoSmash::create([
-                            'user_id' => $user_id,
-                            'fecha_registro' => $date_now
+                            'store_id' => $item->attributes->productid,
+                            'cantidad' => $item->quantity,
+                            'precio' => $item->price,
+                            'total' => $item->quantity*$item->price
                         ]);
                     }
-                }
-                elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
-                    $dias = $item->attributes->cantidadmeses*30+7;
-                    $sumarfecha= Carbon::now()->addDays($dias);
-                    $suscripcion = Suscription::create([
-                        'user_id' => $user_id,
-                        'pay_id' => $pay->id,
-                        'fecha_inicio' => $date_now,
-                        'fecha_fin' => $sumarfecha,
-                        // 'fecha_fin' => strtotime('+'.$dias.'day',strtotime($date_now)),
-                        'estado' => 1,
-                        'fecha' => $date_now
-                    ]);
+                    
                 }
 
-                $multiplicador = $item->associatedModel*$item->quantity;
-                 for ($i=0; $i < $multiplicador; $i++) { 
-                    $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
-                     Code::create([
-                        'user_id' => $user_id,
-                        'product_id' => $item->attributes->productid,
-                        'codigo' => $random,
-                        'estado' => 0
-                     ]);
-                 }
+            // foreach (Cart::getContent() as $item)
+            // {
+            //     if ($item->attributes->mensual == 0) { 
+            //         for ($i=0; $i < $item->quantity; $i++) { 
+            //             SorteoSimple::create([
+            //                 'user_id' => $user_id,
+            //                 'fecha_registro' => $date_now
+            //             ]);
+            //             SorteoSmash::create([
+            //                 'user_id' => $user_id,
+            //                 'fecha_registro' => $date_now
+            //             ]);
+            //         }
+            //     }
+            //     elseif ($item->attributes->mensual == 1) {  
+            //         $dias = $item->attributes->cantidadmeses*30+7;
+            //         $sumarfecha= Carbon::now()->addDays($dias);
+            //         $suscripcion = Suscription::create([
+            //             'user_id' => $user_id,
+            //             'pay_id' => $pay->id,
+            //             'fecha_inicio' => $date_now,
+            //             'fecha_fin' => $sumarfecha,
+            //             'estado' => 1,
+            //             'fecha' => $date_now
+            //         ]);
+            //     }
+
+            //     $multiplicador = $item->associatedModel*$item->quantity;
+            //      for ($i=0; $i < $multiplicador; $i++) { 
+            //         $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
+            //          Code::create([
+            //             'user_id' => $user_id,
+            //             'product_id' => $item->attributes->productid,
+            //             'codigo' => $random,
+            //             'estado' => 0
+            //          ]);
+            //      }
                  
-            }
+            // }
 
             Cart::clear();
+            //return redirect()->route('codigos'); 
             return response()->json(['status' => true, 'msg' => 'Su compra se realizó con exito']); 
         } catch (\Throwable $th) {
+            //return redirect()->route('checkout');
             return response()->json(['status' => false, 'msg' => $th->getMessage()]);
         }      
                         
