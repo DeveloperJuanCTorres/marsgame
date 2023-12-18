@@ -27,7 +27,7 @@
         <tbody> 
             @foreach (Cart::getContent() as $item)
             <tr>
-                <th scope="row"><span class="text-ligth">{{$item->name}} - {{$item->attributes->cantidadticket}}</span></th>
+                <th scope="row"><span class="text-ligth">{{$item->name}}</span></th>
                 <td><span class="text-ligth">S/ {{$item->price}}</span></td>
                 <td>
                     <div class="input-group">

@@ -439,7 +439,8 @@ class AdminController extends Controller
                 'monto' => Cart::getTotal(),
                 'estado' => 'pagado',
                 'fecha_pago' => $date_now,
-                'tipo_pago' => 'CUENTA SALDO'
+                'tipo_pago' => 'CUENTA SALDO',
+                'carrito' => json_encode(Cart::getContent())
             ]);
 
             $cuenta->saldo -= Cart::getTotal();

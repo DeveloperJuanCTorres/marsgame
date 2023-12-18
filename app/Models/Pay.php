@@ -17,6 +17,7 @@ class Pay extends Model
         'monto',
         'estado',
         'fecha_pago',
-        'tipo_pago'
+        'tipo_pago',
+        'carrito'
     ];
 }
