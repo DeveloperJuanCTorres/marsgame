@@ -1,23 +1,37 @@
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #00983A;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2D2E83;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #00983A;  /* creates padding around scroll thumb */
+}
+
 /* carrusel */
 /*Inicia cambio de estilo de scroll bar*/
 ::-webkit-scrollbar{
-  background: #d4d4d4;
+  background: #00983A;
   width: 8px;
 height: 8px;
 }
 ::-webkit-scrollbar-track {
-background: #e1e1e1;
+background: #00983A;
 border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-background: #b3b3b3;
+background: #2D2E83;
 box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 ::-webkit-scrollbar-thumb:active {
-background-color: #999999;
+background-color: #2D2E83;
 }
 ::-webkit-scrollbar-thumb {
-background: #ccc;
+background: #2D2E83;
 border-radius: 4px;
 }
 /*Finaliza cambio de estilo scroll bar*/
