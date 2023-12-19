@@ -1,4 +1,120 @@
+/* carrusel */
+/*Inicia cambio de estilo de scroll bar*/
+::-webkit-scrollbar{
+  background: #d4d4d4;
+  width: 8px;
+height: 8px;
+}
+::-webkit-scrollbar-track {
+background: #e1e1e1;
+border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #b3b3b3;
+box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:active {
+background-color: #999999;
+}
+::-webkit-scrollbar-thumb {
+background: #ccc;
+border-radius: 4px;
+}
+/*Finaliza cambio de estilo scroll bar*/
+/*CAROUSEL al contenedor padre se le deja el tamaño del 100%*/
+#carousel{
+width:100%;
+height: 100%;
+margin-top: 5%;
+margin-bottom: 5%;
+}
+/*en la clase del carousel se realiza independiente para que ahi pueda agregar el escroll X*/
+.carousel{
+overflow-x:scroll;
+}
+/*el texto ya esta centrado ya que se le dio el ancho del 100% al contenedor padre*/
+#carousel p{  
+color: #134A73; 
+font-family:sans-serif;
+font-size:20px;
+text-align:center;   
+margin-top: 3%;
+margin-bottom: 40px;  
+}
+/* se le da el tamaño que se desea para la visulizacion de las imagenes ya que en el contenedor de la clase de carousel es donde estara creado el scroll*/
+#carousel .gallery {
+display: flex;
+flex-direction: row;
+width:2500px;
+height: 70vh;
+}
+
+#carousel .item {
+flex: 1;
+height: 100%;
+background-position: center;
+background-size: cover;
+background-repeat: none;
+transition: flex 0.8s ease;
+}
+
+#carousel .item:hover{
+  flex: 15%;
+}
+
+/*fotos*/
+
+#carousel .item-1 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/1.jpg');
+}
+#carousel .item-2 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/2.jpg');
+}
+#carousel .item-3 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/3.jpg');
+}
+#carousel .item-4 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/4.jpg');
+}
+#carousel .item-5 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/5.jpg');
+}
+#carousel .item-6 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/6.jpg');
+}
+#carousel .item-7 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/7.jpg');
+}
+#carousel .item-8 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/8.jpg');
+}
+
+#carousel .item-9 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/9.jpg');
+}
+#carousel .item-10 { 
+background-image: url('http://127.0.0.1:8000/assets/img/ganadores/10.jpg');
+}
+/* #carousel .item-11 { 
+background-image: url('https://i.ibb.co/dJZ5JW4/18c.jpg');
+}
+#carousel .item-12 { 
+background-image: url('https://i.ibb.co/1LM3t5n/5c.jpg');
+} */
+/*se agrego el cursos para que sepa que esta en cada imagen*/
+.gallery .item:hover{
+cursor:pointer;
+}
+
+
+
+/* fin carrusel */
+
 @media (max-width: 539.98px) {
+  .video_smash{
+    border-radius: 20px;
+    height: 250px;
+  }
   .mascota {
     display: block;
     margin-left: auto;
@@ -41,6 +157,10 @@
 }
 
 @media (max-width: 959px)  {
+  .video_smash{
+    border-radius: 20px;
+    height: 250px;
+  }
   .mascota {
     display: block;
     margin-left: auto;
@@ -83,6 +203,10 @@
 }
 
 @media (min-width: 960px) {
+  .video_smash{
+    border-radius: 20px;
+    height: 650px;
+  }
   .mascota {
     display: block;
     margin-left: auto;
