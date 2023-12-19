@@ -349,7 +349,8 @@ class AdminController extends Controller
                     'monto' => ($answer->transactions[0]->amount/100),
                     'estado' => 'pagado',
                     'fecha_pago' => $date_now,
-                    'tipo_pago' => $answer->transactions[0]->operationType
+                    'tipo_pago' => $answer->transactions[0]->operationType,
+                    'carrito' => json_encode(Cart::getContent())
                 ]);
 
                 foreach (Cart::getContent() as $item)
