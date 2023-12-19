@@ -71,51 +71,19 @@
             </div> -->
             <div class="col-12 mt-6">
               <div class="d-flex align-items-start">
-                <!-- <div class="nav flex-column nav-tab" id="nav-tab" role="tablist" aria-orientation="vertical">
-                  <a class="circle-hover-wrapper nav-link mb-lg-4 active" id="nav-car-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/participar.png" alt="..." />
-                      <img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/participar.png" alt="..." />
-                    </div>
-                  </a>
-                  <a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-home-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/proximosorteo.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/proximosorteo.png" alt="..." /></div>
-                  </a>
-                  <a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-paw-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-paw" role="tab" aria-controls="nav-paw" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/ultimosorteo.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/ultimosorteo.png" alt="..." /></div>
-                  </a>
-                  <a class="circle-hover-wrapper nav-link mb-lg-4" id="nav-plane-tab" href="#!" data-bs-toggle="tab" data-bs-target="#nav-plane" role="tab" aria-controls="nav-plane" aria-selected="false">
-                    <div class="icon-box"><img class="car-insurance-icon" src="assets/img/icons/comunidad.png" alt="..." /><img class="car-insurance-icon car-insurance-icon-hover" src="assets/img/icons/comunidad.png" alt="..." /></div>
-                  </a> 
-                </div> -->
                 
                 <div class="tab-content w-100" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
-                    <div class="row align-items-center offset-sm-1 g-3">
-                      <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                        <h2 class="text-light mb-md-5">¿Cómo Participar</h2>
-                        <p class="text-light movil">¡Es hora de participar en nuestros emocionantes sorteos, repletos de increíbles premios que te dejarán sin aliento!
-                          Nuestro compromiso es mantener la emoción y sorprender a nuestros participantes con premios emocionantes y variados.
-                          En nuestros sorteos, no solo encontrarás una amplia gama de premios tentadores, sino también la oportunidad de entrar con mayor fuerza para los proximos sorteos en el Smash!!.</p>
-                        <p class="text-light mt-3">¡No te pierdas la oportunidad! Participa en nuestro sorteo y podrías ser el próximo ganador. ¡Inscríbete ahora!</p>
-      
-                      </div>
-                      <div class="col-md-6 col-xl-8 text-end">
-                      <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/mCkBLdlovSs?si=7jzGqpKs7KpvT1w_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                 
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
                     <div class="row align-items-center offset-sm-1 g-3">
                       <div class="col-md-6 col-xl-4 order-1 order-md-0">
                         <h2 class="text-light mb-md-5">Premios</h2>
-                        <p class="text-400 movil">¡La emoción continúa y te invitamos a participar en nuestro próximo sorteo a lo grande! No te pierdas la oportunidad de ganar increíbles premios desde lo que imaginas y mucho más. Solo tienes que inscribirte y estarás un paso más cerca de convertirte en uno de nuestros afortunados ganadores</p>
-                        <p class="text-400 mt-3">¡Sigue participando y mantén viva la emoción! ¡No te lo puedes perder! con el Smash el que sigue la consigue!</p>
+                        <p class="text-light movil">¡La emoción continúa y te invitamos a participar en nuestro próximo sorteo a lo grande! No te pierdas la oportunidad de ganar increíbles premios desde lo que imaginas y mucho más. Solo tienes que inscribirte y estarás un paso más cerca de convertirte en uno de nuestros afortunados ganadores</p>
+                        <p class="text-light mt-3">¡Sigue participando y mantén viva la emoción! ¡No te lo puedes perder! con el Smash el que sigue la consigue!</p>
                        
                       </div>
                       <div class="col-md-6 col-xl-8 text-center">
                         <div id="carouselproximosorteo" class="carousel carousel-dark slide" data-bs-ride="carousel"
-                            style="border-radius: 20px;">
+                        style="border-radius: 20px;overflow-x: hidden !important;">
 
                           <div class="carousel-inner" style="border-radius: 20px;">
                             <div class="carousel-item active" data-bs-interval="10000">
@@ -164,33 +132,7 @@
                         
                       </div>
                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="nav-paw" role="tabpanel" aria-labelledby="nav-paw-tab">
-                    <div class="row align-items-center offset-sm-1 g-3">
-                      <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                        <h2 class="text-light mb-md-5">Último sorteo</h2>
-                        <p class="text-400 movil">¡Felicidades a todos los afortunados ganadores de nuestro emocionante ultimo sorteo! Les extendemos nuestras más sinceras felicitaciones por su gran logro. Esperamos que disfruten de sus increíbles premios y que les brinden momentos de felicidad y satisfacción.</p>
-                        <p class="text-400 mt-3">Agradecemos a todos los participantes por hacer de este sorteo un éxito. ¡Sigan atentos a futuros sorteos y quizás puedan ser los próximos en celebrar una victoria! ¡Enhorabuena una vez más!</p>
-                       
-                      </div>
-                      <div class="col-md-6 col-xl-8 text-end">
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="nav-plane" role="tabpanel" aria-labelledby="nav-plane-tab">
-                    <div class="row align-items-center offset-sm-1 g-3">
-                      <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                        <h2 class="text-light mb-md-5">Comunidad</h2>
-                        <p class="text-400 movil">¡Únete a nuestra emocionante comunidad de redes sociales y descubre la magia de los sorteos! En nuestra página, te mantendremos al día con los últimos sorteos cargados de fabulosos premios. Productos diversos para todos los gustos, siempre hay algo emocionante en juego. Participa, comparte con tus amigos y aumenta tus posibilidades de ganar.</p>
-                        <p class="text-400 mt-3">No te pierdas la oportunidad de ser parte de nuestra comunidad de ganadores. ¡Síguenos en nuestras redes sociales y deja que la suerte esté de tu lado! #Sorteos #LasCosasSucedenCuandoParticipas</p>
-                       
-                      </div>
-                      <div class="col-md-6 col-xl-8 text-end">
-                        <div class="img-shape"><img class="feature-img" src="assets/img/gallery/unetecomunidad.jpg" alt="..." /></div>
-                      </div>
-                    </div>
-                  </div>
+                  </div>   
                 </div>
               </div>
             </div>
@@ -199,106 +141,7 @@
         </div>
       </section>
 
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <!-- <section id="clientes" class="py-6"> -->
-
-        <!-- <div class="container-fluid px-0">
-          <div class="row g-0">
-            <div class="col-12 col-xxl-11 offset-xxl-1">
-              <h2 class="text-light text-center">Últimos Ganadores</h2> -->
-              <!-- <div class="p-4">
-                <img src="{{asset('assets/img/illustrations/jugadas.png')}}" style="display: block;margin-left: auto;margin-right: auto;" width="200" alt="">
-                <h4 class="p-2 text-center text-ligth">No tenemos ganadores aún</h4>
-                <p class="text-ligth text-center" style="font-size: 16px;">Aquí podrás ver a nuestros ganadores.</p>
-              </div> -->
-              
-
-              <!-- <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carouse">
-                <div class="carousel-inner ps-md-5 ps-lg-11 py-4 py-md-5 py-lg-4 pb-lg-9">
-                  <div class="carousel-item active">
-                    <div class="row h-100">
-                      <div class="col-12">
-                        <div class="card testimonial-bg card-span text-white mt-10 mt-md-7 mt-lg-8 mx-4 mx-md-0">
-                          <div class="card-body pt-0 p-md-0">
-                            <div class="d-flex flex-column flex-md-row align-items-center">
-                              <div class="card-span-img">
-                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/teamdefault.png" alt="" /></div>
-                              </div>
-                              <div class="mt-n6 mt-md-0 text-center text-md-start px-md-6 px-xl-8 px-xxl-10">
-                                <h4 class="mb-0 fw-medium text-white">Charlize Theron</h4>
-                                <p class="fw-normal mb-0 text-primary">Founder Circle</p>
-                                <p class="card-text text-200 mt-3">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100">
-                      <div class="col-12">
-                        <div class="card testimonial-bg card-span text-white mt-10 mt-md-7 mt-lg-8 mx-4 mx-md-0">
-                          <div class="card-body pt-0 p-md-0">
-                            <div class="d-flex flex-column flex-md-row align-items-center">
-                              <div class="card-span-img">
-                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/teamdefault.jpg" alt="" /></div>
-                              </div>
-                              <div class="mt-n6 mt-md-0 text-center text-md-start px-md-6 px-xl-8 px-xxl-10">
-                                <h4 class="mb-0 fw-medium text-white">Edward Newgate</h4>
-                                <p class="fw-normal mb-0 text-primary">Founder Circle</p>
-                                <p class="card-text text-200 mt-3">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100">
-                      <div class="col-12">
-                        <div class="card testimonial-bg card-span text-white mt-10 mt-md-7 mt-lg-8 mx-4 mx-md-0">
-                          <div class="card-body pt-0 p-md-0">
-                            <div class="d-flex flex-column flex-md-row align-items-center">
-                              <div class="card-span-img">
-                                <div class="circle-wrapper"><img class="rounded-circle w-100" src="assets/img/team/teamdefault.jpg" alt="" /></div>
-                              </div>
-                              <div class="mt-n6 mt-md-0 text-center text-md-start px-md-6 px-xl-8 px-xxl-10">
-                                <h4 class="mb-0 fw-medium text-white">Charlize Theron</h4>
-                                <p class="fw-normal mb-0 text-primary">Founder Circle</p>
-                                <p class="card-text text-200 mt-3">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row justify-content-center justify-content-xl-end me-auto mt-xl-n7 pe-xl-8">
-                  <div class="col-2 text-end position-relative z-index-2">
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-                    <div class="carousel-indicators">
-                      <button class="active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"> </button>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            <!-- </div>
-          </div>
-        </div> -->
-        
-        <!-- end of .container-->
-
-      <!-- </section> -->
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+      
       <section id="carousel">
         <div class="container">
           <h2 class="text-light text-center py-4">Nuestros Últimos 10 Ganadores</h2>
@@ -323,6 +166,99 @@
       </section>
 
 <!-- ============================================-->
+
+<section>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-4 col-md-4 col-4 py-2">
+              <div class="text-center">
+                <button class="btn btn-secondary premios" id="_premios" style="background-color: #2D2E83 !important;">
+                  <img class="mx-2" src="assets/img/icons/proximosorteo.png" style="width: 30px;" alt=""> ¿Cómo jugar?
+                </button>
+              </div>
+            </div>
+            <!-- <div class="col-xl-3 col-md-3 col-6 py-2">
+              <div class="text-center">
+                <button class="btn btn-secondary ultimo_sorteo" id="_ultimo_premio" style="background-color: transparent !important;">
+                  <img class="mx-2" src="assets/img/icons/ultimosorteo.png" style="width: 30px;" alt=""> ¿Qué es SMASH?
+                </button>
+              </div>
+            </div> -->
+            <div class="col-xl-4 col-md-4 col-4 py-2">
+              <div class="text-center">
+                <button class="btn btn-secondary por_definir" id="_smash" style="background-color: transparent !important;">
+                  <i class="fa fa-handshake mx-2" style="color: white;font-size: 22px;"> </i> ¿Qué es SMASH?
+                </button>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-4 py-2">
+              <div class="text-center">
+                <button class="btn btn-secondary comunidad" id="_comunidad" style="background-color: transparent !important;">
+                <img class="mx-2" src="assets/img/icons/comunidad.png" style="width: 30px;" alt=""> Comunidad
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row py-6" id="_div_premios" style="display: block;">         
+
+            <div class="tab-pane" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="row align-items-center offset-sm-1 g-3">
+                <div class="col-md-6 col-xl-4 order-1 order-md-0">
+                  <h2 class="text-light mb-md-5">Cómo participar</h2>
+                  <p class="text-light movil">¡Es hora de participar en nuestros emocionantes sorteos, repletos de increíbles premios que te dejarán sin aliento!
+                Nuestro compromiso es mantener la emoción y sorprender a nuestros participantes con premios emocionantes y variados.
+                En nuestros sorteos, no solo encontrarás una amplia gama de premios tentadores, sino también la oportunidad de entrar con mayor fuerza para los proximos sorteos en el Smash!!.</p>
+              <p class="text-light mt-3">¡No te pierdas la oportunidad! Participa en nuestro sorteo y podrías ser el próximo ganador. ¡Inscríbete ahora!</p>
+                </div>
+                <div class="col-md-6 col-xl-8 text-center">
+                  <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/mCkBLdlovSs?si=7jzGqpKs7KpvT1w_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row py-6" id="_div_ultimo_sorteo" style="display: none;">
+            <div class="tab-pane" id="nav-paw" role="tabpanel" aria-labelledby="nav-paw-tab">
+              <div class="row align-items-center offset-sm-1 g-3">
+                <div class="col-md-6 col-xl-4 order-1 order-md-0">
+                  <h2 class="text-light mb-md-5">Último sorteo</h2>
+                  <p class="text-light movil">¡Felicidades a todos los afortunados ganadores de nuestro emocionante ultimo sorteo! Les extendemos nuestras más sinceras felicitaciones por su gran logro. Esperamos que disfruten de sus increíbles premios y que les brinden momentos de felicidad y satisfacción.</p>
+                  <p class="text-light mt-3">Agradecemos a todos los participantes por hacer de este sorteo un éxito. ¡Sigan atentos a futuros sorteos y quizás puedan ser los próximos en celebrar una victoria! ¡Enhorabuena una vez más!</p>
+                  
+                </div>
+                <div class="col-md-6 col-xl-8 text-end">
+                  <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
+                </div>
+              </div>
+            </div>
+          </div>    -->
+          
+          <div class="row py-6" id="_div_smash" style="display: none;">
+            <div class="img-shape"><iframe width="100%" class="video_smash" src="https://www.youtube.com/embed/BxjVJAVJ1kg?si=bnta8v_GEbLUTrkN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          </div>
+
+          <div class="row py-6" id="_div_comunidad" style="display: none;">
+            <div class="tab-pane" id="nav-plane" role="tabpanel" aria-labelledby="nav-plane-tab">
+              <div class="row align-items-center offset-sm-1 g-3">
+                <div class="col-md-6 col-xl-4 order-1 order-md-0">
+                  <h2 class="text-light mb-md-5">Comunidad</h2>
+                  <p class="text-light movil">¡Únete a nuestra emocionante comunidad de redes sociales y descubre la magia de los sorteos! En nuestra página, te mantendremos al día con los últimos sorteos cargados de fabulosos premios. Productos diversos para todos los gustos, siempre hay algo emocionante en juego. Participa, comparte con tus amigos y aumenta tus posibilidades de ganar.</p>
+                  <p class="text-light mt-3">No te pierdas la oportunidad de ser parte de nuestra comunidad de ganadores. ¡Síguenos en nuestras redes sociales y deja que la suerte esté de tu lado! #Sorteos #LasCosasSucedenCuandoParticipas</p>
+                  
+                </div>
+                <div class="col-md-6 col-xl-8 text-end">
+                  <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/BxjVJAVJ1kg?si=bnta8v_GEbLUTrkN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  <!-- <div class="img-shape"><img class="feature-img" src="assets/img/gallery/unetecomunidad.jpg" alt="..." /></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
       <!-- <section> PROMOCIONES ============================-->
       <section id="promociones" style="padding-top: 0;">
       <div class="container">
@@ -568,142 +504,7 @@
           </div>          
         </div>
       </section> -->
-
-      <section>
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-xl-3 col-md-3 col-6 py-2">
-              <div class="text-center">
-                <button class="btn btn-secondary premios" id="_premios" style="background-color: #2D2E83 !important;">
-                  <img class="mx-2" src="assets/img/icons/proximosorteo.png" style="width: 30px;" alt=""> Premios
-                </button>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-3 col-6 py-2">
-              <div class="text-center">
-                <button class="btn btn-secondary ultimo_sorteo" id="_ultimo_premio" style="background-color: transparent !important;">
-                  <img class="mx-2" src="assets/img/icons/ultimosorteo.png" style="width: 30px;" alt=""> Último sorteo
-                </button>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-3 col-6 py-2">
-              <div class="text-center">
-                <button class="btn btn-secondary por_definir" id="_smash" style="background-color: transparent !important;">
-                  <i class="fa fa-handshake mx-2" style="color: white;font-size: 22px;"> </i> Smash
-                </button>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-3 col-6 py-2">
-              <div class="text-center">
-                <button class="btn btn-secondary comunidad" id="_comunidad" style="background-color: transparent !important;">
-                <img class="mx-2" src="assets/img/icons/comunidad.png" style="width: 30px;" alt=""> Comunidad
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="row py-6" id="_div_premios" style="display: block;">
-            <div class="tab-pane" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-              <div class="row align-items-center offset-sm-1 g-3">
-                <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                  <h2 class="text-light mb-md-5">Premios</h2>
-                  <p class="movil text-light">¡La emoción continúa y te invitamos a participar en nuestro próximo sorteo a lo grande! No te pierdas la oportunidad de ganar increíbles premios desde lo que imaginas y mucho más. Solo tienes que inscribirte y estarás un paso más cerca de convertirte en uno de nuestros afortunados ganadores</p>
-                  <p class="mt-3 text-light">¡Sigue participando y mantén viva la emoción! ¡No te lo puedes perder! con el Smash el que sigue la consigue!</p>
-                  
-                </div>
-                <div class="col-md-6 col-xl-8 text-center">
-                  <div id="carouselproximosorteo1" class="carousel carousel-dark slide" data-bs-ride="carousel"
-                      style="border-radius: 20px;overflow-x: hidden !important;">
-
-                    <div class="carousel-inner" style="border-radius: 20px;">
-                      <div class="carousel-item active" data-bs-interval="10000">
-                        <img class="feature-img" src="assets/img/sorteos/1.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
-                        <img class="feature-img" src="assets/img/sorteos/2.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/3.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/4.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/5.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/6.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/7.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/8.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/9.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/10.jpg" alt="..." />
-                      </div>
-                      <div class="carousel-item">
-                        <img class="feature-img" src="assets/img/sorteos/11.jpg" alt="..." />
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselproximosorteo1" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselproximosorteo1" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row py-6" id="_div_ultimo_sorteo" style="display: none;">
-            <div class="tab-pane" id="nav-paw" role="tabpanel" aria-labelledby="nav-paw-tab">
-              <div class="row align-items-center offset-sm-1 g-3">
-                <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                  <h2 class="text-light mb-md-5">Último sorteo</h2>
-                  <p class="text-light movil">¡Felicidades a todos los afortunados ganadores de nuestro emocionante ultimo sorteo! Les extendemos nuestras más sinceras felicitaciones por su gran logro. Esperamos que disfruten de sus increíbles premios y que les brinden momentos de felicidad y satisfacción.</p>
-                  <p class="text-light mt-3">Agradecemos a todos los participantes por hacer de este sorteo un éxito. ¡Sigan atentos a futuros sorteos y quizás puedan ser los próximos en celebrar una victoria! ¡Enhorabuena una vez más!</p>
-                  
-                </div>
-                <div class="col-md-6 col-xl-8 text-end">
-                  <div class="img-shape"><img class="feature-img" src="assets/img/gallery/defaultgame.png" alt="..." /></div>
-                </div>
-              </div>
-            </div>
-          </div>   
-          
-          <div class="row py-6" id="_div_smash" style="display: none;">
-            <div class="img-shape"><iframe width="100%" class="video_smash" src="https://www.youtube.com/embed/BxjVJAVJ1kg?si=bnta8v_GEbLUTrkN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-          </div>
-
-          <div class="row py-6" id="_div_comunidad" style="display: none;">
-            <div class="tab-pane" id="nav-plane" role="tabpanel" aria-labelledby="nav-plane-tab">
-              <div class="row align-items-center offset-sm-1 g-3">
-                <div class="col-md-6 col-xl-4 order-1 order-md-0">
-                  <h2 class="text-light mb-md-5">Comunidad</h2>
-                  <p class="text-light movil">¡Únete a nuestra emocionante comunidad de redes sociales y descubre la magia de los sorteos! En nuestra página, te mantendremos al día con los últimos sorteos cargados de fabulosos premios. Productos diversos para todos los gustos, siempre hay algo emocionante en juego. Participa, comparte con tus amigos y aumenta tus posibilidades de ganar.</p>
-                  <p class="text-light mt-3">No te pierdas la oportunidad de ser parte de nuestra comunidad de ganadores. ¡Síguenos en nuestras redes sociales y deja que la suerte esté de tu lado! #Sorteos #LasCosasSucedenCuandoParticipas</p>
-                  
-                </div>
-                <div class="col-md-6 col-xl-8 text-end">
-                  <div class="img-shape"><iframe class="feature-img" width="560" height="390" src="https://www.youtube.com/embed/BxjVJAVJ1kg?si=bnta8v_GEbLUTrkN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                  <!-- <div class="img-shape"><img class="feature-img" src="assets/img/gallery/unetecomunidad.jpg" alt="..." /></div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
+      
 
       <section>
         <div class="container">
@@ -885,56 +686,56 @@
 
 <script>
   const premios = document.getElementById("_premios");
-  const ultimo_premio = document.getElementById("_ultimo_premio");
+  // const ultimo_premio = document.getElementById("_ultimo_premio");
   const smash = document.getElementById("_smash");
   const comunidad = document.getElementById("_comunidad"); 
 
   const div_premios = document.getElementById("_div_premios");
-  const div_ultimo_premio = document.getElementById("_div_ultimo_sorteo");
+  // const div_ultimo_premio = document.getElementById("_div_ultimo_sorteo");
   const div_smash = document.getElementById("_div_smash");
   const div_comunidad = document.getElementById("_div_comunidad"); 
 
    premios.addEventListener("click", ()=>{
      premios.style.backgroundColor = '#2D2E83';
-     ultimo_premio.style.backgroundColor = 'transparent';
+    //  ultimo_premio.style.backgroundColor = 'transparent';
      smash.style.backgroundColor = 'transparent';
      comunidad.style.backgroundColor = 'transparent';
 
      div_premios.style.display = 'block';
-     div_ultimo_premio.style.display = 'none';
+    //  div_ultimo_premio.style.display = 'none';
     div_smash.style.display = 'none';
      div_comunidad.style.display = 'none';
    })
-   ultimo_premio.addEventListener("click", ()=>{
-    ultimo_premio.style.backgroundColor = '#2D2E83';
-     premios.style.backgroundColor = 'transparent';
-     smash.style.backgroundColor = 'transparent';
-     comunidad.style.backgroundColor = 'transparent';
+  //  ultimo_premio.addEventListener("click", ()=>{
+  //   ultimo_premio.style.backgroundColor = '#2D2E83';
+  //    premios.style.backgroundColor = 'transparent';
+  //    smash.style.backgroundColor = 'transparent';
+  //    comunidad.style.backgroundColor = 'transparent';
 
-     div_ultimo_premio.style.display = 'block';
-     div_premios.style.display = 'none';
-    div_smash.style.display = 'none';
-     div_comunidad.style.display = 'none';
-   })
+  //    div_ultimo_premio.style.display = 'block';
+  //    div_premios.style.display = 'none';
+  //   div_smash.style.display = 'none';
+  //    div_comunidad.style.display = 'none';
+  //  })
    smash.addEventListener("click", ()=>{
      smash.style.backgroundColor = '#2D2E83';
-     ultimo_premio.style.backgroundColor = 'transparent';
+    //  ultimo_premio.style.backgroundColor = 'transparent';
      comunidad.style.backgroundColor = 'transparent';
      premios.style.backgroundColor = 'transparent';
 
      div_smash.style.display = 'block';
-     div_ultimo_premio.style.display = 'none';
+    //  div_ultimo_premio.style.display = 'none';
     div_comunidad.style.display = 'none';
      div_premios.style.display = 'none';
    })
    comunidad.addEventListener("click", ()=>{
      comunidad.style.backgroundColor = '#2D2E83';
-     ultimo_premio.style.backgroundColor = 'transparent';
+    //  ultimo_premio.style.backgroundColor = 'transparent';
      smash.style.backgroundColor = 'transparent';
      premios.style.backgroundColor = 'transparent';
 
      div_comunidad.style.display = 'block';
-     div_ultimo_premio.style.display = 'none';
+    //  div_ultimo_premio.style.display = 'none';
     div_smash.style.display = 'none';
      div_premios.style.display = 'none';
    })
