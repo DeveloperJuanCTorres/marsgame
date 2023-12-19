@@ -80,7 +80,7 @@
                         <p class="text-light movil">¡La emoción continúa y te invitamos a participar en nuestro próximo sorteo a lo grande! No te pierdas la oportunidad de ganar increíbles premios desde lo que imaginas y mucho más. Solo tienes que inscribirte y estarás un paso más cerca de convertirte en uno de nuestros afortunados ganadores</p>
                         <p class="text-light mt-3">¡Sigue participando y mantén viva la emoción! ¡No te lo puedes perder! con el Smash el que sigue la consigue!</p>
                         <a href="{{url('/PremiosFecha02.pdf')}}" target="_blank" class="btn btn-secondary premios" id="_premios" style="background-color: #2D2E83 !important;">
-                          <img class="mx-2" src="assets/img/icons/proximosorteo.png" style="width: 30px;" alt=""> Lista de Premios
+                          <img class="mx-2" src="assets/img/icons/ultimosorteo.png" style="width: 30px;" alt=""> Lista de Premios
                         </a>
                       </div>
                       <div class="col-md-6 col-xl-8 text-center">
