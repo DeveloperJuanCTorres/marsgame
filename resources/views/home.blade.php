@@ -172,9 +172,9 @@
 <section>
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-xl-4 col-md-4 col-4 py-2">
+            <div class="col-xl-4 col-md-4 col-12 py-2">
               <div class="text-center">
-                <button class="btn btn-secondary premios" id="_premios" style="background-color: #2D2E83 !important;padding: 10px;">
+                <button class="btn btn-secondary premios" id="_premios" style="background-color: #2D2E83 !important;">
                   <img class="mx-2" src="assets/img/icons/proximosorteo.png" style="width: 30px;" alt=""> ¿Cómo jugar?
                 </button>
               </div>
@@ -186,14 +186,14 @@
                 </button>
               </div>
             </div> -->
-            <div class="col-xl-4 col-md-4 col-4 py-2">
+            <div class="col-xl-4 col-md-4 col-12 py-2">
               <div class="text-center">
                 <button class="btn btn-secondary por_definir" id="_smash" style="background-color: transparent !important;">
                   <i class="fa fa-handshake mx-2" style="color: white;font-size: 22px;"> </i> ¿Qué es SMASH?
                 </button>
               </div>
             </div>
-            <div class="col-xl-4 col-md-4 col-4 py-2">
+            <div class="col-xl-4 col-md-4 col-12 py-2">
               <div class="text-center">
                 <button class="btn btn-secondary comunidad" id="_comunidad" style="background-color: transparent !important;">
                 <img class="mx-2" src="assets/img/icons/comunidad.png" style="width: 30px;" alt=""> Comunidad
