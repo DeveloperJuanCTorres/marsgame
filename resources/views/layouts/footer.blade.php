@@ -19,7 +19,7 @@
               <div class="pb-4 text-center">
                 <ul class="list-unstyled list-inline my-2">
                   <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.facebook.com/groups/7721005837927044/?ref=share&mibextid=KtfwRi"><i class="fab fa-facebook-square fa-2x social-icons"></i></a></li>
-                  <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.instagram.com/adm.marsgame/"><i class="fab fa-instagram fa-2x social-icons"></i></a></li>
+                  <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.instagram.com/marsgame.pe?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram fa-2x social-icons"></i></a></li>
                   <!-- <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="#!"><i class="fab fa-twitter-square fa-2x social-icons"> </i></a></li> -->
                   <li class="list-inline-item"><a class="text-decoration-none" target="_blank" href="https://www.tiktok.com/@adm.marsgame"><i class="fab fa-tiktok fa-2x social-icons"></i></a></li>
                 </ul>
