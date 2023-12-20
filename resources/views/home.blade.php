@@ -174,7 +174,7 @@
           <div class="row align-items-center">
             <div class="col-xl-4 col-md-4 col-4 py-2">
               <div class="text-center">
-                <button class="btn btn-secondary premios" id="_premios" style="background-color: #2D2E83 !important;">
+                <button class="btn btn-secondary premios" id="_premios" style="background-color: #2D2E83 !important;padding: 10px;">
                   <img class="mx-2" src="assets/img/icons/proximosorteo.png" style="width: 30px;" alt=""> ¿Cómo jugar?
                 </button>
               </div>
