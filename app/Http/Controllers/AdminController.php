@@ -11,7 +11,7 @@ use App\Models\Code;
 use App\Models\Order;
 use App\Models\User;
 use App\Models\Ticket;
-use App\Models\Pay;
+use App\Models\Payment;
 use App\Models\Suscription;
 use App\Models\Suscriptions;
 use App\Models\Notification;
@@ -40,7 +40,7 @@ class AdminController extends Controller
         $smash = SorteoSmash::where('user_id',Auth::user()->id)->count();
         $simple = SorteoSimple::where('user_id',Auth::user()->id)->count();
         $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
-        $movimientos = Pay::where('user_id',Auth::user()->id)->get();
+        $movimientos = Payment::where('user_id',Auth::user()->id)->get();
         $noticount = $notificaciones->count();
         $cuenta = Account::where('user_id',Auth::user()->id)->first();
         if ($cuenta == null) {
@@ -178,7 +178,7 @@ class AdminController extends Controller
     if ($answer->orderStatus == "PAID") {      
         try {
             $cuenta = Account::where('user_id',$user_id)->first();
-            $pay = Pay::create([
+            $pay = Payment::create([
                 'user_id' => $user_id,
                 'transaction_id' => $answer->shopId,
                 'monto' => ($answer->transactions[0]->amount/100),
@@ -343,7 +343,7 @@ class AdminController extends Controller
 
         if ($answer->orderStatus == "PAID") {      
             try {
-                $pay = Pay::create([
+                $pay = Payment::create([
                     'user_id' => $user_id,
                     'transaction_id' => $answer->shopId,
                     'monto' => ($answer->transactions[0]->amount/100),
@@ -434,7 +434,7 @@ class AdminController extends Controller
 
     if ($cuenta->saldo >= Cart::getTotal()) {      
         try {
-            $pay = Pay::create([
+            $pay = Payment::create([
                 'user_id' => $user_id,
                 'transaction_id' => $keyOrder,
                 'monto' => Cart::getTotal(),
