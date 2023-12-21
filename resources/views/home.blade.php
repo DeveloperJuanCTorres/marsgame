@@ -278,7 +278,7 @@
                   <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
                 </div>
                 <div class="card1-block">
-                  <h4 class="card1-title text-white">
+                  <h4 class="card1-title text-light">
                     {{$item->nombre}}
                   </h4>
                   <ul class="list-group padding-left-0">
@@ -334,7 +334,7 @@
                   <h3 class="display-2 text-white-promo pt-2"><span class="currency">S/.</span>{{$item->monto}}<span class="period px-2">/{{$item->duracion}}</span></h3>
                 </div>
                 <div class="card1-block">
-                  <h4 class="card1-title text-white">
+                  <h4 class="card1-title text-light">
                     {{$item->promocion}}
                   </h4>
                   <ul class="list-group padding-left-0">
