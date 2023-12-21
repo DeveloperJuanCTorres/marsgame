@@ -60,7 +60,7 @@
             </div>
             <div class="col-12 col-sm-8 col-md-6">
               <p class="fs--1 fw-light my-2 text-center text-md-end text-200"> Página hecha por&nbsp;
-                <a class="fw-bold text-primary" href="https://grupotyg.pe" target="_blank">Grupo Tyg Ingenieros</a>
+                <a class="fw-bold text-primary" href="https://grupotyg.pe" target="_blank">Grupo TyG Ingenieros</a>
               </p>
             </div>
           </div>
