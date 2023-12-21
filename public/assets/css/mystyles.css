@@ -24,7 +24,7 @@ background: #1D243D;
 border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-background: #1D243D;
+background: #00983A;
 box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 ::-webkit-scrollbar-thumb:active {
