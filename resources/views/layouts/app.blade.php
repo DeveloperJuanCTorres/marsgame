@@ -91,6 +91,8 @@
     <!-- </div> -->
     <!-- JavaScript Libraries -->
 
+    <script src="{{asset('assets/js/header.js')}}?v=<?php echo $version ?>"></script>
+
     <script src="{{asset('vendors/popper/popper.min.js')}}"></script>
     <script src="{{asset('vendors/bootstrap/bootstrap.min.js')}}"></script>
     <script src="{{asset('vendors/anchorjs/anchor.min.js')}}"></script>
@@ -116,6 +118,7 @@
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    
 
     <script src="https://checkout.culqi.com/js/v4"></script>
         <script>
