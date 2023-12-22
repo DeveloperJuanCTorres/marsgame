@@ -109,14 +109,25 @@
           <span>Fecha Nacimiento:</span>
         </div>  
         <input id="fecha_nac" type="date" name="fecha_nac" class="input-lg" value="10/10/2000">
-          <div>
-            <input placeholder="Email" id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-            @error('email')
-              <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-              </span>
-            @enderror
+        <div>
+          <input placeholder="Email" id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+          @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+          @enderror
+        </div>
+        <div>
+          <div class="text-start mx-5">
+            <span>Codigo promociona (Opcional):</span>
           </div>
+          <input placeholder="código" id="codigo" type="text" class="@error('codigo') is-invalid @enderror" name="codigo" value="{{ old('codigo') }}">
+          @error('codigo')
+            <span class="invalid-feedback" role="alert">
+                <strong>El código es inválido</strong>
+            </span>
+          @enderror
+        </div>
         <div>
             <i class="typcn typcn-eye" id="eye"></i>
             <input id="pwd" placeholder="Password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -131,7 +142,7 @@
             <input placeholder="Confirmar Password" id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
         </div>
         <div class="mx-5 g-recaptcha" data-sitekey="6LdgFhopAAAAAFEizQmgWxRVgWhBKM6XCnNIf_lx"></div>
-        <input type="submit" value="Registrarme" class="btn1">
+        <input style="margin-top: 150px;" type="submit" value="Registrarme" class="btn1">
       </form>
         <a href="/login" class="dnthave">¿Ya tienes cuenta? Iniciar Sesión</a>
   </div> 

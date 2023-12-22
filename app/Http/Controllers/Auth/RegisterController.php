@@ -5,10 +5,13 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Coupon;
+use App\Models\SorteoSmash;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Random;
+use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
@@ -50,6 +53,15 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        if ($data['codigo']!="") {
+            $cupon = Coupon::where('codigo_promocional', $data['codigo'])->first();
+            if (!$cupon) {
+                return Validator::make($data, [
+                    'codigo' => ['required', 'string', 'min:50000']
+                ]);
+            }
+        }
+
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
@@ -83,7 +95,19 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phone' => $data['phone'],
+            'codigo_promocional' => $data['codigo']
         ]);
+
+        if ($data['codigo']) {
+            $cupon = Coupon::where('codigo_promocional', $data['codigo'])->first();
+            $fecha_registro = Carbon::now();
+            for ($i=0; $i < $cupon->cantidad; $i++) { 
+                SorteoSmash::create([
+                    'user_id' => $user->id,
+                    'fecha_registro' => $fecha_registro
+                ]);
+            }
+        }
 
         return $user;
 
