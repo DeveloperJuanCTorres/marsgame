@@ -18,9 +18,12 @@
               <li class="nav-item px-2"><a class="nav-link text-white" aria-current="page" href="/#">Inicio</a></li>
               <!-- <li class="nav-item px-2"><a class="nav-link text-white" href="/#participar">Premios</a></li> -->
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#promociones">Planes</a></li>
-              <li class="nav-item px-2"><a class="nav-link text-white" href="/tienda">Tienda</a></li>
+              <!-- <li class="nav-item px-2"><a class="nav-link text-white" href="/tienda">Tienda</a></li> -->
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
+            <button class="btn btn-sm p-2 add_sugerencia" id="add_sugerencia" type="button" style="font-size: 20px;">
+              <i class="fa fa-gift text-white"> </i>
+            </button>
             @auth
             <button class="btn btn-sm d-flex p-2" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
               <i class="fa fa-bell text-white"> </i>

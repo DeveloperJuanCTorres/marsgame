@@ -13,6 +13,7 @@ use App\Models\Policy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Reclamos;
+use App\Mail\Sugerencia;
 
 class HomeController extends Controller
 {
@@ -57,6 +58,30 @@ class HomeController extends Controller
             return view('home',compact('products','tickets','notificaciones','noticount','saldo'));
         }        
         
+    }
+
+    public function enviarsugerencia(Request $request)
+    {
+        try {
+            $correo = new Sugerencia($request);
+            if (Auth::user()) {
+                $user_id = Auth::user()->id;
+                $user_name = Auth::user()->name;
+                $user_las_name = Auth::user()->last_name;
+            }else{
+                $user_id = '-';
+                $user_name = 'No';
+                $user_las_name = 'registrado';
+            }
+            // Mail::to('soporte@marsgame.pe')->send($correo);
+            Mail::to('jctorresdelcastillo@gmail.com')->send($correo);
+            
+            return response()->json(['status' => true, 'msg' => 'Tu sugerencia se envió con Éxito']);
+
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]);
+        }
+       
     }
 
     public function tienda()

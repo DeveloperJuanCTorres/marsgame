@@ -61,6 +61,8 @@ Route::get('/reclamos',[HomeController::class, 'reclamos'])->name('reclamos');
 Route::post('/enviar-reclamo',[HomeController::class, 'enviar'])->name('enviar-reclamo');
 Route::get('/tienda',[HomeController::class, 'tienda'])->name('tienda');
 
+Route::post('/enviarsugerencia', [HomeController::class, 'enviarsugerencia'])->name('enviarsugerencia');
+
 
 
 

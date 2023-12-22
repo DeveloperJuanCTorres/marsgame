@@ -348,6 +348,64 @@ $(document).on('click', '.aceptar', function(event) {
   })
   })
 
+  $(".add_sugerencia").click(function (e) {
+    e.preventDefault();
+    Swal.fire({
+    title: 'Puedes describirnos una sugerencia de premios',
+    input: 'textarea',
+    inputPlaceholder: "Escribe tus sugerencias...",
+    background: '#2D2E83',
+    color: 'white',
+    inputAttributes: {
+      autocapitalize: 'off'
+    },
+    showCancelButton: true,
+    confirmButtonText: 'Enviar solicitud',
+    confirmButtonColor: '#00983A',
+    cancelButtonText:'Cancelar',
+    preConfirm: (sugerencia) => {
+      $.ajax({
+        url: "/enviarsugerencia",
+        method: "post",
+        dataType: 'json',
+        data: {
+          _token: $('meta[name="csrf-token"]').attr('content'),           
+          sugerencia: sugerencia
+        } ,
+        success: function (response) {
+            if (response.status==true) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Exito',
+                text: response.msg,
+                allowOutsideClick: false,
+                confirmButtonText: "Ok",
+            })
+            .then(resultado => {
+            // window.location.reload();
+            }) 
+            }
+            else{
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Error',
+                  text: response.msg,
+              })
+            }                
+          },
+          error: function (response) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...!!',
+              text: response.msg,
+            })
+          }
+      })        
+    },
+    allowOutsideClick: () => !Swal.isLoading()
+  })
+  })
+
   $(".depositar").click(function (e) {
     e.preventDefault();
     Swal.fire({
