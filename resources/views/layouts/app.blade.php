@@ -99,11 +99,11 @@
     <script src="{{asset('vendors/lodash/lodash.min.js')}}"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="{{asset('vendors/prism/prism.js')}}"></script>
-    <script src="{{asset('assets/js/theme.js')}}"></script>
+    <script src="{{asset('assets/js/theme.js')}}?v=<?php echo $version ?>"></script>
     <script src="{{asset('assets/js/mystyles.js')}}?v=<?php echo $version ?>"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-    <script src="{{asset('assets/js/login.js')}}"></script>
+    <script src="{{asset('assets/js/login.js')}}?v=<?php echo $version ?>"></script>
     <script src="{{asset('assets/js/ubigeo.js')}}"></script>
     <script src="{{asset('assets/js/ubigeo1.js')}}"></script>
     <script src="{{asset('assets/js/selectubigeo.js')}}"></script>
