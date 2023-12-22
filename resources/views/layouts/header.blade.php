@@ -71,7 +71,10 @@
                 </ul> 
               </div>                                 
                              
-            </div>              
+            </div>  
+            <button class="btn btn-sm p-2 add_sugerencia" id="add_sugerencia" type="button" style="font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Suegerencia de premios">
+              <i class="fa fa-gift text-white" aria-hidden="true"> </i>
+            </button>            
             @auth
             <button class="btn btn-sm p-2 movil-block" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotificacion" aria-controls="offcanvasNotificacion">
               <i class="fa fa-bell text-white"> </i>
@@ -79,7 +82,7 @@
               {{$noticount}}
               </span>
             </button>             
-            @endauth 
+            @endauth             
             <button class="btn btn-sm p-2 movil-block" type="button" style="font-size: 20px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
               <i class="fas fa-shopping-cart text-white"> </i>
               <span class="badge rounded-pill bg-danger" id="totalCheckou" style="font-size: 8px;float: right;display:block;position:relative;">
