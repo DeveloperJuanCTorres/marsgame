@@ -21,7 +21,7 @@
               <!-- <li class="nav-item px-2"><a class="nav-link text-white" href="/tienda">Tienda</a></li> -->
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
-            <button class="btn btn-sm p-2 add_sugerencia" id="add_sugerencia" type="button" style="font-size: 20px;">
+            <button class="btn btn-sm p-2 add_sugerencia animacion" id="add_sugerencia" type="button" style="font-size: 20px;">
               <i class="fa fa-gift text-white"> </i>
             </button>
             @auth

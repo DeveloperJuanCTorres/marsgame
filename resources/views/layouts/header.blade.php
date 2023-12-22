@@ -72,7 +72,7 @@
               </div>                                 
                              
             </div>  
-            <button class="btn btn-sm p-2 add_sugerencia" id="add_sugerencia" type="button" style="font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Suegerencia de premios">
+            <button class="btn btn-sm p-2 add_sugerencia animacion" id="add_sugerencia" type="button" style="font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Suegerencia de premios">
               <i class="fa fa-gift text-white" aria-hidden="true"> </i>
             </button>            
             @auth
@@ -107,7 +107,7 @@
               <li class="nav-item px-2"><a class="nav-link text-white" href="/#contact">Contáctanos</a></li>
             </ul>
             <!-- <span class="d-inline-block" > -->
-              <button class="btn btn-sm p-2 add_sugerencia" id="add_sugerencia" type="button" style="font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Suegerencia de premios">
+              <button class="btn btn-sm p-2 add_sugerencia animacion" id="add_sugerencia" type="button" style="font-size: 20px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Suegerencia de premios">
                 <i class="fa fa-gift text-white" aria-hidden="true"> </i>
               </button>
             <!-- </span> -->
