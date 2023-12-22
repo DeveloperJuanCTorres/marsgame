@@ -73,8 +73,7 @@ class HomeController extends Controller
                 $user_name = 'No';
                 $user_las_name = 'registrado';
             }
-            // Mail::to('soporte@marsgame.pe')->send($correo);
-            Mail::to('jctorresdelcastillo@gmail.com')->send($correo);
+            Mail::to('soporte@marsgame.pe')->send($correo);
             
             return response()->json(['status' => true, 'msg' => 'Tu sugerencia se envió con Éxito']);
 
