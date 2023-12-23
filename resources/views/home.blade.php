@@ -657,11 +657,11 @@
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #2D2E83;">
-        <h5 class="modal-title text-ligth" id="exampleModalToggleLabel">Premios Sorteo 23/12/2023</h5>
+        <h5 class="modal-title text-ligth" id="exampleModalToggleLabel">Gánate 10 puntos Smash</h5>
         <button type="button" class="btn-close" style="background-color:white;" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" style="padding: 0;">
-        <img src="{{asset('assets/img/premios3.png')}}" width="100%" alt="">        
+        <img src="{{asset('assets/img/sorpresa.png')}}" width="100%" alt="">        
       </div>
     </div>
   </div>
