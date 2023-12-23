@@ -119,7 +119,7 @@
         </div>
         <div>
           <div class="text-start mx-5">
-            <span>Codigo promociona (Opcional):</span>
+            <span>Codigo promocional (Opcional: ganas 10 Pts Smash)</span>
           </div>
           <input placeholder="código" id="codigo" type="text" class="@error('codigo') is-invalid @enderror" name="codigo" value="{{ old('codigo') }}">
           @error('codigo')
