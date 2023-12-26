@@ -265,7 +265,7 @@
       <section id="promociones" style="padding-top: 0;">
       <div class="container">
         <div class="row">
-          <h2 class="text-light text-center my-5">Tarifa Regular</h2>
+          <h2 class="text-light text-center my-5">Tickets</h2>
         </div>
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
 
@@ -320,7 +320,7 @@
       <section id="promociones" style="padding-top: 0;">
       <div class="container">
         <div class="row">
-          <h2 class="text-light text-center my-5">Tarifa Promocional</h2>
+          <h2 class="text-light text-center my-5">Suscripciones</h2>
         </div>
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
 
