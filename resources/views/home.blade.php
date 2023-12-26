@@ -661,7 +661,7 @@
         <button type="button" class="btn-close" style="background-color:white;" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" style="padding: 0;">
-        <img src="{{asset('assets/img/premios3.png')}}" width="100%" alt="">        
+        <img src="{{asset('assets/img/premios03.png')}}" width="100%" alt="">        
       </div>
     </div>
   </div>
