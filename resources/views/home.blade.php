@@ -121,6 +121,33 @@
                             <div class="carousel-item">
                               <img class="feature-img" src="assets/img/sorteos/11.jpg" alt="..." />
                             </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/12.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/13.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/14.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/15.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/16.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/17.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/18.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/19.jpg" alt="..." />
+                            </div>
+                            <div class="carousel-item">
+                              <img class="feature-img" src="assets/img/sorteos/20.jpg" alt="..." />
+                            </div>
                           </div>
                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselproximosorteo" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
