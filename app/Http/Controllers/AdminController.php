@@ -197,6 +197,33 @@ class AdminController extends Controller
         }
     }
 
+    public function plin(Request $request)
+    {
+        try {
+            $imagen=$request->file("file"); 
+            $extension = $imagen->getClientOriginalExtension();
+            $filename  = 'plin-' . str::random(32) . '.' . $extension;
+            $paths = Storage::putFileAs('public/plin',$imagen,$filename);
+            $ruta = "/yape/".$filename;
+
+            Wallet::create([
+                'order' => json_encode(Cart::getContent()),
+                'monto' => Cart::getTotal(),
+                'vaucher' => $ruta,
+                'estado' => 0,
+                'type' => 'PLIN',
+                'user_id' => Auth::user()->id
+            ]);
+
+            Cart::clear();
+
+            return response()->json(['status' => true, 'msg' => 'Tu pago se envió con éxito, dentro de las 24 se validará la conformidad']); 
+
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
+        }
+    }
+
     public function codigos()
     {
         $codigos = Code::where('user_id',Auth::user()->id)->where('estado',0)->get();

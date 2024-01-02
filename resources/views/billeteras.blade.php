@@ -137,7 +137,7 @@
                                     <div class="row">
                                         <div class="image">
                                             <div class="img-wrapper" style="height: 50px;">
-                                                <a href="http://127.0.0.1:8000/storage/{{$item->vaucher}}"><img style="height: 50px;width: 50px;" src="http://localhost:8000/storage/{{$item->vaucher}}" class="img-responsive"></a>
+                                                <a href="https://marsgame.pe/storage/{{$item->vaucher}}"><img style="height: 50px;width: 50px;" src="http://localhost:8000/storage/{{$item->vaucher}}" class="img-responsive"></a>
                                                 <div class="img-overlay" style="width: 50px;height: 50px;margin-top: -30px;">
                                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                                 </div>

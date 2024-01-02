@@ -798,6 +798,85 @@
       });
     </script>
 
+<script>
+      $('.btn-pagar-plin').on('click', function(e) {
+        e.preventDefault();
+        var formData = new FormData();
+        var archivoplin = $("#fileplin").val();
+
+        if(archivoplin == ''){
+          Swal.fire({
+              icon:'warning',
+              text: 'Debes subir tu comprobante de pago',
+          });
+          return false;
+        }else{
+              const MAXIMO_TAMANIO_BYTES = 1000000;
+              var archivoplin = $('#fileplin')[0].files[0];
+              if (archivoplin.size > MAXIMO_TAMANIO_BYTES) {
+                  Swal.fire({
+                      icon:'warning',
+                      text: 'El tamaño máximo de archivo es 1MB',
+                  });
+                  return false;
+              }
+          }
+
+          formData.append('file',$('#fileplin')[0].files[0]);
+          console.log(formData);
+        $.ajax({
+            url: "/pagar-plin",
+            type: "POST",
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            },
+            data: formData,
+            contentType: false,
+            processData: false,
+            beforeSend: function () {
+                Swal.fire({
+                    header: '...',
+                    title: "cargando",
+                    allowOutsideClick:false,
+                    didOpen: () => {
+                    Swal.showLoading()
+                    }
+                });
+            },
+            success: function (response) {
+                 if (response.status) {
+                 Swal.fire({
+                     icon: 'success',
+                     title: 'Éxito!',
+                     text: response.msg,
+                     allowOutsideClick: false,
+                     confirmButtonText: "Ok",
+                 })
+                 .then(resultado => {
+                  window.location="/";
+                 }) 
+                 }
+                 else{
+                 Swal.fire({
+                     icon: 'error',
+                     title: 'Error',
+                     text: response.msg,
+                 })
+                }
+                
+             },
+            error: function (response) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...!!',
+                    text: response.msg,
+                  })
+            }
+        });
+       
+      });
+    </script>
+
     <script>
       $('.btn-pagar').on('click', function(e) {
         e.preventDefault();
