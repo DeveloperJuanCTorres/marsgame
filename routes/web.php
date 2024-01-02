@@ -39,7 +39,9 @@ use TCG\Voyager\Commands\AdminCommand;
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();    
-
+    Route::get('/billetera-digital',[AdminController::class, 'billeteras'])->name('billetera-digital');
+    
+    
 });
 
 Route::get('/',[HomeController::class, 'index'])->name('index');
@@ -69,11 +71,16 @@ Route::post('/enviarsugerencia', [HomeController::class, 'enviarsugerencia'])->n
 Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function(){
 
+    Route::post('/pagar-yape',[AdminController::class, 'yape'])->name('pagar-yape');
+    Route::post('/pagar-plin',[AdminController::class, 'plin'])->name('pagar-plin');
+
     Route::post('/culqi', [AdminController::class, 'culqi'])->name('culqi');
 
     Route::post('/aceptarcodigo', [AdminController::class, 'aceptarcodigo'])->name('aceptarcodigo');
     Route::post('/rechazarcodigo', [AdminController::class, 'rechazarcodigo'])->name('rechazarcodigo');
     Route::post('/pasarelapagos', [AdminController::class, 'pasarelapagos'])->name('pasarelapagos');
+    Route::post('/aceptar-vaucher',[AdminController::class, 'aceptarvaucher'])->name('aceptar-vaucher');
+    Route::post('/rechazar-vaucher',[AdminController::class, 'rechazarvaucher'])->name('rechazar-vaucher');
 
     Route::get('/depositar/{monto}',[AdminController::class, 'depositar'])->name('depositar');
     Route::post('/pasareladeposito', [AdminController::class, 'pasareladeposito'])->name('pasareladeposito');

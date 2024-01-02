@@ -460,14 +460,47 @@
                     <span class="text-light">Para realizar pagos con tarjeta debes tener habilitado la opción de pagos online de tu tarjeta</span><br>
                     <span style="color: #00983A;">"Contactar a soporte para consultar o validar el pago"</span>
                   </div>
+                  <div class="form-check p-2" style="margin-left: 15px;">
+                  <input class="form-check-input" type="checkbox" value="" id="yape" onchange="javascript:PagarYape()">
+                    <label class="form-check-label text-light" for="flexCheckDefault">
+                      Pagar con YAPE
+                    </label>
+                    <label class="form-check-label text-light p-2" id="LabelYape" style="display: none;">
+                      978461095
+                    </label>
+                    <img src="{{asset('assets/img/yapemarsgame.jpeg')}}" id="ImagenYape" alt="yapemarsgame" style="width: 250px;background-color: transparent !important;color: white !important;display: none;text-align: center;">
+                    <div name="DivYape" id="DivYape" style="display: none;">
+                      <input type="file" name="fileyape" id="fileyape" class="form-control p-2 mt-2">
+                      <div class="row container py-2 justify-content-center">
+                        <button class="btn1 text-center btn-pagar-yape" style="background-color: #00983A;">Pagar</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check p-2" style="margin-left: 15px;">
+                  <input class="form-check-input" type="checkbox" value="" id="plin" onchange="javascript:PagarPlin()">
+                    <label class="form-check-label text-light" for="flexCheckDefault">
+                      Pagar con PLIN
+                    </label>
+                    <label class="form-check-label text-light p-2" id="LabelPlin" style="display: none;">
+                      978461095
+                    </label>
+                    <img src="{{asset('assets/img/plinmarsgame.jpeg')}}" id="ImagenPlin" alt="plinmarsgame" style="width: 250px;background-color: transparent !important;color: white !important;display: none;text-align: center;">
+                    <div name="DivPlin" id="DivPlin" style="display: none;">
+                      <input type="file" name="fileplin" id="fileplin" class="form-control p-2 mt-2">
+                      <div class="row container py-2 justify-content-center">
+                        <button class="btn1 text-center btn-pagar-plin" style="background-color: #00983A;">Pagar</button>
+                      </div>
+                    </div>
+                  </div>
                   @if ($saldo >= Cart::getTotal())
-                  <button id="botonPagarSaldo" class="btn btn-primary btn-pagar" style="width: 200px; background-color: transparent !important;color: white !important;display: none;"> Pagar (Saldo: S/. {{$saldo}})</button>
+                  
                   <div class="form-check p-2" style="margin-left: 15px;">
                     <input class="form-check-input" type="checkbox" value="" id="check" onchange="javascript:PagarSaldo()">
                     <label class="form-check-label text-light" for="flexCheckDefault">
                       Usar mi saldo disponible
                     </label>
                   </div>
+                  <button id="botonPagarSaldo" class="btn btn-primary btn-pagar" style="width: 200px; background-color: transparent !important;color: white !important;display: none;"> Pagar (Saldo: S/. {{$saldo}})</button>
                   @endif
                   
                 </div>
@@ -575,18 +608,194 @@
 
     <script type="text/javascript">
         function PagarSaldo() {
-            element = document.getElementById("pasarela");
+            pasarela = document.getElementById("pasarela");
             boton = document.getElementById("botonPagarSaldo");
+            imagenyape = document.getElementById("ImagenYape");
+            imagenplin = document.getElementById("ImagenPlin");
+            labelyape = document.getElementById("LabelYape");
+            labelplin = document.getElementById("LabelPlin");
+            divyape = document.getElementById("DivYape");
+            divplin = document.getElementById("DivPlin");
             check = document.getElementById("check");
+            yape = document.getElementById("yape");
+            plin = document.getElementById("plin");
             if (check.checked) {
-                element.style.display='none';
+                pasarela.style.display='none';
+                imagenyape.style.display='none';
+                imagenplin.style.display='none';
+                labelyape.style.display='none';
+                labelplin.style.display='none';
+                divyape.style.display='none';
+                divplin.style.display='none';
                 boton.style.display='block';
+                yape.checked=false;
+                plin.checked=false;
             }
             else {
-                element.style.display='block';
+                pasarela.style.display='block';
+                boton.style.display='none';
+                imagenplin.style.display='none';
+                imagenyape.style.display='none';
+                labelyape.style.display='none';
+                labelplin.style.display='none';
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function PagarYape() {
+            pasarela = document.getElementById("pasarela");
+            imagenyape = document.getElementById("ImagenYape");
+            imagenplin = document.getElementById("ImagenPlin");
+            labelyape = document.getElementById("LabelYape");
+            labelplin = document.getElementById("LabelPlin");
+            divyape = document.getElementById("DivYape");
+            divplin = document.getElementById("DivPlin");
+            boton = document.getElementById("botonPagarSaldo");
+            yape = document.getElementById("yape");
+            check = document.getElementById("check");
+            plin = document.getElementById("plin");
+            if (yape.checked) {
+                pasarela.style.display='none';
+                imagenplin.style.display='none';
+                divyape.style.display='block';
+                divplin.style.display='none';
+                labelyape.style.display='block';
+                labelplin.style.display='none';
+                imagenyape.style.display='block';
+                
+                plin.checked=false;
+                check.checked=false;
+                boton.style.display='none';
+            }
+            else {
+                pasarela.style.display='block';
+                imagenyape.style.display='none';
+                imagenplin.style.display='none';
+                
+                labelyape.style.display='none';
+                labelplin.style.display='none';
+                divyape.style.display='none';
                 boton.style.display='none';
             }
         }
+    </script>
+
+    <script type="text/javascript">
+        function PagarPlin() {
+            pasarela = document.getElementById("pasarela");
+            imagenplin = document.getElementById("ImagenPlin");
+            imagenyape = document.getElementById("ImagenYape");
+            labelyape = document.getElementById("LabelYape");
+            labelplin = document.getElementById("LabelPlin");
+            divyape = document.getElementById("DivYape");
+            divplin = document.getElementById("DivPlin");
+            boton = document.getElementById("botonPagarSaldo");
+            plin = document.getElementById("plin");
+            yape = document.getElementById("yape");
+            check = document.getElementById("check");
+            if (plin.checked) {
+                pasarela.style.display='none';
+                imagenyape.style.display='none';
+                labelyape.style.display='none';
+                divyape.style.display='none';
+                divplin.style.display='block';
+                labelplin.style.display='block';
+                imagenplin.style.display='block';
+                yape.checked=false;
+                check.checked=false;
+                boton.style.display='none';
+            }
+            else {
+                pasarela.style.display='block';
+                imagenyape.style.display='none';
+                imagenplin.style.display='none';
+                
+                labelyape.style.display='none';
+                labelplin.style.display='none';
+                divplin.style.display='none';
+                boton.style.display='none';
+            }
+        }
+    </script>
+
+    <script>
+      $('.btn-pagar-yape').on('click', function(e) {
+        e.preventDefault();
+        var formData = new FormData();
+        var archivoyape = $("#fileyape").val();
+
+        if(archivoyape == ''){
+          Swal.fire({
+              icon:'warning',
+              text: 'Debes subir tu comprobante de pago',
+          });
+          return false;
+        }else{
+              const MAXIMO_TAMANIO_BYTES = 1000000;
+              var archivoyape = $('#fileyape')[0].files[0];
+              if (archivoyape.size > MAXIMO_TAMANIO_BYTES) {
+                  Swal.fire({
+                      icon:'warning',
+                      text: 'El tamaño máximo de archivo es 1MB',
+                  });
+                  return false;
+              }
+          }
+
+          formData.append('file',$('#fileyape')[0].files[0]);
+          console.log(formData);
+        $.ajax({
+            url: "/pagar-yape",
+            type: "POST",
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            },
+            data: formData,
+            contentType: false,
+            processData: false,
+            beforeSend: function () {
+                Swal.fire({
+                    header: '...',
+                    title: "cargando",
+                    allowOutsideClick:false,
+                    didOpen: () => {
+                    Swal.showLoading()
+                    }
+                });
+            },
+            success: function (response) {
+                 if (response.status) {
+                 Swal.fire({
+                     icon: 'success',
+                     title: 'Éxito!',
+                     text: response.msg,
+                     allowOutsideClick: false,
+                     confirmButtonText: "Ok",
+                 })
+                 .then(resultado => {
+                  window.location="/";
+                 }) 
+                 }
+                 else{
+                 Swal.fire({
+                     icon: 'error',
+                     title: 'Error',
+                     text: response.msg,
+                 })
+                }
+                
+             },
+            error: function (response) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...!!',
+                    text: response.msg,
+                  })
+            }
+        });
+       
+      });
     </script>
 
     <script>

@@ -15,6 +15,7 @@ use App\Models\Payment;
 use App\Models\Suscription;
 use App\Models\Suscriptions;
 use App\Models\Notification;
+use App\Models\Wallet;
 use Carbon\Carbon;
 use GuzzleHttp\Psr7\Message;
 use Hamcrest\Core\HasToString;
@@ -51,6 +52,149 @@ class AdminController extends Controller
         }
         
         return view('profile',compact('smash','simple','notificaciones','noticount','saldo','movimientos'));
+    }
+
+    public function billeteras()
+    {
+        if (Auth::user()->id==1) {
+            $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
+            $noticount = $notificaciones->count();
+            $orders = Wallet::where('estado',0)->get();
+            $cuenta = Account::where('user_id',Auth::user()->id)->first();
+            if ($cuenta == null) {
+                $saldo = 0.00;
+            }
+            else{
+                $saldo = $cuenta->saldo;
+            }
+            return view('billeteras',compact('orders','notificaciones','noticount','saldo'));
+        }
+        else
+        {
+            return redirect()->route('login');  
+        }
+       
+    }
+
+    public function rechazarvaucher(Request $request)
+    {
+        try {
+            $vaucher = Wallet::where("id",$request->id)->first();
+            $vaucher->estado = 2;
+            $vaucher->save();
+            return response()->json(['status' => true, 'msg' => 'El comprobante ha sido aceptado']); 
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
+        }        
+    }
+
+    public function aceptarvaucher(Request $request)
+    {
+        $order = json_decode($request->order);
+        $date_now = Carbon::now();
+        $user_id = $request->userid;
+        $vaucher = Wallet::where("id",$request->id)->first();
+        $limit = 6;
+        try {
+            $pay = Payment::create([
+                'user_id' => $user_id,
+                'transaction_id' => $request->tipo,
+                'monto' => $request->monto,
+                'estado' => 'pagado',
+                'fecha_pago' => $date_now,
+                'tipo_pago' => $request->tipo,
+                'carrito' => json_encode($order)
+            ]);
+
+            foreach ($order as $item)
+            {
+                if ($item->attributes->imagen==0) {
+                    if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
+                        for ($i=0; $i < $item->quantity; $i++) { 
+                            for ($j=0; $j < $item->attributes->cantidadticket; $j++) { 
+                                SorteoSimple::create([
+                                    'user_id' => $user_id,
+                                    'fecha_registro' => $date_now
+                                ]);
+                                SorteoSmash::create([
+                                    'user_id' => $user_id,
+                                    'fecha_registro' => $date_now
+                                ]);
+                            }                                
+                        }
+                    }
+                    elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
+                        $dias = $item->attributes->cantidadmeses*30;
+                        $sumarfecha= Carbon::now()->addDays($dias);
+
+                        $suscripcion = Suscription::create([
+                            'user_id' => $user_id,
+                            'pay_id' => $pay->id,
+                            'fecha_inicio' => $date_now,
+                            'fecha_fin' => $sumarfecha,
+                            // 'fecha_fin' => strtotime('+'.$dias.'day',strtotime($date_now)),
+                            'estado' => 1,
+                            'fecha' => $date_now
+                        ]);
+                    }
+
+                    $multiplicador = $item->associatedModel*$item->quantity;
+                    for ($i=0; $i < $multiplicador; $i++) { 
+                        $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
+                        Code::create([
+                            'user_id' => $user_id,
+                            'product_id' => $item->attributes->productid,
+                            'codigo' => $random,
+                            'estado' => 0
+                        ]);
+                    }
+                }
+                else
+                {
+                    Order::create([
+                        'user_id' => $user_id,
+                        'store_id' => $item->attributes->productid,
+                        'cantidad' => $item->quantity,
+                        'precio' => $item->price,
+                        'total' => $item->quantity*$item->price
+                    ]);
+                }
+                
+            }
+            $vaucher->estado = 1;
+            $vaucher->save();
+            return response()->json(['status' => true, 'msg' => 'El comprobante ha sido aceptado']); 
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
+        }
+        
+    }
+
+    public function yape(Request $request)
+    {
+        try {
+            $imagen=$request->file("file"); 
+            $extension = $imagen->getClientOriginalExtension();
+            $filename  = 'yape-' . str::random(32) . '.' . $extension;
+            $paths = Storage::putFileAs('public/yape',$imagen,$filename);
+            $ruta = "/yape/".$filename;
+
+            Wallet::create([
+                'order' => json_encode(Cart::getContent()),
+                'monto' => Cart::getTotal(),
+                'vaucher' => $ruta,
+                'estado' => 0,
+                'type' => 'YAPE',
+                'user_id' => Auth::user()->id
+            ]);
+
+            Cart::clear();
+
+            return response()->json(['status' => true, 'msg' => 'Tu pago se envió con éxito, dentro de las 24 se validará la conformidad']); 
+
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
+        }
     }
 
     public function codigos()
@@ -215,19 +359,26 @@ class AdminController extends Controller
             $notificacion = Notification::where('id',$request->id)->first();
             $fecha_registro = Carbon::now();
 
-            SorteoSmash::create([
-                'user_id' => $notificacion->user_id,
-                'fecha_registro' => $fecha_registro
-            ]);
-            SorteoSmash::create([
-                'user_id' => $notificacion->user_id_original,
-                'fecha_registro' => $fecha_registro
-            ]);
+            if ($notificacion->estado==0) {
+                SorteoSmash::create([
+                    'user_id' => $notificacion->user_id,
+                    'fecha_registro' => $fecha_registro
+                ]);
+                SorteoSmash::create([
+                    'user_id' => $notificacion->user_id_original,
+                    'fecha_registro' => $fecha_registro
+                ]);
+    
+                $notificacion->estado = 1;
+                $notificacion->save();
+                return response()->json(['status' => true, 'msg' => 'Aceptaste el código smash con éxito']);
+            }
+            else
+            {
+                return response()->json(['status' => false, 'msg' => 'Este código ya ha sido aceptado anteriormente']);
+            }           
 
-            $notificacion->estado = 1;
-            $notificacion->save();
-
-            return response()->json(['status' => true, 'msg' => 'Aceptaste el código smash con éxito']);
+            
         } catch (\Throwable $th) {
             return response()->json(['status' => false, 'msg' => $th->getMessage()]);
         }   
