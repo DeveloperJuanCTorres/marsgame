@@ -56,7 +56,7 @@ class AdminController extends Controller
 
     public function billeteras()
     {
-        if (Auth::user()->id==1) {
+        if (Auth::user()->id==3875) {
             $notificaciones = Notification::where('user_id_original',Auth::user()->id)->where('estado',0)->get();
             $noticount = $notificaciones->count();
             $orders = Wallet::where('estado',0)->get();
