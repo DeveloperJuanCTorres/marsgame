@@ -455,10 +455,15 @@
                   @else
                       <h3>Error</h3>
                   @endif
-                  <div class="p-2">
+                  <div class="p-2" id="pasarela1">
                     <h4>Recordatorio:</h4>
                     <span class="text-light">Para realizar pagos con tarjeta debes tener habilitado la opción de pagos online de tu tarjeta</span><br>
                     <span style="color: #00983A;">"Contactar a soporte para consultar o validar el pago"</span>
+                  </div>
+                  <div class="p-2" id="billeteradigital" style="display: none;">
+                    <h4>Recordatorio:</h4>
+                    <span class="text-light">Para realizar pagos con YAPE o PLIN deberas adjuntar tu vaucher de pago, recuerda que esta modalidad tiene un plazo maximo de 24 horas para validar tu pago</span><br>
+                    <span style="color: #00983A;">"Contactar a soporte para consultar o validar el pago WhatsApp: 978461095"</span>
                   </div>
                   <div class="form-check p-2" style="margin-left: 15px;">
                   <input class="form-check-input" type="checkbox" value="" id="yape" onchange="javascript:PagarYape()">
@@ -652,6 +657,8 @@
             divyape = document.getElementById("DivYape");
             divplin = document.getElementById("DivPlin");
             boton = document.getElementById("botonPagarSaldo");
+            pasarela1 = document.getElementById("pasarela1");
+            billeteradigital = document.getElementById("billeteradigital");
             yape = document.getElementById("yape");
             check = document.getElementById("check");
             plin = document.getElementById("plin");
@@ -660,6 +667,8 @@
                 imagenplin.style.display='none';
                 divyape.style.display='block';
                 divplin.style.display='none';
+                billeteradigital.style.display="block";
+                pasarela1.style.display="none";
                 labelyape.style.display='block';
                 labelplin.style.display='none';
                 imagenyape.style.display='block';
@@ -672,6 +681,8 @@
                 pasarela.style.display='block';
                 imagenyape.style.display='none';
                 imagenplin.style.display='none';
+                billeteradigital.style.display="none";
+                pasarela1.style.display="block";
                 
                 labelyape.style.display='none';
                 labelplin.style.display='none';
@@ -702,6 +713,8 @@
                 divplin.style.display='block';
                 labelplin.style.display='block';
                 imagenplin.style.display='block';
+                billeteradigital.style.display="block";
+                pasarela1.style.display="none";
                 yape.checked=false;
                 check.checked=false;
                 boton.style.display='none';
@@ -710,6 +723,8 @@
                 pasarela.style.display='block';
                 imagenyape.style.display='none';
                 imagenplin.style.display='none';
+                billeteradigital.style.display="none";
+                pasarela1.style.display="block";
                 
                 labelyape.style.display='none';
                 labelplin.style.display='none';

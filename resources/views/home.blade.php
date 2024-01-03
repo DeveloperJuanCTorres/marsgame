@@ -684,7 +684,7 @@
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header" style="background-color: #2D2E83;">
-        <h5 class="modal-title text-ligth" id="exampleModalToggleLabel">Lista de Premios - Fecha 30/12/2023</h5>
+        <h5 class="modal-title text-ligth" id="exampleModalToggleLabel">Lista de Premios - Fecha 06/01/2024</h5>
         <button type="button" class="btn-close" style="background-color:white;" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" style="padding: 0;">
