@@ -84,7 +84,7 @@ class AdminController extends Controller
             $vaucher->save();
             return response()->json(['status' => true, 'msg' => 'El comprobante ha sido aceptado']); 
         } catch (\Throwable $th) {
-            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
+            return response()->json(['status' => false, 'msg' => $request->id]); 
         }        
     }
 

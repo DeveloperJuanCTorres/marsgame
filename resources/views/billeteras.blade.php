@@ -163,8 +163,8 @@
                                 class="btn btn-secondary main-border-button border-no-active aceptar-vaucher p-2 mt-2">
                                 Aceptar
                             </button>
-                            <button data-id="$item->order" style="border-radius: 30px;background-color: transparent;" 
-                                class="btn btn-secondary main-border-button border-no-active rechazar-codigo p-2 mt-2">
+                            <button data-id="{{$item->id}}" style="border-radius: 30px;background-color: transparent;" 
+                                class="btn btn-secondary main-border-button border-no-active rechazar-vaucher p-2 mt-2">
                                 Rechazar
                             </button>
                         </span>
