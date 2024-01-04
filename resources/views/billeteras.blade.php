@@ -137,7 +137,8 @@
                                     <div class="row">
                                         <div class="image">
                                             <div class="img-wrapper" style="height: 50px;">
-                                                <a href="https://marsgame.pe/storage/{{$item->vaucher}}"><img style="height: 50px;width: 50px;" src="http://localhost:8000/storage/{{$item->vaucher}}" class="img-responsive"></a>
+                                                <a href="https://marsgame.pe/storage/{{$item->vaucher}}"><img style="height: 50px;width: 50px;" src="https://marsgame.pe/storage/{{$item->vaucher}}" class="img-responsive"></a>
+                                                <!-- <a href="http://127.0.0.1:8000/storage/{{$item->vaucher}}"><img style="height: 50px;width: 50px;" src="http://127.0.0.1:8000/storage/{{$item->vaucher}}" class="img-responsive"></a> -->
                                                 <div class="img-overlay" style="width: 50px;height: 50px;margin-top: -30px;">
                                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                                 </div>
@@ -149,23 +150,33 @@
                             </section>
                         </span>
                     </li>
-                    
+                    <li><h4>Teléfono</h4>
+                      @if ($item->user->phone=="")
+                      <span>Sin Cell</span>
+                      @else
+                      <span>{{$item->user->phone}}</span>
+                      @endif
+                    </li>  
                     <li>
                         <span>
                             <button data-id="{{$item->id}}" data-order="{{$item->order}}" data-userid="{{$item->user_id}}" data-tipo="{{$item->type}}" data-monto="{{$item->monto}}" style="border-radius: 30px;" 
-                                class="btn btn-secondary main-border-button border-no-active aceptar-vaucher">
+                                class="btn btn-secondary main-border-button border-no-active aceptar-vaucher p-2 mt-2">
                                 Aceptar
                             </button>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
                             <button data-id="$item->order" style="border-radius: 30px;background-color: transparent;" 
-                                class="btn btn-secondary main-border-button border-no-active rechazar-codigo">
+                                class="btn btn-secondary main-border-button border-no-active rechazar-codigo p-2 mt-2">
                                 Rechazar
                             </button>
                         </span>
                     </li>
+                    <!-- <li>
+                        <span>
+                            <button data-id="$item->order" style="border-radius: 30px;background-color: transparent;" 
+                                class="btn btn-secondary main-border-button border-no-active rechazar-codigo p-2">
+                                Rechazar
+                            </button>
+                        </span>
+                    </li> -->
                 </ul>
               </div>
               @endforeach
