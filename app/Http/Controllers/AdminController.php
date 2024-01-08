@@ -777,4 +777,131 @@ class AdminController extends Controller
         );
         return response()->json($charge);        
     }
+
+    public function enviarsunat(Request $request)
+    {        
+        // try {
+        //     $id = $request->id;
+        //     $tipo_nota_value = $request->motivo_id;
+        //     $transaction = Transaction::find($id);
+        //     $invoice = $transaction->invoice_no;
+        //     $invoice_sus = intval(substr($invoice, 6, 3));
+        //     $serie = substr($invoice, 0, 4);
+        //     $tipo_comprobante = 0;
+        //     $tipo_documento_modifica = "";
+        //     $serie_modifica = "";
+        //     $numero_modifica = "";
+        //     $tipo_nota_credito = "";
+
+        //     $products = [];
+        //     $total_gravada = 0;
+        //     $total_igv = 0;
+
+        //     foreach ($query->sell_lines as $key => $value) {
+        //         $product = array(
+        //             "unidad_de_medida"=> $value->product->unit->short_name,
+        //             "codigo"=> "001",
+        //             "codigo_producto_sunat"=> "10000000",
+        //             "descripcion"=> $value->product->name,
+        //             "cantidad"=> $value->quantity_returned,
+        //             "valor_unitario"=> number_format($value->unit_price,10),
+        //             "precio_unitario"=> number_format(($value->unit_price*1.18),10),
+        //             "descuento"=> "",
+        //             "subtotal"=> number_format(($value->unit_price*$value->quantity_returned),2),
+        //             "tipo_de_igv"=> 1,
+        //             "igv"=> number_format(($value->unit_price*0.18*$value->quantity_returned),2),
+        //             "total"=> number_format(($value->unit_price*1.18*$value->quantity_returned),2),
+        //             "anticipo_regularizacion"=> false,
+        //             "anticipo_documento_serie"=> "",
+        //             "anticipo_documento_numero"=> ""
+        //         );
+        //         array_push($products, $product);
+        //         $total_gravada = ($value->unit_price*$value->quantity_returned) + $total_gravada;
+        //     }   
+            
+        //     $total_igv = $total_gravada*0.18;
+        //     $date_now = \Carbon::now()->format('d-m-Y');
+        //     $store = array(
+        //         "operacion"=> "generar_comprobante",
+        //         "tipo_de_comprobante"=> $tipo_comprobante,
+        //         "serie"=> $serie,
+        //         "numero"=> $invoice_sus,
+        //         "sunat_transaction"=> 1,
+        //         "cliente_tipo_de_documento"=> 6,
+        //         "cliente_numero_de_documento"=> "20600695771",
+        //         "cliente_denominacion"=> "NUBEFACT SA",
+        //         "cliente_direccion"=> "CALLE LIBERTAD 116 MIRAFLORES - LIMA - PERU",
+        //         "cliente_email"=> "tucliente@gmail.com",
+        //         "cliente_email_1"=> "",
+        //         "cliente_email_2"=> "",
+        //         "fecha_de_emision"=> $date_now,
+        //         "fecha_de_vencimiento"=> "",
+        //         "moneda"=> 1,
+        //         "tipo_de_cambio"=> "",
+        //         "porcentaje_de_igv"=> 18.00,
+        //         "descuento_global"=> "",
+        //         "total_descuento"=> "",
+        //         "total_anticipo"=> "",
+        //         "total_gravada"=> number_format($total_gravada,2),
+        //         "total_inafecta"=> "",
+        //         "total_exonerada"=> "",
+        //         "total_igv"=> number_format($total_igv,2),
+        //         "total_gratuita"=> "",
+        //         "total_otros_cargos"=> "",
+        //         "total"=> number_format(($total_gravada + $total_igv),2),
+        //         "percepcion_tipo"=> "",
+        //         "percepcion_base_imponible"=> "",
+        //         "total_percepcion"=> "",
+        //         "total_incluido_percepcion"=> "",
+        //         "retencion_tipo"=> "",
+        //         "retencion_base_imponible"=> "",
+        //         "total_retencion"=> "",
+        //         "total_impuestos_bolsas"=> "",
+        //         "detraccion"=> false,
+        //         "observaciones"=> "",
+        //         "documento_que_se_modifica_tipo"=> $tipo_documento_modifica,
+        //         "documento_que_se_modifica_serie"=> $serie_modifica,
+        //         "documento_que_se_modifica_numero"=> $numero_modifica,
+        //         "tipo_de_nota_de_credito"=> $tipo_nota_credito,
+        //         "tipo_de_nota_de_debito"=> "",
+        //         "enviar_automaticamente_a_la_sunat"=> true,
+        //         "enviar_automaticamente_al_cliente"=> false,
+        //         "condiciones_de_pago"=> "",
+        //         "medio_de_pago"=> "",
+        //         "placa_vehiculo"=> "",
+        //         "orden_compra_servicio"=> "",  
+        //         "formato_de_pdf"=> "",
+        //         "generado_por_contingencia"=> "",
+        //         "bienes_region_selva"=> "",
+        //         "servicios_region_selva"=> "",
+        //         "items" => $products
+                
+        //     );
+           
+        //     $respuesta = Http::withHeaders(
+        //         ['Authorization' => 'ae08473db907470eacd76306bb8c3edd8d287017bfc345ddbe0e10755d4da85e'])
+        //     ->post('https://api.nubefact.com/api/v1/9f7c7c55-9c54-4096-af7b-43690e4750e6', $store);   
+
+
+        //     if ($respuesta->status()==200) {
+        //         $transaction->response_sunat = $respuesta;
+        //         $transaction->status_sunat = 1;
+        //         $resp = json_decode($respuesta);
+        //         $transaction->save();
+
+        //         return response()->json(['status' => true, 'msg' => $resp->sunat_description]);
+        //     }
+        //     else
+        //     {
+        //         $resp = json_decode($respuesta);
+        //         return response()->json(['status' => false, 'msg' => $resp->errors.$serie.$tipo_comprobante]);
+        //     }
+
+
+        // } catch (\Throwable $th) {
+            
+        //     return response()->json(['status' => false, 'msg' => "Error!!, Try again later"]);
+        // }
+       
+    }
 }
