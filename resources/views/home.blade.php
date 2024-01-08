@@ -173,7 +173,7 @@
       
       <section id="carousel">
         <div class="container">
-          <h2 class="text-light text-center py-4">Nuestros 10 Ganadores Fecha 02</h2>
+          <h2 class="text-light text-center py-4">Nuestros 10 Ganadores Fecha 04</h2>
           <div class="carousel">
             <div class="gallery">
               <div class="item item-1"></div>
