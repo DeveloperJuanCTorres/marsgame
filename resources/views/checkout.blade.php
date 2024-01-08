@@ -557,11 +557,9 @@
                     </div>
                 </div>
               </div>
-            <!-- <button type="button" id="btn_pagar" class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button> -->
-                <!-- <button class="btn btn-secondary btn-submit" id="btn_participar" style="background-color: transparent !important;display:none;">
-                    Pagar
+              <!-- <button class="btn btn-secondary btn-submit" id="enviar_sunat" style="background-color: transparent !important;display:none;">
+                    SUNAT
                 </button> -->
-                <!-- <div class="btn btn-submit" style="display:none;">Submit</div> -->
             </section>
             <section id="section4" class="section4" style="display:none;">
                 section4
@@ -1013,6 +1011,71 @@
 
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        const btn_sunat = document.getElementById('enviar_sunat');
+
+
+        btn_sunat.addEventListener('click', function (e){
+            var formData = new FormData();
+            var id = $("#id").val();
+
+            formData.append('id',id);
+            console.log(id);
+            $.ajax({
+                url: "/enviarsunat",
+                type: "POST",
+                headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                },
+                data: formData,
+                contentType: false,
+                processData: false,
+                beforeSend: function () {
+                    Swal.fire({
+                        header: '...',
+                        title: "cargando",
+                        allowOutsideClick:false,
+                        didOpen: () => {
+                        Swal.showLoading()
+                        }
+                    });
+                },
+                success: function (response) {
+                //cambiar gracias por tu compra Swal
+                    // window.location.href = "/";
+                    if (response.status) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: response.msg,
+                        text: "Participación realizada con exito",
+                        allowOutsideClick: false,
+                        confirmButtonText: "Ok",
+                    })
+                    .then(resultado => {
+                        window.location.href = "/";
+                    })
+                    }
+                    else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: response.msg,
+                        text: response.msg,
+                    })
+                    }
+
+                },
+                error: function (response) {
+                Swal.fire({
+                    icon: 'error',
+                    title: "Upps, sucedio un error",
+                    text: response.msg,
+                })
+                }
+            });
+        })
+    </script>
+
     <script>
         const btn_participar = document.getElementById('btn_participar');
 

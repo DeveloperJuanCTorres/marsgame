@@ -92,4 +92,6 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/checkout',[AdminController::class, 'checkout'])->name('checkout');
     Route::post('/pagarsaldo',[AdminController::class, 'pagarsaldo'])->name('chepagarsaldockout');
     Route::post('/avatar', [AdminController::class, 'avatar'])->name('avatar');
+
+    Route::post('/enviarsunat', [AdminController::class, 'enviarsunat'])->name('enviarsunat');
 });

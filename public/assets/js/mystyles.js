@@ -72,7 +72,7 @@ $(() => {
     let msg = document.getElementById('whats-in').value;
     let relmsg = msg.replace(/ /g,"%20");
       //just change the numbers "1515551234567" for your number. Don't use +001-(555)1234567     
-     window.open('https://wa.me/51978461095?text='+relmsg, '_blank'); 
+     window.open('https://wa.me/51908808485?text='+relmsg, '_blank'); 
     
     });
   
