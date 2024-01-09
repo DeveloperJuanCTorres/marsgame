@@ -820,6 +820,22 @@ class AdminController extends Controller
             //  }   
             
             //  $total_igv = $total_gravada*0.18;
+
+            $product = array(
+                "codProducto"=> "P001",
+                "unidad"=> "NIU",
+                "descripcion"=> "TICKET PREMIUM",
+                "cantidad"=> 1,
+                "mtoValorUnitario"=> 12.71,
+                "mtoValorVenta"=> 12.71,
+                "mtoBaseIgv"=> 12.71,
+                "porcentajeIgv"=> 18,
+                "igv"=> 2.29,
+                "tipAfeIgv"=> 10,
+                "totalImpuestos"=> 2.29,
+                "mtoPrecioUnitario"=> 15
+            );
+
              $date_now = Carbon::now()->format('d-m-Y');
              $store = array(
                 "ublVersion"=> "2.1",
@@ -827,7 +843,7 @@ class AdminController extends Controller
                 "tipoDoc"=> "03",
                 "serie"=> "B001",
                 "correlativo"=> "1",
-                "fechaEmision"=> $date_now,
+                "fechaEmision"=> "2023-12-28T00:00:00-05:00",
                 "formaPago"=> array(
                     "moneda"=> "PEN",
                     "tipo"=> "Contado"
@@ -863,25 +879,10 @@ class AdminController extends Controller
                 "totalImpuestos"=> 2.29,
                 "subTotal"=> 12.71,
                 "mtoImpVenta"=> 15,
-                "details"=> array([
-                      "codProducto"=> "P001",
-                      "unidad"=> "NIU",
-                      "descripcion"=> "TICKET PREMIUM",
-                      "cantidad"=> 1,
-                      "mtoValorUnitario"=> 12.71,
-                      "mtoValorVenta"=> 12.71,
-                      "mtoBaseIgv"=> 12.71,
-                      "porcentajeIgv"=> 18,
-                      "igv"=> 2.29,
-                      "tipAfeIgv"=> 10,
-                      "totalImpuestos"=> 2.29,
-                      "mtoPrecioUnitario"=> 15
-                    ]
-                ),
-                  "legends"=> array([
-                      "code"=> "1000",
-                      "value"=> "SON QUINCE CON 00/100 SOLES"
-                      ]
+                "details"=> $product,
+                "legends"=> array(
+                    "code"=> "1000",
+                    "value"=> "SON QUINCE CON 00/100 SOLES"                      
                   )
                 //  "operacion"=> "generar_comprobante",
                 //  "tipo_de_comprobante"=> $tipo_comprobante,
@@ -938,31 +939,41 @@ class AdminController extends Controller
                 //  "items" => $products
                 
              );
-             $resp = json_encode($store);
-             $respuesta = Http::withHeaders(
-                 ['Authorization' => 'aeyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDM2OTYxNzcsImV4cCI6NDg1NzI5NjE3NywidXNlcm5hbWUiOiJqdWFua3Jsb3N0YyIsImNvbXBhbnkiOiIyMDYxMTgwNjQwMSJ9.QZvW62Mlg16knLCOkYWjXqz5DmqwqgPYm9rvdICp9mORWZt-7TgiZCMWWXlKiM49acHnWsEP-y31XEluRqflVvoMxVuCck0KyBOnyM7DozrizC3djBt6HWieei0jGh1TNDetM9XUo3RoYvZX_1ik6HXX2ER3_dJtyH7jEqMOXbIeTDD7c4cG3znUXMxe7yuQqCwTPLDe_SBRmSnlYMTM4AoV1Uaf_dPz9hPnOElKHmtRHkYNNgFfLazNRd6V3OTzWmAZZokWZbNWJxePH4RHKTax8cAAGWPNIbBstsCzWUXs3m17HHYcNzmfp2agAExHEmlkfwmtJnvhRoulVOYE8HwqLiCSlyD8vgNfKYIJgVPhtXdnVfzCy8L1dHo9H9sUAOF3B6ISA63tPqEl-x0SfcBzpXqyk5ED91Frf_yY_ZG9igwAk7xaPvZfd7-c33wGJjMxBpbJsrLIIeLSptCV5xvAr6iBBimR_Q0_WLaycFC222m2oVEzi7XgZK_guMyOvy57HyQKh8YFbnfSk14mjpaN7PrVUmgDtTvuRnIG20gVD-bRgRvZ2DoV0GvvR2C-hEQPZqTb-haDEoWDlMx4jqa0vTWJUxPigtIqz_tN1KJcRE7k2zn7_6FvhcLz5Oo558S-DtzN7lu0wxzDzvqn_0tRt2grFsuF1p4T34Nq29U'])
-             ->post('https://facturacion.apisperu.com/api/v1/invoice/pdf', $resp);   
+             $usuario = array(
+                "username"=> "juankrlostc",
+                "password"=> "@JUANKRLOS70539890"
+             );
+             $sesion = Http::withHeaders(
+                [
+                'Authorization' => 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDM3OTg5MjQsImV4cCI6MTcwMzg4NTMyNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoianVhbmtybG9zdGMifQ.fvasrRsMNINwRtqNADGNUo8h43zwhj-hdhgjSkpvJljhIspneWH4O62_ysAwHG_VI-aeLIH9CiGdK-HX3lwxBvHhYymrH7Hn6nNuhkwO2HDWYujDQgXH5_2NuB8ntpu6hPZUBQhJGHLphQOHI1SORquCbFE5pZabE26vCC8PnBv45ztQgtN14oS-GBUncCkTPEQ-KX7X0A2tTQZpOKuxTCQhsmkE03OivG4OrFZlCCmRFPq7YkD9hPAs5CRpB6O1v7-syOD5Z48PynKwyN3hPeJTH0yn9fGoYOw8HQ5w9wVg2yRpNAHpDngBWOb3jNDe3kdFqBpnSy2-aLytDc51zKR5V2OeLrf4biRegY7etv341oN46oJPiq-5KX5FKXLcmI4uGezX7Ilnl8dS-JSAatxi-cR6AAMuIn6-EX4FYHOwELCWiy9BGJDA0-e-OEhcm6GbH_Nbn5VH4o91eHK5hWdVdthXMXB-kQjPYo9LGiiexRkytthac4pfssAAn5gXgSW6FLumb21JEWKV5xRi5tOE5p1ToAT8dQ9EjaP8LOu9qS6ozu_QYvBZeiMtXP5xJVOI_SMnskm5ie794zGgJvrv4twg3QpOuC4S-E5wmN3lD9hOGSGNGt1oCPxZ5Pylrqnz7YTQd99bHAusdX-RxVkNE7xEYceqgSzXXaQmoGM',
+                ])
+            ->post('https://facturacion.apisperu.com/api/v1/auth/login', $usuario);   
+            $response = json_decode($sesion->body());
+            $token = $response->token;
+
+              $resp = json_encode($store);
+              $respuesta = Http::withHeaders(
+                  [
+                  'Authorization' => 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDM2OTYxNzcsImV4cCI6NDg1NzI5NjE3NywidXNlcm5hbWUiOiJqdWFua3Jsb3N0YyIsImNvbXBhbnkiOiIyMDYxMTgwNjQwMSJ9.QZvW62Mlg16knLCOkYWjXqz5DmqwqgPYm9rvdICp9mORWZt-7TgiZCMWWXlKiM49acHnWsEP-y31XEluRqflVvoMxVuCck0KyBOnyM7DozrizC3djBt6HWieei0jGh1TNDetM9XUo3RoYvZX_1ik6HXX2ER3_dJtyH7jEqMOXbIeTDD7c4cG3znUXMxe7yuQqCwTPLDe_SBRmSnlYMTM4AoV1Uaf_dPz9hPnOElKHmtRHkYNNgFfLazNRd6V3OTzWmAZZokWZbNWJxePH4RHKTax8cAAGWPNIbBstsCzWUXs3m17HHYcNzmfp2agAExHEmlkfwmtJnvhRoulVOYE8HwqLiCSlyD8vgNfKYIJgVPhtXdnVfzCy8L1dHo9H9sUAOF3B6ISA63tPqEl-x0SfcBzpXqyk5ED91Frf_yY_ZG9igwAk7xaPvZfd7-c33wGJjMxBpbJsrLIIeLSptCV5xvAr6iBBimR_Q0_WLaycFC222m2oVEzi7XgZK_guMyOvy57HyQKh8YFbnfSk14mjpaN7PrVUmgDtTvuRnIG20gVD-bRgRvZ2DoV0GvvR2C-hEQPZqTb-haDEoWDlMx4jqa0vTWJUxPigtIqz_tN1KJcRE7k2zn7_6FvhcLz5Oo558S-DtzN7lu0wxzDzvqn_0tRt2grFsuF1p4T34Nq29U',
+                  ])
+              ->post('https://facturacion.apisperu.com/api/v1/invoice/pdf', $resp);   
 
 
              if ($respuesta->status()==200) {
-                //  $transaction->response_sunat = $respuesta;
-                //  $transaction->status_sunat = 1;
-                //  $resp = json_decode($respuesta);
-                //  $transaction->save();
-
-                return response()->json(['status' => true, 'msg' => $respuesta]);
+                $resp = json_decode($respuesta->body());
+                return response()->json(['status' => true, 'msg' => $resp]);
                 // return $respuesta;
              }
              else
              {
-                $resp = json_encode($store);
-                 return response()->json(['status' => false, 'msg' => $respuesta->status()]);
+                $result = json_encode($sesion);
+                 return response()->json(['status' => false, 'msg' => $respuesta->body()]);
              }
 
 
          } catch (\Throwable $th) {
             
-             return response()->json(['status' => false, 'msg' => "Error!!, Try again later"]);
+             return response()->json(['status' => false, 'msg' => $th->getMessage()]);
          }
        
     }

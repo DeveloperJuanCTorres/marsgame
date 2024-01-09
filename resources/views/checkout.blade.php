@@ -1059,7 +1059,7 @@
                     else{
                     Swal.fire({
                         icon: 'error',
-                        title: response.msg,
+                        title: "Error:",
                         text: response.msg,
                     })
                     }
