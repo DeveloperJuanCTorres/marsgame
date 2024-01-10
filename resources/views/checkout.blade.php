@@ -557,9 +557,14 @@
                     </div>
                 </div>
               </div>
-               <button class="btn btn-secondary btn-submit" id="enviar_sunat" style="background-color: transparent !important;display:none;">
+              <!-- <form action="{{ route('enviarsunat') }}" method="post">
+                csrf
+                <button type="submit" class="btn btn-secondary" style="background-color: transparent !important;">
+                            <i class="fa fa-trash mx-2" style="color: white;"> </i>SUNAT</button>
+              </form> -->
+               <!-- <button class="btn btn-secondary btn-submit" id="enviar_sunat" style="background-color: transparent !important;display:none;">
                     SUNAT
-                </button>
+                </button> -->
             </section>
             <section id="section4" class="section4" style="display:none;">
                 section4
@@ -1051,7 +1056,13 @@
                         confirmButtonText: "Ok",
                     })
                     .then(resultado => {
-                        window.location.href = "/";
+                        //Obtenemos la respuesta para convertirla a blob
+                        var blob = new Blob([response.body], { type: 'application/pdf' });
+                        var URL = window.URL || window.webkitURL;
+                        //Creamos objeto URL
+                        var downloadUrl = URL.createObjectURL(blob);
+                        //Abrir en una nueva pestaña
+                        window.open(downloadUrl);
                     })
                     }
                     else{

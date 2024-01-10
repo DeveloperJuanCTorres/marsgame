@@ -848,10 +848,7 @@ class AdminController extends Controller
                   )          
                   ]      
             );
-             
-
-           // $resp = json_encode($store);
-// dd($resp);
+   
             $respuesta = Http::withHeaders(
                 [
                 'Authorization' => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDM2OTYxNzcsImV4cCI6NDg1NzI5NjE3NywidXNlcm5hbWUiOiJqdWFua3Jsb3N0YyIsImNvbXBhbnkiOiIyMDYxMTgwNjQwMSJ9.QZvW62Mlg16knLCOkYWjXqz5DmqwqgPYm9rvdICp9mORWZt-7TgiZCMWWXlKiM49acHnWsEP-y31XEluRqflVvoMxVuCck0KyBOnyM7DozrizC3djBt6HWieei0jGh1TNDetM9XUo3RoYvZX_1ik6HXX2ER3_dJtyH7jEqMOXbIeTDD7c4cG3znUXMxe7yuQqCwTPLDe_SBRmSnlYMTM4AoV1Uaf_dPz9hPnOElKHmtRHkYNNgFfLazNRd6V3OTzWmAZZokWZbNWJxePH4RHKTax8cAAGWPNIbBstsCzWUXs3m17HHYcNzmfp2agAExHEmlkfwmtJnvhRoulVOYE8HwqLiCSlyD8vgNfKYIJgVPhtXdnVfzCy8L1dHo9H9sUAOF3B6ISA63tPqEl-x0SfcBzpXqyk5ED91Frf_yY_ZG9igwAk7xaPvZfd7-c33wGJjMxBpbJsrLIIeLSptCV5xvAr6iBBimR_Q0_WLaycFC222m2oVEzi7XgZK_guMyOvy57HyQKh8YFbnfSk14mjpaN7PrVUmgDtTvuRnIG20gVD-bRgRvZ2DoV0GvvR2C-hEQPZqTb-haDEoWDlMx4jqa0vTWJUxPigtIqz_tN1KJcRE7k2zn7_6FvhcLz5Oo558S-DtzN7lu0wxzDzvqn_0tRt2grFsuF1p4T34Nq29U',
@@ -860,8 +857,12 @@ class AdminController extends Controller
 
 
              if ($respuesta->status()==200) {
-                // $resp = json_encode($respuesta);
-                return response()->json(['status' => true, 'msg' => $respuesta]);
+                // $resp = json_decode($respuesta);
+                // return response()->json(['status' => true, 'msg' => $respuesta]);
+                $resp = base64_decode($respuesta);
+                // return view('emails.comprobante',compact('respuesta'));
+                $base = base64_decode($respuesta->body(),true);
+                return file_put_contents('file.pdf', $base);
              }
              else
              {
