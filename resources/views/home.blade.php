@@ -344,15 +344,15 @@
 
       <!-- ============================================-->
       <!-- <section> PROMOCIONES ============================-->
-      <section id="promociones" style="padding-top: 0;">
+      <!-- <section id="promociones" style="padding-top: 0;">
       <div class="container">
         <div class="row">
           <h2 class="text-light text-center my-5">Suscripciones</h2>
         </div>
         <div class="row align-items-center circle-blend circle-blend-right circle-warning p-4" style="margin-left: auto;margin-right: auto;">
 
-        @if($products != null)
-          @foreach($products as $item)
+        if($products != null)
+          foreach($products as $item)
             <div class="col-xs-12 col-lg-4 pt-4">
 
               <div class="card1 text-center card-soft-primary" style="margin-left: auto;margin-right: auto;">
@@ -385,11 +385,11 @@
               </div>
             </div>
 
-          @endforeach
-          @endif
+          endforeach
+          endif
 
         </div>
-      </div>
+      </div> -->
 
         <!-- end of .container-->
                         <input style="display: none;" type="text" id="id" value="10">
