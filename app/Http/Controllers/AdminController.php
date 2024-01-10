@@ -782,44 +782,6 @@ class AdminController extends Controller
     {        
          try {
              $id = $request->id;
-            //  $tipo_nota_value = $request->motivo_id;
-            //  $transaction = Transaction::find($id);
-            //  $invoice = $transaction->invoice_no;
-            //  $invoice_sus = intval(substr($invoice, 6, 3));
-            //  $serie = substr($invoice, 0, 4);
-            //  $tipo_comprobante = 0;
-            //  $tipo_documento_modifica = "";
-            //  $serie_modifica = "";
-            //  $numero_modifica = "";
-            //  $tipo_nota_credito = "";
-
-            //  $products = [];
-            //  $total_gravada = 0;
-            //  $total_igv = 0;
-
-            //  foreach ($query->sell_lines as $key => $value) {
-            //      $product = array(
-            //          "unidad_de_medida"=> $value->product->unit->short_name,
-            //          "codigo"=> "001",
-            //          "codigo_producto_sunat"=> "10000000",
-            //          "descripcion"=> $value->product->name,
-            //          "cantidad"=> $value->quantity_returned,
-            //          "valor_unitario"=> number_format($value->unit_price,10),
-            //          "precio_unitario"=> number_format(($value->unit_price*1.18),10),
-            //          "descuento"=> "",
-            //          "subtotal"=> number_format(($value->unit_price*$value->quantity_returned),2),
-            //          "tipo_de_igv"=> 1,
-            //          "igv"=> number_format(($value->unit_price*0.18*$value->quantity_returned),2),
-            //          "total"=> number_format(($value->unit_price*1.18*$value->quantity_returned),2),
-            //          "anticipo_regularizacion"=> false,
-            //          "anticipo_documento_serie"=> "",
-            //          "anticipo_documento_numero"=> ""
-            //      );
-            //      array_push($products, $product);
-            //      $total_gravada = ($value->unit_price*$value->quantity_returned) + $total_gravada;
-            //  }   
-            
-            //  $total_igv = $total_gravada*0.18;
 
             $product = array(
                 "codProducto"=> "P001",
@@ -836,8 +798,8 @@ class AdminController extends Controller
                 "mtoPrecioUnitario"=> 15
             );
 
-             $date_now = Carbon::now()->format('d-m-Y');
-             $store = array(
+            $date_now = Carbon::now()->format('d-m-Y');
+            $store = array(
                 "ublVersion"=> "2.1",
                 "tipoOperacion"=> "0101",
                 "tipoDoc"=> "03",
@@ -862,7 +824,7 @@ class AdminController extends Controller
                     )
                 ),
                 "company"=> array(
-                    "ruc"=> 20611806401,
+                    "ruc"=> "20611806401",
                     "razonSocial"=> "MARS INVESTMENTS S.A.C.",
                     "nombreComercial"=> "MARSGAME",
                     "address"=> array(
@@ -879,95 +841,31 @@ class AdminController extends Controller
                 "totalImpuestos"=> 2.29,
                 "subTotal"=> 12.71,
                 "mtoImpVenta"=> 15,
-                "details"=> $product,
-                "legends"=> array(
+                "details"=> [$product],
+                "legends"=> [array(
                     "code"=> "1000",
                     "value"=> "SON QUINCE CON 00/100 SOLES"                      
-                  )
-                //  "operacion"=> "generar_comprobante",
-                //  "tipo_de_comprobante"=> $tipo_comprobante,
-                //  "serie"=> $serie,
-                //  "numero"=> $invoice_sus,
-                //  "sunat_transaction"=> 1,
-                //  "cliente_tipo_de_documento"=> 6,
-                //  "cliente_numero_de_documento"=> "20600695771",
-                //  "cliente_denominacion"=> "NUBEFACT SA",
-                //  "cliente_direccion"=> "CALLE LIBERTAD 116 MIRAFLORES - LIMA - PERU",
-                //  "cliente_email"=> "tucliente@gmail.com",
-                //  "cliente_email_1"=> "",
-                //  "cliente_email_2"=> "",
-                //  "fecha_de_emision"=> $date_now,
-                //  "fecha_de_vencimiento"=> "",
-                //  "moneda"=> 1,
-                //  "tipo_de_cambio"=> "",
-                //  "porcentaje_de_igv"=> 18.00,
-                //  "descuento_global"=> "",
-                //  "total_descuento"=> "",
-                //  "total_anticipo"=> "",
-                //  "total_gravada"=> number_format($total_gravada,2),
-                //  "total_inafecta"=> "",
-                //  "total_exonerada"=> "",
-                //  "total_igv"=> number_format($total_igv,2),
-                //  "total_gratuita"=> "",
-                //  "total_otros_cargos"=> "",
-                //  "total"=> number_format(($total_gravada + $total_igv),2),
-                //  "percepcion_tipo"=> "",
-                //  "percepcion_base_imponible"=> "",
-                //  "total_percepcion"=> "",
-                //  "total_incluido_percepcion"=> "",
-                //  "retencion_tipo"=> "",
-                //  "retencion_base_imponible"=> "",
-                //  "total_retencion"=> "",
-                //  "total_impuestos_bolsas"=> "",
-                //  "detraccion"=> false,
-                //  "observaciones"=> "",
-                //  "documento_que_se_modifica_tipo"=> $tipo_documento_modifica,
-                //  "documento_que_se_modifica_serie"=> $serie_modifica,
-                //  "documento_que_se_modifica_numero"=> $numero_modifica,
-                //  "tipo_de_nota_de_credito"=> $tipo_nota_credito,
-                //  "tipo_de_nota_de_debito"=> "",
-                //  "enviar_automaticamente_a_la_sunat"=> true,
-                //  "enviar_automaticamente_al_cliente"=> false,
-                //  "condiciones_de_pago"=> "",
-                //  "medio_de_pago"=> "",
-                //  "placa_vehiculo"=> "",
-                //  "orden_compra_servicio"=> "",  
-                //  "formato_de_pdf"=> "",
-                //  "generado_por_contingencia"=> "",
-                //  "bienes_region_selva"=> "",
-                //  "servicios_region_selva"=> "",
-                //  "items" => $products
-                
-             );
-             $usuario = array(
-                "username"=> "juankrlostc",
-                "password"=> "@JUANKRLOS70539890"
-             );
-             $sesion = Http::withHeaders(
-                [
-                'Authorization' => 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDM3OTg5MjQsImV4cCI6MTcwMzg4NTMyNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoianVhbmtybG9zdGMifQ.fvasrRsMNINwRtqNADGNUo8h43zwhj-hdhgjSkpvJljhIspneWH4O62_ysAwHG_VI-aeLIH9CiGdK-HX3lwxBvHhYymrH7Hn6nNuhkwO2HDWYujDQgXH5_2NuB8ntpu6hPZUBQhJGHLphQOHI1SORquCbFE5pZabE26vCC8PnBv45ztQgtN14oS-GBUncCkTPEQ-KX7X0A2tTQZpOKuxTCQhsmkE03OivG4OrFZlCCmRFPq7YkD9hPAs5CRpB6O1v7-syOD5Z48PynKwyN3hPeJTH0yn9fGoYOw8HQ5w9wVg2yRpNAHpDngBWOb3jNDe3kdFqBpnSy2-aLytDc51zKR5V2OeLrf4biRegY7etv341oN46oJPiq-5KX5FKXLcmI4uGezX7Ilnl8dS-JSAatxi-cR6AAMuIn6-EX4FYHOwELCWiy9BGJDA0-e-OEhcm6GbH_Nbn5VH4o91eHK5hWdVdthXMXB-kQjPYo9LGiiexRkytthac4pfssAAn5gXgSW6FLumb21JEWKV5xRi5tOE5p1ToAT8dQ9EjaP8LOu9qS6ozu_QYvBZeiMtXP5xJVOI_SMnskm5ie794zGgJvrv4twg3QpOuC4S-E5wmN3lD9hOGSGNGt1oCPxZ5Pylrqnz7YTQd99bHAusdX-RxVkNE7xEYceqgSzXXaQmoGM',
-                ])
-            ->post('https://facturacion.apisperu.com/api/v1/auth/login', $usuario);   
-            $response = json_decode($sesion->body());
-            $token = $response->token;
+                  )          
+                  ]      
+            );
+             
 
-              $resp = json_encode($store);
-              $respuesta = Http::withHeaders(
-                  [
-                  'Authorization' => 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDM2OTYxNzcsImV4cCI6NDg1NzI5NjE3NywidXNlcm5hbWUiOiJqdWFua3Jsb3N0YyIsImNvbXBhbnkiOiIyMDYxMTgwNjQwMSJ9.QZvW62Mlg16knLCOkYWjXqz5DmqwqgPYm9rvdICp9mORWZt-7TgiZCMWWXlKiM49acHnWsEP-y31XEluRqflVvoMxVuCck0KyBOnyM7DozrizC3djBt6HWieei0jGh1TNDetM9XUo3RoYvZX_1ik6HXX2ER3_dJtyH7jEqMOXbIeTDD7c4cG3znUXMxe7yuQqCwTPLDe_SBRmSnlYMTM4AoV1Uaf_dPz9hPnOElKHmtRHkYNNgFfLazNRd6V3OTzWmAZZokWZbNWJxePH4RHKTax8cAAGWPNIbBstsCzWUXs3m17HHYcNzmfp2agAExHEmlkfwmtJnvhRoulVOYE8HwqLiCSlyD8vgNfKYIJgVPhtXdnVfzCy8L1dHo9H9sUAOF3B6ISA63tPqEl-x0SfcBzpXqyk5ED91Frf_yY_ZG9igwAk7xaPvZfd7-c33wGJjMxBpbJsrLIIeLSptCV5xvAr6iBBimR_Q0_WLaycFC222m2oVEzi7XgZK_guMyOvy57HyQKh8YFbnfSk14mjpaN7PrVUmgDtTvuRnIG20gVD-bRgRvZ2DoV0GvvR2C-hEQPZqTb-haDEoWDlMx4jqa0vTWJUxPigtIqz_tN1KJcRE7k2zn7_6FvhcLz5Oo558S-DtzN7lu0wxzDzvqn_0tRt2grFsuF1p4T34Nq29U',
-                  ])
-              ->post('https://facturacion.apisperu.com/api/v1/invoice/pdf', $resp);   
+           // $resp = json_encode($store);
+// dd($resp);
+            $respuesta = Http::withHeaders(
+                [
+                'Authorization' => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDM2OTYxNzcsImV4cCI6NDg1NzI5NjE3NywidXNlcm5hbWUiOiJqdWFua3Jsb3N0YyIsImNvbXBhbnkiOiIyMDYxMTgwNjQwMSJ9.QZvW62Mlg16knLCOkYWjXqz5DmqwqgPYm9rvdICp9mORWZt-7TgiZCMWWXlKiM49acHnWsEP-y31XEluRqflVvoMxVuCck0KyBOnyM7DozrizC3djBt6HWieei0jGh1TNDetM9XUo3RoYvZX_1ik6HXX2ER3_dJtyH7jEqMOXbIeTDD7c4cG3znUXMxe7yuQqCwTPLDe_SBRmSnlYMTM4AoV1Uaf_dPz9hPnOElKHmtRHkYNNgFfLazNRd6V3OTzWmAZZokWZbNWJxePH4RHKTax8cAAGWPNIbBstsCzWUXs3m17HHYcNzmfp2agAExHEmlkfwmtJnvhRoulVOYE8HwqLiCSlyD8vgNfKYIJgVPhtXdnVfzCy8L1dHo9H9sUAOF3B6ISA63tPqEl-x0SfcBzpXqyk5ED91Frf_yY_ZG9igwAk7xaPvZfd7-c33wGJjMxBpbJsrLIIeLSptCV5xvAr6iBBimR_Q0_WLaycFC222m2oVEzi7XgZK_guMyOvy57HyQKh8YFbnfSk14mjpaN7PrVUmgDtTvuRnIG20gVD-bRgRvZ2DoV0GvvR2C-hEQPZqTb-haDEoWDlMx4jqa0vTWJUxPigtIqz_tN1KJcRE7k2zn7_6FvhcLz5Oo558S-DtzN7lu0wxzDzvqn_0tRt2grFsuF1p4T34Nq29U',
+                ])
+            ->post('https://facturacion.apisperu.com/api/v1/invoice/pdf', $store);   
 
 
              if ($respuesta->status()==200) {
-                $resp = json_decode($respuesta->body());
-                return response()->json(['status' => true, 'msg' => $resp]);
-                // return $respuesta;
+                // $resp = json_encode($respuesta);
+                return response()->json(['status' => true, 'msg' => $respuesta]);
              }
              else
              {
-                $result = json_encode($sesion);
-                 return response()->json(['status' => false, 'msg' => $respuesta->body()]);
+                 return response()->json(['status' => false, 'msg' => $respuesta->body()]); // a este mensaje me envia
              }
 
 

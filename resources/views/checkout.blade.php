@@ -557,9 +557,9 @@
                     </div>
                 </div>
               </div>
-              <!-- <button class="btn btn-secondary btn-submit" id="enviar_sunat" style="background-color: transparent !important;display:none;">
+               <button class="btn btn-secondary btn-submit" id="enviar_sunat" style="background-color: transparent !important;display:none;">
                     SUNAT
-                </button> -->
+                </button>
             </section>
             <section id="section4" class="section4" style="display:none;">
                 section4
@@ -1042,13 +1042,11 @@
                     });
                 },
                 success: function (response) {
-                //cambiar gracias por tu compra Swal
-                    // window.location.href = "/";
                     if (response.status) {
                     Swal.fire({
                         icon: 'success',
-                        title: response.msg,
-                        text: "Participación realizada con exito",
+                        title: "Aprobado",
+                        text: response.msg,
                         allowOutsideClick: false,
                         confirmButtonText: "Ok",
                     })
