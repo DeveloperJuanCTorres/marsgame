@@ -79,12 +79,13 @@ class AdminController extends Controller
     public function rechazarvaucher(Request $request)
     {
         try {
-            $vaucher = Wallet::where("id",$request->id)->first();
+            $vaucher = Wallet::where("id",$request->id)->first();                
             $vaucher->estado = 2;
             $vaucher->save();
-            return response()->json(['status' => true, 'msg' => 'El comprobante ha sido aceptado']); 
+            return response()->json(['status' => true, 'msg' => 'El comprobante ha sido rechazado']); 
+            
         } catch (\Throwable $th) {
-            return response()->json(['status' => false, 'msg' => $request->id]); 
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
         }        
     }
 
@@ -96,74 +97,103 @@ class AdminController extends Controller
         $vaucher = Wallet::where("id",$request->id)->first();
         $limit = 6;
         try {
-            $pay = Payment::create([
-                'user_id' => $user_id,
-                'transaction_id' => $request->tipo,
-                'monto' => $request->monto,
-                'estado' => 'pagado',
-                'fecha_pago' => $date_now,
-                'tipo_pago' => $request->tipo,
-                'carrito' => json_encode($order)
-            ]);
-
-            foreach ($order as $item)
-            {
-                if ($item->attributes->imagen==0) {
-                    if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
-                        for ($i=0; $i < $item->quantity; $i++) { 
-                            for ($j=0; $j < $item->attributes->cantidadticket; $j++) { 
-                                SorteoSimple::create([
-                                    'user_id' => $user_id,
-                                    'fecha_registro' => $date_now
-                                ]);
-                                SorteoSmash::create([
-                                    'user_id' => $user_id,
-                                    'fecha_registro' => $date_now
-                                ]);
-                            }                                
+            if ($vaucher->order) {
+                $pay = Payment::create([
+                    'user_id' => $user_id,
+                    'transaction_id' => $request->tipo,
+                    'monto' => $request->monto,
+                    'estado' => 'pagado',
+                    'fecha_pago' => $date_now,
+                    'tipo_pago' => $request->tipo,
+                    'carrito' => json_encode($order)
+                ]);
+    
+                foreach ($order as $item)
+                {
+                    if ($item->attributes->imagen==0) {
+                        if ($item->attributes->mensual == 0) {  // El tipo NO es suscripcion mensual
+                            for ($i=0; $i < $item->quantity; $i++) { 
+                                for ($j=0; $j < $item->attributes->cantidadticket; $j++) { 
+                                    SorteoSimple::create([
+                                        'user_id' => $user_id,
+                                        'fecha_registro' => $date_now
+                                    ]);
+                                    SorteoSmash::create([
+                                        'user_id' => $user_id,
+                                        'fecha_registro' => $date_now
+                                    ]);
+                                }                                
+                            }
+                        }
+                        elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
+                            $dias = $item->attributes->cantidadmeses*30;
+                            $sumarfecha= Carbon::now()->addDays($dias);
+    
+                            $suscripcion = Suscription::create([
+                                'user_id' => $user_id,
+                                'pay_id' => $pay->id,
+                                'fecha_inicio' => $date_now,
+                                'fecha_fin' => $sumarfecha,
+                                // 'fecha_fin' => strtotime('+'.$dias.'day',strtotime($date_now)),
+                                'estado' => 1,
+                                'fecha' => $date_now
+                            ]);
+                        }
+    
+                        $multiplicador = $item->associatedModel*$item->quantity;
+                        for ($i=0; $i < $multiplicador; $i++) { 
+                            $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
+                            Code::create([
+                                'user_id' => $user_id,
+                                'product_id' => $item->attributes->productid,
+                                'codigo' => $random,
+                                'estado' => 0
+                            ]);
                         }
                     }
-                    elseif ($item->attributes->mensual == 1) {  // El tipo SI es suscripcion mensual
-                        $dias = $item->attributes->cantidadmeses*30;
-                        $sumarfecha= Carbon::now()->addDays($dias);
-
-                        $suscripcion = Suscription::create([
+                    else
+                    {
+                        Order::create([
                             'user_id' => $user_id,
-                            'pay_id' => $pay->id,
-                            'fecha_inicio' => $date_now,
-                            'fecha_fin' => $sumarfecha,
-                            // 'fecha_fin' => strtotime('+'.$dias.'day',strtotime($date_now)),
-                            'estado' => 1,
-                            'fecha' => $date_now
+                            'store_id' => $item->attributes->productid,
+                            'cantidad' => $item->quantity,
+                            'precio' => $item->price,
+                            'total' => $item->quantity*$item->price
                         ]);
                     }
-
-                    $multiplicador = $item->associatedModel*$item->quantity;
-                    for ($i=0; $i < $multiplicador; $i++) { 
-                        $random = $user_id . date("mYd") . random_int(10 ** ($limit - 1), (10 ** $limit) - 1);
-                        Code::create([
-                            'user_id' => $user_id,
-                            'product_id' => $item->attributes->productid,
-                            'codigo' => $random,
-                            'estado' => 0
-                        ]);
-                    }
+                    
                 }
-                else
-                {
-                    Order::create([
-                        'user_id' => $user_id,
-                        'store_id' => $item->attributes->productid,
-                        'cantidad' => $item->quantity,
-                        'precio' => $item->price,
-                        'total' => $item->quantity*$item->price
-                    ]);
-                }
-                
+                $vaucher->estado = 1;
+                $vaucher->save();
+                return response()->json(['status' => true, 'msg' => 'El comprobante ha sido aceptado']); 
             }
-            $vaucher->estado = 1;
-            $vaucher->save();
-            return response()->json(['status' => true, 'msg' => 'El comprobante ha sido aceptado']); 
+            else
+            {
+                $cuenta = Account::where('user_id',$user_id)->first();
+                $orderby = "DEPOSITO";
+                $pay = Payment::create([
+                    'user_id' => $user_id,
+                    'transaction_id' => $request->tipo,
+                    'monto' => $request->monto,
+                    'estado' => 'pagado',
+                    'fecha_pago' => $date_now,
+                    'tipo_pago' => $request->tipo
+                ]);
+
+                if ($cuenta == null) {
+                    Account::create([
+                        'user_id' => $user_id,
+                        'saldo' => $request->monto
+                    ]);                
+                }
+                else{
+                    $cuenta->saldo += $request->monto;
+                    $cuenta->save();
+                }
+                $vaucher->estado = 1;
+                $vaucher->save();
+                return response()->json(['status' => true, 'msg' => 'El comprobante ha sido aceptado.']); 
+            }            
         } catch (\Throwable $th) {
             return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
         }
@@ -197,6 +227,34 @@ class AdminController extends Controller
         }
     }
 
+    public function yapedeposito(Request $request)
+    {
+        try {
+            $imagen=$request->file("file"); 
+            $monto = json_decode($request->input("monto"));
+            $extension = $imagen->getClientOriginalExtension();
+            $filename  = 'yape-' . str::random(32) . '.' . $extension;
+            $paths = Storage::putFileAs('public/yape',$imagen,$filename);
+            $ruta = "/yape/".$filename;
+            $order = "DEPOSITO";
+            $orderby = json_encode($order);
+
+            Wallet::create([
+                 'monto' => $monto,
+                 'vaucher' => $ruta,
+                'estado' => 0,
+                 'type' => 'YAPE',
+                 'user_id' => Auth::user()->id
+            ]);
+
+           return response()->json(['status' => true, 'msg' => 'Tu depósito se envió con éxito, dentro de las 24 se validará la conformidad']); 
+
+
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
+        }
+    }
+
     public function plin(Request $request)
     {
         try {
@@ -218,6 +276,34 @@ class AdminController extends Controller
             Cart::clear();
 
             return response()->json(['status' => true, 'msg' => 'Tu pago se envió con éxito, dentro de las 24 se validará la conformidad']); 
+
+        } catch (\Throwable $th) {
+            return response()->json(['status' => false, 'msg' => $th->getMessage()]); 
+        }
+    }
+
+    public function plindeposito(Request $request)
+    {
+        try {
+            $imagen=$request->file("file"); 
+            $monto = json_decode($request->input("monto"));
+            $extension = $imagen->getClientOriginalExtension();
+            $filename  = 'yape-' . str::random(32) . '.' . $extension;
+            $paths = Storage::putFileAs('public/plin',$imagen,$filename);
+            $ruta = "/plin/".$filename;
+            $order = "DEPOSITO";
+            $orderby = json_encode($order);
+
+            Wallet::create([
+                 'monto' => $monto,
+                 'vaucher' => $ruta,
+                'estado' => 0,
+                 'type' => 'PLIN',
+                 'user_id' => Auth::user()->id
+            ]);
+
+           return response()->json(['status' => true, 'msg' => 'Tu depósito se envió con éxito, dentro de las 24 se validará la conformidad']); 
+
 
         } catch (\Throwable $th) {
             return response()->json(['status' => false, 'msg' => $th->getMessage()]); 

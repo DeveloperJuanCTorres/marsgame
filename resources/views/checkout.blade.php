@@ -436,7 +436,7 @@
                    
                 <!-- <input type="button" id="btn_pagar" value="pagar"> -->
                   @if(isset($formToken))
-                  <div class="card p-2" id="pasarela" style="border-radius: 10px !important;background-color: #FF4240;">
+                  <div class="card p-2" id="pasarela" style="border-radius: 10px !important;background-color: #FF4240;display: block;">
                     <div class="d-block mx-auto p-2">
                       <img src="{{asset('assets/img/gallery/izipay.png')}}" width="200" alt="">
                     </div>

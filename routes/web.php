@@ -74,6 +74,9 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/pagar-yape',[AdminController::class, 'yape'])->name('pagar-yape');
     Route::post('/pagar-plin',[AdminController::class, 'plin'])->name('pagar-plin');
 
+    Route::post('/yape-deposito',[AdminController::class, 'yapedeposito'])->name('yape-deposito');
+    Route::post('/plin-deposito',[AdminController::class, 'plindeposito'])->name('plin-deposito');
+
     Route::post('/culqi', [AdminController::class, 'culqi'])->name('culqi');
 
     Route::post('/aceptarcodigo', [AdminController::class, 'aceptarcodigo'])->name('aceptarcodigo');
