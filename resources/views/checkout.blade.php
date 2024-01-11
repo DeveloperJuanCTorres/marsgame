@@ -415,13 +415,13 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" checked name="terminos" id="terminos" value="terminos" disabled>
                         <label class="form-check-label text-ligth" for="terminos">
-                          Al pagar estas aceptando los <a target="_blank" href="/terminos">Términos & Condiciones</a>
+                          Al pagar estas aceptando los <a target="_blank" href="{{asset('Politicas_T_y_C.pdf')}}">Términos & Condiciones</a>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" checked name="politicas" id="politicas" value="politicas" disabled>
                         <label class="form-check-label text-ligth" for="politicas">
-                          Al pagar estas aceptando las <a target="_blank" href="/politicas">Políticas de Seguridad</a>
+                          Al pagar estas aceptando las <a target="_blank" href="{{asset('Politicas_T_y_C.pdf')}}">Políticas de Seguridad</a>
                         </label>
                       </div>
                     </div>                    

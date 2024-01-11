@@ -331,13 +331,13 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" checked name="terminos1" id="terminos1" value="terminos1" disabled>
                         <label class="form-check-label text-ligth" for="terminos1">
-                          Al pagar estas aceptando los <a target="_blank" href="/terminos">Términos & Condiciones</a>
+                          Al pagar estas aceptando los <a target="_blank" href="{{asset('Politicas_T_y_C.pdf')}}">Términos & Condiciones</a>
                         </label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" checked name="politicas1" id="politicas1" value="politicas1" disabled>
                         <label class="form-check-label text-ligth" for="politicas1">
-                          Al pagar estas aceptando las <a target="_blank" href="/politicas">Políticas de Seguridad</a>
+                          Al pagar estas aceptando las <a target="_blank" href="{{asset('Politicas_T_y_C.pdf')}}">Políticas de Seguridad</a>
                         </label>
                       </div>
                     </div>
