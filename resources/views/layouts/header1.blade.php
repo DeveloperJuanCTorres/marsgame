@@ -57,9 +57,9 @@
                     <div class="col-6">
                       <button class="btn btn-primary" style="padding: 10px;width: 100%;">Retirar</button>
                     </div>
-                    <div class="col-6">
+                    <!-- <div class="col-6">
                       <button class="btn btn-secondary depositar" style="padding: 10px;width: 100%;">Depositar</button>
-                    </div>
+                    </div> -->
                   </div>  
                   @else
                   <li><a class="dropdown-item" href="/login">Login</a></li>
@@ -79,9 +79,9 @@
                     </a>
                   </li>
                   <li>                    
-                    <button class="dropdown-item add_codigo" id="add_codigo">
+                    <!-- <button class="dropdown-item add_codigo" id="add_codigo">
                       <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;&nbsp; Agregar código
-                    </button>
+                    </button> -->
                   </li>
                   <li><hr class="dropdown-divider"></li>
                   <li>

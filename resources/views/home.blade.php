@@ -27,18 +27,14 @@
               <p class="fs-2 text-400">Simple Steps You Can Take to Improve Your <br class="d-none d-xxl-block" />Financial Well-Being for the rest of Your Life </p><a class="btn btn-primary btn-ensurance mt-5" href="#!"><span class="fas fa-chevron-right fa-xs btn-icon"></span><span class="btn-text">Learn more</span></a> -->
             </div>
             <div class="col-md-5 col-xl-5 pe-xxl-0">
-              <!-- <h1 class="text-light" style="width: 400px;">¡Ven y participa aquí!</h1>
-              <div class="text-center">
-                <a class="btn btn-primary" style="color: white;border-radius: 15px;width: 250px;" href="">Quiero registrarme</a>
-              </div> -->
               <img class="mascota" src="{{asset('assets/img/mascota.png')}}" width="50%">
               <div class="card card-bg shadow">
                 <div class="card-body p-4 p-xl-6">
                   <h2 class="text-100 text-white">Tenemos premios todas las semanas, ¡Ven y participa Aquí!</h2>
                   <form class="mb-3 mt-4">
-                    <div class="col-12 d-grid">
+                    <!-- <div class="col-12 d-grid">
                       <a class="btn btn-primary rounded-pill text-white" href="/register">Quiero Registrarme</a>
-                    </div>
+                    </div> -->
                   </form>
                 </div>
               </div>
@@ -314,17 +310,17 @@
                     <li class="list-group-item">{{$item->beneficio3}}</li>
                     <li class="list-group-item">{{$item->beneficio4}}</li>
                   </ul>
-                  <button type="button"
-                      data-id='{{$item->nombre}}'
-                      data-name='{{$item->nombre}}'
-                      data-price='{{$item->monto}}'
+                  <!-- <button type="button"
+                      data-id='$item->nombre'
+                      data-name='$item->nombre'
+                      data-price='$item->monto'
                       data-quantity='1'
-                      data-codigos='{{$item->cantidad_codigos}}'
-                      data-mensual='{{$item->mensual}}'
-                      data-cantidadmeses='{{$item->cantidad_meses}}'
-                      data-productid='{{$item->id}}'
-                      data-cantidadticket='{{$item->cantidad_ticket}}'
-                      class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button>
+                      data-codigos='$item->cantidad_codigos'
+                      data-mensual='$item->mensual'
+                      data-cantidadmeses='$item->cantidad_meses'
+                      data-productid='$item->id'
+                      data-cantidadticket='$item->cantidad_ticket'
+                      class="btn1 btn-gradient mt-2 padding-left-0 btn_comprar">Comprar</button> -->
                 </div>
               </div>
             </div>

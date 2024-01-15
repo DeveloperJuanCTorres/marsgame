@@ -145,13 +145,10 @@
         <label class="mx-5 form-check-label text-ligth" for="terminos">
           Al registrarte estas aceptando nustras <a target="_blank" href="{{asset('Politicas_T_y_C.pdf')}}">T&C y Políticas de seguridad</a>
         </label>
-        <input style="margin-top: 150px;" type="submit" value="Registrarme" class="btn1">
+        <!-- <input style="margin-top: 150px;" type="submit" value="Registrarme" class="btn1"> -->
       </form>
         <a href="/login" class="dnthave">¿Ya tienes cuenta? Iniciar Sesión</a>
   </div> 
-       <!-- <div class="footer">
-      <span><i class="fa fa-reply"></i><a href="/"> Regresar</a></span>
-    </div> -->
 </div>
 
 <!-- <button class="g-recaptcha" 
